@@ -1,0 +1,74 @@
+<!-- base.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Campus Eats{% endblock %}</title>
+  
+    <!-- <link rel="stylesheet" href="static/style.css"> -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <link rel="stylesheet" href= "https://fonts.googleapis.com/css?family=Poppins">
+
+</head>
+
+<body>
+
+    <div class="navbar">
+   
+        <a href="#">Login</a>
+        <a href="/register">Sign Up</a>
+        <a href="#">Blog</a>
+    
+    <!-- <a class="logo" href="#"><img src="media/CE_logo.png" alt="Logo"></a> -->
+    <a class="logo" href="#"><img src="{% static 'CE_logo.png' %}" alt="Logo"></a>
+    
+    </div>
+    <div style="height:200px">
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+<div class="footer">
+    <div class="col-1">
+        <h3>About</h3>
+        <a href="#">About</a>
+        <a href="#">Reviews</a>
+        <a href="#">Blog</a>
+
+    </div>
+    <div class="col-2">
+        <h3>Newsletter</h3>
+        <form>
+            <input type="text" placeholder="email address">
+            <br>
+            <button type="submit">subscribe</button>
+        </form>
+    </div>
+    <div class="col-3">
+        <h3>Contact</h3>
+        <p>email: campus.eats@gmail.com <br></p>
+        <p>phone: +61 678 990 889 <br><br><br></p>
+        <p>Address: 783 Oxford St,<br> Sydney NSW 2121, <br>Australia</p>
+        <div class="social-icons">
+            <a><img src="{% static 'fb.png' %}" alt="fbicon" width="50px" height="50px"></a>
+            <a><img src="{% static 'instagram.png' %}" alt="instacon" width="50px" height="50px"></a>
+            <a><img src="{% static 'twitter.png' %}" alt="twicon" width="50px" height="50px"></a>
+
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2023 Campus Eats. All rights reserved.</p>
+    <p><a href="privacy-policy.html">Privacy Policy</a></p>
+</footer>
+  
+  
+</body>
+</html>
