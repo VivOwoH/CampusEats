@@ -69,7 +69,7 @@ class User(models.Model):
         max_length=5,
         choices=[(tag.name, tag.value) for tag in UserType]
     )
-    Bookmark = models.ForeignKey('Bookmark', on_delete=models.CASCADE)
+    Bookmark = models.ForeignKey('Bookmark')
 
     @classmethod
     def register_user(cls, username, email, password1, password2):
@@ -78,7 +78,7 @@ class User(models.Model):
             return False  # Passwords do not match, registration failed
 
         # Create a new User instance
-        user = cls(username=username, email=email)  # No need to specify 'Password'
+        user = cls(UserName=username, Email=email)  # No need to specify 'Password'
         user.set_password(password1)  # Use set_password method to hash the password
         user.save()
         return True  
