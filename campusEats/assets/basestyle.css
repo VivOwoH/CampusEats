@@ -46,6 +46,7 @@
   
   
   .footer{
+    margin-top:20rem;
     position: relative;
     left:0;
     font-family: Arial, Helvetica, sans-serif;
@@ -60,6 +61,7 @@
   
   .footer div{
     text-align:center;
+    margin-top:30px;
   
   }
   
@@ -119,6 +121,7 @@
     padding: 20px;
     text-align: center;
     font-size: 14px;
+    
   }
   footer a {
     color: #ede1da;
@@ -129,3 +132,50 @@
   }
   
   
+  /* Apply some basic styling to the form container */
+.register-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 800px;
+  margin-bottom: 20px;
+}
+
+/* Style form labels */
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Style form input fields */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Style the registration button */
+.form-group button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Style the registration button on hover */
+.form-group button:hover {
+  background-color: #0056b3;
+}
+
+/* Add additional styles as needed */

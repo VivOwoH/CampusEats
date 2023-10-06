@@ -4,6 +4,7 @@ from django.contrib.auth import login, authenticate
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from django.http import HttpResponse
+from .models import *  # Import your models here
 
 def user_login(request):
     if request.method == 'POST':
@@ -27,11 +28,41 @@ def user_login(request):
 def render_base_template(request):
     return render(request, 'base.html')
 
+# def user_register(request):
+#     if request.method == 'POST':
+#         # Assuming you're using Django's built-in User model
+#         username = request.POST['username']
+#         email = request.POST['email']
+#         password1 = request.POST['password1']
+#         password2 = request.POST['password2']
+#         print(username)
+#         # Check if passwords match
+#         if password1 == password2:
+#             # Create a new User instance
+#             user = User.objects.register_user(username=username, email=email, password=password1)
+#             # Save the user instance to the database
+#             user.save()
+#             # Log the user in
+#             # login(request, user)
+#             return redirect('success')  
+    
+#     return render(request, 'user/register.html')
+
 def user_register(request):
     if request.method == 'POST':
-        return redirect('render_base_template')  
-    
+        username = request.POST['username']
+        email = request.POST['email']
+        password1 = request.POST['password1']
+        password2 = request.POST['password2']
+
+        if User.register_user(username, email, password1, password2):
+            return redirect('success')  # Registration successful, redirect to success page
+        else:
+            # Registration failed, handle it (e.g., display an error message)
+            return render(request, 'user/register.html', {'error_message': 'Registration failed'})
+
     return render(request, 'user/register.html')
+
 
 def render_success(request):
     return render(request, 'user/success.html')
