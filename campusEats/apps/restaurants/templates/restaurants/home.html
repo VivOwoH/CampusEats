@@ -1,0 +1,50 @@
+<!-- user/register.html -->
+{% extends 'base.html' %}
+
+{% block title %}Welcome - My Website{% endblock %}
+
+
+{% block content %}
+        <!--search box-->
+        <div class="label_container"><label for="search_label" > Search Restaurants </label></div>
+        
+        <div class="search-wrapper">
+            
+            <input id="search" type="search" placeholder="search restaurants">
+            <button id="search_button" type="submit">search</button>
+        </div>
+        
+        </div>
+
+        </div>
+        
+        
+
+        <nav>
+            <div class="dropdown_nav">
+                <div class="cuisine">
+                    <button>Cuisine</button>
+                    <ul>
+                        <li><a href=""></a>Western</li>
+                        <li><a href=""></a>Italian</li>
+                        <li><a href=""></a>Chinese</li>
+                        <li><a href=""></a>Thai</li>
+                    </ul>
+                </div>
+                <div class="price">
+                    <button>Price</button>
+                    <ul>
+                        <li><a href=""></a>$</li>
+                        <li><a href=""></a>$$</li>
+                        <li><a href=""></a>$$$</li>
+                        <li><a href=""></a>$$$$</li>
+                    </ul>
+                </div>
+                <div class="takeaway">
+                    <button>Takeaway</button>
+                </div>
+            </div>
+        </nav>
+        <div style="height:200px"></div>
+
+{% endblock %}

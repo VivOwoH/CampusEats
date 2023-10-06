@@ -63,6 +63,9 @@ def user_register(request):
 
     return render(request, 'user/register.html')
 
-
 def render_success(request):
     return render(request, 'user/success.html')
+
+# for the rendering of the admin
+def render_admin_dashboard(request):
+    return render(request,'user/adminhome.html')

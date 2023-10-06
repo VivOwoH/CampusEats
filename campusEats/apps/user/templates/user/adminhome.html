@@ -1,0 +1,44 @@
+<!-- admin.html -->
+{% extends 'base.html' %}
+
+{% block title %}Admin view {% endblock %}
+
+{% block content %}
+  
+   <div class="up_container">
+
+   </div>
+
+    <div class="container">
+        
+        <div class="left-column">
+            <a href="#">UPDATE PROFILE</a>
+            <a href="addrestaurant.html">ADD RESTAURANT</a>
+            <a href="updaterestaurant.html">UPDATE RESTAURANT</a>
+            <a href="updateusers.html">UPDATE USERS</a>
+            <a href="inbox.html">INBOX</a>
+        </div>
+
+        <div class="right-column">
+            <h6>ADMIN</h6>
+            <br>
+            <div class="profile-info">
+                <label for="first_name"> First Name </label>
+                <input type="text" id="first_name">
+                <label for="last_name"> Last Name </label>
+                <input type="text" id="last_name">
+                <label for=""> Email </label>
+                <input type="text" id="email">
+                <label for="contact_no"> Contact number </label>
+                <input type="text" id="contact_no">
+                <br><br>
+                <button id="update-btn">UPDATE</button>
+
+            </div>
+        </div>
+        <script src="admin_script.js"></script>
+        
+    </div>
+
+    
+{% endblock %}
