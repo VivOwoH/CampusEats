@@ -55,14 +55,22 @@ def user_register(request):
         password1 = request.POST['password1']
         password2 = request.POST['password2']
 
-        if User.register_user(username, email, password1, password2):
+        if CustomUser.register_user(username, email, password1, password2):
             return redirect('success')  # Registration successful, redirect to success page
         else:
             # Registration failed, handle it (e.g., display an error message)
             return render(request, 'user/register.html', {'error_message': 'Registration failed'})
-
     return render(request, 'user/register.html')
 
+def user_list(request):
+    # Query all users from the CustomUser model
+    users = CustomUser.objects.all()
+    print("idk", users)
+    # Pass the list of users to the template
+    return render(request, 'user/success.html', {'users': users})
 
 def render_success(request):
-    return render(request, 'user/success.html')
+    users = CustomUser.objects.all()
+    print("idk", users)
+    # Pass the list of users to the template
+    return render(request, 'user/success.html', {'users': users})

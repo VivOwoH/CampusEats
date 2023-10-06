@@ -56,20 +56,13 @@ class UserType(Enum):
 #     def __str__(self):
 #         return self.email
 
-class User(models.Model):
-    UserID = models.AutoField(primary_key=True)
-    UserName = models.CharField(max_length=255, null=False)
-    Password = models.CharField(max_length=255, null=False)
-    Email = models.CharField(max_length=255)
-    Phone = models.CharField(
-        max_length=20,
-        validators=[RegexValidator(r'^[0-9]*$', 'Only numeric characters are allowed.')],
-    )
-    Role = models.CharField(
-        max_length=5,
-        choices=[(tag.name, tag.value) for tag in UserType]
-    )
-    Bookmark = models.ForeignKey('Bookmark', on_delete=models.CASCADE)
+class CustomUser(models.Model):
+    username = models.CharField(max_length=255)
+    email = models.EmailField(unique=True)
+    password = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.username
 
     @classmethod
     def register_user(cls, username, email, password1, password2):
@@ -77,9 +70,8 @@ class User(models.Model):
         if password1 != password2:
             return False  # Passwords do not match, registration failed
 
-        # Create a new User instance
-        user = cls(username=username, email=email)  # No need to specify 'Password'
-        user.set_password(password1)  # Use set_password method to hash the password
+        # Create a new CustomUser instance
+        user = cls(username=username, email=email, password=password1)
         user.save()
         return True  
 
