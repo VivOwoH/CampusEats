@@ -69,3 +69,7 @@ def render_success(request):
 # for the rendering of the admin
 def render_admin_dashboard(request):
     return render(request,'user/adminhome.html')
+
+# for the rendering of the admin add resturants page
+def render_admin_add_restaurants(request):
+    return render(request,'user/admin-add-restaurants.html')
