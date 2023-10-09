@@ -1,50 +1,167 @@
 <!-- user/register.html -->
-{% extends 'base.html' %}
 
+{% extends 'base.html' %}
+{% load static %}
 {% block title %}Welcome - My Website{% endblock %}
 
 
 {% block content %}
-        <!--search box-->
-        <div class="label_container"><label for="search_label" > Search Restaurants </label></div>
-        
-        <div class="search-wrapper">
+
+<!--image carousel-->
+<div class="image-carousel">
+  <div class="carousel-container" style="height:800px">
+
+      <div class="slides fade">
+        <img src="{% static 'restaurants/restaurant1.jpg' %}" style="width:100%; height:800px">
+      </div>
+      
+      <div class="slides fade">
+        <img src="{% static 'restaurants/restaurant2.jpg' %}" style="width:100%; height:800px">
+      </div>
+      
+      <div class="slides fade">
+        <img src="{% static 'restaurants/restaurants3.jpg' %}"style="width:100%; height:800px"> 
+      </div>
+      
+      </div>
+      <br>
+      <div style="text-align:center">
+        <span class="moving-dot"></span> 
+        <span class="moving-dot"></span> 
+        <span class="moving-dot"></span> 
+      </div>
+
+      <script>
+          let slide_index = 0;
+          showSlides();
+          function showSlides() {
+
+            // define variables
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            let moving_dots = document.getElementsByClassName("moving-dot");
             
-            <input id="search" type="search" placeholder="search restaurants">
-            <button id="search_button" type="submit">search</button>
-        </div>
-        
-        </div>
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
 
-        </div>
-        
-        
+            // increment slide counter
+            slide_index++;
+            if (slide_index > slides.length) {slide_index = 1}    
+            for (i = 0; i < moving_dots.length; i++) {
+              moving_dots[i].className = moving_dots[i].className.replace(" active", "");
+            }
+            // display current slide and dot
+            slides[slide_index-1].style.display = "block";  
+            moving_dots[slide_index-1].className += " active";
 
-        <nav>
-            <div class="dropdown_nav">
-                <div class="cuisine">
-                    <button>Cuisine</button>
-                    <ul>
-                        <li><a href=""></a>Western</li>
-                        <li><a href=""></a>Italian</li>
-                        <li><a href=""></a>Chinese</li>
-                        <li><a href=""></a>Thai</li>
-                    </ul>
-                </div>
-                <div class="price">
-                    <button>Price</button>
-                    <ul>
-                        <li><a href=""></a>$</li>
-                        <li><a href=""></a>$$</li>
-                        <li><a href=""></a>$$$</li>
-                        <li><a href=""></a>$$$$</li>
-                    </ul>
-                </div>
-                <div class="takeaway">
-                    <button>Takeaway</button>
-                </div>
-            </div>
-        </nav>
-        <div style="height:200px"></div>
+            // Change image every 5 seconds
+            setTimeout(showSlides, 5000); 
+          }
+          </script>  
+</div>
+
+<div class="section1_container">
+  <!--search box-->
+    
+  <div class="label_container"><label for="search_label" > Search Restaurants </label></div>
+        
+  <div class="search-wrapper">
+     
+     <input id="search" type="search" placeholder="search restaurants, cafes near campus">
+     <button id="search_button" type="submit">search</button>
+  </div>
+
+
+ <!--search filters-->
+ <nav>
+  <div class="dropdown_nav">
+      <div class="dropdown_filters">
+          <button class="dropbtn">Cuisine</button>
+          <div class="dropdown_items">
+              <a href="#">Western</a>
+              <a href="#">Italian</a>
+              <a href="#">Indian</a>
+              <a href="#">Chinese</a>
+
+          </div>
+      </div>
+      <div class="dropdown_filters">
+          <button class="dropbtn">Price</button>
+          <div class="dropdown_items">
+              <a href="#">$</a>
+              <a href="#">$$</a>
+              <a href="#">$$$</a>
+
+          </div>
+      </div>
+      <div class="dropdown_filters">
+          <button class="dropbtn">Takeaway</button>
+      </div>
+
+      <div class="dropdown_filters">
+          <button class="dropbtn">Top Rated</button>
+  
+      </div>
+  </div>
+</nav>
+
+<!--add restaurant cards-->
+
+<!--Need to make the cards dynamic--> 
+
+<div class="cards">
+  <div class="card">
+      <img src="" alt="" class="card_img">
+      <div class="card_content">Content 1 </div>
+      <div class="card_info"> 
+          <div>Rating</div>
+          <a href="" class="card_link"> View Restaurant</a>
+      </div>
+  </div>
+  <div class="card">
+      <img src="" alt="" class="card_img">
+      <div class="card_content">Content 2 </div>
+      <div class="card_info"> 
+          <div>Rating</div>
+          <a href="" class="card_link"> View Restaurant</a>
+      </div>
+  </div>
+  <div class="card">
+      <img src="" alt="" class="card_img">
+      <div class="card_content"> Content 3</div>
+      <div class="card_info"> 
+          <div>Rating</div>
+          <a href="" class="card_link"> View Restaurant</a>
+      </div>
+  </div>
+  <div class="card">
+      <img src="" alt="" class="card_img">
+      <div class="card_content">Content 4 </div>
+      <div class="card_info"> 
+          <div>Rating</div>
+          <a href="" class="card_link"> View Restaurant</a>
+      </div>
+  </div>
+  <div class="card">
+      <img src="" alt="" class="card_img">
+      <div class="card_content">Content 5 </div>
+      <div class="card_info"> 
+          <div>Rating</div>
+          <a href="" class="card_link"> View Restaurant</a>
+      </div>
+  </div>
+  <div class="card">
+      <img src="" alt="" class="card_img">
+      <div class="card_content">Content 6 </div>
+      <div class="card_info"> 
+          <div>Rating</div>
+          <a href="" class="card_link"> View Restuarant</a>
+      </div>
+  </div>
+</div>
+</div>
+ 
+
 
 {% endblock %}

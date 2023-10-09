@@ -1,13 +1,14 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
 }
+
+/*search box*/
 .search-wrapper{
     padding-left: 100px;
     overflow:hidden;
     height:50px;
     background-color: white;
 }
-
 #search{
     float:left;
     padding:10px;
@@ -17,8 +18,9 @@
 }
 
 .label_container{
-    height:200px;
-    padding-top: 120px;
+   
+    padding-top: 60px;
+    padding-bottom: 40px;
     padding-left: 100px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
@@ -47,82 +49,150 @@ input{
     font-size: 1rem;
 }
 
+
+.dropbtn{
+    color:rgb(120, 119, 118);
+    padding:12px;
+    font-size: 16px;
+    border:none;
+}
+
+.dropdown_filters{
+    position:relative;
+    display:inline-block;
+}
+
+.dropdown_items{
+    display:none;
+    position:absolute;
+    background-color: rgb(231, 229, 226);
+    min-width: 160px;
+    z-index: 1;
+
+}
+
+.dropdown_items a{
+    color:black;
+    padding:12px 16px;
+    text-decoration: none;
+    display:block;
+}
+
+.dropdown_items a:hover{background: #dad8d8;}
+
+.dropdown_filters:hover .dropdown_items{display: block;}
+
+
+
+/* filters */
 .dropdown_nav{
-    height:8vh;
-    background:rgb(231, 229, 226);
+    height:8vh;  
     display:flex;
     justify-content:space-around;
     align-items:center;
     width:40%;
     margin-top:20px;
     margin-left:100px;
-
-
-
-}
-.cuisine, .price{
-    position:relative;
 }
 
-.cuisine ul, 
-.price ul{
-    background-color: rgb(211, 209, 206);
-    position:absolute;
-    margin-top:10px;
-    width:200px;
-    height:200px;
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    list-style: none;
-    border-radius: 5px;
-    opacity:0;
-    pointer-events: none;
-    transform:translateY(-10px);
-    transition: all 0.4s ease;
+/* carousel code */
 
+
+
+.slides {display: none;}
+
+
+.slides img {
+    vertical-align: middle;
+    width:100%;}
+
+
+.carousel-container {
+    position: relative;
+    margin: auto;
 }
 
-.cuisine li, 
-.price li{
+.active {
+    background-color: #bfb6b6;
+}
     
-    width:100%;
-    height:100%;
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+} 
+
+/* The dots/bullets/indicators */
+.moving-dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #b6b3b3;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.section1_container{
+    height:800px;
+
+}
+
+/* card layout css */
+.cards{
+    margin-top: 80px;
+    margin-left: 100px;
+    margin-right: 100px;
+    max-width: 100%;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.card{
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.card_img{
+    max-width: 100%;
+    display: block;
+
+}
+
+.card_content{
+    line-height:1.5 ;
+    font-size:0.9rem;
+    padding:15px;
+    background: #fafafa;
+}
+
+.card_content > p:first-of-type{
+    margin-top: 0;
+}
+.card_content > p:last-of-type{
+    margin-bottom: 0;
+}
+.card_info{
+    padding:15px;
     display:flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    background: #e5e3e3;
+    font-size: 0.8rem;
+    border-bottom:1px solid grey;
+    border-radius: 2px;
 }
 
-.cuisine li:hover,
-.price li:hover{
-    background-color: rgb(227, 223, 214);
-}
-
-
-.cuisine a, .price a{
-    color:black;
+.card_link{
+    color:rgb(19, 18, 19);
     text-decoration: none;
 }
 
-.dropdown_nav button{
-    background: none;
-    border:none;
-    text-decoration: none;
-    font-size: 16px;
-    cursor:pointer;
-    
 
-}
-
-.dropdown_nav button:hover{
-    color:grey;
+.card_link:hover{
+    text-decoration:underline;
 }
 
 
-.price button:focus + ul,
-.cuisine button:focus + ul{
-    opacity:1;
-    pointer-events: all;
-    transform:translateY(0px) ;
-}
