@@ -170,7 +170,7 @@
             <div class="card_content">{{ restaurant.Name }}</div>
             <div class="card_info"> 
                 <div>Rating: {{ restaurant.Rating }}</div>
-                <a href="" class="card_link">View Restaurant</a>
+                <a  href="{% url 'restaurant_detail' restaurant_id=restaurant.RestaurantID %}" class="card_link">View Restaurant</a>
             </div>
         </div>
     {% endfor %}

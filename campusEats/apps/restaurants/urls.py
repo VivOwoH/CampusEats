@@ -6,5 +6,5 @@ urlpatterns = [
     # Other URL patterns for user-related views
     # path('login/', views.user_login, name='login'),
     path('', views.render_home, name='Home'),
-   
+    path('restaurant/<int:restaurant_id>/', views.restaurant_detail, name='restaurant_detail'),
 ]
