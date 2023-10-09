@@ -110,7 +110,7 @@
 
 <!--Need to make the cards dynamic--> 
 
-<div class="cards">
+<!-- <div class="cards">
   <div class="card">
       <img src="" alt="" class="card_img">
       <div class="card_content">Content 1 </div>
@@ -159,9 +159,22 @@
           <a href="" class="card_link"> View Restuarant</a>
       </div>
   </div>
+</div> -->
+
+<!-- Loop through the list of restaurants -->
+<div class="cards">
+    {% for restaurant in restaurants %}
+        <div class="card">
+            <!-- Display restaurant details dynamically -->
+            <img src="{{ restaurant.ImageURL }}" alt="" class="card_img">            
+            <div class="card_content">{{ restaurant.Name }}</div>
+            <div class="card_info"> 
+                <div>Rating: {{ restaurant.Rating }}</div>
+                <a href="" class="card_link">View Restaurant</a>
+            </div>
+        </div>
+    {% endfor %}
 </div>
-</div>
- 
 
 
 {% endblock %}
