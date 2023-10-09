@@ -70,6 +70,15 @@ def user_list(request):
     return render(request, 'user/success.html', {'users': users})
 
 def render_success(request):
+    return render(request, 'user/success.html')
+
+# for the rendering of the admin
+def render_admin_dashboard(request):
+    return render(request,'user/adminhome.html')
+
+# for the rendering of the admin add resturants page
+def render_admin_add_restaurants(request):
+    return render(request,'user/admin-add-restaurants.html')
     users = CustomUser.objects.all()
     print("idk", users)
     # Pass the list of users to the template

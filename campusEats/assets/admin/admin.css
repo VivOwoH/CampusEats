@@ -1,0 +1,164 @@
+
+.container {
+    display:flex;
+}
+
+/* form section of admin */
+.right-column{
+    flex:1;
+    background-color: rgb(231, 228, 217);
+    padding-top: 50px;
+    padding-left: 80px;
+    font-size: 38px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 600px;
+}
+
+.right-column-add-restaurants{
+    flex:1;
+    background-color: rgb(231, 228, 217);
+    padding-top: 50px;
+    padding-left: 80px;
+    font-size: 38px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 1500px;
+}
+/* admin function menu*/
+.left-column a{
+    background-color: blanchedalmond;
+    color:black;
+    display:block;
+    padding:40px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.left-column a:hover{
+    background-color: burlywood;
+    color:white;
+
+}
+
+/*space above admin form and nav bar*/
+.up_container{
+    height: 80px;
+}
+
+
+/* adds a left margin of 20px between the menu and text */
+.restaurant-info,
+.profile-info{
+    margin:20px 0;
+}
+/*apply style to form labels*/
+.restaurant-info > label,
+.profile-info > label{
+    display:block;
+    margin-bottom: 5px;
+    font-size: 18px;;
+}
+
+.restaurant-info > input[type="text"],
+.profile-info > input[type="text"]{
+    width:40%;
+    padding:10px;
+    margin-bottom: 10px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+}
+
+.restaurant-info > button,
+.profile-info > button{
+    background-color: grey;
+    color: white;
+    border:none;
+    padding:10px 20px;
+    cursor:pointer;
+    float:right;
+    margin-right:200px;
+}
+
+.restaurant-info button:hover,
+.profile-info button:hover{
+    background-color: black;
+}
+
+#dropdown-cuisine{
+  
+    width:200px;
+    padding:10px;
+    margin-bottom: 10px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+ }
+
+ #add_cuisine_container{
+    display:flex;
+    height: 100px;
+    
+  }
+
+#add_cuisine_btn{
+    width:80px;
+    height:40px;
+    background-color: #ccc;
+    margin-left:5px;
+    border:1px solid #ccc;
+    border-radius: 2px;
+    
+}
+
+#add_cuisine_btn:hover{
+    background-color: darkgray;
+}
+
+ #add_cuisine_txt_box{
+    height:40px;
+    width:20%;
+    padding:10px;
+    margin-bottom: 10px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+ }
+
+
+#restaurant_description{
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+
+.open_hrs_table{
+    border-spacing: 0;
+}
+.open_hrs_table > th, td{
+    text-align: center;
+}
+.td_time{
+    height:30px;
+    width:40%;
+    align-items: center;
+    border:1px solid #ccc;
+    border-radius: 5px;
+}
+
+.open_hrs_div{
+    font-size: 16px;
+    display:flex;
+}
+.open_hrs_div_right{
+    flex:1;
+    margin-left: 50px;
+    padding-top: 2px;
+}
+
+#upload_btn{
+    width:8%;
+    background-color: ccc;
+    height: 25px;
+    border:1px solid;
+}

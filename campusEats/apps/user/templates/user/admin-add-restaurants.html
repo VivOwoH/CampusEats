@@ -1,0 +1,167 @@
+<!-- admin.html -->
+{% extends 'base.html' %}
+
+{% block title %}Admin view {% endblock %}
+
+{% block content %}
+
+<!--section between the nav and form-->
+<div class="up_container">
+
+</div>
+
+ <div class="container">
+     
+     <div class="left-column">
+         <a href="adminprofile.html">UPDATE PROFILE</a>
+         <a href="addrestaurant.html">ADD RESTAURANT</a>
+         <a href="updaterestaurant.html">UPDATE RESTAURANT</a>
+         <a href="updateusers.html">UPDATE USERS</a>
+         <a href="inbox.html">INBOX</a>
+     </div>
+
+     <div class="right-column-add-restaurants">
+         <h6>ADD RESTAURANT</h6><br>
+         <div class="restaurant-info">
+            <label for="restaurant_name"> Add Restaurant Name </label>
+            <input type="text" id="restaurant_name">
+            <br><br>
+            <label for="restaurant_description"> Add description </label>
+            <textarea id="restaurant_description" name="restaurant_description" rows="4" cols="50"></textarea>
+            <br><br>
+            <!--choose image-->
+            <label for="add_pictures"> Add Pictures </label>
+            <form >
+                <input type="file" name="image" accept="image/*" />
+                <input type="submit" value="Upload" id="upload_btn"/>
+            </form>
+            <label for="address"> Add Address </label>
+            <input type="text" placeholder="address line 1" id="address_1">
+            <input type="text" placeholder="address line 2" id="address_2">
+            <input type="text" placeholder="address line 3" id="address_3">
+            <br><br>
+            <label for="address"> Select Cuisine(/s) </label>
+
+            <select id="dropdown-cuisine" multiple>
+                <option value="indian">Indian</option>
+                <option value="chinese">Chinese</option>
+                <option value="italian">Italian</option>
+                <option value="italian">Mexican</option>
+
+            </select>
+
+            
+            <!--button to specify add other cuisines-->
+            
+            <div id="add_cuisine_container">
+                <input type="text" placeholder="Add Cuisine" id="add_cuisine_txt_box">
+                <button id="add_cuisine_btn"> Add Cuisine </button>
+            </div>
+        
+    
+            
+
+            
+    
+       
+            <label for="open_hours"> Open Hours </label>
+            <br>
+
+            <div class="open_hrs_div">
+                <div class="open_hrs_div_left">
+                    <table class="open_hrs_table">
+                        <thead>
+                            <tr>
+                                <th class="open_hrs_th">DAY</th>
+                                <th class="open_hrs_th">Open time</th>
+                                <th class="open_hrs_th">Close time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><label class="td_day">Monday</label></td>
+                                <td><input type="text" class="td_time" id="td_time"></td>
+                                <td><input type="text" class="td_time" id="td_time"></td>
+                            </tr>
+                            <tr>
+                                <td><label class="td_day">Tuesday</label></td>
+                                <td><input type="text" class="td_time" id="td_time"></td>
+                                <td><input type="text" class="td_time" id="td_time"></td>
+                            </tr>
+                            <tr>
+                                <td><label class="td_day">Wednesday</label></td>
+                                <td><input type="text" class="td_time" id="td_time"></td>
+                                <td><input type="text" class="td_time" id="td_time"></td>
+                            </tr>
+                            <tr>
+                                <td><label class="td_day">Thursday</label></td>
+                                <td><input type="text" class="td_time" id="td_time"></td>
+                                <td><input type="text" class="td_time" id="td_time"></td>
+                            </tr>
+                            <tr>
+                                <td><label class="td_day">Friday</label></td>
+                                <td><input type="text" class="td_time" id="td_time"></td>
+                                <td><input type="text" class="td_time" id="td_time"></td>
+                            </tr>
+                            <tr>
+                                <td><label class="td_day">Saturday</label></td>
+                                <td><input type="text" class="td_time" id="td_time"></td>
+                                <td><input type="text" class="td_time" id="td_time"></td>
+                            </tr>
+                            <tr>
+                                <td><label class="td_day">Sunday</label></td>
+                                <td><input type="text" class="td_time" id="td_time"></td>
+                                <td><input type="text" class="td_time" id="td_time"></td>
+                            </tr>
+        
+                        </tbody>
+                    </table>
+                </div>
+                <div class="open_hrs_div_right">
+                    Tick the holidays business is open<br><br>
+                    <label class="checkbox-container"> Christmas
+                        <input type="checkbox">
+                        <span class="checkmark"></span></label>
+                        <label class="checkbox-container"> Good Friday
+                            <input type="checkbox">
+                            <span class="checkmark"></span></label>
+                            <label class="checkbox-container"> Easter Sunday
+                                <input type="checkbox">
+                                <span class="checkmark"></span></label>
+                                <label class="checkbox-container"> Australia Day
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span></label>
+                </div>
+            </div>
+      
+    
+
+           <br>
+           <label>Select all that Apply</label>
+            <label class="checkbox-container"> Takeaway available
+                 <input type="checkbox">
+                 <span class="checkmark"></span></label>
+                 <label class="checkbox-container"> Available on UberEats
+                    <input type="checkbox">
+                    <span class="checkmark"></span></label>
+
+            
+                 
+        
+            <button id="add-restaurant-btn">ADD RESTAURANT</button>
+
+        </div>
+     </div>
+     
+ </div>
+
+
+
+
+
+ <div class="up_container">
+ 
+ </div>
+
+
+{% endblock %}
