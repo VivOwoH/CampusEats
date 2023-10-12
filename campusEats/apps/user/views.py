@@ -73,3 +73,6 @@ def render_admin_dashboard(request):
 # for the rendering of the admin add resturants page
 def render_admin_add_restaurants(request):
     return render(request,'user/admin-add-restaurants.html')
+
+def render_admin_update_users(request):
+    return render(request,'user/admin-update-users.html')
