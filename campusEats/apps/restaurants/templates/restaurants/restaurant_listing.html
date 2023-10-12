@@ -12,47 +12,50 @@
 </head>
 
 <!--search box-->
-<div class="label_container"><label for="search_label"> Search Restaurants </label></div>
-<div class="search-wrapper">
-    <input id="search" type="search" placeholder="search restaurants, cafes near campus">
-    <a href="/search/all">
-        <button id="search_button" type="submit">search</button>
-    </a>
+<div class="search-container">
+    <div class="search-wrapper">
+        <input id="search" type="search" placeholder="search restaurants, cafes near campus">
+        <a href="/search/all">
+            <button id="search_button" type="submit">search</button>
+        </a>
+    </div>
+
+    <!--search filters-->
+    <nav>
+        <div class="dropdown_nav">
+            <div class="dropdown_filters">
+                <button class="dropbtn">Cuisine</button>
+                <div class="dropdown_items">
+                    <a href="#">Western</a>
+                    <a href="#">Italian</a>
+                    <a href="#">Indian</a>
+                    <a href="#">Chinese</a>
+                </div>
+            </div>
+            <div class="dropdown_filters">
+                <button class="dropbtn">Price</button>
+                <div class="dropdown_items">
+                    <a href="#">$</a>
+                    <a href="#">$$</a>
+                    <a href="#">$$$</a>
+                </div>
+            </div>
+            <div class="dropdown_filters">
+                <button class="dropbtn">Takeaway</button>
+            </div>
+            <div class="dropdown_filters">
+                <button class="dropbtn">Top Rated</button>
+            </div>
+        </div>
+    </nav>
 </div>
 
-<!--search filters-->
-<nav>
-    <div class="dropdown_nav">
-        <div class="dropdown_filters">
-            <button class="dropbtn">Cuisine</button>
-            <div class="dropdown_items">
-                <a href="#">Western</a>
-                <a href="#">Italian</a>
-                <a href="#">Indian</a>
-                <a href="#">Chinese</a>
-            </div>
-        </div>
-        <div class="dropdown_filters">
-            <button class="dropbtn">Price</button>
-            <div class="dropdown_items">
-                <a href="#">$</a>
-                <a href="#">$$</a>
-                <a href="#">$$$</a>
-            </div>
-        </div>
-        <div class="dropdown_filters">
-            <button class="dropbtn">Takeaway</button>
-        </div>
-        <div class="dropdown_filters">
-            <button class="dropbtn">Top Rated</button>
-        </div>
-    </div>
-</nav>
+<div class="label_container"><label for="search_label"> Search Results </label></div>
 
 
 {% for restaurant in restaurant_list %}
 <div class="restaurant-container">
-    <div class="restaurant-card">    
+    <div class="restaurant-card">
         <div class="restaurant-content">
             <div class="restaurant-details">
                 <div class="icon-text">
