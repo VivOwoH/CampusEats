@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.validators import RegexValidator  # Import RegexValidator here
 from enum import Enum
+from django.contrib.auth.hashers import make_password
 
 class UserType(Enum):
     USER = 'user'
@@ -58,6 +59,7 @@ class UserType(Enum):
 
 class CustomUser(models.Model):
     username = models.CharField(max_length=255)
+    # username = models.CharField(max_length=255, unique=True)
     email = models.EmailField(unique=True)
     password = models.CharField(max_length=255)
 
@@ -72,6 +74,14 @@ class CustomUser(models.Model):
 
         # Create a new CustomUser instance
         user = cls(username=username, email=email, password=password1)
+
+        # or
+        # Hash the password using Django's make_password
+        # hashed_password = make_password(password1)
+
+        # # Create a new CustomUser instance with the hashed password
+        # user = cls(username=username, email=email, password=hashed_password)
+
         user.save()
         return True  
 
@@ -96,3 +106,6 @@ class Bookmark(models.Model):
 #         constraints = [
 #             models.UniqueConstraint(fields=['UserID', 'RestaurantID'], name='unique_favourite_key')
 #         ]
+
+# python manage.py makemigrations
+# python manage.py migrate

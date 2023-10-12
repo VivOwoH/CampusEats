@@ -5,23 +5,35 @@ from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from django.http import HttpResponse
 from .models import *  # Import your models here
+from django.db import IntegrityError
+
+from .models import CustomUser  # Import your CustomUser model
 
 def user_login(request):
     if request.method == 'POST':
-        form = AuthenticationForm(request, request.POST)
-        if form.is_valid():
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
-            user = authenticate(username=username, password=password)
-            if user:
-                login(request, user)
-                messages.success(request, 'You have been successfully logged in.')
-                return redirect('dashboard')  # Redirect to the dashboard or any other desired page
-            else:
-                messages.error(request, 'Invalid username or password.')
-    else:
-        form = AuthenticationForm()
-    return render(request, 'user/base.html', {'form': form})
+        username_or_email = request.POST['id']  # This field can accept both username and email
+        password = request.POST['password']
+        print(username_or_email, password )
+        # Try to find a user with the provided username or email
+        # try:
+        #     user = CustomUser.objects.get(username=username_or_email)  # Try to match by username
+        #     print(user)
+        # except CustomUser.DoesNotExist:
+        try:
+            user = CustomUser.objects.get(email=username_or_email)  # Try to match by email
+            print(user)
+        except CustomUser.DoesNotExist:
+            user = None  # If user doesn't exist, set to None
+
+        if user and user.password == password:
+            # User authentication successful, log the user in (you may want to set a session variable)
+            return redirect('success')  # Redirect to a success page after login
+        else:
+            # Authentication failed, handle it (e.g., display an error message)
+            error_message = 'Invalid login credentials'
+            return render(request, 'user/login.html', {'error_message': error_message})
+
+    return render(request, 'user/login.html')
 
 
 
@@ -55,17 +67,27 @@ def user_register(request):
         password1 = request.POST['password1']
         password2 = request.POST['password2']
 
-        if CustomUser.register_user(username, email, password1, password2):
-            return redirect('success')  # Registration successful, redirect to success page
-        else:
-            # Registration failed, handle it (e.g., display an error message)
-            return render(request, 'user/register.html', {'error_message': 'Registration failed'})
+        try:
+            if CustomUser.register_user(username, email, password1, password2):
+                return redirect('success')  # Registration successful, redirect to success page
+            else:
+                error_message = 'Registration failed'
+                # Render the page and trigger the JavaScript function to show the error popup
+                return render(request, 'user/register.html', {'error_message': error_message})
+        except IntegrityError as e:
+            # Handle the integrity constraint violation (e.g., email already exists)
+            error_message = 'Email already exists'
+            # Render the page and trigger the JavaScript function to show the error popup
+            return render(request, 'user/register.html', {'error_message': error_message})
     return render(request, 'user/register.html')
+
 
 def user_list(request):
     # Query all users from the CustomUser model
     users = CustomUser.objects.all()
-    print("idk", users)
+    print("idk", users[4].email)
+    print("idk", users[4].password)
+
     # Pass the list of users to the template
     return render(request, 'user/success.html', {'users': users})
 
@@ -79,7 +101,7 @@ def render_admin_dashboard(request):
 # for the rendering of the admin add resturants page
 def render_admin_add_restaurants(request):
     return render(request,'user/admin-add-restaurants.html')
-    users = CustomUser.objects.all()
-    print("idk", users)
-    # Pass the list of users to the template
-    return render(request, 'user/success.html', {'users': users})
+    # users = CustomUser.objects.all()
+    # print("idk", users)
+    # # Pass the list of users to the template
+    # return render(request, 'user/success.html', {'users': users})
