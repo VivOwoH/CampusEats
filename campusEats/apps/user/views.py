@@ -6,7 +6,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.http import HttpResponse
 from .models import *  # Import your models here
 from django.db import IntegrityError
-
+from django.contrib.auth.hashers import check_password
 from .models import CustomUser  # Import your CustomUser model
 
 def user_login(request):
@@ -20,12 +20,14 @@ def user_login(request):
         #     print(user)
         # except CustomUser.DoesNotExist:
         try:
-            user = CustomUser.objects.get(email=username_or_email)  # Try to match by email
-            print(user)
+            user = CustomUser.objects.get(username=username_or_email)  # Try to match by username
         except CustomUser.DoesNotExist:
-            user = None  # If user doesn't exist, set to None
+            try:
+                user = CustomUser.objects.get(email=username_or_email)  # Try to match by email
+            except CustomUser.DoesNotExist:
+                user = None  # If user doesn't exist, set to None
 
-        if user and user.password == password:
+        if user and (user.password == password or check_password(password, user.password)):
             # User authentication successful, log the user in (you may want to set a session variable)
             return redirect('success')  # Redirect to a success page after login
         else:
@@ -34,6 +36,7 @@ def user_login(request):
             return render(request, 'user/login.html', {'error_message': error_message})
 
     return render(request, 'user/login.html')
+
 
 
 
@@ -85,8 +88,6 @@ def user_register(request):
 def user_list(request):
     # Query all users from the CustomUser model
     users = CustomUser.objects.all()
-    print("idk", users[4].email)
-    print("idk", users[4].password)
 
     # Pass the list of users to the template
     return render(request, 'user/success.html', {'users': users})

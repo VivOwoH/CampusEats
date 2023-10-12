@@ -6,6 +6,8 @@ from django.contrib.auth.hashers import make_password
 class UserType(Enum):
     USER = 'user'
     ADMIN = 'admin'
+    BLOGGER = 'blogger'
+
 
 # from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 # # from django.db import models
@@ -58,10 +60,16 @@ class UserType(Enum):
 #         return self.email
 
 class CustomUser(models.Model):
-    username = models.CharField(max_length=255)
-    # username = models.CharField(max_length=255, unique=True)
+    username = models.CharField(max_length=255, unique=True)
     email = models.EmailField(unique=True)
     password = models.CharField(max_length=255)
+    display_name = models.CharField(max_length=255, blank=True, null=True)
+    user_type = models.CharField(
+        max_length=10,
+        choices=[(user_type.value, user_type.name) for user_type in UserType],
+        default=UserType.USER.value
+    )
+
 
     def __str__(self):
         return self.username
@@ -77,11 +85,11 @@ class CustomUser(models.Model):
 
         # or
         # Hash the password using Django's make_password
-        # hashed_password = make_password(password1)
+        hashed_password = make_password(password1)
 
-        # # Create a new CustomUser instance with the hashed password
-        # user = cls(username=username, email=email, password=hashed_password)
-
+        # Create a new CustomUser instance with the hashed password
+        user = cls(username=username, email=email, password=hashed_password)
+        display_name = username
         user.save()
         return True  
 

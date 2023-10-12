@@ -41,15 +41,8 @@ INSTALLED_APPS = [
     'apps.restaurants.apps.RestaurantsConfig',
     'apps.review',
     'apps.user',
-    'django.contrib.sites',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.google',
 ]
 
-SITE_ID = 1
-SOCIALACCOUNT_LOGIN_ON_GET=True
 
 
 # 'apps.user.apps.UserConfig',  # Use the full path to the UserConfig
@@ -147,7 +140,6 @@ LOGIN_URL = 'login'
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend',
 ]
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
@@ -160,9 +152,6 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
 }
-
-LOGIN_REDIRECT_URL = 'login'
-LOGOUT_REDIRECT_URL = '/'
 
 import os
 STATICFILES_DIRS = (
