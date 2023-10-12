@@ -37,8 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.user.apps.UserConfig',
+    #'apps.user.apps.UserConfig',
     'apps.restaurants.apps.RestaurantsConfig',
+    'apps.review',
+    'apps.user',
 ]
 
 # 'apps.user.apps.UserConfig',  # Use the full path to the UserConfig
