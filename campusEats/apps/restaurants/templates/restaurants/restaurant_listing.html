@@ -1,0 +1,83 @@
+<!-- user/register.html -->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Restaurants - Search results{% endblock %}
+
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'restaurants/restaurant_listing.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+</head>
+
+<!--search box-->
+<div class="label_container"><label for="search_label"> Search Restaurants </label></div>
+<div class="search-wrapper">
+    <input id="search" type="search" placeholder="search restaurants, cafes near campus">
+    <a href="/search/all">
+        <button id="search_button" type="submit">search</button>
+    </a>
+</div>
+
+<!--search filters-->
+<nav>
+    <div class="dropdown_nav">
+        <div class="dropdown_filters">
+            <button class="dropbtn">Cuisine</button>
+            <div class="dropdown_items">
+                <a href="#">Western</a>
+                <a href="#">Italian</a>
+                <a href="#">Indian</a>
+                <a href="#">Chinese</a>
+            </div>
+        </div>
+        <div class="dropdown_filters">
+            <button class="dropbtn">Price</button>
+            <div class="dropdown_items">
+                <a href="#">$</a>
+                <a href="#">$$</a>
+                <a href="#">$$$</a>
+            </div>
+        </div>
+        <div class="dropdown_filters">
+            <button class="dropbtn">Takeaway</button>
+        </div>
+        <div class="dropdown_filters">
+            <button class="dropbtn">Top Rated</button>
+        </div>
+    </div>
+</nav>
+
+
+{% for restaurant in restaurant_list %}
+<div class="restaurant-container">
+    <div class="restaurant-card">    
+        <div class="restaurant-content">
+            <div class="restaurant-details">
+                <div class="icon-text">
+                    <span class="icon"><i class="ri-message-line"></i></span>
+                    <span class="text">22</span> <!-- placeholder for number of review -->
+                </div>
+                <div class="icon-text">
+                    <span class="icon"><i class="ri-hearts-line"></i></span>
+                    <span class="text">100</span> <!-- placeholder for number of user fav this restaurant -->
+                </div>
+            </div>
+
+            <h2 class="restaurant-title">{{ restaurant.Name }}</h2>
+            <p class="restaurant-description">{{ restaurant.Description }}</p>
+
+            <div class="restaurant-cta">
+                <a href="" class="button">Learn more</a>
+            </div>
+        </div>
+        <div class="restaurant-image">
+            <img src="{{ restaurant.ImageURL }}" alt="{{ restaurant.Name }}">
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+
+{% endblock %}
