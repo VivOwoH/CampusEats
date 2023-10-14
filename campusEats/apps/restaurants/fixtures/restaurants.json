@@ -1,0 +1,24 @@
+[
+  {
+      "model": "restaurants.Restaurant",
+      "pk": 1,
+      "fields": {
+          "Name": "My Restaurant 1",
+          "Location": "123 Main Street",
+          "Description": "This is a great restaurant.",
+          "ImageURL": "https://as1.ftcdn.net/v2/jpg/03/24/73/92/1000_F_324739203_keeq8udvv0P2h1MLYJ0GLSlTBagoXS48.jpg",
+          "Rating": 4.5  
+      }
+  },
+  {
+      "model": "restaurants.Restaurant",
+      "pk": 2,
+      "fields": {
+          "Name": "Your Restaurant 1",
+          "Location": "456 Elm Street",
+          "Description": "This is another great restaurant.",
+          "ImageURL": "https://as1.ftcdn.net/v2/jpg/03/24/73/92/1000_F_324739203_keeq8udvv0P2h1MLYJ0GLSlTBagoXS48.jpg",
+          "Rating": 3.75  
+      }
+  }
+]

@@ -37,13 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.user.apps.UserConfig',
-    'apps.restaurants.apps.RestaurantsConfig'
-    # 'user.UserConfig',
-    # 'apps.restaurants',
-
-    
+    #'apps.user.apps.UserConfig',
+    'apps.restaurants',
+    'apps.review',
+    'apps.user',
 ]
+
+
 
 # 'apps.user.apps.UserConfig',  # Use the full path to the UserConfig
     # 'apps.restaurants.apps.RestaurantsConfig',
@@ -141,6 +141,18 @@ LOGIN_URL = 'login'
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }
+    }
+}
+
 import os
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'assets'),

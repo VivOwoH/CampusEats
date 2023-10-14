@@ -69,7 +69,9 @@
   <div class="search-wrapper">
      
      <input id="search" type="search" placeholder="search restaurants, cafes near campus">
-     <button id="search_button" type="submit">search</button>
+     <a href="/search/all">
+        <button id="search_button" type="submit">search</button>
+     </a>
   </div>
 
 
@@ -110,7 +112,7 @@
 
 <!--Need to make the cards dynamic--> 
 
-<div class="cards">
+<!-- <div class="cards">
   <div class="card">
       <img src="" alt="" class="card_img">
       <div class="card_content">Content 1 </div>
@@ -159,9 +161,22 @@
           <a href="" class="card_link"> View Restuarant</a>
       </div>
   </div>
+</div> -->
+
+<!-- Loop through the list of restaurants -->
+<div class="cards">
+    {% for restaurant in restaurants %}
+        <div class="card">
+            <!-- Display restaurant details dynamically -->
+            <img src="{{ restaurant.ImageURL }}" alt="" class="card_img">            
+            <div class="card_content">{{ restaurant.Name }}</div>
+            <div class="card_info"> 
+                <div>Rating: {{ restaurant.Rating }}</div>
+                <a  href="{% url 'restaurant_detail' restaurant_id=restaurant.RestaurantID %}" class="card_link">View Restaurant</a>
+            </div>
+        </div>
+    {% endfor %}
 </div>
-</div>
- 
 
 
 {% endblock %}
