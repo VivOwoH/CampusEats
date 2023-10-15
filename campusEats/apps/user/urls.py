@@ -11,8 +11,6 @@ urlpatterns = [
     path('success/', views.render_success, name='success'),
     path('register/admin/', views.render_admin_dashboard, name='admin_dashboard'),
     path('register/admin/add-restaurants/', views.render_admin_add_restaurants, name='add_restaurants'),
-    path('register/admin/update-users/', views.render_admin_update_users, name='update_users')
-,
     path('userlist/', views.user_list, name='user list'),
     path('access-denied/', views.access_denied, name='access_denied'),
 

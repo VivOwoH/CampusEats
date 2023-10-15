@@ -7,20 +7,22 @@
 
 {% block content %}
 
+
+
 <!--image carousel-->
 <div class="image-carousel">
-  <div class="carousel-container" style="height:800px">
+  <div class="carousel-container" style="height:700px; display: flex; justify-content: center; align-items: center;">
 
       <div class="slides fade">
-        <img src="{% static 'restaurants/restaurant1.jpg' %}" style="width:100%; height:800px">
+        <img src="{% static 'restaurants/restaurant1.jpg' %}" style="width:95%; height:700px">
       </div>
       
       <div class="slides fade">
-        <img src="{% static 'restaurants/restaurant2.jpg' %}" style="width:100%; height:800px">
+        <img src="{% static 'restaurants/restaurant2.jpg' %}" style="width:95%; height:700px">
       </div>
       
       <div class="slides fade">
-        <img src="{% static 'restaurants/restaurants3.jpg' %}"style="width:100%; height:800px"> 
+        <img src="{% static 'restaurants/restaurants3.jpg' %}"style="width:95%; height:700px"> 
       </div>
       
       </div>
@@ -166,7 +168,7 @@
 <!-- Loop through the list of restaurants -->
 <div class="cards">
     {% for restaurant in restaurants %}
-        <div class="card">
+        <div class="card" data-name="{{ restaurant.Name }}">
             <!-- Display restaurant details dynamically -->
             <img src="{{ restaurant.ImageURL }}" alt="" class="card_img">            
             <div class="card_content">{{ restaurant.Name }}</div>
@@ -177,6 +179,5 @@
         </div>
     {% endfor %}
 </div>
-
 
 {% endblock %}
