@@ -37,8 +37,15 @@ def create_fixture(data):
         description = ", ".join(place.get("types", []))
 
         # Extract the URL from the first HTML attribution
-        html_attributions = place.get("photos", [{}])[0].get("html_attributions", [])
-        image_url = extract_url_from_html(html_attributions[0]) if html_attributions else ""
+        # html_attributions = place.get("photos", [{}])[0].get("html_attributions", [])
+        # image_url = extract_url_from_html(html_attributions[0]) if html_attributions else ""
+
+        photo_reference = place.get("photos", [{}])[0].get("photo_reference", "")
+        if photo_reference:
+            # Construct the image URL
+            image_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference={photo_reference}&key={api_key}"
+        else:
+            image_url = ""
 
         rating = place.get("rating", None)
 
@@ -96,12 +103,21 @@ if __name__ == "__main__":
         # image_url = place.get("photos", [{}])[0].get("html_attributions", [])
         # Extract the ImageURL from html_attributions
         # Extract the URL from the first HTML attribution
-        html_attributions = place.get("photos", [{}])[0].get("html_attributions", [])
-        image_url = extract_url_from_html(html_attributions[0]) if html_attributions else ""
+        # html_attributions = place.get("photos", [{}])[0].get("html_attributions", [])
+        # image_url = extract_url_from_html(html_attributions[0]) if html_attributions else ""
+        # Extract the Image URL
+        photo_reference = place.get("photos", [{}])[0].get("photo_reference", "")
+        if photo_reference:
+            # Construct the image URL
+            image_url = f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference={photo_reference}&key={api_key}"
+        else:
+            image_url = ""
+
 
 
         # Use the retrieved data as needed
         print(f"Name: {name}, Location: {location}, Description: {description}, Image URL: {image_url}")
+        
         break
 
 # // python manage.py loaddata apps/restaurants/fixtures/restaurants.json
