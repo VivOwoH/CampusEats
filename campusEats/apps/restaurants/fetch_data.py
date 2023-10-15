@@ -1,6 +1,5 @@
 import requests
 import json
-# from models import *
 import re
 
 def fetch_place_details(api_key, place_id):
@@ -78,10 +77,6 @@ def create_fixture(input_file, output_file, api_key):
             open_dates = "\n".join(opening_hours)
         else:
             open_dates = "Opening hours not available."
-
-            
-        # is_open = place.get("opening_hours", {}).get("open_now", False)
-        # open_dates = place.get("open_dates", [])
 
         phone = place.get("formatted_phone_number", "")
         price_level = place.get("price_level", None)
@@ -180,12 +175,8 @@ if __name__ == "__main__":
         place_id = place.get("place_id")
         if place_id:
             details = fetch_place_details(api_key, place_id)
-            # print(details)
-            # break
             if details:
                 # Extract the last three fields
-                # print(details)
-                # break
                 formatted_phone_number = details.get("formatted_phone_number", "")
                 is_open = details.get("opening_hours", {}).get("open_now")
             
@@ -199,8 +190,6 @@ if __name__ == "__main__":
 
                 # Extract additional fields
                 price_level = details.get("price_level")
-                                # Extract additional fields
-                # price_level = details.get("price_level")
                 takeout = details.get("takeout")
                 dine_in = details.get("dine_in")
                 delivery = details.get("delivery")
@@ -213,7 +202,6 @@ if __name__ == "__main__":
                 # Append the new fields to the existing data
                 place["formatted_phone_number"] = formatted_phone_number
                 place["is_open"] = is_open
-                # place["open_dates"] = opening_hours
                 place["price_level"] = price_level if price_level is not None else None
                 place["takeout"] = takeout
                 place["dine_in"] = dine_in
@@ -223,12 +211,9 @@ if __name__ == "__main__":
                 place["serves_wine"] = serves_wine
                 place["serves_beer"] = serves_beer
                 place["open_dates"] = open_dates
-                # print(f"Name: {place['is_open']}, hours: {place['open_dates']}")
 
 
             restaurant_details.append(place)
-            # print(restaurant_details)
-            # break
 
     # Write the restaurant details to a new JSON fixture file
     with open("restaurant_details_fixture.json", "w") as details_file:
@@ -237,7 +222,7 @@ if __name__ == "__main__":
     output_file = "fixtures/restaurants.json"
 
     create_fixture(input_file, output_file, api_key)
-    print(len(restaurant_details))
+    # print(len(restaurant_details))
 
 
 
