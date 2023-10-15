@@ -2,6 +2,7 @@ from django.db import models
 from django.core.validators import RegexValidator  # Import RegexValidator here
 from enum import Enum
 from django.contrib.auth.hashers import make_password
+from apps.restaurants.models import Restaurant
 
 class UserType(Enum):
     USER = 'user'
@@ -41,15 +42,15 @@ class CustomUser(models.Model):
         user = cls(username=username, email=email, password=hashed_password)
         display_name = username
         user.save()
-        return True  
+        return True
 
 
-class Restaurant(models.Model):
-    RestaurantID = models.AutoField(primary_key=True)
-    Name = models.CharField(max_length=255, null=False)
-    Location = models.CharField(max_length=255, null=True)
-    Description = models.CharField(max_length=255, null=True)
-    ImageURL = models.CharField(max_length=255, null=True)
+# class Restaurant(models.Model):
+#     RestaurantID = models.AutoField(primary_key=True)
+#     Name = models.CharField(max_length=255, null=False)
+#     Location = models.CharField(max_length=255, null=True)
+#     Description = models.CharField(max_length=255, null=True)
+#     ImageURL = models.CharField(max_length=255, null=True)
 
 
 class Bookmark(models.Model):
