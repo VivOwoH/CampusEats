@@ -166,7 +166,15 @@
     {% for restaurant in restaurants %}
         <div class="card">
             <!-- Display restaurant details dynamically -->
-            <img src="{{ restaurant.ImageURL }}" alt="" class="card_img">            
+            <!-- <img src="{{ restaurant.ImageURL }}" alt="" class="card_img">   -->
+            <!-- <iframe class="card_img"
+                width="600"
+                height="450"
+                frameborder="0" style="border:0"
+                src="{{ restaurant.ImageURL }}"
+                allowfullscreen></iframe> -->
+            <img src="https://maps.google.com/maps/contrib/114475675902935599843/photo.jpg" alt="Contributor's Profile Picture" width="100" height="100">
+
             <div class="card_content">{{ restaurant.Name }}</div>
             <div class="card_info"> 
                 <div>Rating: {{ restaurant.Rating }}</div>
