@@ -1,0 +1,2680 @@
+[
+  {
+    "address_components": [
+      {
+        "long_name": "359",
+        "short_name": "359",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Crown Street",
+        "short_name": "Crown St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Surry Hills",
+        "short_name": "Surry Hills",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "City of Sydney",
+        "short_name": "City of Sydney",
+        "types": [
+          "administrative_area_level_2",
+          "political"
+        ]
+      },
+      {
+        "long_name": "New South Wales",
+        "short_name": "NSW",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Australia",
+        "short_name": "AU",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "2010",
+        "short_name": "2010",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "formatted_phone_number": "(02) 8302 1000",
+    "name": "Adina Apartment Hotel Sydney Surry Hills",
+    "opening_hours": {
+      "open_now": true,
+      "periods": [
+        {
+          "open": {
+            "day": 0,
+            "time": "0000"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: Open 24 hours",
+        "Tuesday: Open 24 hours",
+        "Wednesday: Open 24 hours",
+        "Thursday: Open 24 hours",
+        "Friday: Open 24 hours",
+        "Saturday: Open 24 hours",
+        "Sunday: Open 24 hours"
+      ]
+    },
+    "rating": 4.2
+  },
+  {
+    "address_components": [
+      {
+        "long_name": "86",
+        "short_name": "86",
+        "types": [
+          "subpremise"
+        ]
+      },
+      {
+        "long_name": "88",
+        "short_name": "88",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Chalmers Street",
+        "short_name": "Chalmers St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Surry Hills",
+        "short_name": "Surry Hills",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "City of Sydney",
+        "short_name": "City of Sydney",
+        "types": [
+          "administrative_area_level_2",
+          "political"
+        ]
+      },
+      {
+        "long_name": "New South Wales",
+        "short_name": "NSW",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Australia",
+        "short_name": "AU",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "2010",
+        "short_name": "2010",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "formatted_phone_number": "(02) 9698 2607",
+    "name": "Royal Exhibition Hotel",
+    "opening_hours": {
+      "open_now": true,
+      "periods": [
+        {
+          "close": {
+            "day": 1,
+            "time": "0000"
+          },
+          "open": {
+            "day": 0,
+            "time": "1000"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "0400"
+          },
+          "open": {
+            "day": 1,
+            "time": "1000"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "0400"
+          },
+          "open": {
+            "day": 2,
+            "time": "1000"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "0400"
+          },
+          "open": {
+            "day": 3,
+            "time": "1000"
+          }
+        },
+        {
+          "close": {
+            "day": 5,
+            "time": "0400"
+          },
+          "open": {
+            "day": 4,
+            "time": "1000"
+          }
+        },
+        {
+          "close": {
+            "day": 6,
+            "time": "0600"
+          },
+          "open": {
+            "day": 5,
+            "time": "1000"
+          }
+        },
+        {
+          "close": {
+            "day": 0,
+            "time": "0500"
+          },
+          "open": {
+            "day": 6,
+            "time": "0900"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: 10:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+        "Tuesday: 10:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+        "Wednesday: 10:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+        "Thursday: 10:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+        "Friday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fAM",
+        "Saturday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fAM",
+        "Sunday: 10:00\u202fAM\u2009\u2013\u200912:00\u202fAM"
+      ]
+    },
+    "rating": 3.8
+  },
+  {
+    "address_components": [
+      {
+        "long_name": "111",
+        "short_name": "111",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Goulburn Street",
+        "short_name": "Goulburn St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Sydney",
+        "short_name": "Sydney",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "City of Sydney",
+        "short_name": "City of Sydney",
+        "types": [
+          "administrative_area_level_2",
+          "political"
+        ]
+      },
+      {
+        "long_name": "New South Wales",
+        "short_name": "NSW",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Australia",
+        "short_name": "AU",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "2000",
+        "short_name": "2000",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "formatted_phone_number": "(02) 8272 3300",
+    "name": "Vibe Hotel Sydney",
+    "opening_hours": {
+      "open_now": true,
+      "periods": [
+        {
+          "open": {
+            "day": 0,
+            "time": "0000"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: Open 24 hours",
+        "Tuesday: Open 24 hours",
+        "Wednesday: Open 24 hours",
+        "Thursday: Open 24 hours",
+        "Friday: Open 24 hours",
+        "Saturday: Open 24 hours",
+        "Sunday: Open 24 hours"
+      ]
+    },
+    "rating": 3.9
+  },
+  {
+    "address_components": [
+      {
+        "long_name": "431-439",
+        "short_name": "431-439",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Pitt Street",
+        "short_name": "Pitt St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Haymarket",
+        "short_name": "Haymarket",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "City of Sydney",
+        "short_name": "City of Sydney",
+        "types": [
+          "administrative_area_level_2",
+          "political"
+        ]
+      },
+      {
+        "long_name": "New South Wales",
+        "short_name": "NSW",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Australia",
+        "short_name": "AU",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "2000",
+        "short_name": "2000",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "formatted_phone_number": "(02) 9281 6999",
+    "name": "Metro Hotel Marlow Sydney Central",
+    "rating": 3.6
+  },
+  {
+    "address_components": [
+      {
+        "long_name": "200",
+        "short_name": "200",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Devonshire Street",
+        "short_name": "Devonshire St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Surry Hills",
+        "short_name": "Surry Hills",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "City of Sydney",
+        "short_name": "City of Sydney",
+        "types": [
+          "administrative_area_level_2",
+          "political"
+        ]
+      },
+      {
+        "long_name": "New South Wales",
+        "short_name": "NSW",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Australia",
+        "short_name": "AU",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "2010",
+        "short_name": "2010",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "formatted_phone_number": "(02) 9319 6883",
+    "name": "Shakespeare Hotel",
+    "opening_hours": {
+      "open_now": true,
+      "periods": [
+        {
+          "close": {
+            "day": 0,
+            "time": "2200"
+          },
+          "open": {
+            "day": 0,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "0000"
+          },
+          "open": {
+            "day": 1,
+            "time": "1600"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "0000"
+          },
+          "open": {
+            "day": 2,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "0000"
+          },
+          "open": {
+            "day": 3,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 5,
+            "time": "0000"
+          },
+          "open": {
+            "day": 4,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 6,
+            "time": "0000"
+          },
+          "open": {
+            "day": 5,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 0,
+            "time": "0000"
+          },
+          "open": {
+            "day": 6,
+            "time": "1200"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: 4:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+        "Tuesday: 12:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+        "Wednesday: 12:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+        "Thursday: 12:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+        "Friday: 12:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+        "Saturday: 12:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+        "Sunday: 12:00\u2009\u2013\u200910:00\u202fPM"
+      ]
+    },
+    "rating": 4.3
+  },
+  {
+    "address_components": [
+      {
+        "long_name": "90",
+        "short_name": "90",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Wentworth Avenue",
+        "short_name": "Wentworth Ave",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Surry Hills",
+        "short_name": "Surry Hills",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "City of Sydney",
+        "short_name": "City of Sydney",
+        "types": [
+          "administrative_area_level_2",
+          "political"
+        ]
+      },
+      {
+        "long_name": "New South Wales",
+        "short_name": "NSW",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Australia",
+        "short_name": "AU",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "2010",
+        "short_name": "2010",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "formatted_phone_number": "(02) 9280 0928",
+    "name": "Spice I Am",
+    "opening_hours": {
+      "open_now": true,
+      "periods": [
+        {
+          "close": {
+            "day": 0,
+            "time": "1500"
+          },
+          "open": {
+            "day": 0,
+            "time": "1130"
+          }
+        },
+        {
+          "close": {
+            "day": 0,
+            "time": "2100"
+          },
+          "open": {
+            "day": 0,
+            "time": "1730"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "2100"
+          },
+          "open": {
+            "day": 2,
+            "time": "1730"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "1500"
+          },
+          "open": {
+            "day": 3,
+            "time": "1130"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "2100"
+          },
+          "open": {
+            "day": 3,
+            "time": "1730"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "1500"
+          },
+          "open": {
+            "day": 4,
+            "time": "1130"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "2100"
+          },
+          "open": {
+            "day": 4,
+            "time": "1730"
+          }
+        },
+        {
+          "close": {
+            "day": 5,
+            "time": "1500"
+          },
+          "open": {
+            "day": 5,
+            "time": "1130"
+          }
+        },
+        {
+          "close": {
+            "day": 5,
+            "time": "2100"
+          },
+          "open": {
+            "day": 5,
+            "time": "1730"
+          }
+        },
+        {
+          "close": {
+            "day": 6,
+            "time": "1500"
+          },
+          "open": {
+            "day": 6,
+            "time": "1130"
+          }
+        },
+        {
+          "close": {
+            "day": 6,
+            "time": "2100"
+          },
+          "open": {
+            "day": 6,
+            "time": "1730"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: Closed",
+        "Tuesday: 5:30\u2009\u2013\u20099:00\u202fPM",
+        "Wednesday: 11:30\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:30\u2009\u2013\u20099:00\u202fPM",
+        "Thursday: 11:30\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:30\u2009\u2013\u20099:00\u202fPM",
+        "Friday: 11:30\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:30\u2009\u2013\u20099:00\u202fPM",
+        "Saturday: 11:30\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:30\u2009\u2013\u20099:00\u202fPM",
+        "Sunday: 11:30\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:30\u2009\u2013\u20099:00\u202fPM"
+      ]
+    },
+    "rating": 4.2
+  },
+  {
+    "address_components": [
+      {
+        "long_name": "162",
+        "short_name": "162",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Flinders Street",
+        "short_name": "Flinders St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Paddington",
+        "short_name": "Paddington",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "City of Sydney",
+        "short_name": "City of Sydney",
+        "types": [
+          "administrative_area_level_2",
+          "political"
+        ]
+      },
+      {
+        "long_name": "New South Wales",
+        "short_name": "NSW",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Australia",
+        "short_name": "AU",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "2021",
+        "short_name": "2021",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "formatted_phone_number": "(02) 9539 5859",
+    "name": "Captain Cook Hotel Paddington",
+    "opening_hours": {
+      "open_now": true,
+      "periods": [
+        {
+          "close": {
+            "day": 1,
+            "time": "0000"
+          },
+          "open": {
+            "day": 0,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "0000"
+          },
+          "open": {
+            "day": 1,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "0000"
+          },
+          "open": {
+            "day": 2,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "0000"
+          },
+          "open": {
+            "day": 3,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 5,
+            "time": "0100"
+          },
+          "open": {
+            "day": 4,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 6,
+            "time": "0100"
+          },
+          "open": {
+            "day": 5,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 0,
+            "time": "0100"
+          },
+          "open": {
+            "day": 6,
+            "time": "1200"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: 12:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+        "Tuesday: 12:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+        "Wednesday: 12:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+        "Thursday: 12:00\u202fPM\u2009\u2013\u20091:00\u202fAM",
+        "Friday: 12:00\u202fPM\u2009\u2013\u20091:00\u202fAM",
+        "Saturday: 12:00\u202fPM\u2009\u2013\u20091:00\u202fAM",
+        "Sunday: 12:00\u202fPM\u2009\u2013\u200912:00\u202fAM"
+      ]
+    },
+    "rating": 3.8
+  },
+  {
+    "address_components": [
+      {
+        "long_name": "20",
+        "short_name": "20",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Campbell Street",
+        "short_name": "Campbell St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Haymarket",
+        "short_name": "Haymarket",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "City of Sydney",
+        "short_name": "City of Sydney",
+        "types": [
+          "administrative_area_level_2",
+          "political"
+        ]
+      },
+      {
+        "long_name": "New South Wales",
+        "short_name": "NSW",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Australia",
+        "short_name": "AU",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "2000",
+        "short_name": "2000",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "formatted_phone_number": "(02) 9211 1808",
+    "name": "Chat Thai",
+    "opening_hours": {
+      "open_now": true,
+      "periods": [
+        {
+          "close": {
+            "day": 0,
+            "time": "2200"
+          },
+          "open": {
+            "day": 0,
+            "time": "1000"
+          }
+        },
+        {
+          "close": {
+            "day": 1,
+            "time": "2200"
+          },
+          "open": {
+            "day": 1,
+            "time": "1000"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "2200"
+          },
+          "open": {
+            "day": 2,
+            "time": "1000"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "2200"
+          },
+          "open": {
+            "day": 3,
+            "time": "1000"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "2200"
+          },
+          "open": {
+            "day": 4,
+            "time": "1000"
+          }
+        },
+        {
+          "close": {
+            "day": 5,
+            "time": "2200"
+          },
+          "open": {
+            "day": 5,
+            "time": "1000"
+          }
+        },
+        {
+          "close": {
+            "day": 6,
+            "time": "2200"
+          },
+          "open": {
+            "day": 6,
+            "time": "1000"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: 10:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+        "Tuesday: 10:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+        "Wednesday: 10:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+        "Thursday: 10:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+        "Friday: 10:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+        "Saturday: 10:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+        "Sunday: 10:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
+      ]
+    },
+    "rating": 4.1
+  },
+  {
+    "address_components": [
+      {
+        "long_name": "413",
+        "short_name": "413",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Pitt Street",
+        "short_name": "Pitt St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Haymarket",
+        "short_name": "Haymarket",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "City of Sydney",
+        "short_name": "City of Sydney",
+        "types": [
+          "administrative_area_level_2",
+          "political"
+        ]
+      },
+      {
+        "long_name": "New South Wales",
+        "short_name": "NSW",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Australia",
+        "short_name": "AU",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "2000",
+        "short_name": "2000",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "formatted_phone_number": "(02) 9211 1194",
+    "name": "Thanon Khaosan",
+    "opening_hours": {
+      "open_now": true,
+      "periods": [
+        {
+          "close": {
+            "day": 0,
+            "time": "2300"
+          },
+          "open": {
+            "day": 0,
+            "time": "1130"
+          }
+        },
+        {
+          "close": {
+            "day": 1,
+            "time": "2300"
+          },
+          "open": {
+            "day": 1,
+            "time": "1130"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "2300"
+          },
+          "open": {
+            "day": 2,
+            "time": "1130"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "2300"
+          },
+          "open": {
+            "day": 3,
+            "time": "1130"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "2300"
+          },
+          "open": {
+            "day": 4,
+            "time": "1130"
+          }
+        },
+        {
+          "close": {
+            "day": 5,
+            "time": "2300"
+          },
+          "open": {
+            "day": 5,
+            "time": "1130"
+          }
+        },
+        {
+          "close": {
+            "day": 6,
+            "time": "2300"
+          },
+          "open": {
+            "day": 6,
+            "time": "1130"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: 11:30\u202fAM\u2009\u2013\u200911:00\u202fPM",
+        "Tuesday: 11:30\u202fAM\u2009\u2013\u200911:00\u202fPM",
+        "Wednesday: 11:30\u202fAM\u2009\u2013\u200911:00\u202fPM",
+        "Thursday: 11:30\u202fAM\u2009\u2013\u200911:00\u202fPM",
+        "Friday: 11:30\u202fAM\u2009\u2013\u200911:00\u202fPM",
+        "Saturday: 11:30\u202fAM\u2009\u2013\u200911:00\u202fPM",
+        "Sunday: 11:30\u202fAM\u2009\u2013\u200911:00\u202fPM"
+      ]
+    },
+    "rating": 4
+  },
+  {
+    "address_components": [
+      {
+        "long_name": "24",
+        "short_name": "24",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Campbell Street",
+        "short_name": "Campbell St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Haymarket",
+        "short_name": "Haymarket",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "City of Sydney",
+        "short_name": "City of Sydney",
+        "types": [
+          "administrative_area_level_2",
+          "political"
+        ]
+      },
+      {
+        "long_name": "New South Wales",
+        "short_name": "NSW",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Australia",
+        "short_name": "AU",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "2000",
+        "short_name": "2000",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "formatted_phone_number": "0407 714 832",
+    "name": "Roden Cutler House",
+    "opening_hours": {
+      "open_now": true,
+      "periods": [
+        {
+          "close": {
+            "day": 0,
+            "time": "1600"
+          },
+          "open": {
+            "day": 0,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 0,
+            "time": "2000"
+          },
+          "open": {
+            "day": 0,
+            "time": "1700"
+          }
+        },
+        {
+          "close": {
+            "day": 1,
+            "time": "1900"
+          },
+          "open": {
+            "day": 1,
+            "time": "1000"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "1900"
+          },
+          "open": {
+            "day": 2,
+            "time": "1000"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "1900"
+          },
+          "open": {
+            "day": 3,
+            "time": "1000"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "1900"
+          },
+          "open": {
+            "day": 4,
+            "time": "1000"
+          }
+        },
+        {
+          "close": {
+            "day": 5,
+            "time": "2000"
+          },
+          "open": {
+            "day": 5,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 6,
+            "time": "2000"
+          },
+          "open": {
+            "day": 6,
+            "time": "1200"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+        "Tuesday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+        "Wednesday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+        "Thursday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+        "Friday: 12:00\u2009\u2013\u20098:00\u202fPM",
+        "Saturday: 12:00\u2009\u2013\u20098:00\u202fPM",
+        "Sunday: 12:00\u2009\u2013\u20094:00\u202fPM, 5:00\u2009\u2013\u20098:00\u202fPM"
+      ]
+    },
+    "rating": 4.6
+  },
+  {
+    "address_components": [
+      {
+        "long_name": "285A",
+        "short_name": "285A",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Crown Street",
+        "short_name": "Crown St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Surry Hills",
+        "short_name": "Surry Hills",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "City of Sydney",
+        "short_name": "City of Sydney",
+        "types": [
+          "administrative_area_level_2",
+          "political"
+        ]
+      },
+      {
+        "long_name": "New South Wales",
+        "short_name": "NSW",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Australia",
+        "short_name": "AU",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "2010",
+        "short_name": "2010",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "formatted_phone_number": "(02) 8322 2007",
+    "name": "The Winery",
+    "opening_hours": {
+      "open_now": true,
+      "periods": [
+        {
+          "close": {
+            "day": 0,
+            "time": "2300"
+          },
+          "open": {
+            "day": 0,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 1,
+            "time": "2300"
+          },
+          "open": {
+            "day": 1,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "2300"
+          },
+          "open": {
+            "day": 2,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "2300"
+          },
+          "open": {
+            "day": 3,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "2300"
+          },
+          "open": {
+            "day": 4,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 6,
+            "time": "0000"
+          },
+          "open": {
+            "day": 5,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 0,
+            "time": "0000"
+          },
+          "open": {
+            "day": 6,
+            "time": "1200"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: 12:00\u2009\u2013\u200911:00\u202fPM",
+        "Tuesday: 12:00\u2009\u2013\u200911:00\u202fPM",
+        "Wednesday: 12:00\u2009\u2013\u200911:00\u202fPM",
+        "Thursday: 12:00\u2009\u2013\u200911:00\u202fPM",
+        "Friday: 12:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+        "Saturday: 12:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+        "Sunday: 12:00\u2009\u2013\u200911:00\u202fPM"
+      ]
+    },
+    "rating": 4.3
+  },
+  {
+    "address_components": [
+      {
+        "long_name": "767\u2013769",
+        "short_name": "767\u2013769",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "George Street",
+        "short_name": "George St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Haymarket",
+        "short_name": "Haymarket",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "City of Sydney",
+        "short_name": "City of Sydney",
+        "types": [
+          "administrative_area_level_2",
+          "political"
+        ]
+      },
+      {
+        "long_name": "New South Wales",
+        "short_name": "NSW",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Australia",
+        "short_name": "AU",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "2000",
+        "short_name": "2000",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "formatted_phone_number": "(02) 8668 4676",
+    "name": "It's Time For Thai",
+    "opening_hours": {
+      "open_now": true,
+      "periods": [
+        {
+          "close": {
+            "day": 0,
+            "time": "2200"
+          },
+          "open": {
+            "day": 0,
+            "time": "1100"
+          }
+        },
+        {
+          "close": {
+            "day": 1,
+            "time": "2200"
+          },
+          "open": {
+            "day": 1,
+            "time": "1100"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "2200"
+          },
+          "open": {
+            "day": 2,
+            "time": "1100"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "2200"
+          },
+          "open": {
+            "day": 3,
+            "time": "1100"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "2200"
+          },
+          "open": {
+            "day": 4,
+            "time": "1100"
+          }
+        },
+        {
+          "close": {
+            "day": 5,
+            "time": "2200"
+          },
+          "open": {
+            "day": 5,
+            "time": "1100"
+          }
+        },
+        {
+          "close": {
+            "day": 6,
+            "time": "2200"
+          },
+          "open": {
+            "day": 6,
+            "time": "1100"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+        "Tuesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+        "Wednesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+        "Thursday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+        "Friday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+        "Saturday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+        "Sunday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
+      ]
+    },
+    "rating": 4.2
+  },
+  {
+    "address_components": [
+      {
+        "long_name": "411",
+        "short_name": "411",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Cleveland Street",
+        "short_name": "Cleveland St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Redfern",
+        "short_name": "Redfern",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "City of Sydney",
+        "short_name": "City of Sydney",
+        "types": [
+          "administrative_area_level_2",
+          "political"
+        ]
+      },
+      {
+        "long_name": "New South Wales",
+        "short_name": "NSW",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Australia",
+        "short_name": "AU",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "2016",
+        "short_name": "2016",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "formatted_phone_number": "(02) 9319 5027",
+    "name": "bp",
+    "opening_hours": {
+      "open_now": true,
+      "periods": [
+        {
+          "open": {
+            "day": 0,
+            "time": "0000"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: Open 24 hours",
+        "Tuesday: Open 24 hours",
+        "Wednesday: Open 24 hours",
+        "Thursday: Open 24 hours",
+        "Friday: Open 24 hours",
+        "Saturday: Open 24 hours",
+        "Sunday: Open 24 hours"
+      ]
+    },
+    "rating": 3.3
+  },
+  {
+    "address_components": [
+      {
+        "long_name": "428",
+        "short_name": "428",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Pitt Street",
+        "short_name": "Pitt St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Haymarket",
+        "short_name": "Haymarket",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "City of Sydney",
+        "short_name": "City of Sydney",
+        "types": [
+          "administrative_area_level_2",
+          "political"
+        ]
+      },
+      {
+        "long_name": "New South Wales",
+        "short_name": "NSW",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Australia",
+        "short_name": "AU",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "2000",
+        "short_name": "2000",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "formatted_phone_number": "(02) 9288 0888",
+    "name": "Chamberlain Hotel (C-Bar)",
+    "opening_hours": {
+      "open_now": true,
+      "periods": [
+        {
+          "close": {
+            "day": 1,
+            "time": "0000"
+          },
+          "open": {
+            "day": 0,
+            "time": "1000"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "0400"
+          },
+          "open": {
+            "day": 1,
+            "time": "1000"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "0400"
+          },
+          "open": {
+            "day": 2,
+            "time": "1000"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "0400"
+          },
+          "open": {
+            "day": 3,
+            "time": "1000"
+          }
+        },
+        {
+          "close": {
+            "day": 5,
+            "time": "0400"
+          },
+          "open": {
+            "day": 4,
+            "time": "1000"
+          }
+        },
+        {
+          "close": {
+            "day": 6,
+            "time": "0400"
+          },
+          "open": {
+            "day": 5,
+            "time": "1000"
+          }
+        },
+        {
+          "close": {
+            "day": 0,
+            "time": "0400"
+          },
+          "open": {
+            "day": 6,
+            "time": "1000"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: 10:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+        "Tuesday: 10:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+        "Wednesday: 10:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+        "Thursday: 10:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+        "Friday: 10:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+        "Saturday: 10:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+        "Sunday: 10:00\u202fAM\u2009\u2013\u200912:00\u202fAM"
+      ]
+    },
+    "rating": 4
+  },
+  {
+    "address_components": [
+      {
+        "long_name": "4",
+        "short_name": "4",
+        "types": [
+          "subpremise"
+        ]
+      },
+      {
+        "long_name": "50",
+        "short_name": "50",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Holt Street",
+        "short_name": "Holt St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Surry Hills",
+        "short_name": "Surry Hills",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "City of Sydney",
+        "short_name": "City of Sydney",
+        "types": [
+          "administrative_area_level_2",
+          "political"
+        ]
+      },
+      {
+        "long_name": "New South Wales",
+        "short_name": "NSW",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Australia",
+        "short_name": "AU",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "2010",
+        "short_name": "2010",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "formatted_phone_number": "(02) 9212 7766",
+    "name": "WyNo X Bodega",
+    "opening_hours": {
+      "open_now": false,
+      "periods": [
+        {
+          "close": {
+            "day": 2,
+            "time": "2230"
+          },
+          "open": {
+            "day": 2,
+            "time": "1630"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "2230"
+          },
+          "open": {
+            "day": 3,
+            "time": "1630"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "2230"
+          },
+          "open": {
+            "day": 4,
+            "time": "1630"
+          }
+        },
+        {
+          "close": {
+            "day": 5,
+            "time": "2230"
+          },
+          "open": {
+            "day": 5,
+            "time": "1630"
+          }
+        },
+        {
+          "close": {
+            "day": 6,
+            "time": "2230"
+          },
+          "open": {
+            "day": 6,
+            "time": "1630"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: Closed",
+        "Tuesday: 4:30\u2009\u2013\u200910:30\u202fPM",
+        "Wednesday: 4:30\u2009\u2013\u200910:30\u202fPM",
+        "Thursday: 4:30\u2009\u2013\u200910:30\u202fPM",
+        "Friday: 4:30\u2009\u2013\u200910:30\u202fPM",
+        "Saturday: 4:30\u2009\u2013\u200910:30\u202fPM",
+        "Sunday: Closed"
+      ]
+    },
+    "rating": 4.4
+  },
+  {
+    "address_components": [
+      {
+        "long_name": "140",
+        "short_name": "140",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Commonwealth Street",
+        "short_name": "Commonwealth St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Surry Hills",
+        "short_name": "Surry Hills",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "City of Sydney",
+        "short_name": "City of Sydney",
+        "types": [
+          "administrative_area_level_2",
+          "political"
+        ]
+      },
+      {
+        "long_name": "New South Wales",
+        "short_name": "NSW",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Australia",
+        "short_name": "AU",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "2010",
+        "short_name": "2010",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "formatted_phone_number": "(02) 9281 2522",
+    "name": "Bamboo Dumpling Bar",
+    "opening_hours": {
+      "open_now": true,
+      "periods": [
+        {
+          "close": {
+            "day": 0,
+            "time": "2200"
+          },
+          "open": {
+            "day": 0,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 1,
+            "time": "1500"
+          },
+          "open": {
+            "day": 1,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 1,
+            "time": "2100"
+          },
+          "open": {
+            "day": 1,
+            "time": "1700"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "1500"
+          },
+          "open": {
+            "day": 2,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "2100"
+          },
+          "open": {
+            "day": 2,
+            "time": "1700"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "1500"
+          },
+          "open": {
+            "day": 3,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "2100"
+          },
+          "open": {
+            "day": 3,
+            "time": "1700"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "2200"
+          },
+          "open": {
+            "day": 4,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 5,
+            "time": "2200"
+          },
+          "open": {
+            "day": 5,
+            "time": "1200"
+          }
+        },
+        {
+          "close": {
+            "day": 6,
+            "time": "2200"
+          },
+          "open": {
+            "day": 6,
+            "time": "1200"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: 12:00\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u20099:00\u202fPM",
+        "Tuesday: 12:00\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u20099:00\u202fPM",
+        "Wednesday: 12:00\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u20099:00\u202fPM",
+        "Thursday: 12:00\u2009\u2013\u200910:00\u202fPM",
+        "Friday: 12:00\u2009\u2013\u200910:00\u202fPM",
+        "Saturday: 12:00\u2009\u2013\u200910:00\u202fPM",
+        "Sunday: 12:00\u2009\u2013\u200910:00\u202fPM"
+      ]
+    },
+    "rating": 3.5
+  },
+  {
+    "address_components": [
+      {
+        "long_name": "60-64",
+        "short_name": "60-64",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Reservoir Street",
+        "short_name": "Reservoir St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Surry Hills",
+        "short_name": "Surry Hills",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "City of Sydney",
+        "short_name": "City of Sydney",
+        "types": [
+          "administrative_area_level_2",
+          "political"
+        ]
+      },
+      {
+        "long_name": "New South Wales",
+        "short_name": "NSW",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Australia",
+        "short_name": "AU",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "2010",
+        "short_name": "2010",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "formatted_phone_number": "(02) 9211 0665",
+    "name": "Single O Surry Hills",
+    "opening_hours": {
+      "open_now": true,
+      "periods": [
+        {
+          "close": {
+            "day": 0,
+            "time": "1500"
+          },
+          "open": {
+            "day": 0,
+            "time": "0800"
+          }
+        },
+        {
+          "close": {
+            "day": 1,
+            "time": "1500"
+          },
+          "open": {
+            "day": 1,
+            "time": "0700"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "1500"
+          },
+          "open": {
+            "day": 2,
+            "time": "0700"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "1500"
+          },
+          "open": {
+            "day": 3,
+            "time": "0700"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "1500"
+          },
+          "open": {
+            "day": 4,
+            "time": "0700"
+          }
+        },
+        {
+          "close": {
+            "day": 5,
+            "time": "1500"
+          },
+          "open": {
+            "day": 5,
+            "time": "0700"
+          }
+        },
+        {
+          "close": {
+            "day": 6,
+            "time": "1500"
+          },
+          "open": {
+            "day": 6,
+            "time": "0800"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: 7:00\u202fAM\u2009\u2013\u20093:00\u202fPM",
+        "Tuesday: 7:00\u202fAM\u2009\u2013\u20093:00\u202fPM",
+        "Wednesday: 7:00\u202fAM\u2009\u2013\u20093:00\u202fPM",
+        "Thursday: 7:00\u202fAM\u2009\u2013\u20093:00\u202fPM",
+        "Friday: 7:00\u202fAM\u2009\u2013\u20093:00\u202fPM",
+        "Saturday: 8:00\u202fAM\u2009\u2013\u20093:00\u202fPM",
+        "Sunday: 8:00\u202fAM\u2009\u2013\u20093:00\u202fPM"
+      ]
+    },
+    "rating": 4.6
+  },
+  {
+    "address_components": [
+      {
+        "long_name": "453",
+        "short_name": "453",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Elizabeth Street",
+        "short_name": "Elizabeth St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Surry Hills",
+        "short_name": "Surry Hills",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "City of Sydney",
+        "short_name": "City of Sydney",
+        "types": [
+          "administrative_area_level_2",
+          "political"
+        ]
+      },
+      {
+        "long_name": "New South Wales",
+        "short_name": "NSW",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Australia",
+        "short_name": "AU",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "2010",
+        "short_name": "2010",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "formatted_phone_number": "(02) 9699 3355",
+    "name": "The Strawberry",
+    "opening_hours": {
+      "open_now": true,
+      "periods": [
+        {
+          "close": {
+            "day": 1,
+            "time": "0000"
+          },
+          "open": {
+            "day": 0,
+            "time": "1000"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "0600"
+          },
+          "open": {
+            "day": 1,
+            "time": "0900"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "0600"
+          },
+          "open": {
+            "day": 2,
+            "time": "0900"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "0600"
+          },
+          "open": {
+            "day": 3,
+            "time": "0900"
+          }
+        },
+        {
+          "close": {
+            "day": 5,
+            "time": "0600"
+          },
+          "open": {
+            "day": 4,
+            "time": "0900"
+          }
+        },
+        {
+          "close": {
+            "day": 6,
+            "time": "0600"
+          },
+          "open": {
+            "day": 5,
+            "time": "0900"
+          }
+        },
+        {
+          "close": {
+            "day": 0,
+            "time": "0500"
+          },
+          "open": {
+            "day": 6,
+            "time": "0900"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM",
+        "Tuesday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM",
+        "Wednesday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM",
+        "Thursday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM",
+        "Friday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM",
+        "Saturday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fAM",
+        "Sunday: 10:00\u202fAM\u2009\u2013\u200912:00\u202fAM"
+      ]
+    },
+    "rating": 4
+  },
+  {
+    "address_components": [
+      {
+        "long_name": "633",
+        "short_name": "633",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Bourke Street",
+        "short_name": "Bourke St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Surry Hills",
+        "short_name": "Surry Hills",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "City of Sydney",
+        "short_name": "City of Sydney",
+        "types": [
+          "administrative_area_level_2",
+          "political"
+        ]
+      },
+      {
+        "long_name": "New South Wales",
+        "short_name": "NSW",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Australia",
+        "short_name": "AU",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "2010",
+        "short_name": "2010",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "formatted_phone_number": "(02) 9699 1011",
+    "name": "Bourke Street Bakery Surry Hills",
+    "opening_hours": {
+      "open_now": true,
+      "periods": [
+        {
+          "close": {
+            "day": 0,
+            "time": "1700"
+          },
+          "open": {
+            "day": 0,
+            "time": "0700"
+          }
+        },
+        {
+          "close": {
+            "day": 1,
+            "time": "1800"
+          },
+          "open": {
+            "day": 1,
+            "time": "0700"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "1800"
+          },
+          "open": {
+            "day": 2,
+            "time": "0700"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "1800"
+          },
+          "open": {
+            "day": 3,
+            "time": "0700"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "1800"
+          },
+          "open": {
+            "day": 4,
+            "time": "0700"
+          }
+        },
+        {
+          "close": {
+            "day": 5,
+            "time": "1800"
+          },
+          "open": {
+            "day": 5,
+            "time": "0700"
+          }
+        },
+        {
+          "close": {
+            "day": 6,
+            "time": "1700"
+          },
+          "open": {
+            "day": 6,
+            "time": "0700"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: 7:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+        "Tuesday: 7:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+        "Wednesday: 7:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+        "Thursday: 7:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+        "Friday: 7:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+        "Saturday: 7:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+        "Sunday: 7:00\u202fAM\u2009\u2013\u20095:00\u202fPM"
+      ]
+    },
+    "rating": 4.5
+  },
+  {
+    "address_components": [
+      {
+        "long_name": "324",
+        "short_name": "324",
+        "types": [
+          "street_number"
+        ]
+      },
+      {
+        "long_name": "Elizabeth Street",
+        "short_name": "Elizabeth St",
+        "types": [
+          "route"
+        ]
+      },
+      {
+        "long_name": "Surry Hills",
+        "short_name": "Surry Hills",
+        "types": [
+          "locality",
+          "political"
+        ]
+      },
+      {
+        "long_name": "City of Sydney",
+        "short_name": "City of Sydney",
+        "types": [
+          "administrative_area_level_2",
+          "political"
+        ]
+      },
+      {
+        "long_name": "New South Wales",
+        "short_name": "NSW",
+        "types": [
+          "administrative_area_level_1",
+          "political"
+        ]
+      },
+      {
+        "long_name": "Australia",
+        "short_name": "AU",
+        "types": [
+          "country",
+          "political"
+        ]
+      },
+      {
+        "long_name": "2010",
+        "short_name": "2010",
+        "types": [
+          "postal_code"
+        ]
+      }
+    ],
+    "formatted_phone_number": "(02) 9211 3462",
+    "name": "Aurora Rooftop Hotel",
+    "opening_hours": {
+      "open_now": true,
+      "periods": [
+        {
+          "close": {
+            "day": 1,
+            "time": "0400"
+          },
+          "open": {
+            "day": 0,
+            "time": "0900"
+          }
+        },
+        {
+          "close": {
+            "day": 2,
+            "time": "0400"
+          },
+          "open": {
+            "day": 1,
+            "time": "0800"
+          }
+        },
+        {
+          "close": {
+            "day": 3,
+            "time": "0400"
+          },
+          "open": {
+            "day": 2,
+            "time": "0800"
+          }
+        },
+        {
+          "close": {
+            "day": 4,
+            "time": "0400"
+          },
+          "open": {
+            "day": 3,
+            "time": "0800"
+          }
+        },
+        {
+          "close": {
+            "day": 5,
+            "time": "0400"
+          },
+          "open": {
+            "day": 4,
+            "time": "0800"
+          }
+        },
+        {
+          "close": {
+            "day": 6,
+            "time": "0600"
+          },
+          "open": {
+            "day": 5,
+            "time": "0800"
+          }
+        },
+        {
+          "close": {
+            "day": 0,
+            "time": "0600"
+          },
+          "open": {
+            "day": 6,
+            "time": "0900"
+          }
+        }
+      ],
+      "weekday_text": [
+        "Monday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+        "Tuesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+        "Wednesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+        "Thursday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+        "Friday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fAM",
+        "Saturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM",
+        "Sunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fAM"
+      ]
+    },
+    "rating": 4
+  }
+]
