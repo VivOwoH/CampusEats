@@ -1,8 +1,68 @@
 <!-- restaurants/restaurant_detail.html -->
 
-<h1>{{ restaurant.Name }}</h1>
-<p>Location: {{ restaurant.Location }}</p>
-<p>Description: {{ restaurant.Description }}</p>
-<p>Image: <img src="{{ restaurant.ImageURL }}" alt="{{ restaurant.Name }}"></p>
+<!--link the style sheet-->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Welcome - My Website{% endblock %}
+
+
+{% block content %}
+
+
+
+<head>
+    <link rel="stylesheet" href="{% static 'restaurants/restaurant_details.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+
+</head>
+
+<body>
+
+
+    <div class="row">
+        <div class="column column_1">
+ 
+          <div class="img-container">
+            <img src="{{ restaurant.ImageURL }}" alt="{{ restaurant.Name }}">
+        </div>
+        <div class="button-container">
+            <button class="review-btn">Add Review</button>
+        </div>
+        
+        </div>
+        <div class="column column_2">
+        <div class="bookmark-container">
+            <a href="#" class="bookmark-link">
+                <i class="fa fa-bookmark"></i> Bookmark
+              </a>
+        </div>
+        <div class="name-container">
+            <h1>{{ restaurant.Name }}</h1>
+        </div>
+
+        <div class="address-container">
+            <span class="location-icon"><i class="fas fa-map-marker-alt"></i></span>
+            {{ restaurant.Location }}
+            <br><br>
+            <div class="descr-container">{{ restaurant.Description }}</div>
+        </div>
+
+        
+        
+
+        
+        
+    
+        </div>
+      </div>
+
+</body>
+
 
 <!-- Add more details as needed -->
+
+{% endblock %}

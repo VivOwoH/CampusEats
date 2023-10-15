@@ -1,7 +1,7 @@
 // get search input
 var searchInput = document.getElementById('search');
 
-// Add event listener to the oinput serachInput field
+// Add event listener to the input serachInput field
 searchInput.addEventListener('input', filterRestaurants);
 
 function filterRestaurants(){

@@ -63,7 +63,7 @@
           </script>  
 </div>
 
-<div class="section1_container">
+
   <!--search box-->
     
   <div class="label_container"><label for="search_label" > Search Restaurants </label></div>
@@ -170,12 +170,15 @@
     {% for restaurant in restaurants %}
         <div class="card" data-name="{{ restaurant.Name }}">
             <!-- Display restaurant details dynamically -->
-            <img src="{{ restaurant.ImageURL }}" alt="" class="card_img">            
-            <div class="card_content">{{ restaurant.Name }}</div>
-            <div class="card_info"> 
-                <div>Rating: {{ restaurant.Rating }}</div>
-                <a  href="{% url 'restaurant_detail' restaurant_id=restaurant.RestaurantID %}" class="card_link">View Restaurant</a>
-            </div>
+            
+            <a  href="{% url 'restaurant_detail' restaurant_id=restaurant.RestaurantID %}" class="card_link">
+                <img src="{{ restaurant.ImageURL }}" alt="" class="card_img">
+                <div class="card_content">{{ restaurant.Name }}</div>
+                <div class="card_info"> 
+                    <div>Rating: {{ restaurant.Rating }}</div> 
+                </div>
+            </a>            
+            
         </div>
     {% endfor %}
 </div>
