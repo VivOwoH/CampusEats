@@ -16,3 +16,7 @@ def render_home(request):
 def restaurant_detail(request, restaurant_id):
     restaurant = get_object_or_404(Restaurant, pk=restaurant_id)
     return render(request, 'restaurants/restaurant_detail.html', {'restaurant': restaurant})
+
+def restaurant_list_view(request):
+    restaurant_list = get_all_restaurants()
+    return render(request, 'restaurants/restaurant_listing.html', {'restaurant_list': restaurant_list})
