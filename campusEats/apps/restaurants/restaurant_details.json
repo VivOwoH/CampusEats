@@ -1,60 +1,5 @@
 [
   {
-    "address_components": [
-      {
-        "long_name": "359",
-        "short_name": "359",
-        "types": [
-          "street_number"
-        ]
-      },
-      {
-        "long_name": "Crown Street",
-        "short_name": "Crown St",
-        "types": [
-          "route"
-        ]
-      },
-      {
-        "long_name": "Surry Hills",
-        "short_name": "Surry Hills",
-        "types": [
-          "locality",
-          "political"
-        ]
-      },
-      {
-        "long_name": "City of Sydney",
-        "short_name": "City of Sydney",
-        "types": [
-          "administrative_area_level_2",
-          "political"
-        ]
-      },
-      {
-        "long_name": "New South Wales",
-        "short_name": "NSW",
-        "types": [
-          "administrative_area_level_1",
-          "political"
-        ]
-      },
-      {
-        "long_name": "Australia",
-        "short_name": "AU",
-        "types": [
-          "country",
-          "political"
-        ]
-      },
-      {
-        "long_name": "2010",
-        "short_name": "2010",
-        "types": [
-          "postal_code"
-        ]
-      }
-    ],
     "formatted_phone_number": "(02) 8302 1000",
     "name": "Adina Apartment Hotel Sydney Surry Hills",
     "opening_hours": {
@@ -80,68 +25,6 @@
     "rating": 4.2
   },
   {
-    "address_components": [
-      {
-        "long_name": "86",
-        "short_name": "86",
-        "types": [
-          "subpremise"
-        ]
-      },
-      {
-        "long_name": "88",
-        "short_name": "88",
-        "types": [
-          "street_number"
-        ]
-      },
-      {
-        "long_name": "Chalmers Street",
-        "short_name": "Chalmers St",
-        "types": [
-          "route"
-        ]
-      },
-      {
-        "long_name": "Surry Hills",
-        "short_name": "Surry Hills",
-        "types": [
-          "locality",
-          "political"
-        ]
-      },
-      {
-        "long_name": "City of Sydney",
-        "short_name": "City of Sydney",
-        "types": [
-          "administrative_area_level_2",
-          "political"
-        ]
-      },
-      {
-        "long_name": "New South Wales",
-        "short_name": "NSW",
-        "types": [
-          "administrative_area_level_1",
-          "political"
-        ]
-      },
-      {
-        "long_name": "Australia",
-        "short_name": "AU",
-        "types": [
-          "country",
-          "political"
-        ]
-      },
-      {
-        "long_name": "2010",
-        "short_name": "2010",
-        "types": [
-          "postal_code"
-        ]
-      }
-    ],
     "formatted_phone_number": "(02) 9698 2607",
     "name": "Royal Exhibition Hotel",
     "opening_hours": {
@@ -231,61 +114,6 @@
     "rating": 3.8
   },
   {
-    "address_components": [
-      {
-        "long_name": "111",
-        "short_name": "111",
-        "types": [
-          "street_number"
-        ]
-      },
-      {
-        "long_name": "Goulburn Street",
-        "short_name": "Goulburn St",
-        "types": [
-          "route"
-        ]
-      },
-      {
-        "long_name": "Sydney",
-        "short_name": "Sydney",
-        "types": [
-          "locality",
-          "political"
-        ]
-      },
-      {
-        "long_name": "City of Sydney",
-        "short_name": "City of Sydney",
-        "types": [
-          "administrative_area_level_2",
-          "political"
-        ]
-      },
-      {
-        "long_name": "New South Wales",
-        "short_name": "NSW",
-        "types": [
-          "administrative_area_level_1",
-          "political"
-        ]
-      },
-      {
-        "long_name": "Australia",
-        "short_name": "AU",
-        "types": [
-          "country",
-          "political"
-        ]
-      },
-      {
-        "long_name": "2000",
-        "short_name": "2000",
-        "types": [
-          "postal_code"
-        ]
-      }
-    ],
     "formatted_phone_number": "(02) 8272 3300",
     "name": "Vibe Hotel Sydney",
     "opening_hours": {
@@ -311,121 +139,13 @@
     "rating": 3.9
   },
   {
-    "address_components": [
-      {
-        "long_name": "431-439",
-        "short_name": "431-439",
-        "types": [
-          "street_number"
-        ]
-      },
-      {
-        "long_name": "Pitt Street",
-        "short_name": "Pitt St",
-        "types": [
-          "route"
-        ]
-      },
-      {
-        "long_name": "Haymarket",
-        "short_name": "Haymarket",
-        "types": [
-          "locality",
-          "political"
-        ]
-      },
-      {
-        "long_name": "City of Sydney",
-        "short_name": "City of Sydney",
-        "types": [
-          "administrative_area_level_2",
-          "political"
-        ]
-      },
-      {
-        "long_name": "New South Wales",
-        "short_name": "NSW",
-        "types": [
-          "administrative_area_level_1",
-          "political"
-        ]
-      },
-      {
-        "long_name": "Australia",
-        "short_name": "AU",
-        "types": [
-          "country",
-          "political"
-        ]
-      },
-      {
-        "long_name": "2000",
-        "short_name": "2000",
-        "types": [
-          "postal_code"
-        ]
-      }
-    ],
     "formatted_phone_number": "(02) 9281 6999",
     "name": "Metro Hotel Marlow Sydney Central",
     "rating": 3.6
   },
   {
-    "address_components": [
-      {
-        "long_name": "200",
-        "short_name": "200",
-        "types": [
-          "street_number"
-        ]
-      },
-      {
-        "long_name": "Devonshire Street",
-        "short_name": "Devonshire St",
-        "types": [
-          "route"
-        ]
-      },
-      {
-        "long_name": "Surry Hills",
-        "short_name": "Surry Hills",
-        "types": [
-          "locality",
-          "political"
-        ]
-      },
-      {
-        "long_name": "City of Sydney",
-        "short_name": "City of Sydney",
-        "types": [
-          "administrative_area_level_2",
-          "political"
-        ]
-      },
-      {
-        "long_name": "New South Wales",
-        "short_name": "NSW",
-        "types": [
-          "administrative_area_level_1",
-          "political"
-        ]
-      },
-      {
-        "long_name": "Australia",
-        "short_name": "AU",
-        "types": [
-          "country",
-          "political"
-        ]
-      },
-      {
-        "long_name": "2010",
-        "short_name": "2010",
-        "types": [
-          "postal_code"
-        ]
-      }
-    ],
+    "delivery": false,
+    "dine_in": true,
     "formatted_phone_number": "(02) 9319 6883",
     "name": "Shakespeare Hotel",
     "opening_hours": {
@@ -512,68 +232,20 @@
         "Sunday: 12:00\u2009\u2013\u200910:00\u202fPM"
       ]
     },
-    "rating": 4.3
+    "price_level": 1,
+    "rating": 4.3,
+    "reservable": true,
+    "serves_beer": true,
+    "serves_wine": true,
+    "takeout": true
   },
   {
-    "address_components": [
-      {
-        "long_name": "90",
-        "short_name": "90",
-        "types": [
-          "street_number"
-        ]
-      },
-      {
-        "long_name": "Wentworth Avenue",
-        "short_name": "Wentworth Ave",
-        "types": [
-          "route"
-        ]
-      },
-      {
-        "long_name": "Surry Hills",
-        "short_name": "Surry Hills",
-        "types": [
-          "locality",
-          "political"
-        ]
-      },
-      {
-        "long_name": "City of Sydney",
-        "short_name": "City of Sydney",
-        "types": [
-          "administrative_area_level_2",
-          "political"
-        ]
-      },
-      {
-        "long_name": "New South Wales",
-        "short_name": "NSW",
-        "types": [
-          "administrative_area_level_1",
-          "political"
-        ]
-      },
-      {
-        "long_name": "Australia",
-        "short_name": "AU",
-        "types": [
-          "country",
-          "political"
-        ]
-      },
-      {
-        "long_name": "2010",
-        "short_name": "2010",
-        "types": [
-          "postal_code"
-        ]
-      }
-    ],
+    "delivery": true,
+    "dine_in": true,
     "formatted_phone_number": "(02) 9280 0928",
     "name": "Spice I Am",
     "opening_hours": {
-      "open_now": true,
+      "open_now": false,
       "periods": [
         {
           "close": {
@@ -696,64 +368,14 @@
         "Sunday: 11:30\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:30\u2009\u2013\u20099:00\u202fPM"
       ]
     },
-    "rating": 4.2
+    "price_level": 2,
+    "rating": 4.2,
+    "serves_beer": true,
+    "serves_wine": true,
+    "takeout": true
   },
   {
-    "address_components": [
-      {
-        "long_name": "162",
-        "short_name": "162",
-        "types": [
-          "street_number"
-        ]
-      },
-      {
-        "long_name": "Flinders Street",
-        "short_name": "Flinders St",
-        "types": [
-          "route"
-        ]
-      },
-      {
-        "long_name": "Paddington",
-        "short_name": "Paddington",
-        "types": [
-          "locality",
-          "political"
-        ]
-      },
-      {
-        "long_name": "City of Sydney",
-        "short_name": "City of Sydney",
-        "types": [
-          "administrative_area_level_2",
-          "political"
-        ]
-      },
-      {
-        "long_name": "New South Wales",
-        "short_name": "NSW",
-        "types": [
-          "administrative_area_level_1",
-          "political"
-        ]
-      },
-      {
-        "long_name": "Australia",
-        "short_name": "AU",
-        "types": [
-          "country",
-          "political"
-        ]
-      },
-      {
-        "long_name": "2021",
-        "short_name": "2021",
-        "types": [
-          "postal_code"
-        ]
-      }
-    ],
+    "delivery": false,
     "formatted_phone_number": "(02) 9539 5859",
     "name": "Captain Cook Hotel Paddington",
     "opening_hours": {
@@ -840,64 +462,15 @@
         "Sunday: 12:00\u202fPM\u2009\u2013\u200912:00\u202fAM"
       ]
     },
-    "rating": 3.8
+    "price_level": 1,
+    "rating": 3.8,
+    "serves_beer": true,
+    "serves_wine": true,
+    "takeout": true
   },
   {
-    "address_components": [
-      {
-        "long_name": "20",
-        "short_name": "20",
-        "types": [
-          "street_number"
-        ]
-      },
-      {
-        "long_name": "Campbell Street",
-        "short_name": "Campbell St",
-        "types": [
-          "route"
-        ]
-      },
-      {
-        "long_name": "Haymarket",
-        "short_name": "Haymarket",
-        "types": [
-          "locality",
-          "political"
-        ]
-      },
-      {
-        "long_name": "City of Sydney",
-        "short_name": "City of Sydney",
-        "types": [
-          "administrative_area_level_2",
-          "political"
-        ]
-      },
-      {
-        "long_name": "New South Wales",
-        "short_name": "NSW",
-        "types": [
-          "administrative_area_level_1",
-          "political"
-        ]
-      },
-      {
-        "long_name": "Australia",
-        "short_name": "AU",
-        "types": [
-          "country",
-          "political"
-        ]
-      },
-      {
-        "long_name": "2000",
-        "short_name": "2000",
-        "types": [
-          "postal_code"
-        ]
-      }
-    ],
+    "delivery": true,
+    "dine_in": true,
     "formatted_phone_number": "(02) 9211 1808",
     "name": "Chat Thai",
     "opening_hours": {
@@ -984,64 +557,17 @@
         "Sunday: 10:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
       ]
     },
-    "rating": 4.1
+    "price_level": 2,
+    "rating": 4.1,
+    "reservable": true,
+    "serves_beer": true,
+    "serves_vegetarian_food": true,
+    "serves_wine": true,
+    "takeout": true
   },
   {
-    "address_components": [
-      {
-        "long_name": "413",
-        "short_name": "413",
-        "types": [
-          "street_number"
-        ]
-      },
-      {
-        "long_name": "Pitt Street",
-        "short_name": "Pitt St",
-        "types": [
-          "route"
-        ]
-      },
-      {
-        "long_name": "Haymarket",
-        "short_name": "Haymarket",
-        "types": [
-          "locality",
-          "political"
-        ]
-      },
-      {
-        "long_name": "City of Sydney",
-        "short_name": "City of Sydney",
-        "types": [
-          "administrative_area_level_2",
-          "political"
-        ]
-      },
-      {
-        "long_name": "New South Wales",
-        "short_name": "NSW",
-        "types": [
-          "administrative_area_level_1",
-          "political"
-        ]
-      },
-      {
-        "long_name": "Australia",
-        "short_name": "AU",
-        "types": [
-          "country",
-          "political"
-        ]
-      },
-      {
-        "long_name": "2000",
-        "short_name": "2000",
-        "types": [
-          "postal_code"
-        ]
-      }
-    ],
+    "delivery": true,
+    "dine_in": true,
     "formatted_phone_number": "(02) 9211 1194",
     "name": "Thanon Khaosan",
     "opening_hours": {
@@ -1128,68 +654,20 @@
         "Sunday: 11:30\u202fAM\u2009\u2013\u200911:00\u202fPM"
       ]
     },
-    "rating": 4
+    "price_level": 2,
+    "rating": 4,
+    "reservable": true,
+    "serves_beer": true,
+    "serves_vegetarian_food": true,
+    "serves_wine": true,
+    "takeout": true
   },
   {
-    "address_components": [
-      {
-        "long_name": "24",
-        "short_name": "24",
-        "types": [
-          "street_number"
-        ]
-      },
-      {
-        "long_name": "Campbell Street",
-        "short_name": "Campbell St",
-        "types": [
-          "route"
-        ]
-      },
-      {
-        "long_name": "Haymarket",
-        "short_name": "Haymarket",
-        "types": [
-          "locality",
-          "political"
-        ]
-      },
-      {
-        "long_name": "City of Sydney",
-        "short_name": "City of Sydney",
-        "types": [
-          "administrative_area_level_2",
-          "political"
-        ]
-      },
-      {
-        "long_name": "New South Wales",
-        "short_name": "NSW",
-        "types": [
-          "administrative_area_level_1",
-          "political"
-        ]
-      },
-      {
-        "long_name": "Australia",
-        "short_name": "AU",
-        "types": [
-          "country",
-          "political"
-        ]
-      },
-      {
-        "long_name": "2000",
-        "short_name": "2000",
-        "types": [
-          "postal_code"
-        ]
-      }
-    ],
+    "dine_in": true,
     "formatted_phone_number": "0407 714 832",
     "name": "Roden Cutler House",
     "opening_hours": {
-      "open_now": true,
+      "open_now": false,
       "periods": [
         {
           "close": {
@@ -1282,64 +760,15 @@
         "Sunday: 12:00\u2009\u2013\u20094:00\u202fPM, 5:00\u2009\u2013\u20098:00\u202fPM"
       ]
     },
-    "rating": 4.6
+    "rating": 4.6,
+    "reservable": false,
+    "serves_beer": false,
+    "serves_wine": false,
+    "takeout": true
   },
   {
-    "address_components": [
-      {
-        "long_name": "285A",
-        "short_name": "285A",
-        "types": [
-          "street_number"
-        ]
-      },
-      {
-        "long_name": "Crown Street",
-        "short_name": "Crown St",
-        "types": [
-          "route"
-        ]
-      },
-      {
-        "long_name": "Surry Hills",
-        "short_name": "Surry Hills",
-        "types": [
-          "locality",
-          "political"
-        ]
-      },
-      {
-        "long_name": "City of Sydney",
-        "short_name": "City of Sydney",
-        "types": [
-          "administrative_area_level_2",
-          "political"
-        ]
-      },
-      {
-        "long_name": "New South Wales",
-        "short_name": "NSW",
-        "types": [
-          "administrative_area_level_1",
-          "political"
-        ]
-      },
-      {
-        "long_name": "Australia",
-        "short_name": "AU",
-        "types": [
-          "country",
-          "political"
-        ]
-      },
-      {
-        "long_name": "2010",
-        "short_name": "2010",
-        "types": [
-          "postal_code"
-        ]
-      }
-    ],
+    "delivery": false,
+    "dine_in": true,
     "formatted_phone_number": "(02) 8322 2007",
     "name": "The Winery",
     "opening_hours": {
@@ -1426,64 +855,16 @@
         "Sunday: 12:00\u2009\u2013\u200911:00\u202fPM"
       ]
     },
-    "rating": 4.3
+    "price_level": 3,
+    "rating": 4.3,
+    "reservable": true,
+    "serves_beer": true,
+    "serves_wine": true,
+    "takeout": false
   },
   {
-    "address_components": [
-      {
-        "long_name": "767\u2013769",
-        "short_name": "767\u2013769",
-        "types": [
-          "street_number"
-        ]
-      },
-      {
-        "long_name": "George Street",
-        "short_name": "George St",
-        "types": [
-          "route"
-        ]
-      },
-      {
-        "long_name": "Haymarket",
-        "short_name": "Haymarket",
-        "types": [
-          "locality",
-          "political"
-        ]
-      },
-      {
-        "long_name": "City of Sydney",
-        "short_name": "City of Sydney",
-        "types": [
-          "administrative_area_level_2",
-          "political"
-        ]
-      },
-      {
-        "long_name": "New South Wales",
-        "short_name": "NSW",
-        "types": [
-          "administrative_area_level_1",
-          "political"
-        ]
-      },
-      {
-        "long_name": "Australia",
-        "short_name": "AU",
-        "types": [
-          "country",
-          "political"
-        ]
-      },
-      {
-        "long_name": "2000",
-        "short_name": "2000",
-        "types": [
-          "postal_code"
-        ]
-      }
-    ],
+    "delivery": true,
+    "dine_in": true,
     "formatted_phone_number": "(02) 8668 4676",
     "name": "It's Time For Thai",
     "opening_hours": {
@@ -1570,64 +951,14 @@
         "Sunday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
       ]
     },
-    "rating": 4.2
+    "price_level": 1,
+    "rating": 4.2,
+    "reservable": true,
+    "serves_beer": false,
+    "serves_wine": false,
+    "takeout": true
   },
   {
-    "address_components": [
-      {
-        "long_name": "411",
-        "short_name": "411",
-        "types": [
-          "street_number"
-        ]
-      },
-      {
-        "long_name": "Cleveland Street",
-        "short_name": "Cleveland St",
-        "types": [
-          "route"
-        ]
-      },
-      {
-        "long_name": "Redfern",
-        "short_name": "Redfern",
-        "types": [
-          "locality",
-          "political"
-        ]
-      },
-      {
-        "long_name": "City of Sydney",
-        "short_name": "City of Sydney",
-        "types": [
-          "administrative_area_level_2",
-          "political"
-        ]
-      },
-      {
-        "long_name": "New South Wales",
-        "short_name": "NSW",
-        "types": [
-          "administrative_area_level_1",
-          "political"
-        ]
-      },
-      {
-        "long_name": "Australia",
-        "short_name": "AU",
-        "types": [
-          "country",
-          "political"
-        ]
-      },
-      {
-        "long_name": "2016",
-        "short_name": "2016",
-        "types": [
-          "postal_code"
-        ]
-      }
-    ],
     "formatted_phone_number": "(02) 9319 5027",
     "name": "bp",
     "opening_hours": {
@@ -1653,61 +984,8 @@
     "rating": 3.3
   },
   {
-    "address_components": [
-      {
-        "long_name": "428",
-        "short_name": "428",
-        "types": [
-          "street_number"
-        ]
-      },
-      {
-        "long_name": "Pitt Street",
-        "short_name": "Pitt St",
-        "types": [
-          "route"
-        ]
-      },
-      {
-        "long_name": "Haymarket",
-        "short_name": "Haymarket",
-        "types": [
-          "locality",
-          "political"
-        ]
-      },
-      {
-        "long_name": "City of Sydney",
-        "short_name": "City of Sydney",
-        "types": [
-          "administrative_area_level_2",
-          "political"
-        ]
-      },
-      {
-        "long_name": "New South Wales",
-        "short_name": "NSW",
-        "types": [
-          "administrative_area_level_1",
-          "political"
-        ]
-      },
-      {
-        "long_name": "Australia",
-        "short_name": "AU",
-        "types": [
-          "country",
-          "political"
-        ]
-      },
-      {
-        "long_name": "2000",
-        "short_name": "2000",
-        "types": [
-          "postal_code"
-        ]
-      }
-    ],
+    "delivery": false,
+    "dine_in": true,
     "formatted_phone_number": "(02) 9288 0888",
     "name": "Chamberlain Hotel (C-Bar)",
     "opening_hours": {
@@ -1794,71 +1072,16 @@
         "Sunday: 10:00\u202fAM\u2009\u2013\u200912:00\u202fAM"
       ]
     },
-    "rating": 4
+    "price_level": 2,
+    "rating": 4,
+    "reservable": true,
+    "serves_beer": true,
+    "serves_wine": true,
+    "takeout": true
   },
   {
-    "address_components": [
-      {
-        "long_name": "4",
-        "short_name": "4",
-        "types": [
-          "subpremise"
-        ]
-      },
-      {
-        "long_name": "50",
-        "short_name": "50",
-        "types": [
-          "street_number"
-        ]
-      },
-      {
-        "long_name": "Holt Street",
-        "short_name": "Holt St",
-        "types": [
-          "route"
-        ]
-      },
-      {
-        "long_name": "Surry Hills",
-        "short_name": "Surry Hills",
-        "types": [
-          "locality",
-          "political"
-        ]
-      },
-      {
-        "long_name": "City of Sydney",
-        "short_name": "City of Sydney",
-        "types": [
-          "administrative_area_level_2",
-          "political"
-        ]
-      },
-      {
-        "long_name": "New South Wales",
-        "short_name": "NSW",
-        "types": [
-          "administrative_area_level_1",
-          "political"
-        ]
-      },
-      {
-        "long_name": "Australia",
-        "short_name": "AU",
-        "types": [
-          "country",
-          "political"
-        ]
-      },
-      {
-        "long_name": "2010",
-        "short_name": "2010",
-        "types": [
-          "postal_code"
-        ]
-      }
-    ],
+    "delivery": false,
+    "dine_in": true,
     "formatted_phone_number": "(02) 9212 7766",
     "name": "WyNo X Bodega",
     "opening_hours": {
@@ -1925,64 +1148,14 @@
         "Sunday: Closed"
       ]
     },
-    "rating": 4.4
+    "price_level": 3,
+    "rating": 4.4,
+    "reservable": true,
+    "serves_beer": true,
+    "serves_wine": true
   },
   {
-    "address_components": [
-      {
-        "long_name": "140",
-        "short_name": "140",
-        "types": [
-          "street_number"
-        ]
-      },
-      {
-        "long_name": "Commonwealth Street",
-        "short_name": "Commonwealth St",
-        "types": [
-          "route"
-        ]
-      },
-      {
-        "long_name": "Surry Hills",
-        "short_name": "Surry Hills",
-        "types": [
-          "locality",
-          "political"
-        ]
-      },
-      {
-        "long_name": "City of Sydney",
-        "short_name": "City of Sydney",
-        "types": [
-          "administrative_area_level_2",
-          "political"
-        ]
-      },
-      {
-        "long_name": "New South Wales",
-        "short_name": "NSW",
-        "types": [
-          "administrative_area_level_1",
-          "political"
-        ]
-      },
-      {
-        "long_name": "Australia",
-        "short_name": "AU",
-        "types": [
-          "country",
-          "political"
-        ]
-      },
-      {
-        "long_name": "2010",
-        "short_name": "2010",
-        "types": [
-          "postal_code"
-        ]
-      }
-    ],
+    "dine_in": true,
     "formatted_phone_number": "(02) 9281 2522",
     "name": "Bamboo Dumpling Bar",
     "opening_hours": {
@@ -2099,68 +1272,20 @@
         "Sunday: 12:00\u2009\u2013\u200910:00\u202fPM"
       ]
     },
-    "rating": 3.5
+    "price_level": 2,
+    "rating": 3.5,
+    "reservable": true,
+    "serves_beer": true,
+    "serves_wine": true,
+    "takeout": true
   },
   {
-    "address_components": [
-      {
-        "long_name": "60-64",
-        "short_name": "60-64",
-        "types": [
-          "street_number"
-        ]
-      },
-      {
-        "long_name": "Reservoir Street",
-        "short_name": "Reservoir St",
-        "types": [
-          "route"
-        ]
-      },
-      {
-        "long_name": "Surry Hills",
-        "short_name": "Surry Hills",
-        "types": [
-          "locality",
-          "political"
-        ]
-      },
-      {
-        "long_name": "City of Sydney",
-        "short_name": "City of Sydney",
-        "types": [
-          "administrative_area_level_2",
-          "political"
-        ]
-      },
-      {
-        "long_name": "New South Wales",
-        "short_name": "NSW",
-        "types": [
-          "administrative_area_level_1",
-          "political"
-        ]
-      },
-      {
-        "long_name": "Australia",
-        "short_name": "AU",
-        "types": [
-          "country",
-          "political"
-        ]
-      },
-      {
-        "long_name": "2010",
-        "short_name": "2010",
-        "types": [
-          "postal_code"
-        ]
-      }
-    ],
+    "delivery": true,
+    "dine_in": true,
     "formatted_phone_number": "(02) 9211 0665",
     "name": "Single O Surry Hills",
     "opening_hours": {
-      "open_now": true,
+      "open_now": false,
       "periods": [
         {
           "close": {
@@ -2243,64 +1368,16 @@
         "Sunday: 8:00\u202fAM\u2009\u2013\u20093:00\u202fPM"
       ]
     },
-    "rating": 4.6
+    "price_level": 2,
+    "rating": 4.6,
+    "reservable": false,
+    "serves_beer": true,
+    "serves_vegetarian_food": true,
+    "takeout": true
   },
   {
-    "address_components": [
-      {
-        "long_name": "453",
-        "short_name": "453",
-        "types": [
-          "street_number"
-        ]
-      },
-      {
-        "long_name": "Elizabeth Street",
-        "short_name": "Elizabeth St",
-        "types": [
-          "route"
-        ]
-      },
-      {
-        "long_name": "Surry Hills",
-        "short_name": "Surry Hills",
-        "types": [
-          "locality",
-          "political"
-        ]
-      },
-      {
-        "long_name": "City of Sydney",
-        "short_name": "City of Sydney",
-        "types": [
-          "administrative_area_level_2",
-          "political"
-        ]
-      },
-      {
-        "long_name": "New South Wales",
-        "short_name": "NSW",
-        "types": [
-          "administrative_area_level_1",
-          "political"
-        ]
-      },
-      {
-        "long_name": "Australia",
-        "short_name": "AU",
-        "types": [
-          "country",
-          "political"
-        ]
-      },
-      {
-        "long_name": "2010",
-        "short_name": "2010",
-        "types": [
-          "postal_code"
-        ]
-      }
-    ],
+    "delivery": false,
+    "dine_in": true,
     "formatted_phone_number": "(02) 9699 3355",
     "name": "The Strawberry",
     "opening_hours": {
@@ -2387,64 +1464,16 @@
         "Sunday: 10:00\u202fAM\u2009\u2013\u200912:00\u202fAM"
       ]
     },
-    "rating": 4
+    "price_level": 1,
+    "rating": 4,
+    "reservable": true,
+    "serves_beer": true,
+    "serves_wine": true,
+    "takeout": true
   },
   {
-    "address_components": [
-      {
-        "long_name": "633",
-        "short_name": "633",
-        "types": [
-          "street_number"
-        ]
-      },
-      {
-        "long_name": "Bourke Street",
-        "short_name": "Bourke St",
-        "types": [
-          "route"
-        ]
-      },
-      {
-        "long_name": "Surry Hills",
-        "short_name": "Surry Hills",
-        "types": [
-          "locality",
-          "political"
-        ]
-      },
-      {
-        "long_name": "City of Sydney",
-        "short_name": "City of Sydney",
-        "types": [
-          "administrative_area_level_2",
-          "political"
-        ]
-      },
-      {
-        "long_name": "New South Wales",
-        "short_name": "NSW",
-        "types": [
-          "administrative_area_level_1",
-          "political"
-        ]
-      },
-      {
-        "long_name": "Australia",
-        "short_name": "AU",
-        "types": [
-          "country",
-          "political"
-        ]
-      },
-      {
-        "long_name": "2010",
-        "short_name": "2010",
-        "types": [
-          "postal_code"
-        ]
-      }
-    ],
+    "delivery": false,
+    "dine_in": true,
     "formatted_phone_number": "(02) 9699 1011",
     "name": "Bourke Street Bakery Surry Hills",
     "opening_hours": {
@@ -2531,64 +1560,14 @@
         "Sunday: 7:00\u202fAM\u2009\u2013\u20095:00\u202fPM"
       ]
     },
-    "rating": 4.5
+    "price_level": 2,
+    "rating": 4.5,
+    "serves_vegetarian_food": true,
+    "takeout": true
   },
   {
-    "address_components": [
-      {
-        "long_name": "324",
-        "short_name": "324",
-        "types": [
-          "street_number"
-        ]
-      },
-      {
-        "long_name": "Elizabeth Street",
-        "short_name": "Elizabeth St",
-        "types": [
-          "route"
-        ]
-      },
-      {
-        "long_name": "Surry Hills",
-        "short_name": "Surry Hills",
-        "types": [
-          "locality",
-          "political"
-        ]
-      },
-      {
-        "long_name": "City of Sydney",
-        "short_name": "City of Sydney",
-        "types": [
-          "administrative_area_level_2",
-          "political"
-        ]
-      },
-      {
-        "long_name": "New South Wales",
-        "short_name": "NSW",
-        "types": [
-          "administrative_area_level_1",
-          "political"
-        ]
-      },
-      {
-        "long_name": "Australia",
-        "short_name": "AU",
-        "types": [
-          "country",
-          "political"
-        ]
-      },
-      {
-        "long_name": "2010",
-        "short_name": "2010",
-        "types": [
-          "postal_code"
-        ]
-      }
-    ],
+    "delivery": true,
+    "dine_in": true,
     "formatted_phone_number": "(02) 9211 3462",
     "name": "Aurora Rooftop Hotel",
     "opening_hours": {
@@ -2675,6 +1654,11 @@
         "Sunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fAM"
       ]
     },
-    "rating": 4
+    "price_level": 2,
+    "rating": 4,
+    "reservable": true,
+    "serves_beer": true,
+    "serves_wine": true,
+    "takeout": false
   }
 ]

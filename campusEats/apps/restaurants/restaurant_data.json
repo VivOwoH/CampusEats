@@ -1,6 +1,6 @@
 {
   "html_attributions": [],
-  "next_page_token": "AcJnMuEIW1yMN9esVWGk1wl4GFCSLeiSLOErzxTs5n9JlA4og8J2S2OprXq1vLDPjFSBMqaOLUQ_-2D1kT8gRAoPqsFChI3A6wdyL8dZttRC38ZVJUoFhnGbAEwvJL63jkuiKjkAp7jgNVXkx4Ncr3j0j5KibXvIiTh5GikDKIffaWxjEU9I1LiNxBzWNBEHImCN0OFPqjAsmIAKtph5Y2kJiMmGhyZb9k-bLWyiB8g8EGmIe5gO-RKOEYmLQq5vEliUBw3fL_wRGinzy0LNW7FSY_66__xzSkIIQklixJzSi_H8oY6n5T5TKeAde6pbWs8Cf_PlJrRwBPkz_A7UPr7CbHXm7WVIcA5hpTsw1l0JqT3td46iLMtQ3FcMsz4Le8ixnnfdbPemupejgJfviuAlpkAgWPaNbpV9Fila12ElMkL0spE0f-bBUK2AmFo",
+  "next_page_token": "AcJnMuEZ2bhrdhtY2Q9O0JZIQRJGUSmx3gXxrTqf6lrAMsJlI9UcA1tEmvOZxQK_2toTxELMJAh27NYrvoT6zCci-zM8515gzPcq69smWNHMdyQJDW0PttTpaazNfs4TwvP1qR4r3YQZFNPUJRoRj5sAp8zFpwWUFLPuSrac0X582fog7cme1MIQjiBmAQqPdHNkSocVkEdEK2qZmASJENWr-4lufCZpdr1E7kqcTw0NtZtUZZ5cXPVqbIjFnoRrvxhUBfyURNU2rjQkE0KxaHnTsfPg68sWzOBbLyhjEoX3U1S8GQ_7iX3eNmloZCRUTebEaA9VpQyPLtWUVB0w2wLhmNBkDNzuooYnSInoZdb5t9nA3uzRhTPecebZxssAu_QeD8RDnOrl14VUrzbX8QjM1teXrgVRlzgoztKGa3Wcr7Z3TnW2GIWuiq72b8Q",
   "results": [
     {
       "business_status": "OPERATIONAL",
@@ -33,7 +33,7 @@
           "html_attributions": [
             "<a href=\"https://maps.google.com/maps/contrib/113141409820331887287\">Adina Apartment Hotel Sydney Surry Hills</a>"
           ],
-          "photo_reference": "AcJnMuE149MBMMfhh8G-E_ZVz9oFq9AKc6l5ZVlIdnO97yItpVVKEn0Ja0A6gpAa300_VXw_PiDo-FkgIP_8fw4DMzbjs6EflvcVTg53njQzZ1a8Ge_aoJeS-Q41W3OdFZ8WlfA3g4VDwHJBMfKYEQE_ap5xm7ULYSeXNBAPbLMS4fYPfsy2",
+          "photo_reference": "AcJnMuHPPOywaQAP91Boo6f_jmfBg70dqkXwgo1ZV7FE_awUFNpnfmLk-Yd8-7NBExF1dGFGJUkUezSCEja7IRcS87smQe5PpO7ZBfw77VElA6Pyb5IanjnEfXGW7PoS2N1K9zOW4UkUa6nbF2c9CGuuCgyvwz_mSt7wacJAS8avkkuGxA5-",
           "width": 2880
         }
       ],
@@ -48,8 +48,8 @@
       "types": [
         "lodging",
         "restaurant",
-        "point_of_interest",
         "food",
+        "point_of_interest",
         "establishment"
       ],
       "user_ratings_total": 349,
@@ -86,7 +86,7 @@
           "html_attributions": [
             "<a href=\"https://maps.google.com/maps/contrib/113030756537448268596\">Royal Exhibition Hotel</a>"
           ],
-          "photo_reference": "AcJnMuGgr4E547jiJwa58B_usNZIKRYjXg6PYr3pHBN6UT-P2JuuixpvRLMDT_O6I9ptA9wm3jRc9VOmxoNMD2GSzbxKbseZKYWhw0RfwsYHR7Y-znRWvNbQsE5rsDJcgHAmoTl9ovVImYWzBv_KjTs8OGdFk79YfBhEiKit8ZpIm-UC26cg",
+          "photo_reference": "AcJnMuFFS1U64HiUNdYjBgYtbJwbi_D4xh_gZX3DN1Q9GG-kJdH9ENy3eDwg5Qu7tFeCenNS5fw3PCpNO1DyXiNmX2VHMWTsFtVPZMNPKNNe5_X34NeU1oqN-sVRJ9CWH-xpxLioCWzX8maggT7VtRXei81L9xvi5JLwtofqDOq6VvCH2l0F",
           "width": 3456
         }
       ],
@@ -99,11 +99,11 @@
       "reference": "ChIJZSckAiGuEmsRdpUUf7tWk-o",
       "scope": "GOOGLE",
       "types": [
-        "bar",
         "lodging",
+        "bar",
         "restaurant",
-        "point_of_interest",
         "food",
+        "point_of_interest",
         "establishment"
       ],
       "user_ratings_total": 739,
@@ -140,7 +140,7 @@
           "html_attributions": [
             "<a href=\"https://maps.google.com/maps/contrib/101681711873459078831\">Vibe Hotel Sydney</a>"
           ],
-          "photo_reference": "AcJnMuGQbbQgNHWZohNk_sdAeMbtc8AFgHq4W2f40_FBCFrqXqONc0f6M76OuJB0yH0Mm9K38aDuHJa53KB6yxspLdPPlTBdiKPtlrniKFsP2EjFtdeUthtSxJ_yoyxAFr4sW_RHL5JOeo7bp-tnLNtkuUTNL88GkXqH19QyzIU_qULjaRmP",
+          "photo_reference": "AcJnMuF8CA6mwR8kwfRHcbZ9XRvgqya1Z7oZkvMDjuNQOSCOCSTtxyOWN7zOm9hY2fI7mld_hLeiYNVHSGRV7-f66Zl0YOuAt1wibQjO8ReSlLmWQNEqtuayTnx2Fwj7eej4wKV9ddniYueZ_cP33AokootlJ4IH03KN2OEfvdyfMR9Mg18i",
           "width": 6720
         }
       ],
@@ -155,8 +155,8 @@
       "types": [
         "lodging",
         "restaurant",
-        "point_of_interest",
         "food",
+        "point_of_interest",
         "establishment"
       ],
       "user_ratings_total": 1189,
@@ -190,7 +190,7 @@
           "html_attributions": [
             "<a href=\"https://maps.google.com/maps/contrib/116929835384296324070\">Metro Hotel Marlow Sydney Central</a>"
           ],
-          "photo_reference": "AcJnMuEJsvDmc7YtSiTQE9WvTVn1RvMDuPGHpG3qpQygBCynMlJBLcfreuPjmxe2fPkFH9F_gqppocMjXUGdxEo00UJ7NvWJXzNMtzE9lrbPxz0rmj0_KR9OP0PW5nJ2y8NLB2lluP-EdsR2zzgfRYQsjoo2b3FFC6v6XpiCTy1CYtWKMWxC",
+          "photo_reference": "AcJnMuE7kfiOclkb_JuXS6JIOSq4PjO8NHlzlRERYko3GP8w2INDl2bY6FHo9UsGyAmEu14dYctuzDjyjv2a8XwLyW2MLa1u3xIa__S5RciiVHLtOR3kWz9vb57RbYQD6AiVgKsxkgeFs4FXzj9M47iHcMAF65G3kclWVbki0jdwrfxsYDA-",
           "width": 5616
         }
       ],
@@ -205,8 +205,8 @@
       "types": [
         "lodging",
         "restaurant",
-        "point_of_interest",
         "food",
+        "point_of_interest",
         "establishment"
       ],
       "user_ratings_total": 1243,
@@ -243,7 +243,7 @@
           "html_attributions": [
             "<a href=\"https://maps.google.com/maps/contrib/103067855651350747555\">Shakespeare Hotel</a>"
           ],
-          "photo_reference": "AcJnMuFVH11r1oYXiyree9TdDHW9ke0Dm3SwOWxGfJkaLn3dkuCwbey1XQX1-QEsegvZb2BdeTzsYKQZOTFr1F2YYNVKIaknsmkdzHF356khQGAS1lhlY6WzMU_RH0LbLGfM_5J8uxcEPWHUGl-3cfhsL8XDl3uDyE8_FN5OYwRVJRKeAXs",
+          "photo_reference": "AcJnMuFC-KgkHazwBR253wrkSm-vZc2R6dyBRMkuekX_1467rmW2QKHLwbG2-mNDHA28tlUPOI3b1V6Yhsn63vEkw3kx9bn2g4hpcp4fkGDqWvTkZ2uNP7Dsov4iEV4Z6D4ltvoHkPUMumCp8d4rLKGwEgUjyePrFYLnaeXD84uTDm2qjDE",
           "width": 720
         }
       ],
@@ -257,11 +257,11 @@
       "reference": "ChIJLWc5hR-uEmsRMfTet6jUDnQ",
       "scope": "GOOGLE",
       "types": [
-        "bar",
         "lodging",
+        "bar",
         "restaurant",
-        "point_of_interest",
         "food",
+        "point_of_interest",
         "establishment"
       ],
       "user_ratings_total": 1245,
@@ -290,7 +290,7 @@
       "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
       "name": "Spice I Am",
       "opening_hours": {
-        "open_now": true
+        "open_now": false
       },
       "photos": [
         {
@@ -298,7 +298,7 @@
           "html_attributions": [
             "<a href=\"https://maps.google.com/maps/contrib/117681985833982962659\">Doungkamol Poowanoppadolsunti</a>"
           ],
-          "photo_reference": "AcJnMuHILQ8yotY7Z_YtR1ozUEFb7MoG3XcKKEaKxU_O_rpnyoMILt4PVDdmshGLwYe51dUWvQyvwoU7RlCTQk0CkvQihLihToEBwCJCEWIQ0gEK20xuh9uzzQURBBPXmMhEXiGEEzm_QTtqMWIZd7Q1fBDlqEnBSlFkS3_r-fTAh6wWI5KF",
+          "photo_reference": "AcJnMuHtOzE3X6H8JfwiRsfOiL0tCuO4g5EthaHTR5l6cFWrIjmi11RTLiWG03ZE_4g_cBB_frbfTf7YZStIgHr5tTH-yfRP39QW8mGccWR_PL-nzvjplqWSr8exvd34ZuDeX5puUiDo5_XlCwZ1nfcjIH_5JnQmy3PYDdsBXL31AAJXqUxO",
           "width": 4032
         }
       ],
@@ -313,8 +313,8 @@
       "scope": "GOOGLE",
       "types": [
         "restaurant",
-        "point_of_interest",
         "food",
+        "point_of_interest",
         "establishment"
       ],
       "user_ratings_total": 772,
@@ -351,7 +351,7 @@
           "html_attributions": [
             "<a href=\"https://maps.google.com/maps/contrib/103813079769044025876\">Captain Cook Hotel</a>"
           ],
-          "photo_reference": "AcJnMuGWSy0rzrKkFysIvkCCbeWEJi8N1CEgYetMigoKyNqsePYUMEKgHLgSDm6gkCIB6Wlt5AmewlLtjw15j9QG0dq74oq701rIiMuw_qIuKulfa2fxwjnZRLCI2cM7HIqV_frabJj1aqcjKhYNYKA_Gq3eyJ4gcHg0AFpqN_2BeE0TYNM8",
+          "photo_reference": "AcJnMuHSG9TSR1UpIKUH_EDWcRutvs4N6u2FGMBUnnLARskhGpZ2ZzUxDiQpzncfl3OFQi95Bow-J2_4e5Ry6_H4_A1YBMkJtfPSIs2EjBFLJ-ZaQvQ3rUEmMKcbIh23Zp3-pOHilGMeYn6fmKYihi8iGZU0q-wxnhYaNzzNUDYdwGRNPR6d",
           "width": 4032
         }
       ],
@@ -365,11 +365,11 @@
       "reference": "ChIJmyQYfxuuEmsRfRMDYzNjvqY",
       "scope": "GOOGLE",
       "types": [
-        "bar",
         "lodging",
+        "bar",
         "restaurant",
-        "point_of_interest",
         "food",
+        "point_of_interest",
         "establishment"
       ],
       "user_ratings_total": 503,
@@ -406,7 +406,7 @@
           "html_attributions": [
             "<a href=\"https://maps.google.com/maps/contrib/102873861577055782875\">Sir Mlady</a>"
           ],
-          "photo_reference": "AcJnMuELVANWAlYdZwblOXED7lJAobb7FSEL7G5h1SfbcXErSHI0fMLvtxY9JCP26ctOeddfjtBxx1wbyNv1DIRc7nqHWuORlsb2rBKnJMlnuaDxYPOph0vnpx1-agWxS8newmef_61yOcGbK5RZRS94PDDTUtA2hPaFk9trwWFNUuvpdv8z",
+          "photo_reference": "AcJnMuHCWlCHj2DRYdULHscGmKCUoDtUkCdYe88ho5mW7r7DPqIoPHsZxa4DRUIwL8ulguGedr9O7XsqoRvTrJ-bsCdTUeY3NwlDIY1hTG-fivCjdKDD-aPHNk-9ll0Zz-fPEih-VZRPAnGxX2Ki8ex552CuMCsnaQHf6o3rmyi9gLeMLhQ8",
           "width": 4032
         }
       ],
@@ -421,8 +421,8 @@
       "scope": "GOOGLE",
       "types": [
         "restaurant",
-        "point_of_interest",
         "food",
+        "point_of_interest",
         "establishment"
       ],
       "user_ratings_total": 3195,
@@ -459,7 +459,7 @@
           "html_attributions": [
             "<a href=\"https://maps.google.com/maps/contrib/111543341927062787034\">Thanon Khaosan</a>"
           ],
-          "photo_reference": "AcJnMuHirfI61MIjOYb4Bi1yCdH7Eie6pVb_r5faIObXtXwe-iD9kBIOcgvJKzGNQn-K9hEsIZ8nOkbvlA8GoafnW8UX8ul7g9ku5W6C7f_RJmnOE0AaT_xe_P1PYNmHHgj-MF9gzFUAuuYvhvnF847wVc3hRd8q-3YMyDi4hIFz2QK5mERE",
+          "photo_reference": "AcJnMuGi0D2OxZflH9Xaf6_mNXolD3OPy449i3VQF_N_gbSGHnS0ou1e6Zte42t2sdBWL7IS3VB_K2q1459x_piDlCK6e8IbBrv_OASY9sklh0j8JaBhlfPPKCOUUzigXjaNpUz32r17IMzUqPSex7W2RcT2znYegaMy-bAQfmJZdbAHstZ8",
           "width": 720
         }
       ],
@@ -474,8 +474,8 @@
       "scope": "GOOGLE",
       "types": [
         "restaurant",
-        "point_of_interest",
         "food",
+        "point_of_interest",
         "establishment"
       ],
       "user_ratings_total": 855,
@@ -504,7 +504,7 @@
       "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
       "name": "Roden Cutler House",
       "opening_hours": {
-        "open_now": true
+        "open_now": false
       },
       "photos": [
         {
@@ -512,7 +512,7 @@
           "html_attributions": [
             "<a href=\"https://maps.google.com/maps/contrib/113493032279416500253\">Antoine M</a>"
           ],
-          "photo_reference": "AcJnMuEcftKx7VSPtOWBjVCfiQWV_PT04JINs6zjREK-4qHhcY6dcNL6gBahV9VQI3rH5j83SRC2NlSM7Gsg7stvXaKIh-5Nnyiz2dF1Y66CfuUqviA_YC13RNbhPF5RqFZP6ctikg-kr4SnwVMmeX0OORMniU4SVYSDPQOMARYzZcib0w8r",
+          "photo_reference": "AcJnMuF1hdX1AVmBnvsD-k6a54I0qXiIJu9lVOiTADAU7jT0xiIZ1Q2P1FVVYiViasfsgrk9DgPbPwSutUQOt2IHos7SP7FYiyrcAmN4SD7ep_3a3Lqm7OLybPPQU8LYMhCNqjoJg1rnGtZK9gWqbqCavBOTTOQYJ_igh0Je9h8v3yiaXx44",
           "width": 4032
         }
       ],
@@ -526,8 +526,8 @@
       "scope": "GOOGLE",
       "types": [
         "restaurant",
-        "point_of_interest",
         "food",
+        "point_of_interest",
         "establishment"
       ],
       "user_ratings_total": 14,
@@ -564,7 +564,7 @@
           "html_attributions": [
             "<a href=\"https://maps.google.com/maps/contrib/104367513858177659016\">The Winery</a>"
           ],
-          "photo_reference": "AcJnMuF00nVHr-QHkAPg30RLX7vFcD_GmvFs3hJM4FwjSqR7vqIVWEmsQSkvD-6FF3aEUCxr0uGRkRRKTNLnHOffF8Fbr2ukvDCNpcxih8q6ZHykdZlE4cx9SYJX7DRn24TuKBo8CcCObzitBCavGlDd9jp_V3RzBKIuxruHFipRoLG2BZ3_",
+          "photo_reference": "AcJnMuGjRwPNt01oiHhTpLkJ8Ah_-0VMp3jX-2SfjOcImCnW3jZFOLxrfg_eDA6P6XBVKwiTP0pmLqv6yh2NoZcX3SsjZ3o-Omhim8StYdpkSa3FIWjTLjA-VXU-X95-PE9_8n5SCYpfVN4lMKL9Cz3MlzUpovdk8kPnQ-wZTbfEgQAcyr--",
           "width": 2600
         }
       ],
@@ -580,8 +580,8 @@
       "types": [
         "restaurant",
         "bar",
-        "point_of_interest",
         "food",
+        "point_of_interest",
         "establishment"
       ],
       "user_ratings_total": 2060,
@@ -618,7 +618,7 @@
           "html_attributions": [
             "<a href=\"https://maps.google.com/maps/contrib/101463813056305676442\">It&#39;s Time For Thai</a>"
           ],
-          "photo_reference": "AcJnMuGUva0kRdjnJvIdKH8Yj0j2jp-ZPX_LtWZUiCnZk52TAfbrA_42PeHn9qe18ZAa307Yhj1X7Mq6_adHF3drIuPQbwGPMv2xT7JJq3KDJdvDKVM8erQX2KeLldsMsVZcOfF5bLhcISYzfigvBQ8FlUMxEEeAUzOA_gp6BaaLGQIDEx3a",
+          "photo_reference": "AcJnMuE3A8_OBm2_dy2mPjiGsBpVeiVCnWUlpeQBtLMD3s1hk81y_AxtcS_ZRatIQPSAjFhNTUPwBGs-JU23-1eMtQ1Cfj5ngeBSvL0A26ZPkAGICgBHNYz_wXRnY4FHEhAW76JJumSxznh2Zq9lyi5NP-NSs9jNNSrwiyCaKt6iXI4KWerj",
           "width": 1080
         }
       ],
@@ -634,8 +634,8 @@
       "types": [
         "meal_takeaway",
         "restaurant",
-        "point_of_interest",
         "food",
+        "point_of_interest",
         "establishment"
       ],
       "user_ratings_total": 1336,
@@ -672,7 +672,7 @@
           "html_attributions": [
             "<a href=\"https://maps.google.com/maps/contrib/115192633103639948482\">racka hattori</a>"
           ],
-          "photo_reference": "AcJnMuGvT1JDHtdYBgsBVUc4R0G6aamUvjkjFKGx2rHp21j2D7Hdj6yxcn7UOG0xDVt4h9d-fvNhDRup1rvUz5lnS88tfc_rnvXTnnoQRnDDSwi2v9U-i6gxETslKldlhVGWB9xtf9_R3P2gQrQPUgThwRsOXwbseWceeJRm_9hMrAD5868T",
+          "photo_reference": "AcJnMuEtqcCpkHayvzsaTvhCT68Jrtjo2hbGFWFUtIczxfwjQU0pQ6w4ycM2n7wgykBiOvc4duFtwfrElG9mijomRcZUAI0FeHolSWaqow1Lse0zcKROzpxT53e7Es-S_9j0jalXY7dxRd7k3WTV8A8ej3mIyZedpq_14a1azc4l9OubEHP9",
           "width": 4608
         }
       ],
@@ -689,8 +689,8 @@
         "atm",
         "finance",
         "restaurant",
-        "point_of_interest",
         "food",
+        "point_of_interest",
         "establishment"
       ],
       "user_ratings_total": 67,
@@ -727,7 +727,7 @@
           "html_attributions": [
             "<a href=\"https://maps.google.com/maps/contrib/113687704748195856203\">Mandy Kaur</a>"
           ],
-          "photo_reference": "AcJnMuEu6-OMcpxGO9rbeIwH-lUevDzx8dk8V8_mLlvRY72tZtCGUREb7niOXzSf7ch5QFaf4bLG2aTw5KEr_v6xTTQ3nc3XK5FQ4kVvr2Nr-PoL0XomM66WxXP2PIKWGez3alERS6uB_vDV2aj2jzuVqJGTZrerfrW63xoc-r8G_ukCGB5Y",
+          "photo_reference": "AcJnMuEQ46UgcMczAzFWCnzC7Igt9IMwLAYj6k85h3-czk50Anr1hGSg2Ry6edMPX81dx1uNdgrCkYZ9245z1DryFjPA2PJ5nSfQ7mqUYgyJPAvRaPavc9fNPWqHyQ7DPzDkUvLtGKaus9IDyeN-3byQilVDV73K7Xf9vYwQGaAsLDOsbHgF",
           "width": 4032
         }
       ],
@@ -743,8 +743,8 @@
       "types": [
         "bar",
         "restaurant",
-        "point_of_interest",
         "food",
+        "point_of_interest",
         "establishment"
       ],
       "user_ratings_total": 518,
@@ -781,7 +781,7 @@
           "html_attributions": [
             "<a href=\"https://maps.google.com/maps/contrib/109497474669808130276\">Bodega</a>"
           ],
-          "photo_reference": "AcJnMuFi2RcdIDULD_hPUst9NA2af48SzoGm_I68Ra6sniDKvZ9Hs_aJv-yIqjjyJUzhucgpyJ42IjHAXhbnVIQlAk-v2xhWeKH8WLXl_vtifs4SlZ9pXTWateghuDVu07avmltBENhnhFLR-B3uVtqNuoyMe7p_2w8jq-b8kkKgVUDbUaiq",
+          "photo_reference": "AcJnMuGJnFZ_KiB6jTEsiQzC9EQuftAROv-Ltamct5-xvKZXaVj1CpJ4JWODzD6ofV0SI1MdwAhfDvMRI-zSVkf88vzhI0Jgrdzalq6hyeYz4Y9K7r1O25mqEfZdZQwRgXWSV-LLe67_LoFVXbX8fZyVAMvKwlZngGpPbrTXbmK7IvXPspRH",
           "width": 2048
         }
       ],
@@ -795,12 +795,12 @@
       "reference": "ChIJ353SCSKuEmsRVBcgf48LV98",
       "scope": "GOOGLE",
       "types": [
-        "bar",
         "liquor_store",
-        "restaurant",
-        "point_of_interest",
-        "food",
+        "bar",
         "store",
+        "restaurant",
+        "food",
+        "point_of_interest",
         "establishment"
       ],
       "user_ratings_total": 446,
@@ -837,7 +837,7 @@
           "html_attributions": [
             "<a href=\"https://maps.google.com/maps/contrib/102919380973052811524\">Bamboo Dumpling Bar</a>"
           ],
-          "photo_reference": "AcJnMuF3270mJHMWga_WYjtKgDGeB4kT15rgt8J_nsmKTvIQq2hQlA1ni8qmJzGayK-RyCuVQ5MdUtQ48Trd6zfuLOV-pqhrfFPJGNvLFniCovV0P3xGcFp4Cm2iVAxmALPXYK11D5RoZlGfBfxY51HxwK2Gt9pCFe4DI6isJ89ETsu9m-Zj",
+          "photo_reference": "AcJnMuHsXZO9QVDjkeKjxqKpS7rjd0xFwrYmSp_HozrXstbZB8312WDebTztyvB6El4pYPk07esVMZE2W-TYzgEBGT1kMdqK9n7J-EE6IN8EduW3kFLPZ4RcMEALQ1CQ6rCJY3Nz2l3ZmQmbLWqRk3A-Sc9HDcYgBzqgHoF6-N6JrX_RyenP",
           "width": 400
         }
       ],
@@ -852,8 +852,8 @@
       "scope": "GOOGLE",
       "types": [
         "restaurant",
-        "point_of_interest",
         "food",
+        "point_of_interest",
         "establishment"
       ],
       "user_ratings_total": 71,
@@ -882,7 +882,7 @@
       "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
       "name": "Single O Surry Hills",
       "opening_hours": {
-        "open_now": true
+        "open_now": false
       },
       "photos": [
         {
@@ -890,7 +890,7 @@
           "html_attributions": [
             "<a href=\"https://maps.google.com/maps/contrib/114643889410294247096\">Single O Surry Hills</a>"
           ],
-          "photo_reference": "AcJnMuEW8TkbxTYXLVLLxRcTXFyKD8KxP5Pqdo2TFe_8AqqkxZOo1V46AkCk37lYqnwWoNxA8XY5ZqZSpsIhFGzadnsiiRMssEgjcgoKS5UpSbWw9LlyDWiJV0mLipvzLrBjy-HbCODms_mUU39aeeew1SH2KdI5f5S1zdtRBr7dzOHO4t43",
+          "photo_reference": "AcJnMuFYEww8Ve1NHOmfSQJI4kiYr8HqImZ_vnZt_l7wmjCQ1TA9GpD5vptu_MrcJj0fZa9jxXoQrJsN1-5apBOkKf5ZOH-uzMjshCT3ts8R4BU6xkuTWZjC2k8eUL7OLNPhD_DbgDVivqpHdIEQbTgZPCV0sHn1V1Eo-mmGVHJuk4idKK7m",
           "width": 1200
         }
       ],
@@ -905,10 +905,10 @@
       "scope": "GOOGLE",
       "types": [
         "cafe",
-        "restaurant",
-        "point_of_interest",
-        "food",
         "store",
+        "restaurant",
+        "food",
+        "point_of_interest",
         "establishment"
       ],
       "user_ratings_total": 1885,
@@ -945,7 +945,7 @@
           "html_attributions": [
             "<a href=\"https://maps.google.com/maps/contrib/110627552717238251746\">The Strawberry</a>"
           ],
-          "photo_reference": "AcJnMuEbidvdAMxzUYnFZKhwVT1oh9wRsWMzVvg0s9TIXAcfiobzV5WcR8IT8SS4PS_6WVO5QBR-lROk2PxbURnWTJF5FFA_3-LiuNsraC2pb8fY40mwPV6avmsuNUk42cxSNSnTCZ1XQnvaz2yIfCQHLhuYTgvQOU6iyWD8aj4fqxr3Hyqy",
+          "photo_reference": "AcJnMuHoPWnpy46LRoEeR6Wp0fGXJK4JFnNrTD7XwB1zGDnNwuT9X3yH2dbIkGMCbb8T0EhiN6KJk34RqhDdTKge4qzI6WlEmGK5ti6YVpqH-UxwLvQwnDSzFE_TXgm-qZUh2w5DZxPZ3NsACx8IsY2b8C9Yzb7pzK9br2VckpN3cj4mliIb",
           "width": 1920
         }
       ],
@@ -961,8 +961,8 @@
       "types": [
         "bar",
         "restaurant",
-        "point_of_interest",
         "food",
+        "point_of_interest",
         "establishment"
       ],
       "user_ratings_total": 1860,
@@ -999,7 +999,7 @@
           "html_attributions": [
             "<a href=\"https://maps.google.com/maps/contrib/102919562363612064773\">Bourke Street Bakery Surry Hills</a>"
           ],
-          "photo_reference": "AcJnMuHebq3ZLHDhL8ddByLjYHfFDOsCytHZwGvFEC36864l2u1-2yakp39LBu3d5r_w9kyISCiH3gjEFng2MDPP0YkOZzW0SGDxcBktYJ-tPwO6ZVTzdCyZaqp7hOiHpOsRBZwjbeP6gZzANVZJU8p19VrDaPd8elt6Eh1RdiRoEsRULMJ9",
+          "photo_reference": "AcJnMuGCiLNOQE-9ZY2bDC4sYZSNa2zxMPkAmYRgidfsgYEZuHnRZEAuMl4Mgnqa64C8_5fP-API1hXDmHEHv-_d7UniTnhKqstVor0EifpP5NZL10WKhuzapbSOuTPUa79ONrUA_N5VGJcJnnkLJzK2L13JHaC5yhlkjXu9PDLyz6DNNtvr",
           "width": 4919
         }
       ],
@@ -1015,13 +1015,13 @@
       "types": [
         "bakery",
         "cafe",
-        "restaurant",
-        "point_of_interest",
-        "food",
         "store",
+        "restaurant",
+        "food",
+        "point_of_interest",
         "establishment"
       ],
-      "user_ratings_total": 1733,
+      "user_ratings_total": 1734,
       "vicinity": "633 Bourke Street, Surry Hills"
     },
     {
@@ -1055,7 +1055,7 @@
           "html_attributions": [
             "<a href=\"https://maps.google.com/maps/contrib/116795936377823524539\">Aurora Rooftop Hotel</a>"
           ],
-          "photo_reference": "AcJnMuGpFh-d-IpwvgxY8RHAYpDb_yNLsRAlepR-FL2lbnHLfiwj8vmWKGlNWpzCNWJWKjIEnv_WGum8YpylW3vEXBggE5fOBP_yhFSjHBdIgeqMIGuh4nCseN21fSObz1s8LaljVdOzDXZ83eaGAQNCufuwS0u2CASCC6he22qrhpSEUSG3",
+          "photo_reference": "AcJnMuEz30bcSpN_FpBr9cZAOgw1RzzS46nXgU-0yRDeCCoYZBAIK-DvZeVQSvQBrFXOBoo6vw-DPIq1oYudnMBa0UH7fNhKawLLFo_TCU4vaXMsUHVez_FjpreH2fFEwFpZeKqJTzbsUyonX5FPHBPhTPGRSEK1bnB26o_a8e5ASbwCsxZw",
           "width": 3024
         }
       ],
@@ -1071,8 +1071,8 @@
       "types": [
         "bar",
         "restaurant",
-        "point_of_interest",
         "food",
+        "point_of_interest",
         "establishment"
       ],
       "user_ratings_total": 1010,

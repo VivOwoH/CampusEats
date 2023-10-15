@@ -17,6 +17,15 @@ class Restaurant(models.Model):
     Is_open = models.BooleanField(default=False)
     Open_dates = models.TextField(null=True)
     Phone = models.CharField(max_length=20, null=True)
+    PriceLevel = models.IntegerField(null=True, blank=True)
+    Takeout = models.BooleanField(default=False)  # Add a field for takeout
+    Dine_in = models.BooleanField(default=False)
+    Delivery = models.BooleanField(default=False)
+    Reservable = models.BooleanField(default=False)
+    Serves_vegetarian_food = models.BooleanField(default=False)
+    Serves_wine = models.BooleanField(default=False)
+    Serves_beer = models.BooleanField(default=False)
+    
 
     def __str__(self):
         return self.Name

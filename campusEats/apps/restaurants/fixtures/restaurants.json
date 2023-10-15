@@ -5,20 +5,20 @@
     "fields": {
       "Name": "Adina Apartment Hotel Sydney Surry Hills",
       "Location": "359 Crown Street, Surry Hills",
-      "Description": "lodging, restaurant, point_of_interest, food, establishment",
-      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuE149MBMMfhh8G-E_ZVz9oFq9AKc6l5ZVlIdnO97yItpVVKEn0Ja0A6gpAa300_VXw_PiDo-FkgIP_8fw4DMzbjs6EflvcVTg53njQzZ1a8Ge_aoJeS-Q41W3OdFZ8WlfA3g4VDwHJBMfKYEQE_ap5xm7ULYSeXNBAPbLMS4fYPfsy2&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
+      "Description": "lodging, restaurant, food, point_of_interest, establishment",
+      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuHPPOywaQAP91Boo6f_jmfBg70dqkXwgo1ZV7FE_awUFNpnfmLk-Yd8-7NBExF1dGFGJUkUezSCEja7IRcS87smQe5PpO7ZBfw77VElA6Pyb5IanjnEfXGW7PoS2N1K9zOW4UkUa6nbF2c9CGuuCgyvwz_mSt7wacJAS8avkkuGxA5-&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
       "Rating": 4.2,
       "Is_open": true,
-      "Open_dates": [
-        "Monday: Open 24 hours",
-        "Tuesday: Open 24 hours",
-        "Wednesday: Open 24 hours",
-        "Thursday: Open 24 hours",
-        "Friday: Open 24 hours",
-        "Saturday: Open 24 hours",
-        "Sunday: Open 24 hours"
-      ],
-      "Phone": "(02) 8302 1000"
+      "Open_dates": "Monday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nTuesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nWednesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nThursday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nFriday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSaturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+      "Phone": "(02) 8302 1000",
+      "PriceLevel": null,
+      "Takeout": false,
+      "Dine_in": false,
+      "Delivery": false,
+      "Reservable": false,
+      "Serves_vegetarian_food": false,
+      "Serves_wine": false,
+      "Serves_beer": false
     }
   },
   {
@@ -27,20 +27,20 @@
     "fields": {
       "Name": "Royal Exhibition Hotel",
       "Location": "86/88 Chalmers Street, Surry Hills",
-      "Description": "bar, lodging, restaurant, point_of_interest, food, establishment",
-      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuGgr4E547jiJwa58B_usNZIKRYjXg6PYr3pHBN6UT-P2JuuixpvRLMDT_O6I9ptA9wm3jRc9VOmxoNMD2GSzbxKbseZKYWhw0RfwsYHR7Y-znRWvNbQsE5rsDJcgHAmoTl9ovVImYWzBv_KjTs8OGdFk79YfBhEiKit8ZpIm-UC26cg&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
+      "Description": "lodging, bar, restaurant, food, point_of_interest, establishment",
+      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuFFS1U64HiUNdYjBgYtbJwbi_D4xh_gZX3DN1Q9GG-kJdH9ENy3eDwg5Qu7tFeCenNS5fw3PCpNO1DyXiNmX2VHMWTsFtVPZMNPKNNe5_X34NeU1oqN-sVRJ9CWH-xpxLioCWzX8maggT7VtRXei81L9xvi5JLwtofqDOq6VvCH2l0F&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
       "Rating": 3.8,
       "Is_open": true,
-      "Open_dates": [
-        "Monday: 10:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
-        "Tuesday: 10:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
-        "Wednesday: 10:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
-        "Thursday: 10:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
-        "Friday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fAM",
-        "Saturday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fAM",
-        "Sunday: 10:00\u202fAM\u2009\u2013\u200912:00\u202fAM"
-      ],
-      "Phone": "(02) 9698 2607"
+      "Open_dates": "Monday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nTuesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nWednesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nThursday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nFriday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSaturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+      "Phone": "(02) 9698 2607",
+      "PriceLevel": null,
+      "Takeout": false,
+      "Dine_in": false,
+      "Delivery": false,
+      "Reservable": false,
+      "Serves_vegetarian_food": false,
+      "Serves_wine": false,
+      "Serves_beer": false
     }
   },
   {
@@ -49,20 +49,20 @@
     "fields": {
       "Name": "Vibe Hotel Sydney",
       "Location": "111 Goulburn Street, Sydney",
-      "Description": "lodging, restaurant, point_of_interest, food, establishment",
-      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuGQbbQgNHWZohNk_sdAeMbtc8AFgHq4W2f40_FBCFrqXqONc0f6M76OuJB0yH0Mm9K38aDuHJa53KB6yxspLdPPlTBdiKPtlrniKFsP2EjFtdeUthtSxJ_yoyxAFr4sW_RHL5JOeo7bp-tnLNtkuUTNL88GkXqH19QyzIU_qULjaRmP&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
+      "Description": "lodging, restaurant, food, point_of_interest, establishment",
+      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuF8CA6mwR8kwfRHcbZ9XRvgqya1Z7oZkvMDjuNQOSCOCSTtxyOWN7zOm9hY2fI7mld_hLeiYNVHSGRV7-f66Zl0YOuAt1wibQjO8ReSlLmWQNEqtuayTnx2Fwj7eej4wKV9ddniYueZ_cP33AokootlJ4IH03KN2OEfvdyfMR9Mg18i&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
       "Rating": 3.9,
       "Is_open": true,
-      "Open_dates": [
-        "Monday: Open 24 hours",
-        "Tuesday: Open 24 hours",
-        "Wednesday: Open 24 hours",
-        "Thursday: Open 24 hours",
-        "Friday: Open 24 hours",
-        "Saturday: Open 24 hours",
-        "Sunday: Open 24 hours"
-      ],
-      "Phone": "(02) 8272 3300"
+      "Open_dates": "Monday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nTuesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nWednesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nThursday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nFriday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSaturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+      "Phone": "(02) 8272 3300",
+      "PriceLevel": null,
+      "Takeout": false,
+      "Dine_in": false,
+      "Delivery": false,
+      "Reservable": false,
+      "Serves_vegetarian_food": false,
+      "Serves_wine": false,
+      "Serves_beer": false
     }
   },
   {
@@ -71,12 +71,20 @@
     "fields": {
       "Name": "Metro Hotel Marlow Sydney Central",
       "Location": "431-439 Pitt Street, Haymarket",
-      "Description": "lodging, restaurant, point_of_interest, food, establishment",
-      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuEJsvDmc7YtSiTQE9WvTVn1RvMDuPGHpG3qpQygBCynMlJBLcfreuPjmxe2fPkFH9F_gqppocMjXUGdxEo00UJ7NvWJXzNMtzE9lrbPxz0rmj0_KR9OP0PW5nJ2y8NLB2lluP-EdsR2zzgfRYQsjoo2b3FFC6v6XpiCTy1CYtWKMWxC&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
+      "Description": "lodging, restaurant, food, point_of_interest, establishment",
+      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuE7kfiOclkb_JuXS6JIOSq4PjO8NHlzlRERYko3GP8w2INDl2bY6FHo9UsGyAmEu14dYctuzDjyjv2a8XwLyW2MLa1u3xIa__S5RciiVHLtOR3kWz9vb57RbYQD6AiVgKsxkgeFs4FXzj9M47iHcMAF65G3kclWVbki0jdwrfxsYDA-&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
       "Rating": 3.6,
-      "Is_open": false,
-      "Open_dates": [],
-      "Phone": "(02) 9281 6999"
+      "Is_open": true,
+      "Open_dates": "Monday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nTuesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nWednesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nThursday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nFriday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSaturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+      "Phone": "(02) 9281 6999",
+      "PriceLevel": null,
+      "Takeout": false,
+      "Dine_in": false,
+      "Delivery": false,
+      "Reservable": false,
+      "Serves_vegetarian_food": false,
+      "Serves_wine": false,
+      "Serves_beer": false
     }
   },
   {
@@ -85,20 +93,20 @@
     "fields": {
       "Name": "Shakespeare Hotel",
       "Location": "200 Devonshire Street, Surry Hills",
-      "Description": "bar, lodging, restaurant, point_of_interest, food, establishment",
-      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuFVH11r1oYXiyree9TdDHW9ke0Dm3SwOWxGfJkaLn3dkuCwbey1XQX1-QEsegvZb2BdeTzsYKQZOTFr1F2YYNVKIaknsmkdzHF356khQGAS1lhlY6WzMU_RH0LbLGfM_5J8uxcEPWHUGl-3cfhsL8XDl3uDyE8_FN5OYwRVJRKeAXs&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
+      "Description": "lodging, bar, restaurant, food, point_of_interest, establishment",
+      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuFC-KgkHazwBR253wrkSm-vZc2R6dyBRMkuekX_1467rmW2QKHLwbG2-mNDHA28tlUPOI3b1V6Yhsn63vEkw3kx9bn2g4hpcp4fkGDqWvTkZ2uNP7Dsov4iEV4Z6D4ltvoHkPUMumCp8d4rLKGwEgUjyePrFYLnaeXD84uTDm2qjDE&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
       "Rating": 4.3,
       "Is_open": true,
-      "Open_dates": [
-        "Monday: 4:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
-        "Tuesday: 12:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
-        "Wednesday: 12:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
-        "Thursday: 12:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
-        "Friday: 12:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
-        "Saturday: 12:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
-        "Sunday: 12:00\u2009\u2013\u200910:00\u202fPM"
-      ],
-      "Phone": "(02) 9319 6883"
+      "Open_dates": "Monday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nTuesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nWednesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nThursday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nFriday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSaturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+      "Phone": "(02) 9319 6883",
+      "PriceLevel": 1,
+      "Takeout": true,
+      "Dine_in": true,
+      "Delivery": false,
+      "Reservable": true,
+      "Serves_vegetarian_food": false,
+      "Serves_wine": true,
+      "Serves_beer": true
     }
   },
   {
@@ -107,20 +115,20 @@
     "fields": {
       "Name": "Spice I Am",
       "Location": "90 Wentworth Avenue, Surry Hills",
-      "Description": "restaurant, point_of_interest, food, establishment",
-      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuHILQ8yotY7Z_YtR1ozUEFb7MoG3XcKKEaKxU_O_rpnyoMILt4PVDdmshGLwYe51dUWvQyvwoU7RlCTQk0CkvQihLihToEBwCJCEWIQ0gEK20xuh9uzzQURBBPXmMhEXiGEEzm_QTtqMWIZd7Q1fBDlqEnBSlFkS3_r-fTAh6wWI5KF&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
+      "Description": "restaurant, food, point_of_interest, establishment",
+      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuHtOzE3X6H8JfwiRsfOiL0tCuO4g5EthaHTR5l6cFWrIjmi11RTLiWG03ZE_4g_cBB_frbfTf7YZStIgHr5tTH-yfRP39QW8mGccWR_PL-nzvjplqWSr8exvd34ZuDeX5puUiDo5_XlCwZ1nfcjIH_5JnQmy3PYDdsBXL31AAJXqUxO&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
       "Rating": 4.2,
       "Is_open": true,
-      "Open_dates": [
-        "Monday: Closed",
-        "Tuesday: 5:30\u2009\u2013\u20099:00\u202fPM",
-        "Wednesday: 11:30\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:30\u2009\u2013\u20099:00\u202fPM",
-        "Thursday: 11:30\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:30\u2009\u2013\u20099:00\u202fPM",
-        "Friday: 11:30\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:30\u2009\u2013\u20099:00\u202fPM",
-        "Saturday: 11:30\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:30\u2009\u2013\u20099:00\u202fPM",
-        "Sunday: 11:30\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:30\u2009\u2013\u20099:00\u202fPM"
-      ],
-      "Phone": "(02) 9280 0928"
+      "Open_dates": "Monday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nTuesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nWednesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nThursday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nFriday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSaturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+      "Phone": "(02) 9280 0928",
+      "PriceLevel": 2,
+      "Takeout": true,
+      "Dine_in": true,
+      "Delivery": true,
+      "Reservable": false,
+      "Serves_vegetarian_food": false,
+      "Serves_wine": true,
+      "Serves_beer": true
     }
   },
   {
@@ -129,20 +137,20 @@
     "fields": {
       "Name": "Captain Cook Hotel Paddington",
       "Location": "162 Flinders Street, Paddington",
-      "Description": "bar, lodging, restaurant, point_of_interest, food, establishment",
-      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuGWSy0rzrKkFysIvkCCbeWEJi8N1CEgYetMigoKyNqsePYUMEKgHLgSDm6gkCIB6Wlt5AmewlLtjw15j9QG0dq74oq701rIiMuw_qIuKulfa2fxwjnZRLCI2cM7HIqV_frabJj1aqcjKhYNYKA_Gq3eyJ4gcHg0AFpqN_2BeE0TYNM8&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
+      "Description": "lodging, bar, restaurant, food, point_of_interest, establishment",
+      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuHSG9TSR1UpIKUH_EDWcRutvs4N6u2FGMBUnnLARskhGpZ2ZzUxDiQpzncfl3OFQi95Bow-J2_4e5Ry6_H4_A1YBMkJtfPSIs2EjBFLJ-ZaQvQ3rUEmMKcbIh23Zp3-pOHilGMeYn6fmKYihi8iGZU0q-wxnhYaNzzNUDYdwGRNPR6d&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
       "Rating": 3.8,
       "Is_open": true,
-      "Open_dates": [
-        "Monday: 12:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
-        "Tuesday: 12:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
-        "Wednesday: 12:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
-        "Thursday: 12:00\u202fPM\u2009\u2013\u20091:00\u202fAM",
-        "Friday: 12:00\u202fPM\u2009\u2013\u20091:00\u202fAM",
-        "Saturday: 12:00\u202fPM\u2009\u2013\u20091:00\u202fAM",
-        "Sunday: 12:00\u202fPM\u2009\u2013\u200912:00\u202fAM"
-      ],
-      "Phone": "(02) 9539 5859"
+      "Open_dates": "Monday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nTuesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nWednesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nThursday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nFriday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSaturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+      "Phone": "(02) 9539 5859",
+      "PriceLevel": 1,
+      "Takeout": true,
+      "Dine_in": false,
+      "Delivery": false,
+      "Reservable": false,
+      "Serves_vegetarian_food": false,
+      "Serves_wine": true,
+      "Serves_beer": true
     }
   },
   {
@@ -151,20 +159,20 @@
     "fields": {
       "Name": "Chat Thai",
       "Location": "20 Campbell Street, Haymarket",
-      "Description": "restaurant, point_of_interest, food, establishment",
-      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuELVANWAlYdZwblOXED7lJAobb7FSEL7G5h1SfbcXErSHI0fMLvtxY9JCP26ctOeddfjtBxx1wbyNv1DIRc7nqHWuORlsb2rBKnJMlnuaDxYPOph0vnpx1-agWxS8newmef_61yOcGbK5RZRS94PDDTUtA2hPaFk9trwWFNUuvpdv8z&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
+      "Description": "restaurant, food, point_of_interest, establishment",
+      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuHCWlCHj2DRYdULHscGmKCUoDtUkCdYe88ho5mW7r7DPqIoPHsZxa4DRUIwL8ulguGedr9O7XsqoRvTrJ-bsCdTUeY3NwlDIY1hTG-fivCjdKDD-aPHNk-9ll0Zz-fPEih-VZRPAnGxX2Ki8ex552CuMCsnaQHf6o3rmyi9gLeMLhQ8&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
       "Rating": 4.1,
       "Is_open": true,
-      "Open_dates": [
-        "Monday: 10:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
-        "Tuesday: 10:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
-        "Wednesday: 10:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
-        "Thursday: 10:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
-        "Friday: 10:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
-        "Saturday: 10:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
-        "Sunday: 10:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
-      ],
-      "Phone": "(02) 9211 1808"
+      "Open_dates": "Monday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nTuesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nWednesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nThursday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nFriday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSaturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+      "Phone": "(02) 9211 1808",
+      "PriceLevel": 2,
+      "Takeout": true,
+      "Dine_in": true,
+      "Delivery": true,
+      "Reservable": true,
+      "Serves_vegetarian_food": true,
+      "Serves_wine": true,
+      "Serves_beer": true
     }
   },
   {
@@ -173,20 +181,20 @@
     "fields": {
       "Name": "Thanon Khaosan",
       "Location": "413 Pitt Street, Haymarket",
-      "Description": "restaurant, point_of_interest, food, establishment",
-      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuHirfI61MIjOYb4Bi1yCdH7Eie6pVb_r5faIObXtXwe-iD9kBIOcgvJKzGNQn-K9hEsIZ8nOkbvlA8GoafnW8UX8ul7g9ku5W6C7f_RJmnOE0AaT_xe_P1PYNmHHgj-MF9gzFUAuuYvhvnF847wVc3hRd8q-3YMyDi4hIFz2QK5mERE&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
+      "Description": "restaurant, food, point_of_interest, establishment",
+      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuGi0D2OxZflH9Xaf6_mNXolD3OPy449i3VQF_N_gbSGHnS0ou1e6Zte42t2sdBWL7IS3VB_K2q1459x_piDlCK6e8IbBrv_OASY9sklh0j8JaBhlfPPKCOUUzigXjaNpUz32r17IMzUqPSex7W2RcT2znYegaMy-bAQfmJZdbAHstZ8&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
       "Rating": 4,
       "Is_open": true,
-      "Open_dates": [
-        "Monday: 11:30\u202fAM\u2009\u2013\u200911:00\u202fPM",
-        "Tuesday: 11:30\u202fAM\u2009\u2013\u200911:00\u202fPM",
-        "Wednesday: 11:30\u202fAM\u2009\u2013\u200911:00\u202fPM",
-        "Thursday: 11:30\u202fAM\u2009\u2013\u200911:00\u202fPM",
-        "Friday: 11:30\u202fAM\u2009\u2013\u200911:00\u202fPM",
-        "Saturday: 11:30\u202fAM\u2009\u2013\u200911:00\u202fPM",
-        "Sunday: 11:30\u202fAM\u2009\u2013\u200911:00\u202fPM"
-      ],
-      "Phone": "(02) 9211 1194"
+      "Open_dates": "Monday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nTuesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nWednesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nThursday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nFriday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSaturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+      "Phone": "(02) 9211 1194",
+      "PriceLevel": 2,
+      "Takeout": true,
+      "Dine_in": true,
+      "Delivery": true,
+      "Reservable": true,
+      "Serves_vegetarian_food": true,
+      "Serves_wine": true,
+      "Serves_beer": true
     }
   },
   {
@@ -195,20 +203,20 @@
     "fields": {
       "Name": "Roden Cutler House",
       "Location": "24 Campbell Street, Haymarket",
-      "Description": "restaurant, point_of_interest, food, establishment",
-      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuEcftKx7VSPtOWBjVCfiQWV_PT04JINs6zjREK-4qHhcY6dcNL6gBahV9VQI3rH5j83SRC2NlSM7Gsg7stvXaKIh-5Nnyiz2dF1Y66CfuUqviA_YC13RNbhPF5RqFZP6ctikg-kr4SnwVMmeX0OORMniU4SVYSDPQOMARYzZcib0w8r&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
+      "Description": "restaurant, food, point_of_interest, establishment",
+      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuF1hdX1AVmBnvsD-k6a54I0qXiIJu9lVOiTADAU7jT0xiIZ1Q2P1FVVYiViasfsgrk9DgPbPwSutUQOt2IHos7SP7FYiyrcAmN4SD7ep_3a3Lqm7OLybPPQU8LYMhCNqjoJg1rnGtZK9gWqbqCavBOTTOQYJ_igh0Je9h8v3yiaXx44&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
       "Rating": 4.6,
       "Is_open": true,
-      "Open_dates": [
-        "Monday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
-        "Tuesday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
-        "Wednesday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
-        "Thursday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
-        "Friday: 12:00\u2009\u2013\u20098:00\u202fPM",
-        "Saturday: 12:00\u2009\u2013\u20098:00\u202fPM",
-        "Sunday: 12:00\u2009\u2013\u20094:00\u202fPM, 5:00\u2009\u2013\u20098:00\u202fPM"
-      ],
-      "Phone": "0407 714 832"
+      "Open_dates": "Monday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nTuesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nWednesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nThursday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nFriday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSaturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+      "Phone": "0407 714 832",
+      "PriceLevel": null,
+      "Takeout": true,
+      "Dine_in": true,
+      "Delivery": false,
+      "Reservable": false,
+      "Serves_vegetarian_food": false,
+      "Serves_wine": false,
+      "Serves_beer": false
     }
   },
   {
@@ -217,20 +225,20 @@
     "fields": {
       "Name": "The Winery",
       "Location": "285A Crown Street, Surry Hills",
-      "Description": "restaurant, bar, point_of_interest, food, establishment",
-      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuF00nVHr-QHkAPg30RLX7vFcD_GmvFs3hJM4FwjSqR7vqIVWEmsQSkvD-6FF3aEUCxr0uGRkRRKTNLnHOffF8Fbr2ukvDCNpcxih8q6ZHykdZlE4cx9SYJX7DRn24TuKBo8CcCObzitBCavGlDd9jp_V3RzBKIuxruHFipRoLG2BZ3_&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
+      "Description": "restaurant, bar, food, point_of_interest, establishment",
+      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuGjRwPNt01oiHhTpLkJ8Ah_-0VMp3jX-2SfjOcImCnW3jZFOLxrfg_eDA6P6XBVKwiTP0pmLqv6yh2NoZcX3SsjZ3o-Omhim8StYdpkSa3FIWjTLjA-VXU-X95-PE9_8n5SCYpfVN4lMKL9Cz3MlzUpovdk8kPnQ-wZTbfEgQAcyr--&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
       "Rating": 4.3,
       "Is_open": true,
-      "Open_dates": [
-        "Monday: 12:00\u2009\u2013\u200911:00\u202fPM",
-        "Tuesday: 12:00\u2009\u2013\u200911:00\u202fPM",
-        "Wednesday: 12:00\u2009\u2013\u200911:00\u202fPM",
-        "Thursday: 12:00\u2009\u2013\u200911:00\u202fPM",
-        "Friday: 12:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
-        "Saturday: 12:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
-        "Sunday: 12:00\u2009\u2013\u200911:00\u202fPM"
-      ],
-      "Phone": "(02) 8322 2007"
+      "Open_dates": "Monday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nTuesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nWednesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nThursday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nFriday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSaturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+      "Phone": "(02) 8322 2007",
+      "PriceLevel": 3,
+      "Takeout": false,
+      "Dine_in": true,
+      "Delivery": false,
+      "Reservable": true,
+      "Serves_vegetarian_food": false,
+      "Serves_wine": true,
+      "Serves_beer": true
     }
   },
   {
@@ -239,20 +247,20 @@
     "fields": {
       "Name": "It's Time For Thai",
       "Location": "767\u2013769 George Street, Haymarket",
-      "Description": "meal_takeaway, restaurant, point_of_interest, food, establishment",
-      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuGUva0kRdjnJvIdKH8Yj0j2jp-ZPX_LtWZUiCnZk52TAfbrA_42PeHn9qe18ZAa307Yhj1X7Mq6_adHF3drIuPQbwGPMv2xT7JJq3KDJdvDKVM8erQX2KeLldsMsVZcOfF5bLhcISYzfigvBQ8FlUMxEEeAUzOA_gp6BaaLGQIDEx3a&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
+      "Description": "meal_takeaway, restaurant, food, point_of_interest, establishment",
+      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuE3A8_OBm2_dy2mPjiGsBpVeiVCnWUlpeQBtLMD3s1hk81y_AxtcS_ZRatIQPSAjFhNTUPwBGs-JU23-1eMtQ1Cfj5ngeBSvL0A26ZPkAGICgBHNYz_wXRnY4FHEhAW76JJumSxznh2Zq9lyi5NP-NSs9jNNSrwiyCaKt6iXI4KWerj&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
       "Rating": 4.2,
       "Is_open": true,
-      "Open_dates": [
-        "Monday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
-        "Tuesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
-        "Wednesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
-        "Thursday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
-        "Friday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
-        "Saturday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
-        "Sunday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
-      ],
-      "Phone": "(02) 8668 4676"
+      "Open_dates": "Monday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nTuesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nWednesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nThursday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nFriday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSaturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+      "Phone": "(02) 8668 4676",
+      "PriceLevel": 1,
+      "Takeout": true,
+      "Dine_in": true,
+      "Delivery": true,
+      "Reservable": true,
+      "Serves_vegetarian_food": false,
+      "Serves_wine": false,
+      "Serves_beer": false
     }
   },
   {
@@ -261,20 +269,20 @@
     "fields": {
       "Name": "bp",
       "Location": "411 Cleveland Street, Redfern",
-      "Description": "gas_station, atm, finance, restaurant, point_of_interest, food, establishment",
-      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuGvT1JDHtdYBgsBVUc4R0G6aamUvjkjFKGx2rHp21j2D7Hdj6yxcn7UOG0xDVt4h9d-fvNhDRup1rvUz5lnS88tfc_rnvXTnnoQRnDDSwi2v9U-i6gxETslKldlhVGWB9xtf9_R3P2gQrQPUgThwRsOXwbseWceeJRm_9hMrAD5868T&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
+      "Description": "gas_station, atm, finance, restaurant, food, point_of_interest, establishment",
+      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuEtqcCpkHayvzsaTvhCT68Jrtjo2hbGFWFUtIczxfwjQU0pQ6w4ycM2n7wgykBiOvc4duFtwfrElG9mijomRcZUAI0FeHolSWaqow1Lse0zcKROzpxT53e7Es-S_9j0jalXY7dxRd7k3WTV8A8ej3mIyZedpq_14a1azc4l9OubEHP9&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
       "Rating": 3.3,
       "Is_open": true,
-      "Open_dates": [
-        "Monday: Open 24 hours",
-        "Tuesday: Open 24 hours",
-        "Wednesday: Open 24 hours",
-        "Thursday: Open 24 hours",
-        "Friday: Open 24 hours",
-        "Saturday: Open 24 hours",
-        "Sunday: Open 24 hours"
-      ],
-      "Phone": "(02) 9319 5027"
+      "Open_dates": "Monday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nTuesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nWednesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nThursday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nFriday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSaturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+      "Phone": "(02) 9319 5027",
+      "PriceLevel": null,
+      "Takeout": false,
+      "Dine_in": false,
+      "Delivery": false,
+      "Reservable": false,
+      "Serves_vegetarian_food": false,
+      "Serves_wine": false,
+      "Serves_beer": false
     }
   },
   {
@@ -283,20 +291,20 @@
     "fields": {
       "Name": "Chamberlain Hotel (C-Bar)",
       "Location": "428 Pitt Street, Haymarket",
-      "Description": "bar, restaurant, point_of_interest, food, establishment",
-      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuEu6-OMcpxGO9rbeIwH-lUevDzx8dk8V8_mLlvRY72tZtCGUREb7niOXzSf7ch5QFaf4bLG2aTw5KEr_v6xTTQ3nc3XK5FQ4kVvr2Nr-PoL0XomM66WxXP2PIKWGez3alERS6uB_vDV2aj2jzuVqJGTZrerfrW63xoc-r8G_ukCGB5Y&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
+      "Description": "bar, restaurant, food, point_of_interest, establishment",
+      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuEQ46UgcMczAzFWCnzC7Igt9IMwLAYj6k85h3-czk50Anr1hGSg2Ry6edMPX81dx1uNdgrCkYZ9245z1DryFjPA2PJ5nSfQ7mqUYgyJPAvRaPavc9fNPWqHyQ7DPzDkUvLtGKaus9IDyeN-3byQilVDV73K7Xf9vYwQGaAsLDOsbHgF&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
       "Rating": 4,
       "Is_open": true,
-      "Open_dates": [
-        "Monday: 10:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
-        "Tuesday: 10:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
-        "Wednesday: 10:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
-        "Thursday: 10:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
-        "Friday: 10:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
-        "Saturday: 10:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
-        "Sunday: 10:00\u202fAM\u2009\u2013\u200912:00\u202fAM"
-      ],
-      "Phone": "(02) 9288 0888"
+      "Open_dates": "Monday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nTuesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nWednesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nThursday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nFriday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSaturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+      "Phone": "(02) 9288 0888",
+      "PriceLevel": 2,
+      "Takeout": true,
+      "Dine_in": true,
+      "Delivery": false,
+      "Reservable": true,
+      "Serves_vegetarian_food": false,
+      "Serves_wine": true,
+      "Serves_beer": true
     }
   },
   {
@@ -305,20 +313,20 @@
     "fields": {
       "Name": "WyNo X Bodega",
       "Location": "4/50 Holt Street, Surry Hills",
-      "Description": "bar, liquor_store, restaurant, point_of_interest, food, store, establishment",
-      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuFi2RcdIDULD_hPUst9NA2af48SzoGm_I68Ra6sniDKvZ9Hs_aJv-yIqjjyJUzhucgpyJ42IjHAXhbnVIQlAk-v2xhWeKH8WLXl_vtifs4SlZ9pXTWateghuDVu07avmltBENhnhFLR-B3uVtqNuoyMe7p_2w8jq-b8kkKgVUDbUaiq&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
+      "Description": "liquor_store, bar, store, restaurant, food, point_of_interest, establishment",
+      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuGJnFZ_KiB6jTEsiQzC9EQuftAROv-Ltamct5-xvKZXaVj1CpJ4JWODzD6ofV0SI1MdwAhfDvMRI-zSVkf88vzhI0Jgrdzalq6hyeYz4Y9K7r1O25mqEfZdZQwRgXWSV-LLe67_LoFVXbX8fZyVAMvKwlZngGpPbrTXbmK7IvXPspRH&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
       "Rating": 4.4,
-      "Is_open": false,
-      "Open_dates": [
-        "Monday: Closed",
-        "Tuesday: 4:30\u2009\u2013\u200910:30\u202fPM",
-        "Wednesday: 4:30\u2009\u2013\u200910:30\u202fPM",
-        "Thursday: 4:30\u2009\u2013\u200910:30\u202fPM",
-        "Friday: 4:30\u2009\u2013\u200910:30\u202fPM",
-        "Saturday: 4:30\u2009\u2013\u200910:30\u202fPM",
-        "Sunday: Closed"
-      ],
-      "Phone": "(02) 9212 7766"
+      "Is_open": true,
+      "Open_dates": "Monday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nTuesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nWednesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nThursday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nFriday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSaturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+      "Phone": "(02) 9212 7766",
+      "PriceLevel": 3,
+      "Takeout": false,
+      "Dine_in": true,
+      "Delivery": false,
+      "Reservable": true,
+      "Serves_vegetarian_food": false,
+      "Serves_wine": true,
+      "Serves_beer": true
     }
   },
   {
@@ -327,20 +335,20 @@
     "fields": {
       "Name": "Bamboo Dumpling Bar",
       "Location": "140 Commonwealth Street, Surry Hills",
-      "Description": "restaurant, point_of_interest, food, establishment",
-      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuF3270mJHMWga_WYjtKgDGeB4kT15rgt8J_nsmKTvIQq2hQlA1ni8qmJzGayK-RyCuVQ5MdUtQ48Trd6zfuLOV-pqhrfFPJGNvLFniCovV0P3xGcFp4Cm2iVAxmALPXYK11D5RoZlGfBfxY51HxwK2Gt9pCFe4DI6isJ89ETsu9m-Zj&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
+      "Description": "restaurant, food, point_of_interest, establishment",
+      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuHsXZO9QVDjkeKjxqKpS7rjd0xFwrYmSp_HozrXstbZB8312WDebTztyvB6El4pYPk07esVMZE2W-TYzgEBGT1kMdqK9n7J-EE6IN8EduW3kFLPZ4RcMEALQ1CQ6rCJY3Nz2l3ZmQmbLWqRk3A-Sc9HDcYgBzqgHoF6-N6JrX_RyenP&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
       "Rating": 3.5,
       "Is_open": true,
-      "Open_dates": [
-        "Monday: 12:00\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u20099:00\u202fPM",
-        "Tuesday: 12:00\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u20099:00\u202fPM",
-        "Wednesday: 12:00\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u20099:00\u202fPM",
-        "Thursday: 12:00\u2009\u2013\u200910:00\u202fPM",
-        "Friday: 12:00\u2009\u2013\u200910:00\u202fPM",
-        "Saturday: 12:00\u2009\u2013\u200910:00\u202fPM",
-        "Sunday: 12:00\u2009\u2013\u200910:00\u202fPM"
-      ],
-      "Phone": "(02) 9281 2522"
+      "Open_dates": "Monday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nTuesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nWednesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nThursday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nFriday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSaturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+      "Phone": "(02) 9281 2522",
+      "PriceLevel": 2,
+      "Takeout": true,
+      "Dine_in": true,
+      "Delivery": false,
+      "Reservable": true,
+      "Serves_vegetarian_food": false,
+      "Serves_wine": true,
+      "Serves_beer": true
     }
   },
   {
@@ -349,20 +357,20 @@
     "fields": {
       "Name": "Single O Surry Hills",
       "Location": "60-64 Reservoir Street, Surry Hills",
-      "Description": "cafe, restaurant, point_of_interest, food, store, establishment",
-      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuEW8TkbxTYXLVLLxRcTXFyKD8KxP5Pqdo2TFe_8AqqkxZOo1V46AkCk37lYqnwWoNxA8XY5ZqZSpsIhFGzadnsiiRMssEgjcgoKS5UpSbWw9LlyDWiJV0mLipvzLrBjy-HbCODms_mUU39aeeew1SH2KdI5f5S1zdtRBr7dzOHO4t43&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
+      "Description": "cafe, store, restaurant, food, point_of_interest, establishment",
+      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuFYEww8Ve1NHOmfSQJI4kiYr8HqImZ_vnZt_l7wmjCQ1TA9GpD5vptu_MrcJj0fZa9jxXoQrJsN1-5apBOkKf5ZOH-uzMjshCT3ts8R4BU6xkuTWZjC2k8eUL7OLNPhD_DbgDVivqpHdIEQbTgZPCV0sHn1V1Eo-mmGVHJuk4idKK7m&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
       "Rating": 4.6,
       "Is_open": true,
-      "Open_dates": [
-        "Monday: 7:00\u202fAM\u2009\u2013\u20093:00\u202fPM",
-        "Tuesday: 7:00\u202fAM\u2009\u2013\u20093:00\u202fPM",
-        "Wednesday: 7:00\u202fAM\u2009\u2013\u20093:00\u202fPM",
-        "Thursday: 7:00\u202fAM\u2009\u2013\u20093:00\u202fPM",
-        "Friday: 7:00\u202fAM\u2009\u2013\u20093:00\u202fPM",
-        "Saturday: 8:00\u202fAM\u2009\u2013\u20093:00\u202fPM",
-        "Sunday: 8:00\u202fAM\u2009\u2013\u20093:00\u202fPM"
-      ],
-      "Phone": "(02) 9211 0665"
+      "Open_dates": "Monday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nTuesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nWednesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nThursday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nFriday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSaturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+      "Phone": "(02) 9211 0665",
+      "PriceLevel": 2,
+      "Takeout": true,
+      "Dine_in": true,
+      "Delivery": true,
+      "Reservable": false,
+      "Serves_vegetarian_food": true,
+      "Serves_wine": false,
+      "Serves_beer": true
     }
   },
   {
@@ -371,20 +379,20 @@
     "fields": {
       "Name": "The Strawberry",
       "Location": "453 Elizabeth Street, Surry Hills",
-      "Description": "bar, restaurant, point_of_interest, food, establishment",
-      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuEbidvdAMxzUYnFZKhwVT1oh9wRsWMzVvg0s9TIXAcfiobzV5WcR8IT8SS4PS_6WVO5QBR-lROk2PxbURnWTJF5FFA_3-LiuNsraC2pb8fY40mwPV6avmsuNUk42cxSNSnTCZ1XQnvaz2yIfCQHLhuYTgvQOU6iyWD8aj4fqxr3Hyqy&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
+      "Description": "bar, restaurant, food, point_of_interest, establishment",
+      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuHoPWnpy46LRoEeR6Wp0fGXJK4JFnNrTD7XwB1zGDnNwuT9X3yH2dbIkGMCbb8T0EhiN6KJk34RqhDdTKge4qzI6WlEmGK5ti6YVpqH-UxwLvQwnDSzFE_TXgm-qZUh2w5DZxPZ3NsACx8IsY2b8C9Yzb7pzK9br2VckpN3cj4mliIb&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
       "Rating": 4,
       "Is_open": true,
-      "Open_dates": [
-        "Monday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM",
-        "Tuesday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM",
-        "Wednesday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM",
-        "Thursday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM",
-        "Friday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM",
-        "Saturday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fAM",
-        "Sunday: 10:00\u202fAM\u2009\u2013\u200912:00\u202fAM"
-      ],
-      "Phone": "(02) 9699 3355"
+      "Open_dates": "Monday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nTuesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nWednesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nThursday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nFriday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSaturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+      "Phone": "(02) 9699 3355",
+      "PriceLevel": 1,
+      "Takeout": true,
+      "Dine_in": true,
+      "Delivery": false,
+      "Reservable": true,
+      "Serves_vegetarian_food": false,
+      "Serves_wine": true,
+      "Serves_beer": true
     }
   },
   {
@@ -393,20 +401,20 @@
     "fields": {
       "Name": "Bourke Street Bakery Surry Hills",
       "Location": "633 Bourke Street, Surry Hills",
-      "Description": "bakery, cafe, restaurant, point_of_interest, food, store, establishment",
-      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuHebq3ZLHDhL8ddByLjYHfFDOsCytHZwGvFEC36864l2u1-2yakp39LBu3d5r_w9kyISCiH3gjEFng2MDPP0YkOZzW0SGDxcBktYJ-tPwO6ZVTzdCyZaqp7hOiHpOsRBZwjbeP6gZzANVZJU8p19VrDaPd8elt6Eh1RdiRoEsRULMJ9&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
+      "Description": "bakery, cafe, store, restaurant, food, point_of_interest, establishment",
+      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuGCiLNOQE-9ZY2bDC4sYZSNa2zxMPkAmYRgidfsgYEZuHnRZEAuMl4Mgnqa64C8_5fP-API1hXDmHEHv-_d7UniTnhKqstVor0EifpP5NZL10WKhuzapbSOuTPUa79ONrUA_N5VGJcJnnkLJzK2L13JHaC5yhlkjXu9PDLyz6DNNtvr&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
       "Rating": 4.5,
       "Is_open": true,
-      "Open_dates": [
-        "Monday: 7:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
-        "Tuesday: 7:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
-        "Wednesday: 7:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
-        "Thursday: 7:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
-        "Friday: 7:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
-        "Saturday: 7:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
-        "Sunday: 7:00\u202fAM\u2009\u2013\u20095:00\u202fPM"
-      ],
-      "Phone": "(02) 9699 1011"
+      "Open_dates": "Monday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nTuesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nWednesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nThursday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nFriday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSaturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+      "Phone": "(02) 9699 1011",
+      "PriceLevel": 2,
+      "Takeout": true,
+      "Dine_in": true,
+      "Delivery": false,
+      "Reservable": false,
+      "Serves_vegetarian_food": true,
+      "Serves_wine": false,
+      "Serves_beer": false
     }
   },
   {
@@ -415,20 +423,20 @@
     "fields": {
       "Name": "Aurora Rooftop Hotel",
       "Location": "324 Elizabeth Street, Surry Hills",
-      "Description": "bar, restaurant, point_of_interest, food, establishment",
-      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuGpFh-d-IpwvgxY8RHAYpDb_yNLsRAlepR-FL2lbnHLfiwj8vmWKGlNWpzCNWJWKjIEnv_WGum8YpylW3vEXBggE5fOBP_yhFSjHBdIgeqMIGuh4nCseN21fSObz1s8LaljVdOzDXZ83eaGAQNCufuwS0u2CASCC6he22qrhpSEUSG3&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
+      "Description": "bar, restaurant, food, point_of_interest, establishment",
+      "ImageURL": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=AcJnMuEz30bcSpN_FpBr9cZAOgw1RzzS46nXgU-0yRDeCCoYZBAIK-DvZeVQSvQBrFXOBoo6vw-DPIq1oYudnMBa0UH7fNhKawLLFo_TCU4vaXMsUHVez_FjpreH2fFEwFpZeKqJTzbsUyonX5FPHBPhTPGRSEK1bnB26o_a8e5ASbwCsxZw&key=AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA",
       "Rating": 4,
       "Is_open": true,
-      "Open_dates": [
-        "Monday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
-        "Tuesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
-        "Wednesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
-        "Thursday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
-        "Friday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fAM",
-        "Saturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM",
-        "Sunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fAM"
-      ],
-      "Phone": "(02) 9211 3462"
+      "Open_dates": "Monday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nTuesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nWednesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nThursday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fAM\nFriday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSaturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fAM\nSunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fAM",
+      "Phone": "(02) 9211 3462",
+      "PriceLevel": 2,
+      "Takeout": false,
+      "Dine_in": true,
+      "Delivery": true,
+      "Reservable": true,
+      "Serves_vegetarian_food": false,
+      "Serves_wine": true,
+      "Serves_beer": true
     }
   }
 ]
