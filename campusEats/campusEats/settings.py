@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'apps.restaurants',
     'apps.review',
     'apps.user',
-    'apps.blogs.apps.BlogsConfig'
 ]
 
 
