@@ -9,7 +9,7 @@ from django.db import IntegrityError
 from django.contrib.auth.hashers import check_password
 from .models import CustomUser  # Import your CustomUser model
 from django.contrib.auth.decorators import user_passes_test
-from .models import CustomUser  
+from .models import CustomUser
 
 global_user = None
 
@@ -43,26 +43,29 @@ def user_login(request):
             return render(request, 'user/login.html', {'error_message': error_message})
 
     return render(request, 'user/login.html')
+
 def access_denied(request):
     # print(message)
     # context = {'message': message}
     return render(request, 'user/access_denied.html', {'message': 'admin'})
+
 # Custom test functions
 def is_admin(request):
     # print(1, global_user.user_type)
     # user = request.user  # Retrieve the User object from the request
-    # custom_user = CustomUser(user)  
+    # custom_user = CustomUser(user)
     return global_user.user_type == UserType.ADMIN.value
 # for the rendering of the admin
 # @user_passes_test(is_admin, login_url='access_denied')
 # def render_admin_dashboard(request):
 #     # return render(request,'user/adminhome.html')
-#     return access_denied(request, "admin")  
+#     return access_denied(request, "admin")
+
 @user_passes_test(is_admin, login_url='access_denied')
 def render_admin_dashboard(request):
     if not is_admin(request.user):
         return access_denied(request,  message='admin')  # Pass the message to the access_denied view
-    
+
     # If the user is an admin, render the admin dashboard
     return render(request, 'user/adminhome.html', {'user': global_user})
 
@@ -86,8 +89,8 @@ def render_base_template(request):
 #             user.save()
 #             # Log the user in
 #             # login(request, user)
-#             return redirect('success')  
-    
+#             return redirect('success')
+
 #     return render(request, 'user/register.html')
 
 def user_register(request):

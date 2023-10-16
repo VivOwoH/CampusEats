@@ -32,7 +32,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('apps.user.urls')),  # Include the 'user' app's URLs
     path('', include('apps.restaurants.urls')),  # Include the 'user' app's URLs
-    path('', include('apps.user.urls')),
+    path('', include('apps.review.urls')),
     path('', include('apps.blogs.urls'))
 ]
 
