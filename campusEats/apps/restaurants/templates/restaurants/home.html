@@ -7,20 +7,22 @@
 
 {% block content %}
 
+
+
 <!--image carousel-->
 <div class="image-carousel">
-  <div class="carousel-container" style="height:800px">
+  <div class="carousel-container" style="height:700px; display: flex; justify-content: center; align-items: center;">
 
       <div class="slides fade">
-        <img src="{% static 'restaurants/restaurant1.jpg' %}" style="width:100%; height:800px">
+        <img src="{% static 'restaurants/restaurant1.jpg' %}" style="width:95%; height:700px">
       </div>
       
       <div class="slides fade">
-        <img src="{% static 'restaurants/restaurant2.jpg' %}" style="width:100%; height:800px">
+        <img src="{% static 'restaurants/restaurant2.jpg' %}" style="width:95%; height:700px">
       </div>
       
       <div class="slides fade">
-        <img src="{% static 'restaurants/restaurants3.jpg' %}"style="width:100%; height:800px"> 
+        <img src="{% static 'restaurants/restaurants3.jpg' %}"style="width:95%; height:700px"> 
       </div>
       
       </div>
@@ -61,7 +63,7 @@
           </script>  
 </div>
 
-<div class="section1_container">
+
   <!--search box-->
     
   <div class="label_container"><label for="search_label" > Search Restaurants </label></div>
@@ -166,25 +168,19 @@
 <!-- Loop through the list of restaurants -->
 <div class="cards">
     {% for restaurant in restaurants %}
-        <div class="card">
+        <div class="card" data-name="{{ restaurant.Name }}">
             <!-- Display restaurant details dynamically -->
-            <img src="{{ restaurant.ImageURL }}" alt="" class="card_img">  
-            <!-- <iframe class="card_img"
-                width="600"
-                height="450"
-                frameborder="0" style="border:0"
-                src="{{ restaurant.ImageURL }}"
-                allowfullscreen></iframe> -->
-            <!-- <img src="https://maps.google.com/maps/contrib/114475675902935599843/photo.jpg" alt="Contributor's Profile Picture" width="100" height="100"> -->
-
-            <div class="card_content">{{ restaurant.Name }}</div>
-            <div class="card_info"> 
-                <div>Rating: {{ restaurant.Rating }}</div>
-                <a  href="{% url 'restaurant_detail' restaurant_id=restaurant.RestaurantID %}" class="card_link">View Restaurant</a>
-            </div>
+            
+            <a  href="{% url 'restaurant_detail' restaurant_id=restaurant.RestaurantID %}" class="card_link">
+                <img src="{{ restaurant.ImageURL }}" alt="" class="card_img">
+                <div class="card_content">{{ restaurant.Name }}</div>
+                <div class="card_info"> 
+                    <div>Rating: {{ restaurant.Rating }}</div> 
+                </div>
+            </a>            
+            
         </div>
     {% endfor %}
 </div>
-
 
 {% endblock %}

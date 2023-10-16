@@ -2,24 +2,25 @@
 .container {
     display:flex;
 }
-
 /* form section of admin */
+
 .right-column{
     flex:1;
     background-color: rgb(231, 228, 217);
     padding-top: 50px;
     padding-left: 80px;
-    font-size: 38px;
+    font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     height: 600px;
 }
+
 
 .right-column-add-restaurants{
     flex:1;
     background-color: rgb(231, 228, 217);
     padding-top: 50px;
     padding-left: 80px;
-    font-size: 38px;
+    font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     height: 1500px;
 }
