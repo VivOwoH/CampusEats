@@ -170,7 +170,7 @@
     {% for restaurant in restaurants %}
         <div class="card" data-name="{{ restaurant.Name }}">
             <!-- Display restaurant details dynamically -->
-            
+             
             <a  href="{% url 'restaurant_detail' restaurant_id=restaurant.RestaurantID %}" class="card_link">
                 <img src="{{ restaurant.ImageURL }}" alt="" class="card_img">
                 <div class="card_content">{{ restaurant.Name }}</div>
