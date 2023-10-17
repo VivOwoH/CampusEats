@@ -69,6 +69,53 @@ def render_admin_dashboard(request):
     # If the user is an admin, render the admin dashboard
     return render(request, 'user/adminhome.html', {'user': global_user})
 
+#render the admin update users html
+def render_admin_updateusers(request):
+    print("hello")
+    data = CustomUser.objects.all()
+    print(data)
+    context = {"data":data}
+    print(context)
+    return render(request,'user/admin-update-users.html', context)
+
+
+
+def update_user(request):
+    if request.method == "POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        role = request.POST.get('role')
+        print(name, email, role)
+        query=CustomUser(username=name, email=email,user_type=role)
+        query.save()
+        return redirect('/register/admin/update-users/')
+    return render(request, 'user/admin-update-users.html', {'user': global_user})
+
+
+def edit_user(request, id):
+
+    #save the updated information
+    if request.method == "POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        role = request.POST.get('role')
+
+        updated_d = CustomUser.objects.get(id=id)
+        updated_d.username = name
+        updated_d.email = email
+        updated_d.user_type= role
+        updated_d.save()
+        return redirect('/register/admin/update-users/')
+    
+    d = CustomUser.objects.get(id=id)
+    context={"d":d}
+    return render(request,"user/edit.html", context)
+
+def delete_user(request, id):
+
+    d = CustomUser.objects.get(id=id)
+    d.delete()
+    return redirect("/register/admin/update-users/")
 
 def render_base_template(request):
     return render(request, 'base.html')

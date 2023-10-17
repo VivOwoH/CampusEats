@@ -1,9 +1,13 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Login - My Website{% endblock %}
 
 {% block content %}
-    <h2>Login</h2>
+<head>
+    <link rel="stylesheet" href="{% static 'user/login.css' %}">
+  
+</head>
+   
     <div class="register-form">
         <form method="post">
             {% csrf_token %}

@@ -1,9 +1,14 @@
 <!-- admin.html -->
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Admin Update Users {% endblock %}
 
 {% block content %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'admin/admin.css' %}">
+    <link rel="stylesheet" href="{% static 'admin/update_users.css' %}">
+</head>
 
 <div class="up_container">
 
@@ -20,8 +25,63 @@
     
      </div>
 
-     <div class="right-column">
-        <h6>UPDATE USERS</h6>
+     <div class="right-column-uu">
+        <p class="title"> ADD USERS </p>
+
+        <form class="user_info_form" action="/update-user/" method="post"> {% csrf_token %}
+            <label>UserName</label>
+            <div class="form-group">    
+                <input type="text" class="form-control" placeholder="userName" name="name" required></input>
+            </div>
+            <label>Email</label>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="userEmail" name="email" required></input>
+            </div>
+            <label>Role</label>
+            <div class="form-group">
+                <select class="form-control" id="role" name="role">
+                    <option value="user">user</option>
+                    <option value="blogger">blogger</option>
+                    <option value="admin">admin</option> 
+                  </select>
+            </div>
+            <div class="form-group">
+                <button>INSERT USER</button>
+            </div>
+        </form>
+
+        
+        <!--<a href="#"><button>Refresh</button></a>-->
+
+
+        <!--Display Users-->
+        <p class="title"> USER DATABASE </p>
+        <br>
+        <table class="user_db_table">
+            <thead>
+                <tr>
+                    <th class="column">ID</th>
+                    <th class="column">Name</th>
+                    <th class="column">Email</th>
+                    <th class="column">Role</th>
+                    <th class="column">Edit</th>
+                    <th class="column">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for d in data %}
+            <tr class="row">
+                <th class="column">{{d.id}}</th>
+                <td class="column">{{d.username}}</td>
+                <td class="column">{{d.email}}</td>
+                <td class="column">{{d.user_type}}</td>
+                <td class="column"><a href="/edit/{{d.id}}" type="button" class="edit">EDIT</td>
+                <td class="column"><a href="/delete/{{d.id}}" type="button" class="delete">DELETE</td>
+       
+            </tr>
+                {% endfor %}
+            </tbody>
+        </table>
         
         
     
@@ -29,5 +89,6 @@
     </div>  
 
     </div>
+ 
 
 {% endblock %}
