@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .title{
+            width:100%;
+            font-size:60px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .write-blog-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            height: 60px;
+            width:180px;
+            cursor: pointer;
+            font-size:20px;
+        }
+        .blog-item {
+            width: calc(45%);
+            background-color: #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 200px;
+        }
+        .blog-title {
+            font-weight: bold;
+            margin-bottom: 35px;
+        }
+        .blog-content {
+            white-space: normal;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            BLOG
+            <button class="write-blog-button">Write my blog</button>
+        </div>
+        <div class="blog-item">
+            <div class="blog-title">Blog Name 1</div>
+            <div class="blog-content">This is a sample blog post with some content. This is a sample blog post with some content. This is a sample blog post with some content. This is a sample blog post with some content. This is a sample blog post with some content. This is a sample blog post with some content.</div>
+        </div>
+        <div class="blog-item">
+            <div class="blog-title">Blog Name 2</div>
+            <div class="blog-content">This is another blog post with some content. This is another blog post with some content. This is another blog post with some content. This is another blog post with some content. This is another blog post with some content. This is another blog post with some content.</div>
+        </div>
+        <div class="blog-item">
+            <div class="blog-title">Blog Name 3</div>
+            <div class="blog-content">This is a sample blog post with some content. This is a sample blog post with some content. This is a sample blog post with some content. This is a sample blog post with some content. This is a sample blog post with some content. This is a sample blog post with some content.</div>
+        </div>
+        <div class="blog-item">
+            <div class="blog-title">Blog Name 4</div>
+            <div class="blog-content">This is a sample blog post with some content. This is a sample blog post with some content. This is a sample blog post with some content. This is a sample blog post with some content. This is a sample blog post with some content. This is a sample blog post with some content.</div>
+        </div>
+    </div>
+</body>
+</html>

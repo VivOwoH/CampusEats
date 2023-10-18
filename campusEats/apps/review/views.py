@@ -17,11 +17,12 @@ def create_review(request):
         form = ReviewForm()
 
     context = {'form': form}
-    return render(request, 'reviews/create_review.html', context)
+    return render(request, 'review/create_review.html', context)
 
 def display_reviews(request, restaurant_id):
     reviews = Review.objects.filter(RestaurantID=restaurant_id)
     return render(request, 'reviews_template.html', {'reviews': reviews})
+
 
 @login_required
 def delete_review(request, review_id):
