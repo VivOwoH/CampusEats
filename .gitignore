@@ -39,6 +39,3 @@ db.sqlite3
 
 myenv/
 .vscode/settings.json
-
-.vscode/settings.json
-myenv/
