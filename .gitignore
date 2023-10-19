@@ -37,3 +37,7 @@ logs/
 db.sqlite3
 *.sqlite3
 
+myenv/
+.vscode/settings.json
+/campusEats/venv/
+/myenv/

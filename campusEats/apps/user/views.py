@@ -10,6 +10,8 @@ from django.contrib.auth.hashers import check_password
 from .models import CustomUser  # Import your CustomUser model
 from django.contrib.auth.decorators import user_passes_test
 from .models import CustomUser
+from django.urls import reverse
+
 
 global_user = None
 
@@ -33,16 +35,21 @@ def user_login(request):
                 user = None  # If user doesn't exist, set to None
         global global_user
         global_user = user
-        print(global_user, type(global_user), global_user.user_type)
+        print(global_user, type(global_user))
         if user and (user.password == password or check_password(password, user.password)):
+            # global_user = user
+            if is_admin(request):
+                return redirect('/register/admin')
+                # return redirect(reverse('/register/admin'))  
+                # return render(request, 'user/adminhome.html', {'error_message': error_message})
             # User authentication successful, log the user in (you may want to set a session variable)
             return redirect('success')  # Redirect to a success page after login
         else:
             # Authentication failed, handle it (e.g., display an error message)
             error_message = 'Invalid login credentials'
             return render(request, 'user/login.html', {'error_message': error_message})
-
-    return render(request, 'user/login.html')
+    if request.method == 'GET':
+        return render(request, 'user/login.html')
 
 def access_denied(request):
     # print(message)
@@ -69,13 +76,35 @@ def render_admin_dashboard(request):
     # If the user is an admin, render the admin dashboard
     return render(request, 'user/adminhome.html', {'user': global_user})
 
+def admin_profile(request):
+    if request.method == 'POST':
+        # Retrieve form data from the POST request
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get('last_name')
+        email = request.POST.get('email')
+        contact_no = request.POST.get('contact_no')
+
+        # Process the form data (you can save it to the database or perform other actions)
+        # For this example, we'll just print the data to the console
+        print('First Name:', first_name)
+        print('Last Name:', last_name)
+        print('Email:', email)
+        print('Contact Number:', contact_no)
+
+        # You can also return a response to the user, e.g., a success message
+        return HttpResponse('Profile updated successfully.')
+
+    # If it's not a POST request, render the HTML form
+    return render(request, 'admin_profile.html')
+
+
 #render the admin update users html
 def render_admin_updateusers(request):
-    print("hello")
+    # print("hello")
     data = CustomUser.objects.all()
-    print(data)
+    # print(data)
     context = {"data":data}
-    print(context)
+    # print(context)
     return render(request,'user/admin-update-users.html', context)
 
 
@@ -163,9 +192,6 @@ def user_register(request):
 
 
 # # Custom test functions
-# def is_admin(global_user):
-#     print(1, global_user.user_type)
-#     return global_user.user_type == UserType.ADMIN.value
 
 def is_blogger(global_user):
     return global_user.user_type == UserType.BLOGGER.value
@@ -180,20 +206,11 @@ def user_list(request):
 def render_success(request):
     return render(request, 'user/success.html')
 
-# def access_denied(request, message=None):
-#     print(message)
-#     context = {'message': message}
-#     return render(request, 'user/access_denied.html', context)
-
 
 # for the rendering of the admin add resturants page
 @user_passes_test(is_admin, login_url='access_denied')
 def render_admin_add_restaurants(request):
-    return render(request,'user/admin-add-restaurants.html', "admin")
-    # users = CustomUser.objects.all()
-    # print("idk", users)
-    # # Pass the list of users to the template
-    # return render(request, 'user/success.html', {'users': users})
+    return render(request,'user/admin-add-restaurants.html')
 
 
 # Views restricted to admin and blogger roles
