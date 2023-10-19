@@ -1,0 +1,141 @@
+.container {
+    display:flex;
+}
+
+/*update user right side column*/
+.right-column-uu{
+    flex:1;
+    background-color: rgb(236, 229, 217);
+    padding-top: 50px;
+    padding-left: 80px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.right-column-uu .title{
+    font-size: larger;
+}
+
+.user_info_form{
+   max-width: 400px;
+   margin-bottom: 5rem;
+   position: relative;
+   margin-top: 2rem;
+   padding-top: 1rem;
+   padding-left: 2rem;
+   padding-bottom: 2rem;
+   display: flex;
+   flex-direction: column;
+   border-style: groove;
+   border-radius: 2px;
+   background-color: rgb(206, 206, 207);
+}
+
+@media (max-width:768px){
+    .user_info_form{
+        max-width: 100%;
+        padding:2rem;
+    }
+}
+.form-group{
+    display:block;
+}
+
+.form-group button{
+    position:absolute;
+    right:1rem;
+    bottom: 1rem;
+    background-color: rgb(34, 77, 141);
+    border-radius: 2px;
+    color:rgb(250, 248, 248);
+    border-style:none;
+
+}
+
+.form-group #role{
+    
+    height:40px;
+    width:80px;
+    border-style: none;
+    color: grey;
+}
+
+.form-group button:hover{
+    background-color: black;
+    color:white;
+}
+
+/*table stlying */
+.user_db_table{
+    margin-bottom: 10rem;
+    width:98%;
+    border-collapse: collapse;
+    
+}
+
+.user_db_table th td{
+    border:1px solid #000;
+    padding:8px;
+    text-align: center;
+   
+}
+
+.user_db_table th{
+    height: 60px;
+    background-color: rgb(34, 77, 141);
+    color:white;
+}
+
+.user_db_table td{
+    background-color: rgb(206, 206, 207);
+}
+
+.column{
+    border-right: 1px solid #8c9eb1;
+}
+
+.row{
+    border-bottom: 1px solid #8c9eb1;
+}
+
+.column > .edit{
+    background-color:rgb(34, 77, 141);
+    height:30px;
+    width:60px;
+    padding:1px;
+    border-style: 1px solid;
+    color:white;
+    border-color: rgb(34, 77, 141);
+    border-radius: 2px;
+    cursor:pointer;
+}
+
+.column > .delete{
+    background-color: white;
+    height:30px;
+    width:70px;
+    padding:1px;
+    border-style: 1px solid;
+    color:red;
+    border-color: rgb(208, 37, 15);
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.column > .edit:hover{
+    color:white;
+    background-color: black;
+    border-radius: 2px;
+}
+
+.column > .delete:hover{
+    background-color: red;
+    color:rgb(255, 255, 255);
+    border-radius: 2px;
+}
+
+
+
+
+

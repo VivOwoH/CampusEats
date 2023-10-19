@@ -150,7 +150,7 @@ input{
     max-width: 100%;
     display:grid;
     grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
-    gap:20px;
+    gap:80px;
     font-family: Arial, Helvetica, sans-serif;
     /* margin-bottom: 800rem; */
 
@@ -170,7 +170,7 @@ input{
     height:300px;
     overflow:hidden;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-    /* margin-bottom: 500px; */
+
 }
 
 .card_img{
