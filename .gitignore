@@ -39,3 +39,5 @@ db.sqlite3
 
 myenv/
 .vscode/settings.json
+/campusEats/venv/
+/myenv/
