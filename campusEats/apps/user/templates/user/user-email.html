@@ -22,29 +22,33 @@
 
     <!--user information -->
     <div class="right-column">
+        <h6>CONTACT US</h6>
         <br>
         <div class="profile-info">
-            <label for="first_name"> First Name </label>
+            <label for="first_name"> Name (optional) </label>
             <input type="text" id="first_name">
-            <label for="last_name"> Last Name </label>
-            <input type="text" id="last_name">
-            <label for=""> Email </label>
+            <label for=""> Message </label>
             <input type="text" id="email">
-            <label for="contact_no"> Contact number </label>
-            <input type="text" id="contact_no">
             <br><br>
-            <button id="update-btn">UPDATE</button>
+            <button id="update-btn">SENT</button>
         </div>
     </div>
 </div>
 
 <div class="up_container"></div>
 
+<style>
+    #email {
+        width: 82%;
+        height: 220px;
+    }
+</style>
+
 {% else %}
-    <!-- Redirect to login.html -->
-    <script>
-        window.location.href = "{% url 'login' %}";
-    </script>
+<!-- Redirect to login.html -->
+<script>
+    window.location.href = "{% url 'login' %}";
+</script>
 {% endif %}
 
 {% endblock %}
