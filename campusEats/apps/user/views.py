@@ -69,6 +69,28 @@ def render_admin_dashboard(request):
     # If the user is an admin, render the admin dashboard
     return render(request, 'user/adminhome.html', {'user': global_user})
 
+def admin_profile(request):
+    if request.method == 'POST':
+        # Retrieve form data from the POST request
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get('last_name')
+        email = request.POST.get('email')
+        contact_no = request.POST.get('contact_no')
+
+        # Process the form data (you can save it to the database or perform other actions)
+        # For this example, we'll just print the data to the console
+        print('First Name:', first_name)
+        print('Last Name:', last_name)
+        print('Email:', email)
+        print('Contact Number:', contact_no)
+
+        # You can also return a response to the user, e.g., a success message
+        return HttpResponse('Profile updated successfully.')
+
+    # If it's not a POST request, render the HTML form
+    return render(request, 'admin_profile.html')
+
+
 
 def render_base_template(request):
     return render(request, 'base.html')

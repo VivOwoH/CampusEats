@@ -22,7 +22,7 @@
     </div>
 
     <!--admin information update form-->
-    <div class="right-column">
+    <!-- <div class="right-column">
         <h6>ADMIN</h6>
         <br>
         <div class="profile-info">
@@ -37,7 +37,21 @@
             <br><br>
             <button id="update-btn">UPDATE</button>
         </div>
-    </div>
+    </div> -->
+
+    <form class="profile-info" method="post" action="{% url 'admin_profile' %}">
+        {% csrf_token %}
+        <label for="first_name"> First Name </label>
+        <input type="text" id="first_name" name="first_name">
+        <label for="last_name"> Last Name </label>
+        <input type="text" id="last_name" name="last_name">
+        <label for="email"> Email </label>
+        <input type="text" id="email" name="email">
+        <label for="contact_no"> Contact number </label>
+        <input type="text" id="contact_no" name="contact_no">
+        <br><br>
+        <button id="update-btn" type="submit">UPDATE</button>
+    </form>    
 
     <script src="admin_script.js"></script>
 </div>
