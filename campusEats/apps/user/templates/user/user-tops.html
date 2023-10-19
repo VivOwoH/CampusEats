@@ -1,0 +1,51 @@
+<!-- user-tops.html -->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} My Account - My Top Restaurants {% endblock %}
+
+{% block content %}
+{% if user.user_type == 'user' %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'user/user-bookmarks.css' %}?{% now 'U' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+</head>
+
+<!--section between the nav and form-->
+<div class="up_container"></div>
+
+<div class="container">
+
+    <!--user navigation-->
+    <div class="left-column">
+        <a href="account">EDIT PROFILE</a>
+        <a href="#">MY TOP RESTAURANTS</a>
+        <a href="bookmarks">BOOKMARKED RESTAURANTS</a>
+        <a href="email">EMAIL ADMIN</a>
+    </div>
+
+    <!--user information -->
+    <div class="right-column">
+        <h6>MY FAVOURITES</h6>
+        <div class="profile-info">
+            <label for="first_name"> First Name </label>
+            <input type="text" id="first_name">
+            <label for="last_name"> Last Name </label>
+            <input type="text" id="last_name">
+        </div>
+
+
+    </div>
+</div>
+
+<div class="up_container"></div>
+
+{% else %}
+<!-- Redirect to login.html -->
+<script>
+    window.location.href = "{% url 'login' %}";
+</script>
+{% endif %}
+
+{% endblock %}
