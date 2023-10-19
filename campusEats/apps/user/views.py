@@ -71,6 +71,8 @@ def is_admin(request):
     # print(1, global_user.user_type)
     # user = request.user  # Retrieve the User object from the request
     # custom_user = CustomUser(user)
+    if not global_user:
+        return False
     return global_user.user_type == UserType.ADMIN.value
 # for the rendering of the admin
 # @user_passes_test(is_admin, login_url='access_denied')
@@ -86,26 +88,49 @@ def render_admin_dashboard(request):
     # If the user is an admin, render the admin dashboard
     return render(request, 'user/adminhome.html', {'user': global_user})
 
-def admin_profile(request):
+@user_passes_test(is_admin, login_url='access_denied')
+def update_admin(request):
     if request.method == 'POST':
         # Retrieve form data from the POST request
-        first_name = request.POST.get('first_name')
-        last_name = request.POST.get('last_name')
+        username = request.POST.get('username')
+        display_name = request.POST.get('display_name')
         email = request.POST.get('email')
         contact_no = request.POST.get('contact_no')
 
         # Process the form data (you can save it to the database or perform other actions)
         # For this example, we'll just print the data to the console
-        print('First Name:', first_name)
-        print('Last Name:', last_name)
-        print('Email:', email)
-        print('Contact Number:', contact_no)
+        # print('First Name:', username)
+        # print('Last Name:', display_name == '')
+        # print('Email:', email)
+        # print('Contact Number:', contact_no)
+        try:
+            if username:
+                global_user.username = username
+            if display_name:
+                global_user.display_name = display_name
+            if email:
+                global_user.email = email
+            if contact_no:
+                global_user.contact_number = contact_no
+
+            global_user.save()  # Save the changes to the user profile
+
+            message = "Profile updated successfully"
+            
+        except Exception as e:
+            # Handle the IntegrityError (e.g., unique constraint violation)
+            message = "An error occurred while updating the profile."
+        messages = list()
+        messages.append(message)
+
+        return render(request, 'user/adminhome.html', {'messages': messages, 'user':global_user})
+
 
         # You can also return a response to the user, e.g., a success message
-        return HttpResponse('Profile updated successfully.')
+        # return HttpResponse('Profile updated successfully.')
 
     # If it's not a POST request, render the HTML form
-    return render(request, 'admin_profile.html')
+    # return render(request, 'user/adminhome.html')
 
 
 #render the admin update users html

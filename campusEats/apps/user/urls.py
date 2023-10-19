@@ -16,6 +16,7 @@ urlpatterns = [
     path('access-denied/', views.access_denied, name='access_denied'),
     path('register/admin/update-users/', views.render_admin_updateusers, name='update_users'),
     path('update-user/', views.update_user, name='update_user'),
+    path('update-admin/', views.update_admin, name='update_admin'),
     path('edit/<id>', views.edit_user, name='editData'),
     path('delete/<id>', views.delete_user, name='deleteData'),
     #path('register/admin/update-users/update-user/', views.update_user, name='update_user'),
