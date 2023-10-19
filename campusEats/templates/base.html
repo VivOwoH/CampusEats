@@ -22,12 +22,24 @@
 
     <div class="navbar">
         {% if user.user_type == 'admin' %}
-        <a href="/register/admin"><i class="fas fa-user"></i></a>
+            <a href="/register/admin"><i class="fas fa-user"></i></a>
+        {% elif user.user_type == 'user' or user.user_type == 'blogger' %}
+            <a href="/success"><i class="fas fa-user"></i></a>
         {% else %}
-        <a href="/success"><i class="fas fa-user"></i></a>
+            <a href="/"><i class="fas fa-user"></i></a>
         {% endif %}
 
+        <!-- {% if user == None %}
         <a href="/login">Login</a>
+        {% else %}
+        <a href="/logout">Logout</a>
+        {% endif %} -->
+        {% if user.user_type == 'admin' or user.user_type == 'user' or user.user_type == 'blogger' %}
+        <a href="/logout">Logout</a>
+        {% else %}
+        <a href="/login">Login</a>
+        {% endif %}
+        <!-- <a href="/login">Login</a> -->
         <a href="/register">Sign Up</a>
         <a href="#">Blog</a>
         <a href="/">Home</a>

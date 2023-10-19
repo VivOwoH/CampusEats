@@ -10,7 +10,8 @@ from django.contrib.auth.hashers import check_password
 from .models import CustomUser  # Import your CustomUser model
 from django.contrib.auth.decorators import user_passes_test
 from .models import CustomUser
-from django.urls import reverse
+from django.contrib import messages
+
 
 
 global_user = None
@@ -51,6 +52,15 @@ def user_login(request):
     if request.method == 'GET':
         return render(request, 'user/login.html')
 
+def user_logout(request):
+    global global_user 
+    global_user = None
+    message = "Log out successful"
+    messages.success(request, message, extra_tags="autoclose")  # Add a success message with an "autoclose" tag
+
+    return redirect('/')
+
+
 def access_denied(request):
     # print(message)
     # context = {'message': message}
@@ -72,7 +82,7 @@ def is_admin(request):
 def render_admin_dashboard(request):
     if not is_admin(request.user):
         return access_denied(request,  message='admin')  # Pass the message to the access_denied view
-
+    print(type(global_user))
     # If the user is an admin, render the admin dashboard
     return render(request, 'user/adminhome.html', {'user': global_user})
 
@@ -178,7 +188,7 @@ def user_register(request):
 
         try:
             if CustomUser.register_user(username, email, password1, password2):
-                return redirect('success')  # Registration successful, redirect to success page
+                return redirect('login')  # Registration successful, redirect to success page
             else:
                 error_message = 'Registration failed'
                 # Render the page and trigger the JavaScript function to show the error popup
@@ -204,7 +214,7 @@ def user_list(request):
     return render(request, 'user/success.html', {'users': users})
 
 def render_success(request):
-    return render(request, 'user/success.html')
+    return render(request, 'user/success.html', {'user': global_user})
 
 
 # for the rendering of the admin add resturants page
