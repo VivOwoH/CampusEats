@@ -12,6 +12,7 @@ function filterRestaurants(){
     // iterate over each card
     cards.forEach(function(card) {
         var restuarantName = card.getAttrbute('data-name').toLowerCase();
+        console.log(restuarantName)
         if(restuarantName.includes(filterValue)){
             card.style.display = 'block';
         }else{
