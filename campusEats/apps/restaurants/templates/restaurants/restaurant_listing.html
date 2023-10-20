@@ -7,7 +7,7 @@
 {% block content %}
 
 <head>
-    <link rel="stylesheet" href="{% static 'restaurants/restaurant_listing.css' %}">
+    <link rel="stylesheet" href="{% static 'restaurants/restaurant_listing.css' %}?{% now 'U' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
 </head>
 

@@ -70,6 +70,23 @@ def render_admin_dashboard(request):
     return render(request, 'user/adminhome.html', {'user': global_user})
 
 
+def render_user_dashboard(request):
+    return render(request, 'user/userhome.html', {'user': global_user})
+
+# please help implement the tops and bookmarks
+def render_user_tops(request):
+    tops = {}
+    return render(request, 'user/user-tops.html', {'user': global_user, 'tops': tops})
+
+def render_user_bookmarks(request):
+    bookmarks = {}
+    return render(request, 'user/user-bookmarks.html', {'user': global_user, 'bookmarks': bookmarks})
+
+def render_user_email(request):
+    return render(request, 'user/user-email.html', {'user': global_user})
+  
+
+
 def render_base_template(request):
     return render(request, 'base.html')
 

@@ -1,0 +1,186 @@
+<!-- user-tops.html -->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} My Account - My Top Restaurants {% endblock %}
+
+{% block content %}
+{% if user.user_type == 'user' %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'user/user-tops.css' %}?{% now 'U' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+</head>
+
+<!--section between the nav and form-->
+<div class="up_container"></div>
+
+<div class="container">
+
+    <!--user navigation-->
+    <div class="left-column">
+        <a href="account">EDIT PROFILE</a>
+        <a href="#">MY TOP RESTAURANTS</a>
+        <a href="bookmarks">BOOKMARKED RESTAURANTS</a>
+        <a href="email">EMAIL ADMIN</a>
+    </div>
+
+    <!--user information -->
+    <div class="right-column">
+        <h6>MY FAVOURITES</h6>
+
+        <!-- Test UI -->
+        <div class="scroll-list">
+            <div class="bookmark-container">
+                <div class="bookmark-card">
+                    <div class="bookmark-image">
+                        <img src="{{ bookmark.ImageURL }}" alt="{{ bookmark.Name }}">
+                    </div>
+                    <div class="bookmark-content">
+                        <div class="bookmark-details">
+                            <div class="icon-text">
+                                <span class="icon"><i class="ri-message-line"></i></span>
+                                <span class="text">22</span> <!-- placeholder for number of review -->
+                            </div>
+                            <div class="icon-text">
+                                <span class="icon"><i class="ri-hearts-line"></i></span>
+                                <span class="text">100</span>
+                                <!-- placeholder for number of user fav this restaurant -->
+                            </div>
+                        </div>
+
+                        <h2 class="bookmark-title">
+                            <a href="">Restaurant Name</a> <!-- go to restaurant details -->
+                        </h2>
+                        <p class="bookmark-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur
+                            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                            laborum</p>
+                    </div>
+                    <div class="bookmark-cta">
+                        <a href="" class="button">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="bookmark-container">
+                <div class="bookmark-card">
+                    <div class="bookmark-image">
+                        <img src="{{ bookmark.ImageURL }}" alt="{{ bookmark.Name }}">
+                    </div>
+                    <div class="bookmark-content">
+                        <div class="bookmark-details">
+                            <div class="icon-text">
+                                <span class="icon"><i class="ri-message-line"></i></span>
+                                <span class="text">22</span> <!-- placeholder for number of review -->
+                            </div>
+                            <div class="icon-text">
+                                <span class="icon"><i class="ri-hearts-line"></i></span>
+                                <span class="text">100</span>
+                                <!-- placeholder for number of user fav this restaurant -->
+                            </div>
+                        </div>
+
+                        <h2 class="bookmark-title">
+                            <a href="">Restaurant Name</a> <!-- go to restaurant details -->
+                        </h2>
+                        <p class="bookmark-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur
+                            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                            laborum</p>
+                    </div>
+                    <div class="bookmark-cta">
+                        <a href="" class="button">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="bookmark-container">
+                <div class="bookmark-card">
+                    <div class="bookmark-image">
+                        <img src="{{ bookmark.ImageURL }}" alt="{{ bookmark.Name }}">
+                    </div>
+                    <div class="bookmark-content">
+                        <div class="bookmark-details">
+                            <div class="icon-text">
+                                <span class="icon"><i class="ri-message-line"></i></span>
+                                <span class="text">22</span> <!-- placeholder for number of review -->
+                            </div>
+                            <div class="icon-text">
+                                <span class="icon"><i class="ri-hearts-line"></i></span>
+                                <span class="text">100</span>
+                                <!-- placeholder for number of user fav this restaurant -->
+                            </div>
+                        </div>
+
+                        <h2 class="bookmark-title">
+                            <a href="">Restaurant Name</a> <!-- go to restaurant details -->
+                        </h2>
+                        <p class="bookmark-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur
+                            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                            laborum</p>
+                    </div>
+                    <div class="bookmark-cta">
+                        <a href="" class="button">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Actual lists here -->
+        {% for bookmark in bookmarks %}
+        <div class="scroll-list">
+            <div class="bookmark-container">
+                <div class="bookmark-card">
+                    <div class="bookmark-image">
+                        <img src="{{ bookmark.ImageURL }}" alt="{{ bookmark.Name }}">
+                    </div>
+                    <div class="bookmark-content">
+                        <div class="bookmark-details">
+                            <div class="icon-text">
+                                <span class="icon"><i class="ri-message-line"></i></span>
+                                <span class="text">22</span> <!-- placeholder for number of review -->
+                            </div>
+                            <div class="icon-text">
+                                <span class="icon"><i class="ri-hearts-line"></i></span>
+                                <span class="text">100</span>
+                                <!-- placeholder for number of user fav this restaurant -->
+                            </div>
+                        </div>
+
+                        <h2 class="bookmark-title">{{ bookmark.Name }}</h2>
+                        <p class="bookmark-description">{{ bookmark.Description }}</p>
+                    </div>
+                    <div class="bookmark-cta">
+                        <a href="" class="button">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+<div class="up_container"></div>
+
+{% else %}
+<!-- Redirect to login.html -->
+<script>
+    window.location.href = "{% url 'login' %}";
+</script>
+{% endif %}
+
+{% endblock %}

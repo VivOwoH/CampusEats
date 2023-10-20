@@ -1,0 +1,98 @@
+.scroll-list {
+    width: 90%;
+    height: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.bookmark-container {
+    margin-top: 1rem;
+}
+
+.bookmark-card {
+    margin-right: 1rem;
+    background-color: white;
+    display: inline-block;
+}
+
+.bookmark-image {
+    overflow: hidden;
+}
+
+.bookmark-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.bookmark-content {
+    padding: 2rem;
+}
+
+.bookmark-title {
+    margin: 0.5rem 0 0.5rem 0;
+    font-size: 30px;
+}
+
+.bookmark-description {
+    font-size: 19px;
+}
+
+.bookmark-details,
+.icon-text {
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+}
+
+.icon-text {
+    margin-right: 1rem;
+}
+
+.icon-text .icon {
+    color: #e25934;
+    margin-right: 0.4rem;
+}
+
+.bookmark-cta {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button {
+    padding: 1rem 1.1rem;
+    display: inline-block;
+    background-color: #e25934;
+    border-radius: 0.6rem;
+    color: white;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+@media screen and (min-width: 900px) {
+    .bookmark-card {
+        overflow: hidden;
+    }
+
+    .bookmark-image {
+        height: auto;
+        flex: 1;
+    }
+
+    .bookmark-content {
+        flex: 1.5;
+        display: flex;
+        flex-direction: column;
+    }
+}

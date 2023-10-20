@@ -13,6 +13,8 @@ urlpatterns = [
     path('register/admin/add-restaurants/', views.render_admin_add_restaurants, name='add_restaurants'),
     path('userlist/', views.user_list, name='user list'),
     path('access-denied/', views.access_denied, name='access_denied'),
-
-
+    path('profile/user/account', views.render_user_dashboard, name='user_dashboard'),
+    path('profile/user/email', views.render_user_email, name='user_email'),
+    path('profile/user/tops', views.render_user_tops, name='user_top_restaurants'),
+    path('profile/user/bookmarks', views.render_user_bookmarks, name='user_bookmarks'),
 ]

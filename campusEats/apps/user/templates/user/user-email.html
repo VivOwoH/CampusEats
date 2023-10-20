@@ -1,0 +1,54 @@
+<!-- user-email.html -->
+
+{% extends 'base.html' %}
+
+{% block title %} My Account - Email Admin {% endblock %}
+
+{% block content %}
+{% if user.user_type == 'user' %}
+
+<!--section between the nav and form-->
+<div class="up_container"></div>
+
+<div class="container">
+
+    <!--user navigation-->
+    <div class="left-column">
+        <a href="account">EDIT PROFILE</a>
+        <a href="tops">MY TOP RESTAURANTS</a>
+        <a href="bookmarks">BOOKMARKED RESTAURANTS</a>
+        <a href="#">EMAIL ADMIN</a>
+    </div>
+
+    <!--user information -->
+    <div class="right-column">
+        <h6>CONTACT US</h6>
+        <br>
+        <div class="profile-info">
+            <label for="first_name"> Name (optional) </label>
+            <input type="text" id="first_name">
+            <label for=""> Message </label>
+            <input type="text" id="email">
+            <br><br>
+            <button id="update-btn">SENT</button>
+        </div>
+    </div>
+</div>
+
+<div class="up_container"></div>
+
+<style>
+    #email {
+        width: 82%;
+        height: 220px;
+    }
+</style>
+
+{% else %}
+<!-- Redirect to login.html -->
+<script>
+    window.location.href = "{% url 'login' %}";
+</script>
+{% endif %}
+
+{% endblock %}
