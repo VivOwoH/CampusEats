@@ -98,6 +98,7 @@ def admin_profile(request):
     return render(request, 'admin_profile.html')
 
 
+
 #render the admin update users html
 def render_admin_updateusers(request):
     # print("hello")
@@ -141,7 +142,6 @@ def edit_user(request, id):
     return render(request,"user/edit.html", context)
 
 def delete_user(request, id):
-
     d = CustomUser.objects.get(id=id)
     d.delete()
     return redirect("/register/admin/update-users/")
@@ -208,9 +208,72 @@ def render_success(request):
 
 
 # for the rendering of the admin add resturants page
-@user_passes_test(is_admin, login_url='access_denied')
+#@user_passes_test(is_admin, login_url='access_denied')
+
 def render_admin_add_restaurants(request):
     return render(request,'user/admin-add-restaurants.html')
+
+def insert_restaurant(request):
+    if request.method == "POST":
+        name=request.POST.get('name')
+        description=request.POST.get('restaurant_desc')
+        location=request.POST.get('location')
+        img_url=request.POST.get('img_url')
+        phone = request.POST.get('phone')
+        price = request.POST.get('price')
+        dine_in = request.POST.get('dine_in')
+        delivery = request.POST.get('delivery')
+        reservable = request.POST.get('reservable')
+        serves_wine = request.POST.get('serves_wine')
+        query = Restaurant(Name=name, Location=location,Description=description)
+        query.save()
+        print(name, location)
+    return render(request,'user/admin-add-restaurants.html')
+
+# edit restuarant details
+def edit_restaurant(request):
+    rest_data = Restaurant.objects.all()
+    context_={"rest_data":rest_data}
+    return render(request,'user/admin-update-restaurants.html', context_)
+
+
+def edit_restaurant_details(request, id):
+    if request.method == "POST":
+        name=request.POST.get('name')
+        
+        description=request.POST.get('restaurant_desc')
+        location=request.POST.get('location')
+        img_url=request.POST.get('img_url')
+        phone = request.POST.get('phone')
+        price = request.POST.get('price')
+        dine_in = request.POST.get('dine_in')
+        delivery = request.POST.get('delivery')
+        reservable = request.POST.get('reservable')
+        serves_wine = request.POST.get('serves_wine')
+
+        updated_r = Restaurant.objects.get( RestaurantID=id)
+        print("2", updated_r.name)
+        
+        updated_r.name = name
+        
+        updated_r.location = location
+        updated_r.save()
+        print(updated_r.name)
+
+        return redirect('/register/admin/update-resturants/')
+
+    rest_id = Restaurant.objects.get(RestaurantID=id)
+    print(rest_id)
+    context_ = {"rest_id":rest_id}
+    return render(request, "user/edit-restaurant.html",context_)
+
+
+
+
+def delete_restaurant(request, id):
+    rest_id = CustomUser.object.get(id=id)
+    rest_id.delete()
+    return redirect('/register/admin/update-restaurants.html')
 
 
 # Views restricted to admin and blogger roles

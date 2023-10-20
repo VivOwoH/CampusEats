@@ -25,13 +25,13 @@
          <a href="inbox.html">INBOX</a>
      </div>
 
-     <div class="right-column-add-restaurants" style="height:2000px">
-         <h5>ADD RESTAURANT</h5><br>
-         <form action="/insert_restaurant/" method="post"> {% csrf_token %}
+     <div class="right-column-add-restaurants">
+         <h5>UPDATE RESTAURANT</h5><br>
+         <form action="/edit_rest/{{rest_data.RestaurantID}}" method="post"> {% csrf_token %}
 
             <label for="restaurant_name"> Add Restaurant Name </label>
             <div class="form_gp">
-                <input type="text" id="restaurant_name" name="name" required>
+                <input type="text" id="restaurant_name" name="name" value={{rd.Name}} required>
             </div>
             
             <label for="restaurant_description"> Add description </label>
@@ -118,8 +118,6 @@
                 
             </div>
       
-    
-
            
            <label>Select all that Apply</label>
             <label class="checkbox-container"> Dine In
@@ -135,7 +133,7 @@
                     <input type="checkbox" name="serves_wine">
             
         
-            <button id="add-restaurant-btn" type="submit">ADD RESTAURANT</button>
+            <button id="add-restaurant-btn" type="submit"><a href="/register/admin/update-restaurants/" >UPDATE RESTAURANT </a></button>
                  </form>
 
      </div>

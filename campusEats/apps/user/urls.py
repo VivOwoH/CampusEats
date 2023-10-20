@@ -17,7 +17,11 @@ urlpatterns = [
     path('update-user/', views.update_user, name='update_user'),
     path('edit/<id>', views.edit_user, name='editData'),
     path('delete/<id>', views.delete_user, name='deleteData'),
-    #path('register/admin/update-users/update-user/', views.update_user, name='update_user'),
+    path('insert_restaurant/', views.insert_restaurant, name='insertRestaurants'),
+    path('register/admin/update-restaurants/', views.edit_restaurant, name='editRestaurant'),
+    path('edit_rest/<id>', views.edit_restaurant_details, name='editRestaurantDetails'),
+    path('delete_rest/<id>', views.delete_restaurant, name='deleteRestaurant'),
+    
 
 
 ]

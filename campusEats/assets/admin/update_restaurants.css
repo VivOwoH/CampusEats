@@ -1,0 +1,18 @@
+.container {
+    display:flex;
+}
+
+/*update user right side column*/
+.right-column-ur{
+    flex:1;
+    background-color: rgb(236, 229, 217);
+    padding-top: 50px;
+    padding-left: 80px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.right-column-ur .title{
+    font-size: larger;
+}

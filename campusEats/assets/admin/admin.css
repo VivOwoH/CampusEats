@@ -22,7 +22,7 @@
     padding-left: 80px;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
-    height: 1500px;
+    
 }
 /* admin function menu*/
 .left-column a{
@@ -85,43 +85,6 @@
     background-color: black;
 }
 
-#dropdown-cuisine{
-  
-    width:200px;
-    padding:10px;
-    margin-bottom: 10px;
-    border:1px solid #ccc;
-    border-radius: 5px;
- }
-
- #add_cuisine_container{
-    display:flex;
-    height: 100px;
-    
-  }
-
-#add_cuisine_btn{
-    width:80px;
-    height:40px;
-    background-color: #ccc;
-    margin-left:5px;
-    border:1px solid #ccc;
-    border-radius: 2px;
-    
-}
-
-#add_cuisine_btn:hover{
-    background-color: darkgray;
-}
-
- #add_cuisine_txt_box{
-    height:40px;
-    width:20%;
-    padding:10px;
-    margin-bottom: 10px;
-    border:1px solid #ccc;
-    border-radius: 5px;
- }
 
 
 #restaurant_description{
@@ -135,6 +98,9 @@
 
 .open_hrs_table{
     border-spacing: 0;
+}
+.open_hrs_table tr{
+    height:10px;
 }
 .open_hrs_table > th, td{
     text-align: center;
@@ -151,6 +117,7 @@
     font-size: 16px;
     display:flex;
 }
+
 .open_hrs_div_right{
     flex:1;
     margin-left: 50px;

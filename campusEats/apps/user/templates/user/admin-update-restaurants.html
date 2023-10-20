@@ -1,9 +1,33 @@
-<!-- admin update restaurant -->
+<!-- admin.html -->
 {% extends 'base.html' %}
-
-{% block title %}Admin view {% endblock %}
+{% load static %}
+{% block title %}Update Restaurant{% endblock %}
 
 {% block content %}
 
-
+<body>
+    <h3>RESTAURANT DATABASE</h3>
+    <table class="rest_db_table">
+        <thead>
+            <tr>
+                <th class="column">ID</th>
+                <th class="column">Name</th>
+                <th class="column">Edit</th>
+                <th class="column">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for r in rest_data %}
+        <tr class="row">
+            
+            <td class="column">{{r.RestaurantID}}</td>
+            <th class="column">{{r.Name}}</th>
+            <td class="column"><a href="/edit_rest/{{r.RestaurantID}}" type="button" class="edit">EDIT</td>
+            <td class="column"><a href="/delete_rest/{{r.RestaurantID}}" type="button" class="delete">DELETE</td>
+   
+        </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
 {% endblock %}
