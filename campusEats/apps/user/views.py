@@ -245,6 +245,17 @@ def render_success(request):
 # for the rendering of the admin add resturants page
 @user_passes_test(is_admin, login_url='access_denied')
 def render_admin_add_restaurants(request):
+    if request.method == "POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        role = request.POST.get('role')
+
+        updated_d = CustomUser.objects.get(id=id)
+        updated_d.username = name
+        updated_d.email = email
+        updated_d.user_type= role
+        updated_d.save()
+        return redirect('/register/admin/update-users/')
     return render(request,'user/admin-add-restaurants.html')
 
 
