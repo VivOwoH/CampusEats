@@ -1,4 +1,5 @@
-<!-- admin.html -->
+<!-- admin can update users' existing data and view user db -->
+
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Admin Update Users {% endblock %}
@@ -17,11 +18,11 @@
  <div class="container">
      
      <div class="left-column">
-         <a href="">UPDATE PROFILE</a>
-         <a href="">ADD RESTAURANT</a>
-         <a href="">UPDATE RESTAURANT</a>
-         <a href="">UPDATE USERS</a>
-         <a href="">INBOX</a>
+         <a href="#">UPDATE PROFILE</a>
+         <a href="admin-add-restaurants.html">ADD RESTAURANT</a>
+         <a href="admin-update-restaurants.html">UPDATE RESTAURANT</a>
+         <a href="#">UPDATE USERS</a>
+         <a href="#">INBOX</a>
     
      </div>
 
@@ -75,8 +76,12 @@
                 <td class="column">{{d.username}}</td>
                 <td class="column">{{d.email}}</td>
                 <td class="column">{{d.user_type}}</td>
-                <td class="column"><a href="/edit/{{d.id}}" type="button" class="edit">EDIT</td>
-                <td class="column"><a href="/delete/{{d.id}}" type="button" class="delete">DELETE</td>
+                <td class="column"><a href="/edit/{{d.id}}" type="button" class="edit">
+                    <i class="fas fa-edit"></i></a>
+                </td>
+                <td class="column"><a href="/delete/{{d.id}}" type="button" class="delete">
+                    <i class="fas fa-trash"></i>
+                </td>
        
             </tr>
                 {% endfor %}

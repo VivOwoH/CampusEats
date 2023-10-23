@@ -9,6 +9,7 @@
 <head>
     <link rel="stylesheet" href="{% static 'restaurants/restaurant_listing.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+
 </head>
 
 <!--search box-->
@@ -23,21 +24,13 @@
     <!--search filters-->
     <nav>
         <div class="dropdown_nav">
-            <div class="dropdown_filters">
-                <button class="dropbtn">Cuisine</button>
-                <div class="dropdown_items">
-                    <a href="#">Western</a>
-                    <a href="#">Italian</a>
-                    <a href="#">Indian</a>
-                    <a href="#">Chinese</a>
-                </div>
-            </div>
+           
             <div class="dropdown_filters">
                 <button class="dropbtn">Price</button>
-                <div class="dropdown_items">
-                    <a href="#">$</a>
-                    <a href="#">$$</a>
-                    <a href="#">$$$</a>
+                <div class="dropdown_items" id="price_filter_dpd">
+                    <a data-price=1>$</a>
+                    <a data-price=2>$$</a>
+                    <a data-price=3>$$$</a>
                 </div>
             </div>
             <div class="dropdown_filters">
@@ -52,10 +45,10 @@
 
 <div class="label_container"><label for="search_label"> Search Results </label></div>
 
-
 {% for restaurant in restaurant_list %}
+
 <div class="restaurant-container">
-    <div class="restaurant-card">
+    <div class="restaurant-card" data-name="{{ restaurant.Name }}">
         <div class="restaurant-content">
             <div class="restaurant-details">
                 <div class="icon-text">
@@ -81,6 +74,4 @@
     </div>
 </div>
 {% endfor %}
-
-
 {% endblock %}

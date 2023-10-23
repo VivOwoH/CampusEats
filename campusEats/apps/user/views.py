@@ -237,10 +237,12 @@ def edit_restaurant(request):
     return render(request,'user/admin-update-restaurants.html', context_)
 
 
+# called when the edit restaurant button is clicked the form is calls the submit function
 def edit_restaurant_details(request, id):
+
     if request.method == "POST":
+
         name=request.POST.get('name')
-        
         description=request.POST.get('restaurant_desc')
         location=request.POST.get('location')
         img_url=request.POST.get('img_url')
@@ -250,15 +252,17 @@ def edit_restaurant_details(request, id):
         delivery = request.POST.get('delivery')
         reservable = request.POST.get('reservable')
         serves_wine = request.POST.get('serves_wine')
-
-        updated_r = Restaurant.objects.get( RestaurantID=id)
-        print("2", updated_r.name)
         
-        updated_r.name = name
+        #get updated restaurant data
+        updated_r = Restaurant.objects.get(RestaurantID=id)        
+        updated_r.Name = name
+        updated_r.Location = location
+        updated_r.Description = description
+        updated_r.ImageURL = img_url
         
-        updated_r.location = location
+        # save the updated data into the db
         updated_r.save()
-        print(updated_r.name)
+        print(updated_r.Name)
 
         return redirect('/register/admin/update-resturants/')
 

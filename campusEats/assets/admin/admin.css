@@ -130,3 +130,27 @@
     height: 25px;
     border:1px solid;
 }
+
+.checkbox-container {
+    display: flex;
+    align-items: center; 
+    
+}
+
+.container_options {
+    display: flex;
+}
+
+.label_container {
+    flex: 1;
+    margin: 10px; 
+}
+
+.check_container {
+    flex: 1;
+    margin: 10px; 
+}
+
+
+
+

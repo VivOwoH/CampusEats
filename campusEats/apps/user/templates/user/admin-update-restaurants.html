@@ -4,11 +4,18 @@
 {% block title %}Update Restaurant{% endblock %}
 
 {% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'admin/add_rest.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+
+</head>
 <body>
-    <h3>RESTAURANT DATABASE</h3>
+    <div class="upper_container"></div>
+    <p class="title">RESTAURANT DATABASE</p>
     <table class="rest_db_table">
-        <thead>
+        <thead class="db_header">
             <tr>
                 <th class="column">ID</th>
                 <th class="column">Name</th>
@@ -21,9 +28,17 @@
         <tr class="row">
             
             <td class="column">{{r.RestaurantID}}</td>
-            <th class="column">{{r.Name}}</th>
-            <td class="column"><a href="/edit_rest/{{r.RestaurantID}}" type="button" class="edit">EDIT</td>
-            <td class="column"><a href="/delete_rest/{{r.RestaurantID}}" type="button" class="delete">DELETE</td>
+            <td class="column" id="align-name-col">{{r.Name}}</td>
+
+            <td class="column"><a href="/edit_rest/{{r.RestaurantID}}" type="button" class="edit">
+                <i class="fas fa-edit"></i></a>
+            </td>
+
+            <td class="column">
+                    <a href="/delete_rest/{{r.RestaurantID}}"type="button" class="delete">
+                        <i class="fas fa-trash"></i>
+                      </a>
+                </td>
    
         </tr>
             {% endfor %}

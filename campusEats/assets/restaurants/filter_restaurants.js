@@ -1,4 +1,4 @@
-// get search input
+/* get search input
 var searchInput = document.getElementById('search');
 
 // Add event listener to the input serachInput field
@@ -20,4 +20,4 @@ function filterRestaurants(){
         }
     });
 
-}
+}*/

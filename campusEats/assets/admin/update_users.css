@@ -100,19 +100,15 @@
 }
 
 .column > .edit{
-    background-color:rgb(34, 77, 141);
     height:30px;
     width:60px;
     padding:1px;
     border-style: 1px solid;
-    color:white;
-    border-color: rgb(34, 77, 141);
     border-radius: 2px;
     cursor:pointer;
 }
 
 .column > .delete{
-    background-color: white;
     height:30px;
     width:70px;
     padding:1px;
@@ -122,6 +118,9 @@
     border-radius: 2px;
     cursor: pointer;
 }
+
+
+
 
 .column > .edit:hover{
     color:white;
@@ -134,8 +133,5 @@
     color:rgb(255, 255, 255);
     border-radius: 2px;
 }
-
-
-
 
 

@@ -9,7 +9,27 @@
     <link rel="stylesheet" href="{% static 'admin/admin.css' %}">
     <link rel="stylesheet" href="{% static 'admin/update_restaurants.css' %}">
 </head>
+<style>
+    form input{
+        text-align: left;
+        padding-left: 1rem;
+    }
 
+    #add-restaurant-btn{
+        color:white;
+        text-decoration: none;
+        background-color: rgb(231, 183, 95);
+        margin-bottom: 2rem;
+    }
+
+    .checkbox-container > input{
+        height:15px;
+    }
+
+    
+
+
+</style>
 <!--section between the nav and form-->
 <div class="up_container">
 
@@ -18,20 +38,20 @@
  <div class="container">
      
      <div class="left-column">
-         <a href="adminprofile.html">UPDATE PROFILE</a>
-         <a href="addrestaurant.html">ADD RESTAURANT</a>
-         <a href="updaterestaurant.html">UPDATE RESTAURANT</a>
+         <a href="#">UPDATE PROFILE</a>
+         <a href="#">ADD RESTAURANT</a>
+         <a href="#">UPDATE RESTAURANT</a>
          <a href="updateusers.html">UPDATE USERS</a>
          <a href="inbox.html">INBOX</a>
      </div>
 
      <div class="right-column-add-restaurants">
-         <h5>UPDATE RESTAURANT</h5><br>
+         <h5>UPDATE RESTAURANTS</h5><br>
          <form action="/edit_rest/{{rest_data.RestaurantID}}" method="post"> {% csrf_token %}
 
             <label for="restaurant_name"> Add Restaurant Name </label>
             <div class="form_gp">
-                <input type="text" id="restaurant_name" name="name" value={{rd.Name}} required>
+                <input type="text" id="restaurant_name" name="name" required>
             </div>
             
             <label for="restaurant_description"> Add description </label>
@@ -61,76 +81,79 @@
                 <option value="3">3</option>
                 <option value="4">4</option>
             </select>
-       
-            <label for="open_hours"> Open Hours </label>
-            <br>
+            <br><br>
 
-            <div class="open_hrs_div">
-                <div class="open_hrs_div_left">
-                    <table class="open_hrs_table">
-                        <thead>
-                            <tr>
-                                <th class="open_hrs_th">DAY</th>
-                                <th class="open_hrs_th">Open time</th>
-                                <th class="open_hrs_th">Close time</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><label class="td_day">Monday</label></td>
-                                <td><input type="text" class="td_time" id="td_time"></td>
-                                <td><input type="text" class="td_time" id="td_time"></td>
-                            </tr>
-                            <tr>
-                                <td><label class="td_day">Tuesday</label></td>
-                                <td><input type="text" class="td_time" id="td_time"></td>
-                                <td><input type="text" class="td_time" id="td_time"></td>
-                            </tr>
-                            <tr>
-                                <td><label class="td_day">Wednesday</label></td>
-                                <td><input type="text" class="td_time" id="td_time"></td>
-                                <td><input type="text" class="td_time" id="td_time"></td>
-                            </tr>
-                            <tr>
-                                <td><label class="td_day">Thursday</label></td>
-                                <td><input type="text" class="td_time" id="td_time"></td>
-                                <td><input type="text" class="td_time" id="td_time"></td>
-                            </tr>
-                            <tr>
-                                <td><label class="td_day">Friday</label></td>
-                                <td><input type="text" class="td_time" id="td_time"></td>
-                                <td><input type="text" class="td_time" id="td_time"></td>
-                            </tr>
-                            <tr>
-                                <td><label class="td_day">Saturday</label></td>
-                                <td><input type="text" class="td_time" id="td_time"></td>
-                                <td><input type="text" class="td_time" id="td_time"></td>
-                            </tr>
-                            <tr>
-                                <td><label class="td_day">Sunday</label></td>
-                                <td><input type="text" class="td_time" id="td_time"></td>
-                                <td><input type="text" class="td_time" id="td_time"></td>
-                            </tr>
-        
-                        </tbody>
-                    </table>
-                </div>
-                
-            </div>
-      
+ 
            
-           <label>Select all that Apply</label>
+           <label><h4>Select all that Apply</h4></label><br><br>
             <label class="checkbox-container"> Dine In
-                 <input type="checkbox" name="dine_in">
+                 <input type="checkbox" name="dine_in"><br>
                  
             <label class="checkbox-container"> Delivery
-                <input type="checkbox" name="delivery">
+                <input type="checkbox" name="delivery"><br>
                 
             <label class="checkbox-container"> Reservable
-                <input type="checkbox" name="reservable">
+                <input type="checkbox" name="reservable"><br>
 
                 <label class="checkbox-container"> Serves Wine
-                    <input type="checkbox" name="serves_wine">
+                    <input type="checkbox" name="serves_wine"><br>
+
+                    <label for="open_hours"> <h4>Open Hours </h4></label>
+                    <br>
+        
+                    <div class="open_hrs_div">
+                        <div class="open_hrs_div_left">
+                            <table class="open_hrs_table">
+                                <thead>
+                                    <tr>
+                                        <th class="open_hrs_th day">DAY</th>
+                                        <th class="open_hrs_th">Open time</th>
+                                        <th class="open_hrs_th">Close time</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><label class="td_day">Monday</label></td>
+                                        <td><input type="text" class="td_time" id="td_time"></td>
+                                        <td><input type="text" class="td_time" id="td_time"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label class="td_day">Tuesday</label></td>
+                                        <td><input type="text" class="td_time" id="td_time"></td>
+                                        <td><input type="text" class="td_time" id="td_time"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label class="td_day">Wednesday</label></td>
+                                        <td><input type="text" class="td_time" id="td_time"></td>
+                                        <td><input type="text" class="td_time" id="td_time"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label class="td_day">Thursday</label></td>
+                                        <td><input type="text" class="td_time" id="td_time"></td>
+                                        <td><input type="text" class="td_time" id="td_time"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label class="td_day">Friday</label></td>
+                                        <td><input type="text" class="td_time" id="td_time"></td>
+                                        <td><input type="text" class="td_time" id="td_time"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label class="td_day">Saturday</label></td>
+                                        <td><input type="text" class="td_time" id="td_time"></td>
+                                        <td><input type="text" class="td_time" id="td_time"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label class="td_day">Sunday</label></td>
+                                        <td><input type="text" class="td_time" id="td_time"></td>
+                                        <td><input type="text" class="td_time" id="td_time"></td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+              
             
         
             <button id="add-restaurant-btn" type="submit"><a href="/register/admin/update-restaurants/" >UPDATE RESTAURANT </a></button>
@@ -139,10 +162,6 @@
      </div>
      
  </div>
-
-
-
-
 
  <div class="up_container">
  

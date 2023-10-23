@@ -48,6 +48,8 @@ def get_all_restaurants():
             'Description': restaurant.Description,
             'ImageURL': restaurant.ImageURL,
             'Rating': restaurant.Rating,
+            'PriceLevel':restaurant.PriceLevel,
+            'Takeout': restaurant.Takeout,
         }
         # Append the individual restaurant data to the list
         restaurant_list.append(restaurant_data)
