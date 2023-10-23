@@ -12,13 +12,8 @@
     <!-- <link rel="stylesheet" href="static/style.css"> -->
     <link rel="stylesheet" href="{% static 'restaurants/home.css' %}">
     <link rel="stylesheet" href="{% static 'admin/admin.css' %}">
-    <link rel="stylesheet" href="{% static 'admin/admin-add-restaurants.css' %}">
     <link rel="stylesheet" href="{% static 'basestyle.css' %}">
-    <link rel="stylesheet" href="{% static 'restaurants/home.js' %}">
-
-    
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href= "https://fonts.googleapis.com/css?family=Poppins">
 
 </head>
@@ -26,14 +21,20 @@
 <body>
 
     <div class="navbar">
-   
-        <a href="/">Home</a>
+        {% if user.user_type == 'admin' %}
+        <a href="/register/admin"><i class="fas fa-user"></i></a>
+        {% else %}
+        <a href="/success"><i class="fas fa-user"></i></a>
+        {% endif %}
+
         <a href="/login">Login</a>
         <a href="/register">Sign Up</a>
         <a href="#">Blog</a>
+        <a href="/">Home</a>
+        
     
     <!-- <a class="logo" href="#"><img src="media/CE_logo.png" alt="Logo"></a> -->
-    <a class="logo" href="#"><img src="{% static 'CE_logo.png' %}" alt="Logo"></a>
+    <a class="logo" href="/"><img src="{% static 'CE_logo.png' %}" alt="Logo"></a>
     
     </div>
     <div>

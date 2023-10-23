@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            margin: 0 200px;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .button {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .return-button {
+            background-color: #ccc;
+        }
+        .write-review-button {
+            background-color: #333;
+            color: #fff;
+        }
+        .review {
+            background-color: #f5f5f5;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+        .review-content {
+            display: flex;
+            align-items: center;
+        }
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .name {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <button class="button return-button">Return</button>
+        <button class="button write-review-button">Write My Review</button>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="review">
+                <div class="review-content">
+                    <img class="avatar" src="avatar.jpg" alt="Avatar">
+                    <div>
+                        <div class="name">John Doe</div>
+                        <p>Review content goes here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

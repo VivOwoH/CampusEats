@@ -10,6 +10,8 @@ from django.contrib.auth.hashers import check_password
 from .models import CustomUser  # Import your CustomUser model
 from django.contrib.auth.decorators import user_passes_test
 from .models import CustomUser
+from django.urls import reverse
+
 
 global_user = None
 
@@ -33,16 +35,21 @@ def user_login(request):
                 user = None  # If user doesn't exist, set to None
         global global_user
         global_user = user
-        print(global_user, type(global_user), global_user.user_type)
+        print(global_user, type(global_user))
         if user and (user.password == password or check_password(password, user.password)):
+            # global_user = user
+            if is_admin(request):
+                return redirect('/register/admin')
+                # return redirect(reverse('/register/admin'))  
+                # return render(request, 'user/adminhome.html', {'error_message': error_message})
             # User authentication successful, log the user in (you may want to set a session variable)
             return redirect('success')  # Redirect to a success page after login
         else:
             # Authentication failed, handle it (e.g., display an error message)
             error_message = 'Invalid login credentials'
             return render(request, 'user/login.html', {'error_message': error_message})
-
-    return render(request, 'user/login.html')
+    if request.method == 'GET':
+        return render(request, 'user/login.html')
 
 def access_denied(request):
     # print(message)
@@ -69,6 +76,75 @@ def render_admin_dashboard(request):
     # If the user is an admin, render the admin dashboard
     return render(request, 'user/adminhome.html', {'user': global_user})
 
+def admin_profile(request):
+    if request.method == 'POST':
+        # Retrieve form data from the POST request
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get('last_name')
+        email = request.POST.get('email')
+        contact_no = request.POST.get('contact_no')
+
+        # Process the form data (you can save it to the database or perform other actions)
+        # For this example, we'll just print the data to the console
+        print('First Name:', first_name)
+        print('Last Name:', last_name)
+        print('Email:', email)
+        print('Contact Number:', contact_no)
+
+        # You can also return a response to the user, e.g., a success message
+        return HttpResponse('Profile updated successfully.')
+
+    # If it's not a POST request, render the HTML form
+    return render(request, 'admin_profile.html')
+
+
+
+#render the admin update users html
+def render_admin_updateusers(request):
+    # print("hello")
+    data = CustomUser.objects.all()
+    # print(data)
+    context = {"data":data}
+    # print(context)
+    return render(request,'user/admin-update-users.html', context)
+
+
+
+def update_user(request):
+    if request.method == "POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        role = request.POST.get('role')
+        print(name, email, role)
+        query=CustomUser(username=name, email=email,user_type=role)
+        query.save()
+        return redirect('/register/admin/update-users/')
+    return render(request, 'user/admin-update-users.html', {'user': global_user})
+
+
+def edit_user(request, id):
+
+    #save the updated information
+    if request.method == "POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        role = request.POST.get('role')
+
+        updated_d = CustomUser.objects.get(id=id)
+        updated_d.username = name
+        updated_d.email = email
+        updated_d.user_type= role
+        updated_d.save()
+        return redirect('/register/admin/update-users/')
+    
+    d = CustomUser.objects.get(id=id)
+    context={"d":d}
+    return render(request,"user/edit.html", context)
+
+def delete_user(request, id):
+    d = CustomUser.objects.get(id=id)
+    d.delete()
+    return redirect("/register/admin/update-users/")
 
 def render_user_dashboard(request):
     return render(request, 'user/userhome.html', {'user': global_user})
@@ -133,9 +209,6 @@ def user_register(request):
 
 
 # # Custom test functions
-# def is_admin(global_user):
-#     print(1, global_user.user_type)
-#     return global_user.user_type == UserType.ADMIN.value
 
 def is_blogger(global_user):
     return global_user.user_type == UserType.BLOGGER.value
@@ -150,20 +223,78 @@ def user_list(request):
 def render_success(request):
     return render(request, 'user/success.html')
 
-# def access_denied(request, message=None):
-#     print(message)
-#     context = {'message': message}
-#     return render(request, 'user/access_denied.html', context)
-
 
 # for the rendering of the admin add resturants page
-@user_passes_test(is_admin, login_url='access_denied')
+#@user_passes_test(is_admin, login_url='access_denied')
+
 def render_admin_add_restaurants(request):
-    return render(request,'user/admin-add-restaurants.html', "admin")
-    # users = CustomUser.objects.all()
-    # print("idk", users)
-    # # Pass the list of users to the template
-    # return render(request, 'user/success.html', {'users': users})
+    return render(request,'user/admin-add-restaurants.html')
+
+def insert_restaurant(request):
+    if request.method == "POST":
+        name=request.POST.get('name')
+        description=request.POST.get('restaurant_desc')
+        location=request.POST.get('location')
+        img_url=request.POST.get('img_url')
+        phone = request.POST.get('phone')
+        price = request.POST.get('price')
+        dine_in = request.POST.get('dine_in')
+        delivery = request.POST.get('delivery')
+        reservable = request.POST.get('reservable')
+        serves_wine = request.POST.get('serves_wine')
+        query = Restaurant(Name=name, Location=location,Description=description)
+        query.save()
+        print(name, location)
+    return render(request,'user/admin-add-restaurants.html')
+
+# edit restuarant details
+def edit_restaurant(request):
+    rest_data = Restaurant.objects.all()
+    context_={"rest_data":rest_data}
+    return render(request,'user/admin-update-restaurants.html', context_)
+
+
+# called when the edit restaurant button is clicked the form is calls the submit function
+def edit_restaurant_details(request, id):
+
+    if request.method == "POST":
+
+        name=request.POST.get('name')
+        description=request.POST.get('restaurant_desc')
+        location=request.POST.get('location')
+        img_url=request.POST.get('img_url')
+        phone = request.POST.get('phone')
+        price = request.POST.get('price')
+        dine_in = request.POST.get('dine_in')
+        delivery = request.POST.get('delivery')
+        reservable = request.POST.get('reservable')
+        serves_wine = request.POST.get('serves_wine')
+        
+        #get updated restaurant data
+        updated_r = Restaurant.objects.get(RestaurantID=id)        
+        updated_r.Name = name
+        updated_r.Location = location
+        updated_r.Description = description
+        updated_r.ImageURL = img_url
+        
+        # save the updated data into the db
+        updated_r.save()
+        print(updated_r.Name)
+
+        return redirect('/register/admin/update-resturants/')
+
+    rest_id = Restaurant.objects.get(RestaurantID=id)
+    print(rest_id)
+    context_ = {"rest_id":rest_id}
+    return render(request, "user/edit-restaurant.html",context_)
+
+
+
+
+def delete_restaurant(request, id):
+    rest_id = CustomUser.object.get(id=id)
+    rest_id.delete()
+    return redirect('/register/admin/update-restaurants.html')
 
 
 # Views restricted to admin and blogger roles

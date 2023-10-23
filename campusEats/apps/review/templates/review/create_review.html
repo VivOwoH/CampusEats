@@ -1,0 +1,163 @@
+<!-- user/register.html -->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Welcome - My Website{% endblock %}
+
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            margin: 0 200px 0 200px;
+        }
+        .review {
+            flex: 1;
+            text-align: center;
+        }
+        .left {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+        .right {
+            flex: 1;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .form-section {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .form-section select {
+        width: 400px;
+        height: 30px;
+        }.form-section label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .stars {
+            font-size: 0;
+        }
+        .stars input {
+            display: none;
+        }
+        .stars label {
+            font-size: 32px;
+            cursor: pointer;
+            display: inline-block;
+            color: #ccc;
+        }
+        .stars label:before {
+            content: "\2605";
+        }
+        .stars input:checked ~ label {
+            color: #000;
+        }
+        .form-section textarea {
+        width: 600px;
+        height: 100px;
+        }.form-section .submit-button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }.cancel-button {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }.image {
+            max-width: 400px;
+            max-height: 400px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="review">
+        <h2>Review</h2>
+    </div>
+    <div class="container">
+        <div class="left">
+            <img class="image" src="restaurant-image.jpg" alt="Image">
+            <p>Restaurant name.</p>
+            <button class="cancel-button">Cancel Review</button>
+        </div>
+        <div class="right">
+            <div class="form-section">
+                <label>How would you rate your experience?</label>
+                <div class="stars">
+                    <input type="radio" name="rating" id="star5" value="5">
+                    <label for="star5"></label>
+                    <input type="radio" name="rating" id="star4" value="4">
+                    <label for="star4"></label>
+                    <input type="radio" name="rating" id="star3" value="3">
+                    <label for="star3"></label>
+                    <input type="radio" name="rating" id="star2" value="2">
+                    <label for="star2"></label>
+                    <input type="radio" name="rating" id="star1" value="1">
+                    <label for="star1"></label>
+                </div>
+            </div>
+                        <div class="form-section">
+                <label for="tag">Add a tag</label>
+                <select id="tag">
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="form-section">
+                <label for="visit">When did you visit?</label>
+                <select id="visit">
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="form-section">
+                <label for="purpose">What were you here for?</label>
+                <select id="purpose">
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="form-section">
+                <br>
+            </div>
+            <div class="form-section">
+                <label for="review">Write your review</label>
+                <textarea id="review" rows="4"></textarea>
+            </div>
+            <div class="form-section">
+                <label for="photos">Add some photos</label>
+                <input type="file" id="photos">
+            </div>
+            <div class="form-section">
+                <button class="submit-button">Submit</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}

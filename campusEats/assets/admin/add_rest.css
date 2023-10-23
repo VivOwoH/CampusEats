@@ -1,0 +1,48 @@
+.upper_container{
+    height:40px;
+}
+
+.title{
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    color: brown;
+    font-weight: bold;
+    
+}
+.rest_db_table{
+    margin-top: 2rem;
+    margin-left: 2rem;
+    border-spacing: 20px;
+    border-collapse: separate;
+}
+
+
+#align-name-col{
+    text-align: left;
+}
+
+.edit, .delete{
+    color: brown;
+    
+}
+
+th, td { 
+    padding: 8px; 
+    border-radius: 5px;
+  }
+
+th{
+    border-style:  1px solid orangered;
+    background-color: rgb(243, 194, 176);
+    color:brown;
+    
+}
+td{
+    border: 1px solid rgb(239, 220, 214); 
+  }
+
+button{
+    background-color: black;
+}
