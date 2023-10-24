@@ -1,8 +1,18 @@
-from django.shortcuts import render, redirect #I assume were using render but this can change.
+from django.shortcuts import render, redirect
+from apps.restaurants.models import Restaurant #I assume were using render but this can change.
 from .models import Review
 from .forms import ReviewForm
 from django.contrib.auth.decorators import login_required
 from datetime import datetime
+
+def cancel_review(request, restaurant_id):
+    # Do any necessary processing and retrieve the restaurant details
+    # For example, you can query the database to get restaurant data
+    print(restaurant)
+    restaurant = Restaurant.objects.get(pk=restaurant_id)  # Adjust this according to your model
+    print(restaurant_id)
+    # Render the "Cancel Review" template with the restaurant context variable
+    return render(request, 'cancel_review.html', {'restaurant': restaurant})
 
 @login_required
 def create_review(request):

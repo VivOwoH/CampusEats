@@ -20,6 +20,7 @@ class CustomUser(models.Model):
         choices=[(user_type.value, user_type.name) for user_type in UserType],
         default=UserType.USER.value
     )
+    contact_number = models.PositiveIntegerField( blank=True, null=True)
 
 
     def __str__(self):

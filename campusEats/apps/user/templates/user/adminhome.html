@@ -6,6 +6,14 @@
 
 {% block content %}
 {% if user.user_type == 'admin' %}
+<!-- {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %} -->
+
 
 <!--section between the nav and form-->
 <div class="up_container"></div>
@@ -22,7 +30,7 @@
     </div>
 
     <!--admin information update form-->
-    <div class="right-column">
+    <!-- <div class="right-column">
         <h6>ADMIN</h6>
         <br>
         <div class="profile-info">
@@ -37,7 +45,36 @@
             <br><br>
             <button id="update-btn">UPDATE</button>
         </div>
+    </div> -->
+    
+    <div class="right-column">
+        <form id="admin-profile-form" action="/update-admin/" method="post">
+            {% csrf_token %}
+
+        <h6>ADMIN</h6>
+        <br>
+        <div class="profile-info">
+            
+                <label for="username" class="label"> User Name </label>
+                <input type="text" id="first_name" class="input" name="first_name">
+    
+                <label for="display_name" class="label"> Display Name </label>
+                <input type text" id="last_name" class="input" name="last_name">
+    
+                <label for="email" class="label"> Email </label>
+                <input type="text" id="email" class="input" name="email">
+    
+                <label for="contact_no" class="label"> Contact number </label>
+                <input type="text" id="contact_no" class="input" name="contact_no">
+                <br><br>
+                <button id="update-btn" class="btn">UPDATE</button>
+            
+        </div>
+    </form>
     </div>
+    
+    
+    
 
     <script src="admin_script.js"></script>
 </div>

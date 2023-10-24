@@ -10,7 +10,8 @@ from django.contrib.auth.hashers import check_password
 from .models import CustomUser  # Import your CustomUser model
 from django.contrib.auth.decorators import user_passes_test
 from .models import CustomUser
-from django.urls import reverse
+from django.contrib import messages
+
 
 
 global_user = None
@@ -51,6 +52,15 @@ def user_login(request):
     if request.method == 'GET':
         return render(request, 'user/login.html')
 
+def user_logout(request):
+    global global_user 
+    global_user = None
+    message = "Log out successful"
+    messages.success(request, message, extra_tags="autoclose")  # Add a success message with an "autoclose" tag
+
+    return redirect('/')
+
+
 def access_denied(request):
     # print(message)
     # context = {'message': message}
@@ -61,6 +71,8 @@ def is_admin(request):
     # print(1, global_user.user_type)
     # user = request.user  # Retrieve the User object from the request
     # custom_user = CustomUser(user)
+    if not global_user:
+        return False
     return global_user.user_type == UserType.ADMIN.value
 # for the rendering of the admin
 # @user_passes_test(is_admin, login_url='access_denied')
@@ -72,30 +84,53 @@ def is_admin(request):
 def render_admin_dashboard(request):
     if not is_admin(request.user):
         return access_denied(request,  message='admin')  # Pass the message to the access_denied view
-
+    print(type(global_user))
     # If the user is an admin, render the admin dashboard
     return render(request, 'user/adminhome.html', {'user': global_user})
 
-def admin_profile(request):
+@user_passes_test(is_admin, login_url='access_denied')
+def update_admin(request):
     if request.method == 'POST':
         # Retrieve form data from the POST request
-        first_name = request.POST.get('first_name')
-        last_name = request.POST.get('last_name')
+        username = request.POST.get('username')
+        display_name = request.POST.get('display_name')
         email = request.POST.get('email')
         contact_no = request.POST.get('contact_no')
 
         # Process the form data (you can save it to the database or perform other actions)
         # For this example, we'll just print the data to the console
-        print('First Name:', first_name)
-        print('Last Name:', last_name)
-        print('Email:', email)
-        print('Contact Number:', contact_no)
+        # print('First Name:', username)
+        # print('Last Name:', display_name == '')
+        # print('Email:', email)
+        # print('Contact Number:', contact_no)
+        try:
+            if username:
+                global_user.username = username
+            if display_name:
+                global_user.display_name = display_name
+            if email:
+                global_user.email = email
+            if contact_no:
+                global_user.contact_number = contact_no
+
+            global_user.save()  # Save the changes to the user profile
+
+            message = "Profile updated successfully"
+            
+        except Exception as e:
+            # Handle the IntegrityError (e.g., unique constraint violation)
+            message = "An error occurred while updating the profile."
+        messages = list()
+        messages.append(message)
+
+        return render(request, 'user/adminhome.html', {'messages': messages, 'user':global_user})
+
 
         # You can also return a response to the user, e.g., a success message
-        return HttpResponse('Profile updated successfully.')
+        # return HttpResponse('Profile updated successfully.')
 
     # If it's not a POST request, render the HTML form
-    return render(request, 'admin_profile.html')
+    # return render(request, 'user/adminhome.html')
 
 
 
@@ -195,7 +230,7 @@ def user_register(request):
 
         try:
             if CustomUser.register_user(username, email, password1, password2):
-                return redirect('success')  # Registration successful, redirect to success page
+                return redirect('login')  # Registration successful, redirect to success page
             else:
                 error_message = 'Registration failed'
                 # Render the page and trigger the JavaScript function to show the error popup
@@ -221,13 +256,24 @@ def user_list(request):
     return render(request, 'user/success.html', {'users': users})
 
 def render_success(request):
-    return render(request, 'user/success.html')
+    return render(request, 'user/success.html', {'user': global_user})
 
 
 # for the rendering of the admin add resturants page
 #@user_passes_test(is_admin, login_url='access_denied')
 
 def render_admin_add_restaurants(request):
+    if request.method == "POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        role = request.POST.get('role')
+
+        updated_d = CustomUser.objects.get(id=id)
+        updated_d.username = name
+        updated_d.email = email
+        updated_d.user_type= role
+        updated_d.save()
+        return redirect('/register/admin/update-users/')
     return render(request,'user/admin-add-restaurants.html')
 
 def insert_restaurant(request):
