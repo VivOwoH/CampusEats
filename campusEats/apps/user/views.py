@@ -43,7 +43,7 @@ def user_login(request):
                 # return redirect(reverse('/register/admin'))  
                 # return render(request, 'user/adminhome.html', {'error_message': error_message})
             # User authentication successful, log the user in (you may want to set a session variable)
-            return redirect('success')  # Redirect to a success page after login
+            return redirect('/profile/user/account')  # Redirect to a success page after login
         else:
             # Authentication failed, handle it (e.g., display an error message)
             error_message = 'Invalid login credentials'
@@ -195,7 +195,7 @@ def user_register(request):
 
         try:
             if CustomUser.register_user(username, email, password1, password2):
-                return redirect('success')  # Registration successful, redirect to success page
+                return redirect('/login')  # Registration successful, redirect to success page
             else:
                 error_message = 'Registration failed'
                 # Render the page and trigger the JavaScript function to show the error popup

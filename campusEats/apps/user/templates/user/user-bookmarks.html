@@ -5,7 +5,7 @@
 {% block title %} My Account - Bookmarked Restaurants {% endblock %}
 
 {% block content %}
-{% if user.user_type == 'user' %}
+{% if user.user_type == 'user' or user.user_type == 'blogger' %}
 
 <head>
     <link rel="stylesheet" href="{% static 'user/user-bookmarks.css' %}?{% now 'U' %}">
@@ -27,7 +27,7 @@
 
     <!--user information -->
     <div class="right-column">
-        <h6>LIST OF BOOKMARKED RESTAURANTS</h6>
+        <h2>LIST OF BOOKMARKED RESTAURANTS</h2>
 
         <!-- Test UI -->
         <div class="scroll-list">

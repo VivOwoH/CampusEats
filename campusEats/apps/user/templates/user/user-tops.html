@@ -5,7 +5,7 @@
 {% block title %} My Account - My Top Restaurants {% endblock %}
 
 {% block content %}
-{% if user.user_type == 'user' %}
+{% if user.user_type == 'user' or user.user_type == 'blogger' %}
 
 <head>
     <link rel="stylesheet" href="{% static 'user/user-tops.css' %}?{% now 'U' %}">
@@ -27,7 +27,7 @@
 
     <!--user information -->
     <div class="right-column">
-        <h6>MY FAVOURITES</h6>
+        <h2>MY FAVOURITES</h2>
 
         <!-- Test UI -->
         <div class="scroll-list">
