@@ -27,7 +27,7 @@
             <img src="{{ restaurant.ImageURL }}" alt="{{ restaurant.Name }}">
         </div>
         <div class="button-container">
-            <a href="/create-review"> <button class="review-btn">Add Review </button></a>
+            <a href="{% url 'create_review' %}?restaurant_id={{ restaurant.RestaurantID }}"> <button class="review-btn">Add Review </button></a>
         </div>
         
         </div>
@@ -39,6 +39,8 @@
         </div>
         <div class="name-container">
             <h1>{{ restaurant.Name }}</h1>
+            <h1>{{ restaurant.RestaurantID}} cc</h1>
+            <!-- {{ user.user_type}} ko -->
         </div>
 
         <div class="address-container">

@@ -57,6 +57,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
 ]
+# AUTH_USER_MODEL = 'apps.user.models.CustomUser'
+
 
 ROOT_URLCONF = 'campusEats.urls'
 

@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from apps.restaurants.models import Restaurant #I assume were using render but this can change.
 from .models import Review
+from .models import CustomUser
 from .forms import ReviewForm
 from django.contrib.auth.decorators import login_required
 from datetime import datetime
@@ -16,18 +17,37 @@ def cancel_review(request, restaurant_id):
 
 @login_required
 def create_review(request):
-    if request.method == 'POST':
-        form = ReviewForm(request.POST)
-        if form.is_valid():
-            new_review = form.save(commit=False)
-            new_review.UserID = request.user  # Assuming we are using Django's authentication system
-            new_review.save()
-            return redirect('some_view_name')  # Redirect to a confirmation page or the review list page
-    else:
-        form = ReviewForm()
+    print(request.user)
 
-    context = {'form': form}
-    return render(request, 'review/create_review.html', context)
+    # if not request.user.is_authenticated:
+    #     # User is not authenticated (not logged in)
+    #     # You can handle this situation here, e.g., redirect to a login page or show an error message.
+    #     return redirect('login')  
+    restaurant_id = request.GET.get('restaurant_id')
+
+    if request.method == 'POST':
+        print(request.user)
+        # Get data from the POST request
+        rating = request.POST.get('rating')
+        description = request.POST.get('description')  # Adjust the field name as per your form
+
+        # Create a new Review instance
+        new_review = Review(
+            RestaurantID_id=restaurant_id,
+            UserID=request.user,  # Assuming you have a logged-in user
+            Rating=rating,
+            Description=description
+        )
+
+        # Save the new review
+        new_review.save()
+
+        return redirect('success')  # Redirect to a confirmation page or the review list page
+
+    else:
+        # Handle GET request to display the form
+        return render(request, 'review/create_review.html', {'restaurant_id': restaurant_id})
+
 
 def display_reviews(request, restaurant_id):
     reviews = Review.objects.filter(RestaurantID=restaurant_id)

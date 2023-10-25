@@ -99,62 +99,68 @@
         <div class="left">
             <img class="image" src="restaurant-image.jpg" alt="Image">
             <p>Restaurant name.</p>
-            <a href="{% url 'restaurant_detail' restaurant_id=restaurant.RestaurantID %}" ><button class="cancel-button">Cancel Review</button></a>
+            <a href="#" ><button class="cancel-button">Cancel Review</button></a>
         </div>
         <div class="right">
-            <div class="form-section">
-                <label>How would you rate your experience?</label>
-                <div class="stars">
-                    <input type="radio" name="rating" id="star5" value="5">
-                    <label for="star5"></label>
-                    <input type="radio" name="rating" id="star4" value="4">
-                    <label for="star4"></label>
-                    <input type="radio" name="rating" id="star3" value="3">
-                    <label for="star3"></label>
-                    <input type="radio" name="rating" id="star2" value="2">
-                    <label for="star2"></label>
-                    <input type="radio" name="rating" id="star1" value="1">
-                    <label for="star1"></label>
+            <form method="post" action="{% url 'create_review' %}">
+                {% csrf_token %} 
+                <!-- {{ form.as_p }}    -->
+                <!-- <input type="hidden" name="restaurant_id" value="{{ restaurant_id }}"> -->
+                <div class="form-section">
+                    <label>How would you rate your experience?</label>
+                    <div class="stars">
+                        <input type="radio" name="rating" id="star5" value="5">
+                        <label for="star5"></label>
+                        <input type="radio" name="rating" id="star4" value="4">
+                        <label for="star4"></label>
+                        <input type="radio" name="rating" id="star3" value="3">
+                        <label for="star3"></label>
+                        <input type="radio" name="rating" id="star2" value="2">
+                        <label for="star2"></label>
+                        <input type="radio" name="rating" id="star1" value="1">
+                        <label for="star1"></label>
+                    </div>
                 </div>
-            </div>
-                        <div class="form-section">
-                <label for="tag">Add a tag</label>
-                <select id="tag">
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-            </div>
-            <div class="form-section">
-                <label for="visit">When did you visit?</label>
-                <select id="visit">
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-            </div>
-            <div class="form-section">
-                <label for="purpose">What were you here for?</label>
-                <select id="purpose">
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-            </div>
-            <div class="form-section">
-                <br>
-            </div>
-            <div class="form-section">
-                <label for="review">Write your review</label>
-                <textarea id="review" rows="4"></textarea>
-            </div>
-            <div class="form-section">
-                <label for="photos">Add some photos</label>
-                <input type="file" id="photos">
-            </div>
-            <div class="form-section">
-                <button class="submit-button">Submit</button>
-            </div>
+                <div class="form-section">
+                    <label for="tag">Add a tag</label>
+                    <select id="tag">
+                        <option value="">$</option>
+                        <option value="">$$</option>
+                        <option value="">$$$</option>
+                    </select>
+                </div>
+                <div class="form-section">
+                    <label for="visit">When did you visit?</label>
+                    <select id="visit">
+                        <option value="">today</option>
+                        <option value="">this week</option>
+                        <option value="">last week</option>
+                    </select>
+                </div>
+                <div class="form-section">
+                    <label for="purpose">What were you here for?</label>
+                    <select id="purpose">
+                        <option value="">a</option>
+                        <option value="">b</option>
+                        <option value="">c</option>
+                    </select>
+                </div>
+                <div class="form-section">
+                    <br>
+                </div>
+                <div class="form-section">
+                    <label for="review">Write your review</label>
+                    <textarea id="review" rows="4"></textarea>
+                </div>
+                <div class="form-section">
+                    <label for="photos">Add some photos</label>
+                    <input type="file" id="photos">
+                </div>
+                <div class="form-section">
+                    <button class="submit-button">Submit</button>
+                </div>
+            </form>
+            
         </div>
     </div>
 </body>

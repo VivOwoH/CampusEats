@@ -28,6 +28,50 @@ class Review(models.Model):
     Description = models.CharField(max_length = 500, null = True, blank = True)
     Timestamp = models.DateTimeField(auto_now_add = True)
 
+    def get_average_rating(self):
+        """
+        Calculate and return the average rating for a restaurant based on its reviews.
+        """
+        reviews = Review.objects.filter(RestaurantID=self.RestaurantID)
+        total_ratings = sum(review.Rating for review in reviews)
+        if reviews:
+            return total_ratings / len(reviews)
+        else:
+            return 0
+
+    def get_user_reviews(self, user):
+        """
+        Get all reviews for a specific user.
+        """
+        return Review.objects.filter(UserID=user)
+
+    def get_parent_reviews(self):
+        """
+        Get all parent reviews (reviews without a ParentReviewID).
+        """
+        return Review.objects.filter(ParentReviewID__isnull=True)
+
+    def get_child_reviews(self):
+        """
+        Get all child reviews (reviews with a ParentReviewID).
+        """
+        return Review.objects.filter(ParentReviewID=self)
+
+    def has_children(self):
+        """
+        Check if a review has child reviews.
+        """
+        return Review.objects.filter(ParentReviewID=self).exists()
+
+    def get_review_age(self):
+        """
+        Calculate and return the age of the review in days.
+        """
+        from datetime import datetime
+        delta = datetime.now() - self.Timestamp
+        return delta.days
+
+
 # CREATE TABLE React (
 # 	Id INT PRIMARY KEY AUTO_INCREMENT,
 # 	reviewId INT,
