@@ -6,6 +6,15 @@
     display: block !important;
 }
 
+.footer {
+    justify-content: space-between;
+}
+
+#spinner-box {
+    margin: 2rem auto;
+    width: 85%;
+}
+
 #loading-box {
     display: flex;
     margin: 2rem auto;
