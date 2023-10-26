@@ -110,9 +110,19 @@ class ArticleGetEditDel(generics.RetrieveUpdateDestroyAPIView):
 
 # Comment Views
 class CommentListOrAdd(generics.ListCreateAPIView):
-    queryset = Comment.objects.all()
     serializer_class = CommentSerializer
+    def get_queryset(self):
+        # Get the 'article_id' from the URL parameters
+        article_id = self.kwargs['article_id']
+        # Filter comments based on the given article_id
+        return Comment.objects.filter(article__id=article_id)
+
 
 class CommentGetEditDel(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Comment.objects.all()
     serializer_class = CommentSerializer
+    def get_queryset(self):
+        # Get the 'article_id' from the URL parameters
+        article_id = self.kwargs['article_id']
+        # Filter comments based on the given article_id
+        return Comment.objects.filter(article__id=article_id)
+
