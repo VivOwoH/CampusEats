@@ -15,7 +15,7 @@ def blog_test(request):
 
 
 #
-# ListCreateAPIView Usage Guide: (the other one works similarly)
+# ListCreateAPIView Usage Guide:
 #
 # 1. Endpoint URL: /articles/
 #
@@ -51,25 +51,68 @@ def blog_test(request):
 # Create: When accessed with a POST request and provided with appropriate data,
 # it creates a new article.
 
-class ArticleListView(generics.ListCreateAPIView):
+class ArticleListOrAdd(generics.ListCreateAPIView):
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer
 
-# ArticleDetailView: Inherits from RetrieveUpdateDestroyAPIView.
+#
+# RetrieveUpdateDestroyAPIView Usage Guide:
+#
+# Endpoint URL: /articles/<ID>/
+# Where <ID> is the unique identifier of the Article.
+#
+# Supported HTTP Methods:
+#
+# - GET:
+#   - Description: Retrieve the details of a specific article.
+#   - Payload: None.
+#   - Example: `/articles/3/` retrieves the article with ID 3.
+#
+# - PUT (Full Update):
+#   - Description: Update all fields of a specific article.
+#   - Payload: JSON object with all article fields.
+#   - Example:
+#     {
+#       "title": "Updated Title",
+#       "content": "Updated content...",
+#       "restaurant": 2,
+#       "author": 4
+#     }
+#   - Usage: Sending to `/articles/3/` updates the entire article with ID 3.
+#
+# - PATCH (Partial Update):
+#   - Description: Update specific fields of an article.
+#   - Payload: JSON object with only fields to update.
+#   - Example:
+#     {
+#       "title": "New Title Only"
+#     }
+#   - Usage: Sending to `/articles/3/` updates just the title of the article with ID 3.
+#
+# - DELETE:
+#   - Description: Delete a specific article.
+#   - Payload: None.
+#   - Usage: Sending to `/articles/3/` deletes the article with ID 3.
+#
+# For PUT and PATCH, ensure the Content-Type header is set to 'application/json'.
+#
+
+
+# RetrieveUpdateDestroyAPIView does these:
 # Retrieve: With a GET request and an article's ID, it fetches and returns
 # that specific article.
 # Update: With a PUT or PATCH request, it updates the specified article's data.
 # Destroy: With a DELETE request, it deletes the specified article.
 
-class ArticleDetailView(generics.RetrieveUpdateDestroyAPIView):
+class ArticleGetEditDel(generics.RetrieveUpdateDestroyAPIView):
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer
 
 # Comment Views
-class CommentListView(generics.ListCreateAPIView):
+class CommentListOrAdd(generics.ListCreateAPIView):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
 
-class CommentDetailView(generics.RetrieveUpdateDestroyAPIView):
+class CommentGetEditDel(generics.RetrieveUpdateDestroyAPIView):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
