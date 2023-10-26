@@ -34,6 +34,7 @@ urlpatterns = [
     path('', include('apps.restaurants.urls')),  # Include the 'user' app's URLs
     path('', include('apps.review.urls')),
     path('', include('apps.blogs.urls')),
+    path('', include('apps.cloudinary_integration.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
