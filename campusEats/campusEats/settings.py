@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,6 +28,20 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#You need to set these values in the python venv
+
+# set CLOUDINARY_API_KEY=your_actual_api_key
+# set CLOUDINARY_API_SECRET=your_actual_api_secret
+
+CLOUDINARY_API_KEY = os.environ.get('CLOUDINARY_API_KEY')
+# if not CLOUDINARY_API_KEY:
+#     raise ValueError("CLOUDINARY_API_KEY is not set in environment variables")
+
+CLOUDINARY_API_SECRET = os.environ.get('CLOUDINARY_API_SECRET')
+# if not CLOUDINARY_API_SECRET:
+#     raise ValueError("CLOUDINARY_API_SECRET is not set in environment variables")
+
+
 
 # Application definition
 
@@ -42,6 +57,7 @@ INSTALLED_APPS = [
     'apps.review',
     'apps.user',
     'apps.blogs',
+    'apps.cloudinary_integration',
 ]
 
 
