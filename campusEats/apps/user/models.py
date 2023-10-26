@@ -9,8 +9,82 @@ class UserType(Enum):
     ADMIN = 'admin'
     BLOGGER = 'blogger'
 
+# class CustomUserManager(BaseUserManager):
+#     def create_user(self, username, email, password=None, **extra_fields):
+#         if not email:
+#             raise ValueError('The Email field must be set')
+#         email = self.normalize_email(email)
+#         user = self.model(username=username, email=email, **extra_fields)
+#         user.set_password(password)
+#         user.save(using=self._db)
+#         return user
 
+#     def create_superuser(self, username, email, password=None, **extra_fields):
+#         extra_fields.setdefault('is_staff', True)
+#         extra_fields.setdefault('is_superuser', True)
+
+#         if extra_fields.get('is_staff') is not True:
+#             raise ValueError('Superuser must have is_staff=True.')
+#         if extra_fields.get('is_superuser') is not True:
+#             raise ValueError('Superuser must have is_superuser=True.')
+
+#         return self.create_user(username, email, password, **extra_fields)
+    
+#     def create_user(self, username, email, password=None, **extra_fields):
+#         extra_fields.setdefault('is_staff', False)
+#         extra_fields.setdefault('is_superuser', False)
+
+#         if extra_fields.get('is_staff') is not True:
+#             raise ValueError('Superuser must have is_staff=True.')
+#         if extra_fields.get('is_superuser') is not True:
+#             raise ValueError('Superuser must have is_superuser=True.')
+
+#         return self.create_user(username, email, password, **extra_fields)
+
+# class CustomUser(AbstractBaseUser, PermissionsMixin):
+#     username = models.CharField(max_length=255, unique=True, default='user')
+#     email = models.EmailField(unique=True)
+#     password = models.CharField(max_length=255)
+#     display_name = models.CharField(max_length=255, blank=True, null=True)
+#     user_type = models.CharField(
+#         max_length=10,
+#         choices=[(user_type.value, user_type.name) for user_type in UserType],
+#         default=UserType.USER.value
+#     )
+#     contact_number = models.PositiveIntegerField(blank=True, null=True)
+
+#     is_staff = models.BooleanField(default=False)
+#     is_active = models.BooleanField(default=True)
+#     is_superuser = models.BooleanField(default=False)
+
+#     objects = CustomUserManager()
+
+#     USERNAME_FIELD = 'username'
+#     REQUIRED_FIELDS = []
+
+#     @property
+#     def is_anonymous(self):
+#         return False
+
+#     @property
+#     def is_authenticated(self):
+#         return True
+
+#     def __str__(self):
+#         return self.email
+
+
+
+
+# ************************
+class UserType(Enum):
+    USER = 'user'
+    ADMIN = 'admin'
+    BLOGGER = 'blogger'
+
+# Uncomment the CustomUser class definition
 class CustomUser(models.Model):
+    # UserID = models.AutoField(primary_key = True)
     username = models.CharField(max_length=255, unique=True)
     email = models.EmailField(unique=True)
     password = models.CharField(max_length=255)
@@ -20,10 +94,25 @@ class CustomUser(models.Model):
         choices=[(user_type.value, user_type.name) for user_type in UserType],
         default=UserType.USER.value
     )
-
+    contact_number = models.PositiveIntegerField(blank=True, null=True)
 
     def __str__(self):
         return self.username
+
+    def is_anonymous(self):
+        return False
+
+    def is_authenticated(self):
+        return True
+
+    @classmethod
+    def set_global_user(cls, user):
+        global global_user
+        global_user = user
+
+    @classmethod
+    def get_global_user(cls):
+        return global_user
 
     @classmethod
     def register_user(cls, username, email, password1, password2):
@@ -31,19 +120,14 @@ class CustomUser(models.Model):
         if password1 != password2:
             return False  # Passwords do not match, registration failed
 
-        # Create a new CustomUser instance
-        user = cls(username=username, email=email, password=password1)
-
-        # or
         # Hash the password using Django's make_password
         hashed_password = make_password(password1)
 
         # Create a new CustomUser instance with the hashed password
-        user = cls(username=username, email=email, password=hashed_password)
-        display_name = username
+        user = cls(username=username, email=email, password=hashed_password, display_name=username)
         user.save()
         return True
-
+# **************************
 
 # class Restaurant(models.Model):
 #     RestaurantID = models.AutoField(primary_key=True)
@@ -68,54 +152,3 @@ class Bookmark(models.Model):
 
 # python manage.py makemigrations
 # python manage.py migrate
-
-
-# from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
-# # from django.db import models
-
-# class CustomUserManager(BaseUserManager):
-#     def create_user(self, username, email, password=None):
-#         if not email:
-#             raise ValueError('The Email field must be set')
-#         email = self.normalize_email(email)
-#         user = self.model(username=username, email=email)
-#         user.set_password(password)
-#         user.save(using=self._db)
-#         return user
-
-#     def create_superuser(self, username, email, password=None):
-#         user = self.create_user(username, email, password)
-#         user.is_staff = True
-#         user.is_superuser = True
-#         user.save(using=self._db)
-#         return user
-
-# class CustomUser(AbstractBaseUser, PermissionsMixin):
-#     username = models.CharField(max_length=255, unique=True)
-#     email = models.EmailField(max_length=255, unique=True)
-#     # Add your custom fields here
-#     # ...
-#     UserID = models.AutoField(primary_key=True)
-#     UserName = models.CharField(max_length=255, null=False)
-#     Password = models.CharField(max_length=255, null=False)
-#     Email = models.CharField(max_length=255)
-#     Phone = models.CharField(
-#         max_length=20,
-#         validators=[RegexValidator(r'^[0-9]*$', 'Only numeric characters are allowed.')],
-#     )
-#     Role = models.CharField(
-#         max_length=5,
-#         choices=[(tag.name, tag.value) for tag in UserType]
-#     )
-#     Bookmark = models.ForeignKey('Bookmark', on_delete=models.CASCADE)
-
-#     is_active = models.BooleanField(default=True)
-#     is_staff = models.BooleanField(default=False)
-
-#     objects = CustomUserManager()
-
-#     USERNAME_FIELD = 'email'
-#     REQUIRED_FIELDS = ['username']
-
-#     def __str__(self):
-#         return self.email

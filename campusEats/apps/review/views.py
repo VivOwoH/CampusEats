@@ -1,23 +1,93 @@
-from django.shortcuts import render, redirect #I assume were using render but this can change.
+from django.shortcuts import render, redirect
+from apps.restaurants.models import Restaurant #I assume were using render but this can change.
 from .models import Review
+from apps.user.models import CustomUser
 from .forms import ReviewForm
 from django.contrib.auth.decorators import login_required
 from datetime import datetime
 
+def cancel_review(request, restaurant_id):
+    # Do any necessary processing and retrieve the restaurant details
+    # For example, you can query the database to get restaurant data
+    print(restaurant)
+    restaurant = Restaurant.objects.get(pk=restaurant_id)  # Adjust this according to your model
+    print(restaurant_id)
+    # Render the "Cancel Review" template with the restaurant context variable
+    return render(request, 'cancel_review.html', {'restaurant': restaurant})
+
 @login_required
 def create_review(request):
-    if request.method == 'POST':
-        form = ReviewForm(request.POST)
-        if form.is_valid():
-            new_review = form.save(commit=False)
-            new_review.UserID = request.user  # Assuming we are using Django's authentication system
-            new_review.save()
-            return redirect('some_view_name')  # Redirect to a confirmation page or the review list page
-    else:
-        form = ReviewForm()
+    global_user = CustomUser.get_global_user()
 
-    context = {'form': form}
-    return render(request, 'review/create_review.html', context)
+    # if not global_user == None:
+    #     # User is not authenticated (not logged in)
+    #     # You can handle this situation here, e.g., redirect to a login page or show an error message.
+    #     return redirect('login')  
+    restaurant_id = request.GET.get('restaurant_id')
+    review_id = request.GET.get('review_id')
+    print(restaurant_id, review_id)
+
+    
+    if request.method == 'POST':
+        print("AT POST")
+        restaurant_id = request.POST.get('restaurant_id')
+        review_id = request.POST.get('review_id')
+        print(restaurant_id, review_id)
+        print(review_id is None)
+        print(review_id  == 'None')
+
+
+        if review_id  != 'None':
+            restaurant = Restaurant.objects.get(pk=restaurant_id) 
+            rating = request.POST.get('rating')
+            description = request.POST.get('review')  # Adjust the field name as per your form
+            print("fere", description)
+
+            # Create a new Review instance
+            new_review = Review(
+                RestaurantID=restaurant,
+                UserID=global_user,  # Assuming you have a logged-in user
+                Rating=rating,
+                Description=description,
+                Timestamp=datetime.now(),
+                ParentReviewID = Review.objects.get(pk=review_id)
+
+            )
+
+            # Save the new review
+            new_review.save()
+
+            return redirect('success') 
+
+
+
+
+        restaurant = Restaurant.objects.get(pk=restaurant_id) 
+        # Get data from the POST request
+        rating = request.POST.get('rating')
+        description = request.POST.get('review')  # Adjust the field name as per your form
+        print("fere", description)
+
+        # Create a new Review instance
+        new_review = Review(
+            RestaurantID=restaurant,
+            UserID=global_user,  # Assuming you have a logged-in user
+            Rating=rating,
+            Description=description,
+            Timestamp=datetime.now(),
+            ParentReviewID = None
+
+        )
+
+        # Save the new review
+        new_review.save()
+
+        return redirect('success')  # Redirect to a confirmation page or the review list page
+
+    else:
+        # Handle GET request to display the form
+        return render(request, 'review/create_review.html', {'restaurant_id': restaurant_id, 'review_id': review_id})
+
 
 def display_reviews(request, restaurant_id):
     reviews = Review.objects.filter(RestaurantID=restaurant_id)

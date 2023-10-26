@@ -6,6 +6,14 @@
 
 
 {% block content %}
+<!-- {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %} -->
+
 
 
 
@@ -298,3 +306,17 @@
 <div class="bottom-container" style="height:100px"></div>
 
 {% endblock %}
+
+<script>
+    // Function to close or hide messages with the "messages" class
+    function closeAutoCloseMessages() {
+        var messages = document.getElementsByClassName("messages");
+        for (var i = 0; i < messages.length; i++) {
+            messages[i].style.display = "none";  // Hide the message
+        }
+    }
+
+    // Automatically close or hide messages after a specified duration (e.g., 5 seconds)
+    setTimeout(closeAutoCloseMessages, 5000);  // Adjust the duration as needed (in milliseconds)
+</script>
+

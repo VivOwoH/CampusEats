@@ -27,9 +27,36 @@
             <img src="{{ restaurant.ImageURL }}" alt="{{ restaurant.Name }}">
         </div>
         <div class="button-container">
-            <a href="/create-review"> <button class="review-btn">Add Review </button></a>
+            <a href="{% url 'create_review' %}?restaurant_id={{ restaurant.RestaurantID }}"> <button class="review-btn">Add Review </button></a>
         </div>
-        
+        <ul>
+            {% for review in reviews %}
+              <li>
+                <!-- Display review details -->
+                By User: {{ review.UserID }}
+                Rating: {{ review.Rating }}
+                Description: {{ review.Description }}
+                At Timestamp: {{ review.Timestamp }}
+                
+                <!-- Check if it's a parent review or a child review -->
+                {% if review.ParentReviewID == None %}
+                  <!-- Add a button to redirect to the restaurant_detail.html page for parent reviews -->
+                  <a href="{% url 'create_review' %}?restaurant_id={{ restaurant.RestaurantID }}&review_id={{ review.ReviewID }}">
+                    <button class="review-detail-btn">Add comment</button>
+                  </a>
+                {% else %}
+                  <!-- Display a child comment, you can use additional styling or indentation -->
+                  <div class="child-comment">
+                    By User: {{ review.UserID }}
+                    Rating: {{ review.Rating }}
+                    Description: {{ review.Description }}
+                    At Timestamp: {{ review.Timestamp }}
+                  </div>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+          
         </div>
         <div class="column column_2">
         <div class="bookmark-container">
@@ -47,9 +74,13 @@
             <br><br>
             <div class="descr-container">{{ restaurant.Description }}</div>
         </div>
+
+                
     
         </div>
       </div>
+
+      
 
 </body>
 
