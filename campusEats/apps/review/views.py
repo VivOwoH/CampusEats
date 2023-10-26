@@ -15,7 +15,7 @@ def cancel_review(request, restaurant_id):
     # Render the "Cancel Review" template with the restaurant context variable
     return render(request, 'cancel_review.html', {'restaurant': restaurant})
 
-@login_required
+# @login_required
 def create_review(request):
     global_user = CustomUser.get_global_user()
 
