@@ -1,3 +1,17 @@
+.not-visible {
+    display: none;
+}
+
+.navbar {
+    display: block !important;
+}
+
+#loading-box {
+    display: flex;
+    margin: 2rem auto;
+    width: 85%;
+}
+
 .search-container {
     width: 85%;
     margin: 2rem auto;
@@ -90,6 +104,20 @@
     color: white;
     text-decoration: none;
 }
+
+#load-btn{
+    width:150px;
+    background-color: black;
+    border:1px solid;
+    color:white;
+    border-radius: 30px;
+    padding:10px 30px;
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 15px;
+    cursor:pointer;
+    float:left;
+  }
 
 @media screen and (min-width: 900px) {
     .restaurant-card {

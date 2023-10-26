@@ -9,11 +9,13 @@
     overflow:hidden;
     background-color: white;
 }
-#search{
-    float:left;
+#search { 
+    float:left; 
     padding:10px;
     color: black;
     width:80%;
+    border: 2px solid black;
+    text-align: left;
 }
 
 .label_container{
@@ -34,6 +36,7 @@
     border-radius: 30px;
     padding:10px 30px;
     margin-left: 10px;
+    margin-top: 20px;
     font-size: 15px;
     cursor:pointer;
     float:left;
