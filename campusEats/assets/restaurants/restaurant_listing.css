@@ -2,6 +2,16 @@
     display: none;
 }
 
+.navbar {
+    display: block !important;
+}
+
+#loading-box {
+    display: flex;
+    margin: 2rem auto;
+    width: 85%;
+}
+
 .search-container {
     width: 85%;
     margin: 2rem auto;
