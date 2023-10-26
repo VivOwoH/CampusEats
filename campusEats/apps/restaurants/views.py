@@ -100,6 +100,7 @@ def restaurant_detail(request, restaurant_id):
     reviews = get_restaurant_reviews(restaurant_id)
 
     review_list = list(reviews)
+    # emojis = get_restaurant_raction_for_review(review_id)
 
     return render(request, 'restaurants/restaurant_detail.html', {'restaurant': restaurant, 'user': global_user, 'reviews': review_list, 'reactions': reactions })
 

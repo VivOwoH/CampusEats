@@ -3,6 +3,10 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 from apps.restaurants.models import Restaurant
 from apps.user.models import CustomUser
 from django import forms
+from django import template
+
+register = template.Library()
+
 
 
 # Create your models here.
@@ -47,6 +51,30 @@ def get_restaurant_reviews(restaurantID):
     Get all reviews for a specific user.
     """
     return Review.objects.filter(RestaurantID=restaurantID)
+
+@register.simple_tag
+def get_restaurant_raction_for_review(review_id):
+    """
+    Get all reviews for a specific user.
+    """
+    review = Review.objects.get(ReviewID=review_id)
+    emoji_ids = review.user_reactions
+    emoji_ids = emoji_ids.split(",") 
+
+    emoji_count = {}  
+
+    reactions = [Reaction.objects.get(pk=int(i)) for i in emoji_ids]
+
+    for reaction in reactions:
+        emoji = reaction.emoji
+        if emoji in emoji_count:
+            emoji_count[emoji] += 1
+        else:
+            emoji_count[emoji] = 1
+
+    print(emoji_count)
+    
+    return emoji_count
 
 # def get_average_rating():
 #     """

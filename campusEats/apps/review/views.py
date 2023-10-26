@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from apps.restaurants.models import Restaurant #I assume were using render but this can change.
-from .models import Review
+from .models import *
 from apps.user.models import CustomUser
 from .forms import ReviewForm
 from datetime import datetime
@@ -30,10 +30,15 @@ def create_review(request):
     restaurant_id = request.GET.get('restaurant_id')
     review_id = request.GET.get('review_id')
 
+    reactions = Reaction.objects.all()  
+   
     
     if request.method == 'POST':
         restaurant_id = request.POST.get('restaurant_id')
         review_id = request.POST.get('review_id')
+        reviews = get_restaurant_reviews(restaurant_id)
+
+        review_list = list(reviews)
 
 
         if review_id  != 'None':
@@ -55,7 +60,8 @@ def create_review(request):
             # Save the new review
             new_review.save()
 
-            return redirect('success') 
+            # return redirect('success') 
+            return render(request, 'restaurants/restaurant_detail.html', {'restaurant': restaurant, 'user': global_user, 'reviews': review_list, 'reactions': reactions })
 
 
 
@@ -64,6 +70,9 @@ def create_review(request):
         # Get data from the POST request
         rating = request.POST.get('rating')
         description = request.POST.get('review')  # Adjust the field name as per your form
+        review_id = request.POST.get('review_id')
+        reviews = get_restaurant_reviews(restaurant_id)
+        emojis = get_restaurant_raction_for_review(review_id)
 
         # Create a new Review instance
         new_review = Review(
@@ -80,10 +89,10 @@ def create_review(request):
         new_review.save()
 
         # return redirect('restaurant/restaurant_detail') 
-        # return render(request, 'restaurants/restaurant_detail.html', {'restaurant': restaurant, 'user': global_user, 'reviews': review_list, 'reactions': reactions })
+        return render(request, 'restaurants/restaurant_detail.html', {'restaurant': restaurant, 'user': global_user, 'reviews': review_list, 'reactions': reactions, 'emojis': emojis })
         # previous_url = request.META.get('HTTP_REFERER', '/')
         # return redirect(previous_url)
-        return redirect('success') 
+        # return redirect('success') 
 
 
     
