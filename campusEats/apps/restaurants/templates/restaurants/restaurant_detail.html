@@ -29,33 +29,54 @@
         <div class="button-container">
             <a href="{% url 'create_review' %}?restaurant_id={{ restaurant.RestaurantID }}"> <button class="review-btn">Add Review </button></a>
         </div>
-        <ul>
+         <!-- Display available reactions -->
+         
+         <ul>
             {% for review in reviews %}
-              <li>
-                <!-- Display review details -->
-                By User: {{ review.UserID }}
-                Rating: {{ review.Rating }}
-                Description: {{ review.Description }}
-                At Timestamp: {{ review.Timestamp }}
-                
-                <!-- Check if it's a parent review or a child review -->
-                {% if review.ParentReviewID == None %}
-                  <!-- Add a button to redirect to the restaurant_detail.html page for parent reviews -->
-                  <a href="{% url 'create_review' %}?restaurant_id={{ restaurant.RestaurantID }}&review_id={{ review.ReviewID }}">
-                    <button class="review-detail-btn">Add comment</button>
-                  </a>
-                {% else %}
-                  <!-- Display a child comment, you can use additional styling or indentation -->
-                  <div class="child-comment">
+                <li>
+                    <!-- Display review details -->
+                    {{ review.ReviewID }}
                     By User: {{ review.UserID }}
                     Rating: {{ review.Rating }}
                     Description: {{ review.Description }}
                     At Timestamp: {{ review.Timestamp }}
-                  </div>
-                {% endif %}
-              </li>
+        
+                    <!-- Check if it's a parent review or a child review -->
+                    {% if review.ParentReviewID == None %}
+                        <!-- Add a button to redirect to the restaurant_detail.html page for parent reviews -->
+                        <a href="{% url 'create_review' %}?restaurant_id={{ restaurant.RestaurantID }}&review_id={{ review.ReviewID }}">
+                            <button class="review-detail-btn">Add comment</button>
+                        </a>
+                    {% else %}
+                        <!-- Display a child comment, you can use additional styling or indentation -->
+                        <div class="child-comment">
+                            By User: {{ review.UserID }}
+                            Rating: {{ review.Rating }}
+                            Description: {{ review.Description }}
+                            At Timestamp: {{ review.Timestamp }}
+                        </div>
+                    {% endif %}
+        
+                    <!-- Display available reactions -->
+                    Available Reactions:
+                    {% for reaction in reactions %}
+                        <span class="add-reaction-btn" data-review-id="{{ review.ReviewID }}" data-reaction-id="{{ reaction.id }}">{{ reaction.emoji }}</span>
+                    {% endfor %}
+
+                    
+
+                    <!-- Display user reactions here, you can use JavaScript to update this section -->
+                    <div class="user-reactions" id="user-reactions-{{ review.ReviewID }}">
+                        {% if review.user_reactions %}
+                        User Reactions: {{ review.user_reactions }}
+                        {% else %}
+                        No reactions yet.
+                        {% endif %}
+                    </div>
+                </li>
             {% endfor %}
-          </ul>
+        </ul>
+        
           
         </div>
         <div class="column column_2">
@@ -80,10 +101,87 @@
         </div>
       </div>
 
-      
+   <!-- Add more details as needed -->
+   <script>
+//     document.addEventListener("DOMContentLoaded", function () {
+//     const reactionButtons = document.querySelectorAll(".add-reaction-btn");
+
+//     reactionButtons.forEach((button) => {
+//         button.addEventListener("click", function () {
+//             console.log("clicked");
+//             const reviewID = this.getAttribute("data-review-id");
+//             const availableReactions = document.querySelectorAll(`.add-reaction-btn[data-review-id="${reviewID}"]`);
+
+//             // Show/hide available reactions
+//             availableReactions.forEach((reaction) => {
+//                 reaction.style.display = "inline";
+//             });
+
+//             // Add a click event to each reaction
+//             availableReactions.forEach((reaction) => {
+//                 reaction.addEventListener("click", function () {
+//                     const reactionID = this.getAttribute("data-reaction-id");
+//                     // Send the reactionID and reviewID to the server via AJAX
+//                     // Update the user's reactions for the review with the new reaction
+//                     // You may need to customize this part based on your Django views
+//                     // Update the user reactions in the user-reactions div
+//                     const userReactionsDiv = document.getElementById(`user-reactions-${reviewID}`);
+//                     userReactionsDiv.innerHTML = `User Reactions: ${reaction.innerHTML}`;
+//                 });
+//             });
+//         });
+//     });
+// });
+document.addEventListener("DOMContentLoaded", function () {
+        const reactionButtons = document.querySelectorAll(".add-reaction-btn");
+
+        reactionButtons.forEach((button) => {
+            button.addEventListener("click", function () {
+                const reviewID = this.getAttribute("data-review-id");
+                const reactionID = this.getAttribute("data-reaction-id");
+                console.log(reviewID, reactionID )
+                // Send the reactionID and reviewID to the server via AJAX
+                // Update the user's reactions for the review with the new reaction
+                // You can use the fetch API or a library like Axios for the AJAX request\
+
+                const data = new URLSearchParams();
+                data.append('review_id', reviewID);
+                data.append('reaction_id', reactionID);
+
+               
+                fetch('{% url "save_reaction"  %}', {
+                    method: "POST",
+                    body: data,
+
+                })
+
+                    .then((response) => {
+                        if (response.ok) {
+                            // The reaction was saved successfully
+                            return response.json();
+                        }
+                    })
+                    .then((data) => {
+                        // Update the user reactions in the user-reactions div
+                        console.log(data)
+                        const userReactionsDiv = document.getElementById(`user-reactions-${reviewID}`);
+                        userReactionsDiv.innerHTML = `User Reactions: ${data.user_reactions}`;
+                    })
+                    .catch((error) => {
+                        console.error("Error saving reaction: " + error);
+                    });
+            });
+        });
+    });
+
+
+
+</script>
+
 
 </body>
 
-<!-- Add more details as needed -->
+
+  
 
 {% endblock %}

@@ -1,0 +1,116 @@
+[
+    {
+        "model": "review.reaction",
+        "pk": 1,
+        "fields": {
+            "name": "Like",
+            "emoji": "👍"
+        }
+    },
+    {
+        "model": "review.reaction",
+        "pk": 2,
+        "fields": {
+            "name": "Love",
+            "emoji": "❤️"
+        }
+    },
+    {
+        "model": "review.reaction",
+        "pk": 3,
+        "fields": {
+            "name": "Smile",
+            "emoji": "😊"
+        }
+    },
+    {
+        "model": "review.reaction",
+        "pk": 4,
+        "fields": {
+            "name": "Start",
+            "emoji": "🌟"
+        }
+    },
+    {
+        "model": "review.reaction",
+        "pk": 5,
+        "fields": {
+            "name": "Celebrate",
+            "emoji": "🎉"
+        }
+    },
+    {
+        "model": "review.reaction",
+        "pk": 6,
+        "fields": {
+            "name": "Flower",
+            "emoji": "🌺"
+        }
+    },
+    {
+        "model": "review.reaction",
+        "pk": 4,
+        "fields": {
+            "name": "Sad",
+            "emoji": "😢"
+        }
+    },
+    {
+        "model": "review.reaction",
+        "pk": 5,
+        "fields": {
+            "name": "Neutral",
+            "emoji": "😐"
+        }
+    },
+    {
+        "model": "review.reaction",
+        "pk": 6,
+        "fields": {
+            "name": "Pricy",
+            "emoji": "💰"
+        }
+    },
+    {
+        "model": "review.reaction",
+        "pk": 7,
+        "fields": {
+            "name": "Cheap",
+            "emoji": "💲"
+        }
+    },
+    {
+        "model": "review.reaction",
+        "pk": 8,
+        "fields": {
+            "name": "Excited",
+            "emoji": "😃"
+        }
+    },
+    {
+        "model": "review.reaction",
+        "pk": 9,
+        "fields": {
+            "name": "Surprised",
+            "emoji": "😲"
+        }
+    },
+    {
+        "model": "review.reaction",
+        "pk": 10,
+        "fields": {
+            "name": "Delighted",
+            "emoji": "😄"
+        }
+    },
+    {
+        "model": "review.reaction",
+        "pk": 7,
+        "fields": {
+            "name": "Medium",
+            "emoji": "💲💲"
+        }
+    }
+
+
+]

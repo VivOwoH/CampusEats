@@ -2,6 +2,8 @@ from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 from apps.restaurants.models import Restaurant
 from apps.user.models import CustomUser
+from django import forms
+
 
 # Create your models here.
 # CREATE TABLE Review (
@@ -27,6 +29,24 @@ class Review(models.Model):
     )
     Description = models.CharField(max_length = 500, null = True, blank = True)
     Timestamp = models.DateTimeField(auto_now_add = True)
+    # Field to store user reactions (for example, as a comma-separated list of reaction IDs)
+    user_reactions = models.CharField(max_length=100, blank=True, null=True)
+
+
+class Reaction(models.Model):
+    name = models.CharField(max_length=50)
+    emoji = models.CharField(max_length=10)  
+
+class ReactionForm(forms.Form):
+    reaction = forms.ModelChoiceField(
+        queryset=Reaction.objects.all(),
+        empty_label=None,  # Disable empty label
+    )
+def get_restaurant_reviews(restaurantID):
+    """
+    Get all reviews for a specific user.
+    """
+    return Review.objects.filter(RestaurantID=restaurantID)
 
 # def get_average_rating():
 #     """
@@ -45,11 +65,7 @@ class Review(models.Model):
 #     """
 #     return Review.objects.filter(UserID=user)
 
-def get_restaurant_reviews(restaurantID):
-    """
-    Get all reviews for a specific user.
-    """
-    return Review.objects.filter(RestaurantID=restaurantID)
+
 
 # def get_parent_reviews(self):
 #     """
@@ -104,4 +120,5 @@ class React(models.Model):
 
 class InitReacts(models.Model):
     value = models.CharField(max_length=100)
+
 

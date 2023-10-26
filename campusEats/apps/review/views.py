@@ -25,23 +25,17 @@ def create_review(request):
     #     return redirect('login')  
     restaurant_id = request.GET.get('restaurant_id')
     review_id = request.GET.get('review_id')
-    print(restaurant_id, review_id)
 
     
     if request.method == 'POST':
-        print("AT POST")
         restaurant_id = request.POST.get('restaurant_id')
         review_id = request.POST.get('review_id')
-        print(restaurant_id, review_id)
-        print(review_id is None)
-        print(review_id  == 'None')
 
 
         if review_id  != 'None':
             restaurant = Restaurant.objects.get(pk=restaurant_id) 
             rating = request.POST.get('rating')
             description = request.POST.get('review')  # Adjust the field name as per your form
-            print("fere", description)
 
             # Create a new Review instance
             new_review = Review(
@@ -66,7 +60,6 @@ def create_review(request):
         # Get data from the POST request
         rating = request.POST.get('rating')
         description = request.POST.get('review')  # Adjust the field name as per your form
-        print("fere", description)
 
         # Create a new Review instance
         new_review = Review(
@@ -87,6 +80,35 @@ def create_review(request):
     else:
         # Handle GET request to display the form
         return render(request, 'review/create_review.html', {'restaurant_id': restaurant_id, 'review_id': review_id})
+
+# from django.http import JsonResponse
+# from django.views.decorators.csrf import csrf_exempt
+# from .models import Review, Reaction
+
+# @csrf_exempt  # Disable CSRF protection for demonstration purposes; use CSRF in a production environment
+# def save_reaction(request):
+#     if request.method == "POST":
+#         review_id = request.POST.get("review_id")
+#         reaction_id = request.POST.get("reaction_id")
+
+#         try:
+#             review = Review.objects.get(ReviewID=review_id)
+#             reaction = Reaction.objects.get(pk=reaction_id)
+
+#             # Update the user reactions for the review (append the new reaction)
+#             if review.user_reactions:
+#                 review.user_reactions += f",{reaction_id}"
+#             else:
+#                 review.user_reactions = reaction_id
+#             review.save()
+
+#             # Return the updated user reactions
+#             return JsonResponse({"user_reactions": review.user_reactions})
+
+#         except (Review.DoesNotExist, Reaction.DoesNotExist):
+#             return JsonResponse({"error": "Review or Reaction not found"}, status=400)
+
+#     return JsonResponse({"error": "Invalid request"}, status=400)
 
 
 def display_reviews(request, restaurant_id):

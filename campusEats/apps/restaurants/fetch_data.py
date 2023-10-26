@@ -228,4 +228,5 @@ if __name__ == "__main__":
 
 
 # // python manage.py loaddata apps/restaurants/fixtures/restaurants.json
+# python manage.py loaddata apps/review/fixtures/reactions_fixture.json
 # https://developers.google.com/maps/documentation/places/web-service/search-nearby#maps_http_places_nearbysearch-txt
