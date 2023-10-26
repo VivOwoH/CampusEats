@@ -32,6 +32,7 @@ def save_reaction(request):
         else:
             review.user_reactions = reaction_id
         review.extra = get_restaurant_raction_for_review(review.ReviewID)
+        print(review.extra)
         review.save()
 
         # Return the updated user reactions
@@ -79,6 +80,10 @@ def get_reaction_emoji(request):
     except Reaction.DoesNotExist:
         return JsonResponse({"error": "Reaction not found"}, status=404)
 
+def update_extra(reviews):
+    for review in reviews:
+        review.extra = get_restaurant_raction_for_review(review.ReviewID)
+    print(review.extra)
 
 def render_home(request):
     restaurants = get_all_restaurants()
@@ -101,6 +106,7 @@ def restaurant_detail(request, restaurant_id):
     reviews = get_restaurant_reviews(restaurant_id)
 
     review_list = list(reviews)
+    update_extra(reviews)
     # new_review.extra = get_restaurant_raction_for_review(new_review.ReviewID)
     # emojis = get_restaurant_raction_for_review(review_id)
 

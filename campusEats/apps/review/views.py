@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-from apps.restaurants.models import Restaurant #I assume were using render but this can change.
+from apps.restaurants.models import Restaurant
+from apps.restaurants.views import update_extra #I assume were using render but this can change.
 from .models import *
 from apps.user.models import CustomUser
 from .forms import ReviewForm
@@ -62,6 +63,7 @@ def create_review(request):
             reviews = get_restaurant_reviews(restaurant_id)
 
             review_list = list(reviews)
+            update_extra(reviews)
 
             # return redirect('restaurants/restaurant_detail') 
             return render(request, 'restaurants/restaurant_detail.html', {'restaurant': restaurant, 'user': global_user, 'reviews': review_list, 'reactions': reactions })
@@ -95,6 +97,7 @@ def create_review(request):
         reviews = get_restaurant_reviews(restaurant_id)
 
         review_list = list(reviews)
+        update_extra(reviews)
 
         # return redirect('restaurant/restaurant_detail') 
         return render(request, 'restaurants/restaurant_detail.html', {'restaurant': restaurant, 'user': global_user, 'reviews': review_list, 'reactions': reactions})
