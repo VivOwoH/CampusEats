@@ -36,7 +36,7 @@ def user_login(request):
                 user = None  # If user doesn't exist, set to None
         global global_user
         global_user = user
-        print(global_user, type(global_user))
+        CustomUser.set_global_user(global_user)
         if user and (user.password == password or check_password(password, user.password)):
             # global_user = user
             if is_admin(request):

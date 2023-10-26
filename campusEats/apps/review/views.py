@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from apps.restaurants.models import Restaurant #I assume were using render but this can change.
 from .models import Review
-from .models import CustomUser
+from apps.user.models import CustomUser
 from .forms import ReviewForm
 from django.contrib.auth.decorators import login_required
 from datetime import datetime
@@ -17,26 +17,66 @@ def cancel_review(request, restaurant_id):
 
 @login_required
 def create_review(request):
-    print(request.user)
+    global_user = CustomUser.get_global_user()
 
-    # if not request.user.is_authenticated:
+    # if not global_user == None:
     #     # User is not authenticated (not logged in)
     #     # You can handle this situation here, e.g., redirect to a login page or show an error message.
     #     return redirect('login')  
     restaurant_id = request.GET.get('restaurant_id')
+    review_id = request.GET.get('review_id')
+    print(restaurant_id, review_id)
 
+    
     if request.method == 'POST':
-        print(request.user)
+        print("AT POST")
+        restaurant_id = request.POST.get('restaurant_id')
+        review_id = request.POST.get('review_id')
+        print(restaurant_id, review_id)
+        print(review_id is None)
+        print(review_id  == 'None')
+
+
+        if review_id  != 'None':
+            restaurant = Restaurant.objects.get(pk=restaurant_id) 
+            rating = request.POST.get('rating')
+            description = request.POST.get('review')  # Adjust the field name as per your form
+            print("fere", description)
+
+            # Create a new Review instance
+            new_review = Review(
+                RestaurantID=restaurant,
+                UserID=global_user,  # Assuming you have a logged-in user
+                Rating=rating,
+                Description=description,
+                Timestamp=datetime.now(),
+                ParentReviewID = Review.objects.get(pk=review_id)
+
+            )
+
+            # Save the new review
+            new_review.save()
+
+            return redirect('success') 
+
+
+
+
+        restaurant = Restaurant.objects.get(pk=restaurant_id) 
         # Get data from the POST request
         rating = request.POST.get('rating')
-        description = request.POST.get('description')  # Adjust the field name as per your form
+        description = request.POST.get('review')  # Adjust the field name as per your form
+        print("fere", description)
 
         # Create a new Review instance
         new_review = Review(
-            RestaurantID_id=restaurant_id,
-            UserID=request.user,  # Assuming you have a logged-in user
+            RestaurantID=restaurant,
+            UserID=global_user,  # Assuming you have a logged-in user
             Rating=rating,
-            Description=description
+            Description=description,
+            Timestamp=datetime.now(),
+            ParentReviewID = None
+
         )
 
         # Save the new review
@@ -46,7 +86,7 @@ def create_review(request):
 
     else:
         # Handle GET request to display the form
-        return render(request, 'review/create_review.html', {'restaurant_id': restaurant_id})
+        return render(request, 'review/create_review.html', {'restaurant_id': restaurant_id, 'review_id': review_id})
 
 
 def display_reviews(request, restaurant_id):
