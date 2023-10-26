@@ -7,11 +7,18 @@ from django.shortcuts import render, get_object_or_404
 from .models import *
 
 from rest_framework import generics
-from .models import Article, Comment
-from .serializers import ArticleSerializer, CommentSerializer
+from .models import Blog, Comment
+from .serializers import BlogSerializer, CommentSerializer
 
 def blog_test(request):
     return render(request, 'blogs/test.html')
+
+def blog_list_view(request):
+    return render(request, 'blogs/list_blogs.html')
+
+def add_blog_view(request):
+    return render(request, 'blogs/add_blogs.html')
+
 
 
 #
@@ -51,9 +58,9 @@ def blog_test(request):
 # Create: When accessed with a POST request and provided with appropriate data,
 # it creates a new article.
 
-class ArticleListOrAdd(generics.ListCreateAPIView):
-    queryset = Article.objects.all()
-    serializer_class = ArticleSerializer
+class BlogListOrAdd(generics.ListCreateAPIView):
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer
 
 #
 # RetrieveUpdateDestroyAPIView Usage Guide:
@@ -104,25 +111,25 @@ class ArticleListOrAdd(generics.ListCreateAPIView):
 # Update: With a PUT or PATCH request, it updates the specified article's data.
 # Destroy: With a DELETE request, it deletes the specified article.
 
-class ArticleGetEditDel(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Article.objects.all()
-    serializer_class = ArticleSerializer
+class BlogGetEditDel(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer
 
 # Comment Views
 class CommentListOrAdd(generics.ListCreateAPIView):
     serializer_class = CommentSerializer
     def get_queryset(self):
         # Get the 'article_id' from the URL parameters
-        article_id = self.kwargs['article_id']
+        blog_id = self.kwargs['Blog_id']
         # Filter comments based on the given article_id
-        return Comment.objects.filter(article__id=article_id)
+        return Comment.objects.filter(Blog__id=article_id)
 
 
 class CommentGetEditDel(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = CommentSerializer
     def get_queryset(self):
         # Get the 'article_id' from the URL parameters
-        article_id = self.kwargs['article_id']
+        blog_id = self.kwargs['Blog_id']
         # Filter comments based on the given article_id
-        return Comment.objects.filter(article__id=article_id)
+        return Comment.objects.filter(Blog__id=article_id)
 
