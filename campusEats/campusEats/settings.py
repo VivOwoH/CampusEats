@@ -34,12 +34,12 @@ ALLOWED_HOSTS = []
 # set CLOUDINARY_API_SECRET=your_actual_api_secret
 
 CLOUDINARY_API_KEY = os.environ.get('CLOUDINARY_API_KEY')
-if not CLOUDINARY_API_KEY:
-    raise ValueError("CLOUDINARY_API_KEY is not set in environment variables")
+# if not CLOUDINARY_API_KEY:
+#     raise ValueError("CLOUDINARY_API_KEY is not set in environment variables")
 
 CLOUDINARY_API_SECRET = os.environ.get('CLOUDINARY_API_SECRET')
-if not CLOUDINARY_API_SECRET:
-    raise ValueError("CLOUDINARY_API_SECRET is not set in environment variables")
+# if not CLOUDINARY_API_SECRET:
+#     raise ValueError("CLOUDINARY_API_SECRET is not set in environment variables")
 
 
 
