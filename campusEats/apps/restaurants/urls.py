@@ -10,5 +10,6 @@ urlpatterns = [
     path('search/all', views.restaurant_list_view, name='restaurant_list'),
     path('save_reaction/', views.save_reaction, name='save_reaction'),
     path('save_reaction/<int:review_id>/<int:reaction_id>/', views.save_reaction, name='save_reaction'),
+    path('get_reaction_emoji', views.get_reaction_emoji, name='get_reaction_emoji'),
 
 ]

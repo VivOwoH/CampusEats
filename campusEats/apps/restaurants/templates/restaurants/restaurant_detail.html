@@ -148,6 +148,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 data.append('review_id', reviewID);
                 data.append('reaction_id', reactionID);
 
+                // const data1 = new URLSearchParams();
+                // data1.append('review_id', reviewID);
+                // data1.append('reaction_id', reactionID);
+
                
                 fetch('{% url "save_reaction"  %}', {
                     method: "POST",
@@ -155,21 +159,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 })
 
-                    .then((response) => {
-                        if (response.ok) {
-                            // The reaction was saved successfully
-                            return response.json();
-                        }
-                    })
-                    .then((data) => {
-                        // Update the user reactions in the user-reactions div
-                        console.log(data)
-                        const userReactionsDiv = document.getElementById(`user-reactions-${reviewID}`);
-                        userReactionsDiv.innerHTML = `User Reactions: ${data.user_reactions}`;
-                    })
-                    .catch((error) => {
-                        console.error("Error saving reaction: " + error);
-                    });
+                .then((response) => {
+                    if (response.ok) {
+                        // Reaction saved, now get the emoji
+                        return fetch(`{% url 'get_reaction_emoji' %}`, {
+                            method: "POST",
+                            body: data,
+                        });
+                    } else {
+                        throw new Error("Error saving reaction");
+                    }
+                })
+                .then((response) => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        throw new Error("Error fetching emoji");
+                    }
+                })
+                .then((data) => {
+                    // Update the user reactions in the user-reactions div with the emoji
+                    const userReactionsDiv = document.getElementById(`user-reactions-${reviewID}`);
+                    // userReactionsDiv.innerHTML = `User Reactions: ${data.emoji}`;
+                    // Initialize an empty string to store the HTML content
+                    let emojiContent = "User Reactions: ";
+                    console.log("here", data.emoji )
+                    // Loop over the dictionary and add each emoji icon and its count to the content
+                    for (const emojiIcon in data.emoji) {
+                        const count = data.emoji[emojiIcon];
+                        emojiContent += `${emojiIcon} (Count: ${count})&nbsp;&nbsp;`; // Add a space between emojis
+                    }
+
+                    // Set the innerHTML of the div to display the emoji icons and counts
+                    userReactionsDiv.innerHTML = emojiContent;
+
+
+                })
+                .catch((error) => {
+                    console.error(error);
+                });
+
             });
         });
     });

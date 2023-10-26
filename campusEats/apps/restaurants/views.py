@@ -38,9 +38,45 @@ def save_reaction(request):
 
     except (Review.DoesNotExist, Reaction.DoesNotExist):
         return JsonResponse({"error": "Review or Reaction not found"}, status=400)
+@csrf_exempt  
+def get_reaction_emoji(request):
+    if request.method == "POST":
+        review_id = request.POST.get("review_id")
+    try:
+        review = Review.objects.get(ReviewID=review_id)
+        emoji_ids = review.user_reactions
+        emoji_ids = emoji_ids.split(",") 
+        print("this", type(emoji_ids[0]))
+        # emoji_ids = set(emoji_ids)
 
-    return JsonResponse({"error": "Invalid request"}, status=400)
+        reactions = [Reaction.objects.get(pk=int(i)) for i in emoji_ids]
+        print("this", reactions)
 
+
+
+        emojis = [reaction.emoji for reaction in reactions]
+
+        # *******
+
+        emoji_count = {}  # Create a dictionary to count emojis
+
+        reactions = [Reaction.objects.get(pk=int(i)) for i in emoji_ids]
+
+        for reaction in reactions:
+            emoji = reaction.emoji
+            if emoji in emoji_count:
+                emoji_count[emoji] += 1
+            else:
+                emoji_count[emoji] = 1
+
+        # Map emoji icons to emoji counts
+        # emoji_count_with_icons = {emoji_icons[key]: count for key, count in emoji_count.items()}
+        print(emoji_count)
+
+        # ******
+        return JsonResponse({"emoji": emoji_count})
+    except Reaction.DoesNotExist:
+        return JsonResponse({"error": "Reaction not found"}, status=404)
 
 
 def render_home(request):
