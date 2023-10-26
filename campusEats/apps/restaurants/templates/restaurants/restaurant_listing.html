@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{% static 'restaurants/restaurant_listing.css' %}?{% now 'U' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <!--search box-->
@@ -52,19 +54,20 @@
 <div class="label_container"><label for="search_label"> Search Results </label></div>
 
 
-<div class="list-container">
-    {% for restaurant in restaurant_list %}
-    <div class="restaurant-container" data-name="{{ restaurant.Name }}" data-price= "{{ restaurant.PriceLevel }}" data-takeout="{{ restaurant.Takeout }}" data-toprated="{{ restaurant.Rating }}">
+<div class="list-container" id="restaurant-box">
+    <!-- {% for restaurant in restaurant_list %}
+    <div class="restaurant-container" data-name="{{ restaurant.Name }}" data-price="{{ restaurant.PriceLevel }}"
+        data-takeout="{{ restaurant.Takeout }}" data-toprated="{{ restaurant.Rating }}">
         <div class="restaurant-card">
             <div class="restaurant-content">
                 <div class="restaurant-details">
                     <div class="icon-text">
                         <span class="icon"><i class="ri-message-line"></i></span>
-                        <span class="text">22</span> <!-- placeholder for number of review -->
+                        <span class="text">22</span>
                     </div>
                     <div class="icon-text">
                         <span class="icon"><i class="ri-hearts-line"></i></span>
-                        <span class="text">100</span> <!-- placeholder for number of user fav this restaurant -->
+                        <span class="text">100</span>
                     </div>
                 </div>
 
@@ -81,10 +84,90 @@
             </div>
         </div>
     </div>
-    {% endfor %}
+    {% endfor %} -->
+</div>
+
+<div id="spinner-box" class="not-visible">
+    <div class="spinner-border text-primary" role="status"></div>
+</div>
+<div id="loading-box">
+    <button class="button" id="load-btn">Load More</button>
 </div>
 
 
+<!--AJAX restaurants list-->
+<script>
+    console.log("Restaurants reponse")
+    const restaurantsBox = document.getElementById("restaurant-box")
+    const spinnerBox = document.getElementById("spinner-box")
+    const loadBtn = document.getElementById("load-btn")
+    const loadBox = document.getElementById("loading-box")
+    let visible = 5
+
+    const handleGetData = () => {
+        $.ajax({
+            type: "GET",
+            url: `/restaurants-json/${visible}`,
+            success: function (response) {
+                // console.log(response)
+                maxSize = response.max
+                const data = response.data
+                spinnerBox.classList.remove('not-visible')
+                setTimeout(() => {
+                    spinnerBox.classList.add('not-visible')
+                    data.map(restaurant => {
+                        console.log(restaurant.RestaurantID)
+                        restaurantsBox.innerHTML += `
+                        <div class="restaurant-container" data-name="${restaurant.Name}" data-price="${restaurant.PriceLevel}"
+                            data-takeout="${restaurant.Takeout}" data-toprated="${restaurant.Rating}">
+                            <div class="restaurant-card">
+                                <div class="restaurant-content">
+                                    <div class="restaurant-details">
+                                        <div class="icon-text">
+                                            <span class="icon"><i class="ri-message-line"></i></span>
+                                            <span class="text">22</span>
+                                        </div>
+                                        <div class="icon-text">
+                                            <span class="icon"><i class="ri-hearts-line"></i></span>
+                                            <span class="text">100</span>
+                                        </div>
+                                    </div>
+
+                                    <h2 class="restaurant-title">${restaurant.Name}</h2>
+                                    <p class="restaurant-description">${restaurant.Description}</p>
+
+                                    <div class="restaurant-cta">
+                                        <a href="/restaurant/${restaurant.RestaurantID}/" class="button">Learn more</a>
+                                    </div>
+                                </div>
+                                <div class="restaurant-image">
+                                    <img src="${restaurant.ImageURL}" alt="${restaurant.Name}">
+                                </div>
+                            </div>
+                        </div>`
+                    })
+                    if (maxSize) {
+                        console.log("no more")
+                        loadBox.innerHTML = "<h4>No more data to load.</h4>"
+                    }
+                }, 500)
+            },
+            error: function (error) {
+                console.log(error)
+            }
+        })
+    }
+
+    handleGetData()
+
+    loadBtn.addEventListener('click', () => {
+        visible += 5
+        handleGetData()
+    })
+</script>
+
+
+<!--search parameter-->
 <script>
     // received search input from parameter
     window.addEventListener('load', () => {
@@ -136,7 +219,7 @@
                 child.style.display = 'none';
             }
         })
-    };   
+    };
 </script>
 
 <!--price filter-->
@@ -162,7 +245,7 @@
             console.log(priceFilterValue)
             console.log(level)
 
-            // select the child div inside the parent div 
+            // select the child div inside the parent div
             var parentDiv = document.querySelector('.list-container');
             console.log(parentDiv)
             var childDivs = parentDiv.querySelectorAll('.restaurant-container');
@@ -247,4 +330,5 @@
         }
     }
 </script>
+
 {% endblock %}
