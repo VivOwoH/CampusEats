@@ -2,26 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog List</title>
+    <title>List of Blogs</title>
 </head>
 <body>
     <h1>List of Blogs</h1>
-    <ul id="blogList">
-        <!-- Articles will be populated here via JavaScript -->
+    <ul>
+        {% for blog in blogs %}
+            <li>
+                <a href="{% url 'blog_detail' blog.id %}">{{ blog.title }}</a> by {{ blog.author.username }}
+            </li>
+        {% endfor %}
     </ul>
 
-    <script>
-        fetch('/blogs/')  // Replace with the appropriate endpoint to get the list of blogs
-        .then(response => response.json())
-        .then(data => {
-            const blogListElement = document.getElementById('blogList');
-            data.forEach(article => {
-                const listItem = document.createElement('li');
-                listItem.textContent = article.title + " by " + article.author;
-                blogListElement.appendChild(listItem);
-            });
-        });
-    </script>
+    <a href="{% url 'add_blog' %}">Create a New Blog</a>
 </body>
 </html>
