@@ -3,9 +3,6 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 from apps.restaurants.models import Restaurant
 from apps.user.models import CustomUser
 from django import forms
-from django import template
-
-register = template.Library()
 
 
 
@@ -34,7 +31,8 @@ class Review(models.Model):
     Description = models.CharField(max_length = 500, null = True, blank = True)
     Timestamp = models.DateTimeField(auto_now_add = True)
     # Field to store user reactions (for example, as a comma-separated list of reaction IDs)
-    user_reactions = models.CharField(max_length=100, blank=True, null=True)
+    user_reactions = models.CharField(max_length=1000, blank=True, null=True)
+    extra = models.CharField(max_length=1000, blank=True, null=True)  
 
 
 class Reaction(models.Model):
@@ -52,13 +50,14 @@ def get_restaurant_reviews(restaurantID):
     """
     return Review.objects.filter(RestaurantID=restaurantID)
 
-@register.simple_tag
 def get_restaurant_raction_for_review(review_id):
     """
     Get all reviews for a specific user.
     """
     review = Review.objects.get(ReviewID=review_id)
     emoji_ids = review.user_reactions
+    if emoji_ids is None:
+        return 
     emoji_ids = emoji_ids.split(",") 
 
     emoji_count = {}  

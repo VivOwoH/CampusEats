@@ -36,9 +36,9 @@ def create_review(request):
     if request.method == 'POST':
         restaurant_id = request.POST.get('restaurant_id')
         review_id = request.POST.get('review_id')
-        reviews = get_restaurant_reviews(restaurant_id)
+        # reviews = get_restaurant_reviews(restaurant_id)
 
-        review_list = list(reviews)
+        # review_list = list(reviews)
 
 
         if review_id  != 'None':
@@ -59,8 +59,11 @@ def create_review(request):
 
             # Save the new review
             new_review.save()
+            reviews = get_restaurant_reviews(restaurant_id)
 
-            # return redirect('success') 
+            review_list = list(reviews)
+
+            # return redirect('restaurants/restaurant_detail') 
             return render(request, 'restaurants/restaurant_detail.html', {'restaurant': restaurant, 'user': global_user, 'reviews': review_list, 'reactions': reactions })
 
 
@@ -72,7 +75,8 @@ def create_review(request):
         description = request.POST.get('review')  # Adjust the field name as per your form
         review_id = request.POST.get('review_id')
         reviews = get_restaurant_reviews(restaurant_id)
-        emojis = get_restaurant_raction_for_review(review_id)
+        # emojis = get_restaurant_raction_for_review(review_id)
+
 
         # Create a new Review instance
         new_review = Review(
@@ -85,14 +89,20 @@ def create_review(request):
 
         )
 
+        # new_review.extra = get_restaurant_raction_for_review(new_review.ReviewID)
         # Save the new review
         new_review.save()
+        reviews = get_restaurant_reviews(restaurant_id)
+
+        review_list = list(reviews)
 
         # return redirect('restaurant/restaurant_detail') 
-        return render(request, 'restaurants/restaurant_detail.html', {'restaurant': restaurant, 'user': global_user, 'reviews': review_list, 'reactions': reactions, 'emojis': emojis })
+        return render(request, 'restaurants/restaurant_detail.html', {'restaurant': restaurant, 'user': global_user, 'reviews': review_list, 'reactions': reactions})
         # previous_url = request.META.get('HTTP_REFERER', '/')
         # return redirect(previous_url)
         # return redirect('success') 
+        # return redirect('restaurants/restaurant_detail') 
+
 
 
     

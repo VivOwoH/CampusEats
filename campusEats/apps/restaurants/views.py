@@ -31,6 +31,7 @@ def save_reaction(request):
             review.user_reactions += f",{reaction_id}"
         else:
             review.user_reactions = reaction_id
+        review.extra = get_restaurant_raction_for_review(review.ReviewID)
         review.save()
 
         # Return the updated user reactions
@@ -100,6 +101,7 @@ def restaurant_detail(request, restaurant_id):
     reviews = get_restaurant_reviews(restaurant_id)
 
     review_list = list(reviews)
+    # new_review.extra = get_restaurant_raction_for_review(new_review.ReviewID)
     # emojis = get_restaurant_raction_for_review(review_id)
 
     return render(request, 'restaurants/restaurant_detail.html', {'restaurant': restaurant, 'user': global_user, 'reviews': review_list, 'reactions': reactions })

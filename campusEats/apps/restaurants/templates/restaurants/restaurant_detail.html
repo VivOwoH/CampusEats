@@ -68,7 +68,7 @@
                     <!-- Display user reactions here, you can use JavaScript to update this section -->
                     <div class="user-reactions" id="user-reactions-{{ review.ReviewID }}">
                         {% if review.user_reactions %}
-                        User Reactions: {{ review.user_reactions }}
+                        User Reactions: {{ review.extra }}
                         {% else %}
                         No reactions yet.
                         {% endif %}
