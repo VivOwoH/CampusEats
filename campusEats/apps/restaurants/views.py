@@ -81,8 +81,10 @@ def get_reaction_emoji(request):
 
 def render_home(request):
     restaurants = get_all_restaurants()
+    user = CustomUser.get_global_user()
+
     # Pass the list of users to the template
-    return render(request, 'restaurants/home.html', {'restaurants': restaurants})
+    return render(request, 'restaurants/home.html', {'restaurants': restaurants, "user" : user })
 # Create your views here.
 
 def restaurant_detail(request, restaurant_id):
@@ -95,7 +97,6 @@ def restaurant_detail(request, restaurant_id):
     #     # Handle the case when there is no authenticated user
     global_user = CustomUser.get_global_user()
     reactions = Reaction.objects.all()  
-    print(reactions)
     reviews = get_restaurant_reviews(restaurant_id)
 
     review_list = list(reviews)

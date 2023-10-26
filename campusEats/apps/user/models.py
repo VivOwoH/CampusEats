@@ -77,6 +77,9 @@ class UserType(Enum):
 
 
 # ************************
+global global_user
+global_user = None
+
 class UserType(Enum):
     USER = 'user'
     ADMIN = 'admin'

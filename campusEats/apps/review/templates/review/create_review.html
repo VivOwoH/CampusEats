@@ -99,7 +99,7 @@
         <div class="left">
             <img class="image" src="restaurant-image.jpg" alt="Image">
             <p>Restaurant name.</p>
-            <a href="#" ><button class="cancel-button">Cancel Review</button></a>
+            <a href="{% url 'restaurant_detail' restaurant_id=restaurant_id %}" ><button class="cancel-button">Cancel Review</button></a>
         </div>
         <div class="right">
             <form method="post" action="{% url 'create_review' %}">

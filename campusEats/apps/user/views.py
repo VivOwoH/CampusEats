@@ -34,6 +34,7 @@ def user_login(request):
                 user = CustomUser.objects.get(email=username_or_email)  # Try to match by email
             except CustomUser.DoesNotExist:
                 user = None  # If user doesn't exist, set to None
+                
         global global_user
         global_user = user
         CustomUser.set_global_user(global_user)
@@ -53,8 +54,7 @@ def user_login(request):
         return render(request, 'user/login.html')
 
 def user_logout(request):
-    global global_user 
-    global_user = None
+    CustomUser.set_global_user(None)
     message = "Log out successful"
     messages.success(request, message, extra_tags="autoclose")  # Add a success message with an "autoclose" tag
 
