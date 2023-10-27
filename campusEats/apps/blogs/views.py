@@ -9,15 +9,21 @@ from .models import *
 from .models import Blog, Comment
 from .forms import BlogForm, CommentForm
 
+global gloabl_user
 
+gloabl_user = None
 
 def blog_test(request):
-    return render(request, 'blogs/test.html')
+    context = {'user': gloabl_user}
+    return render(request, 'blogs/test.html', context)
 
 # List all blog posts
 def blog_list(request):
     blogs = Blog.objects.all()
-    context = {'blogs': blogs}
+    global gloabl_user
+    gloabl_user = CustomUser.get_global_user()
+    print(gloabl_user)
+    context = {'blogs': blogs, 'user': gloabl_user}
     return render(request, 'blogs/list_blogs.html', context)
 
 # View details of a single blog post
@@ -37,7 +43,7 @@ def blog_detail(request, blog_id):
     else:
         form = CommentForm()
 
-    context = {'blog': blog, 'comments': comments, 'form': form}
+    context = {'blog': blog, 'comments': comments, 'form': form, 'user': gloabl_user}
     return render(request, 'blogs/blog_detail.html', context)
 
 # Create a new blog post
@@ -49,7 +55,7 @@ def add_blog(request):
             return redirect('list_blogs')
     else:
         form = BlogForm()
-    context = {'form': form}
+    context = {'form': form, 'user': gloabl_user}
     return render(request, 'blogs/blog_form.html', context)
 
 # Update an existing blog post
@@ -62,7 +68,7 @@ def blog_update(request, blog_id):
             return redirect('blog_detail', blog_id=blog.id)
     else:
         form = BlogForm(instance=blog)
-    context = {'form': form}
+    context = {'form': form, 'user': gloabl_user}
     return render(request, 'blog_form.html', context)
 
 # Delete a blog post
@@ -84,5 +90,5 @@ def blog_comments(request, blog_id):
             return redirect('blog_comments', blog_id=blog.id)
     else:
         form = CommentForm()
-    context = {'blog': blog, 'comments': comments, 'form': form}
+    context = {'blog': blog, 'comments': comments, 'form': form, 'user': gloabl_user}
     return render(request, 'blog_comments.html', context)

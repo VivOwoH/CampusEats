@@ -38,6 +38,8 @@ def user_login(request):
         global global_user
         global_user = user
         CustomUser.set_global_user(global_user)
+        print(CustomUser.get_global_user())
+
         if user and (user.password == password or check_password(password, user.password)):
             # global_user = user
             if is_admin(request):
@@ -92,28 +94,30 @@ def render_admin_dashboard(request):
 def update_admin(request):
     if request.method == 'POST':
         # Retrieve form data from the POST request
-        username = request.POST.get('username')
-        display_name = request.POST.get('display_name')
+        username = request.POST.get('first_name')
+        display_name = request.POST.get('last_name')
         email = request.POST.get('email')
         contact_no = request.POST.get('contact_no')
 
         # Process the form data (you can save it to the database or perform other actions)
         # For this example, we'll just print the data to the console
-        # print('First Name:', username)
-        # print('Last Name:', display_name == '')
-        # print('Email:', email)
-        # print('Contact Number:', contact_no)
+        print('First Name:', username)
+        print('Last Name:', display_name == '')
+        print('Email:', email)
+        print('Contact Number:', contact_no)
+        
+        user = CustomUser.get_global_user()
         try:
             if username:
-                global_user.username = username
+                user.username = username
             if display_name:
-                global_user.display_name = display_name
+                user.display_name = display_name
             if email:
-                global_user.email = email
+                user.email = email
             if contact_no:
-                global_user.contact_number = contact_no
+                user.contact_number = contact_no
 
-            global_user.save()  # Save the changes to the user profile
+            user.save()  # Save the changes to the user profile
 
             message = "Profile updated successfully"
             
@@ -123,7 +127,7 @@ def update_admin(request):
         messages = list()
         messages.append(message)
 
-        return render(request, 'user/adminhome.html', {'messages': messages, 'user':global_user})
+        return render(request, 'user/adminhome.html', {'messages': messages, 'user':user})
 
 
         # You can also return a response to the user, e.g., a success message
@@ -256,6 +260,41 @@ def user_list(request):
     return render(request, 'user/success.html', {'users': users})
 
 def render_success(request):
+    if request.method == "POST":
+        id=request.POST.get('restaurant_id')
+        print(id)
+        name=request.POST.get('name')
+        description=request.POST.get('restaurant_desc')
+        location=request.POST.get('location')
+        img_url=request.POST.get('img_url')
+        phone = request.POST.get('phone')
+        price = request.POST.get('price')
+        dine_in = request.POST.get('dine_in')
+        delivery = request.POST.get('delivery')
+        reservable = request.POST.get('reservable')
+        serves_wine = request.POST.get('serves_wine')
+        
+        #get updated restaurant data
+        updated_r = Restaurant.objects.get(RestaurantID=id) 
+        print(updated_r)  
+        try:
+            updated_r.Name = name
+            updated_r.Location = location
+            updated_r.Description = description
+            updated_r.ImageURL = img_url
+            
+            # save the updated data into the db
+            updated_r.save()
+            print(updated_r.Name)
+        except Exception as e:
+            print(e) 
+
+        return redirect('/register/admin/update-resturants/')
+
+    rest_id = Restaurant.objects.get(RestaurantID=id)
+    print(rest_id)
+    context_ = {"rest_id":rest_id}
+    # return render(request, "user/edit-restaurant.html",context_)
     return render(request, 'user/success.html', {'user': global_user})
 
 
@@ -302,9 +341,9 @@ def edit_restaurant(request):
 
 # called when the edit restaurant button is clicked the form is calls the submit function
 def edit_restaurant_details(request, id):
-
+    print(id)
     if request.method == "POST":
-
+        name=request.POST.get('restaurant_id')
         name=request.POST.get('name')
         description=request.POST.get('restaurant_desc')
         location=request.POST.get('location')
@@ -317,15 +356,19 @@ def edit_restaurant_details(request, id):
         serves_wine = request.POST.get('serves_wine')
         
         #get updated restaurant data
-        updated_r = Restaurant.objects.get(RestaurantID=id)        
-        updated_r.Name = name
-        updated_r.Location = location
-        updated_r.Description = description
-        updated_r.ImageURL = img_url
-        
-        # save the updated data into the db
-        updated_r.save()
-        print(updated_r.Name)
+        updated_r = Restaurant.objects.get(RestaurantID=id) 
+        print(updated_r)  
+        try:
+            updated_r.Name = name
+            updated_r.Location = location
+            updated_r.Description = description
+            updated_r.ImageURL = img_url
+            
+            # save the updated data into the db
+            updated_r.save()
+            print(updated_r.Name)
+        except Exception as e:
+            print(e) 
 
         return redirect('/register/admin/update-resturants/')
 
@@ -334,6 +377,42 @@ def edit_restaurant_details(request, id):
     context_ = {"rest_id":rest_id}
     return render(request, "user/edit-restaurant.html",context_)
 
+def update_details(request, id):
+    print(id)
+    if request.method == "POST":
+        name=request.POST.get('restaurant_id')
+        name=request.POST.get('name')
+        description=request.POST.get('restaurant_desc')
+        location=request.POST.get('location')
+        img_url=request.POST.get('img_url')
+        phone = request.POST.get('phone')
+        price = request.POST.get('price')
+        dine_in = request.POST.get('dine_in')
+        delivery = request.POST.get('delivery')
+        reservable = request.POST.get('reservable')
+        serves_wine = request.POST.get('serves_wine')
+        
+        #get updated restaurant data
+        updated_r = Restaurant.objects.get(RestaurantID=id) 
+        print(updated_r)  
+        try:
+            updated_r.Name = name
+            updated_r.Location = location
+            updated_r.Description = description
+            updated_r.ImageURL = img_url
+            
+            # save the updated data into the db
+            updated_r.save()
+            print(updated_r.Name)
+        except Exception as e:
+            print(e) 
+
+        return redirect('/register/admin/update-resturants/')
+
+    rest_id = Restaurant.objects.get(RestaurantID=id)
+    print(rest_id)
+    context_ = {"rest_id":rest_id}
+    return render(request, "user/edit-restaurant.html",context_)
 
 
 
