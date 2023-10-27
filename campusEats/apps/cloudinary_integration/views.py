@@ -17,6 +17,9 @@ def upload_view(request):
             # Handle the error, e.g., return an error message to the user
             return HttpResponse("The image file is too large. Please upload an image less than 10 MB.")
 
+        # image_url = "test"
+        # return render(request, "upload_template_success.html", {'url': image_url})
+
         if form.is_valid():
             # Upload image to Cloudinary
             response = cloudinary.uploader.upload(request.FILES['image'])
@@ -37,7 +40,7 @@ def upload_view(request):
             )
 
             print(image_url)
-            return redirect("/blogs/add/")  # Redirect to a success page or another view
+            return render(request, "upload_template_success.html", {'url': image_url})  # Redirect to a success page or another view
         
     else:
         form = ImageUploadForm()
