@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Blog form{% endblock %}
+
+{% block content %}
+
+<style>
+    #upload-btn,
+    #submit-btn {
+        width: 150px;
+        background-color: black;
+        border: 1px solid;
+        color: white;
+        border-radius: 30px;
+        padding: 10px 30px;
+        margin: 2rem auto;
+        font-size: 15px;
+        cursor: pointer;
+        float: left;
+    }
+</style>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Blog Post</title>
+</head>
+
+<body>
+    <!--section between the nav and form-->
+    <div class="up_container"></div>
+
+    <div class="container">
+
+        <div class="left-column">
+            <a href="#">CREATE A BLOG</a>
+            <a href="/upload">UPLOAD IMAGE</a>
+        </div>
+
+        <div class="right-column">
+            <h2>CREATE A BLOG POST</h2>
+            <br>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" id="submit-btn">Submit</button>
+            </form>
+
+            <br>
+            <div style="margin: 2rem auto;">
+                <a href="{% url 'list_blogs' %}">Back to List of Blogs</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="up_container"></div>
+
+</body>
+
+</html>
+
+{% endblock %}

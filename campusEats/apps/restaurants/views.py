@@ -3,7 +3,9 @@ from django.contrib.auth import login, authenticate
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from django.http import HttpResponse
+from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
+from django.views.generic import View, TemplateView
 from .models import * 
 from apps.user.models import CustomUser
 from apps.review.models import *
@@ -84,6 +86,16 @@ def update_extra(reviews):
     for review in reviews:
         review.extra = get_restaurant_raction_for_review(review.ReviewID)
     print(review.extra)
+class MainView(TemplateView):
+    template_name = 'restaurants/restaurant_listing.html'
+class RestaurantJsonListview(View):
+    def get(self, *args, **kwargs):
+        upper = kwargs.get('restaurant_id') #5
+        lower = upper - 5 #0
+        restaurants = list(Restaurant.objects.values()[lower:upper])
+        restaurant_size = len(Restaurant.objects.all())
+        size = True if upper >= restaurant_size else False
+        return JsonResponse({'data': restaurants, 'max':size}, safe=False)
 
 def render_home(request):
     restaurants = get_all_restaurants()

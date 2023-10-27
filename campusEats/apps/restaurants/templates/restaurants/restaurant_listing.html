@@ -9,69 +9,326 @@
 <head>
     <link rel="stylesheet" href="{% static 'restaurants/restaurant_listing.css' %}?{% now 'U' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <!--search box-->
 <div class="search-container">
     <div class="search-wrapper">
-        <input id="search" type="search" placeholder="search restaurants, cafes near campus">
-        <a href="/search/all">
-            <button id="search_button" type="submit">search</button>
-        </a>
+
+        <form action="/search/all" style="display: inline-flex; align-items: center; width: 100%;">
+            <input id="search" type="search" name="search_input" placeholder="search restaurants, cafes near campus">
+            {% csrf_token %}
+            <button id="search_button" type="submit" style="margin: 0 0 20px 20px;">search</button>
+        </form>
     </div>
 
     <!--search filters-->
     <nav>
         <div class="dropdown_nav">
-           
+
             <div class="dropdown_filters">
                 <button class="dropbtn">Price</button>
                 <div class="dropdown_items" id="price_filter_dpd">
                     <a data-price=1>$</a>
                     <a data-price=2>$$</a>
                     <a data-price=3>$$$</a>
+
                 </div>
             </div>
             <div class="dropdown_filters">
-                <button class="dropbtn">Takeaway</button>
+                <button class="dropbtn" id="takeaway_filter">Takeaway</button>
             </div>
+
             <div class="dropdown_filters">
-                <button class="dropbtn">Top Rated</button>
+                <button class="dropbtn" id="toprated_filter">Top Rated</button>
+
             </div>
         </div>
     </nav>
 </div>
 
+
 <div class="label_container"><label for="search_label"> Search Results </label></div>
 
-{% for restaurant in restaurant_list %}
 
-<div class="restaurant-container">
-    <div class="restaurant-card" data-name="{{ restaurant.Name }}">
-        <div class="restaurant-content">
-            <div class="restaurant-details">
-                <div class="icon-text">
-                    <span class="icon"><i class="ri-message-line"></i></span>
-                    <span class="text">22</span> <!-- placeholder for number of review -->
+<div class="list-container" id="restaurant-box">
+    <!-- {% for restaurant in restaurant_list %}
+    <div class="restaurant-container" data-name="{{ restaurant.Name }}" data-price="{{ restaurant.PriceLevel }}"
+        data-takeout="{{ restaurant.Takeout }}" data-toprated="{{ restaurant.Rating }}">
+        <div class="restaurant-card">
+            <div class="restaurant-content">
+                <div class="restaurant-details">
+                    <div class="icon-text">
+                        <span class="icon"><i class="ri-message-line"></i></span>
+                        <span class="text">22</span>
+                    </div>
+                    <div class="icon-text">
+                        <span class="icon"><i class="ri-hearts-line"></i></span>
+                        <span class="text">100</span>
+                    </div>
                 </div>
-                <div class="icon-text">
-                    <span class="icon"><i class="ri-hearts-line"></i></span>
-                    <span class="text">100</span> <!-- placeholder for number of user fav this restaurant -->
+
+                <h2 class="restaurant-title">{{ restaurant.Name }}</h2>
+                <p class="restaurant-description">{{ restaurant.Description }}</p>
+
+                <div class="restaurant-cta">
+                    <a href="{% url 'restaurant_detail' restaurant_id=restaurant.RestaurantID %}" class="button">Learn
+                        more</a>
                 </div>
             </div>
-
-            <h2 class="restaurant-title">{{ restaurant.Name }}</h2>
-            <p class="restaurant-description">{{ restaurant.Description }}</p>
-
-            <div class="restaurant-cta">
-                <a href="{% url 'restaurant_detail' restaurant_id=restaurant.RestaurantID %}" class="button">Learn more</a>
+            <div class="restaurant-image">
+                <img src="{{ restaurant.ImageURL }}" alt="{{ restaurant.Name }}">
             </div>
-        </div>
-        <div class="restaurant-image">
-            <img src="{{ restaurant.ImageURL }}" alt="{{ restaurant.Name }}">
         </div>
     </div>
+    {% endfor %} -->
 </div>
-{% endfor %}
+
+<div id="spinner-box" class="not-visible">
+    <div class="spinner-border text-primary" role="status"></div>
+</div>
+<div id="loading-box">
+    <button class="button" id="load-btn">Load More</button>
+</div>
+
+
+<!--AJAX restaurants list-->
+<script>
+    console.log("Restaurants reponse")
+    const restaurantsBox = document.getElementById("restaurant-box")
+    const spinnerBox = document.getElementById("spinner-box")
+    const loadBtn = document.getElementById("load-btn")
+    const loadBox = document.getElementById("loading-box")
+    let visible = 5
+
+    const handleGetData = () => {
+        $.ajax({
+            type: "GET",
+            url: `/restaurants-json/${visible}`,
+            success: function (response) {
+                // console.log(response)
+                maxSize = response.max
+                const data = response.data
+                spinnerBox.classList.remove('not-visible')
+                setTimeout(() => {
+                    spinnerBox.classList.add('not-visible')
+                    data.map(restaurant => {
+                        console.log(restaurant.RestaurantID)
+                        restaurantsBox.innerHTML += `
+                        <div class="restaurant-container" data-name="${restaurant.Name}" data-price="${restaurant.PriceLevel}"
+                            data-takeout="${restaurant.Takeout}" data-toprated="${restaurant.Rating}">
+                            <div class="restaurant-card">
+                                <div class="restaurant-content">
+                                    <div class="restaurant-details">
+                                        <div class="icon-text">
+                                            <span class="icon"><i class="ri-message-line"></i></span>
+                                            <span class="text">22</span>
+                                        </div>
+                                        <div class="icon-text">
+                                            <span class="icon"><i class="ri-hearts-line"></i></span>
+                                            <span class="text">100</span>
+                                        </div>
+                                    </div>
+
+                                    <h2 class="restaurant-title">${restaurant.Name}</h2>
+                                    <p class="restaurant-description">${restaurant.Description}</p>
+
+                                    <div class="restaurant-cta">
+                                        <a href="/restaurant/${restaurant.RestaurantID}/" class="button">Learn more</a>
+                                    </div>
+                                </div>
+                                <div class="restaurant-image">
+                                    <img src="${restaurant.ImageURL}" alt="${restaurant.Name}">
+                                </div>
+                            </div>
+                        </div>`
+                    })
+                    if (maxSize) {
+                        console.log("no more")
+                        loadBox.innerHTML = "<h4>No more data to load.</h4>"
+                    }
+                }, 500)
+            },
+            error: function (error) {
+                console.log(error)
+            }
+        })
+    }
+
+    handleGetData()
+
+    loadBtn.addEventListener('click', () => {
+        visible += 5
+        handleGetData()
+    })
+</script>
+
+
+<!--search parameter-->
+<script>
+    // received search input from parameter
+    window.addEventListener('load', () => {
+        const params = (new URL(document.location)).searchParams;
+        const receivedInput = params.get('search_input');
+
+        if (receivedInput != null) {
+            // document.getElementById('result-search').innerHTML = receivedInput;
+            const searchResults = [];
+            const results = [];
+
+            const cardContainer = document.querySelector('.list-container');
+
+            Array.from(cardContainer.children).forEach((child) => {
+
+                let name = child.getAttribute('data-name').toLowerCase();
+
+                if (name.indexOf(receivedInput.toLowerCase()) > -1) {
+                    child.style.display = '';
+                    //searchResults.push(child.getAttribute('data-name'));
+                } else {
+                    child.style.display = 'none';
+                }
+            })
+        }
+    })
+
+    // Add event listener for filtering
+    var searchInput = document.getElementById('search');
+    searchInput.addEventListener('keyup', function () {
+        filterCards(this);
+    });
+
+    function filterCards(input) {
+
+        const searchResults = [];
+        const results = [];
+
+        const cardContainer = document.querySelector('.list-container');
+
+        Array.from(cardContainer.children).forEach((child) => {
+
+            let name = child.getAttribute('data-name').toLowerCase();
+
+            if (name.indexOf(input.value.toLowerCase()) > -1) {
+                child.style.display = '';
+                //searchResults.push(child.getAttribute('data-name'));
+            } else {
+                child.style.display = 'none';
+            }
+        })
+    };
+</script>
+
+<!--price filter-->
+<script>
+    var dropdownPrice = document.getElementById('price_filter_dpd').addEventListener('click', filtercardsByPrice);
+
+    function filtercardsByPrice(event) {
+
+        if (event.target && event.target.tagName == 'A') {
+            var priceFilterValue = event.target.innerText;
+
+            // map to prices
+            var level;
+            if (priceFilterValue == '$') {
+                level = 1;
+            } else if (priceFilterValue == '$$') {
+                level = 2;
+            } else if (priceFilterValue == '$$$') {
+                level = 3;
+            }
+
+            // print selected filter
+            console.log(priceFilterValue)
+            console.log(level)
+
+            // select the child div inside the parent div
+            var parentDiv = document.querySelector('.list-container');
+            console.log(parentDiv)
+            var childDivs = parentDiv.querySelectorAll('.restaurant-container');
+            console.log(childDivs.length)
+
+            for (var i = 0; i < childDivs.length; i++) {
+
+                //console.log(childDivs[i].textContent);
+                var elem = childDivs[i];
+                console.log(elem)
+                var dataPrice = elem.getAttribute('data-price')
+
+                if (level == dataPrice) {
+                    elem.style.display = 'block'
+                }
+                else {
+                    elem.style.display = 'none'
+                }
+            }
+        }
+
+    }
+</script>
+
+<!--takeaway filter-->
+<script>
+    const takeawayFilterButton = document.getElementById('takeaway_filter');
+
+    takeawayFilterButton.addEventListener('click', function () {
+        console.log('Applying takeaway filter');
+        filtercardsByTakeout();
+    });
+
+    function filtercardsByTakeout() {
+
+        var parentDiv = document.querySelector('.list-container');
+        var childDivs = parentDiv.querySelectorAll('.restaurant-container');
+        for (var i = 0; i < childDivs.length; i++) {
+
+            var elem = childDivs[i];
+            console.log(elem)
+            var dataTakeout = elem.getAttribute('data-takeout').toLowerCase();
+            console.log(typeof dataTakeout)
+
+            if (dataTakeout == 'true') {
+
+                elem.style.display = 'block'
+            }
+            else {
+                elem.style.display = 'none'
+            }
+        }
+    }
+</script>
+
+
+<!--top rated filter-->
+<script>
+    const topRatedFilterButton = document.getElementById('toprated_filter');
+
+    topRatedFilterButton.addEventListener('click', function () {
+        console.log('Applying topRated filter');
+        filtercardsByTopRated();
+    });
+
+    function filtercardsByTopRated() {
+
+        var parentDiv = document.querySelector('.list-container');
+        var childDivs = parentDiv.querySelectorAll('.restaurant-container');
+        for (var i = 0; i < childDivs.length; i++) {
+
+            var elem = childDivs[i];
+            var dataToprated = elem.getAttribute('data-toprated');
+            let threshold = 4
+            if (parseFloat(dataToprated) >= threshold) {
+
+                elem.style.display = 'block'
+            }
+            else {
+                elem.style.display = 'none'
+            }
+        }
+    }
+</script>
+
 {% endblock %}

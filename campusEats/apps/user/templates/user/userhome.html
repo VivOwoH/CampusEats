@@ -1,11 +1,15 @@
 <!-- userhome.html -->
 
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %} My Account {% endblock %}
 
 {% block content %}
-{% if user.user_type == 'user' %}
+{% if user.user_type == 'user' or user.user_type == 'blogger' %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'user/user-bookmarks.css' %}?{% now 'U' %}">
+</head>
 
 <!--section between the nav and form-->
 <div class="up_container"></div>
@@ -22,7 +26,7 @@
 
     <!--user information -->
     <div class="right-column">
-        <h6>MY ACCOUNT</h6>
+        <h2>MY ACCOUNT</h2>
         <br>
         <div class="profile-info">
             <label for="first_name"> First Name </label>

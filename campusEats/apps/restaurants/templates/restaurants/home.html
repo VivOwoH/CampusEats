@@ -78,11 +78,11 @@
         
   <div class="search-wrapper">
      
-     <input id="search" type="search" placeholder="search restaurants, cafes near campus">
-     
-     <a href="/search/all">
-        <button id="search_button" type="submit">search</button>
-     </a>
+    <form action="/search/all">
+      <input id="search" type="search" name="search_input" placeholder="search restaurants, cafes near campus">
+      {% csrf_token %}
+      <button id="search_button" type="submit">search</button>
+    </form>
   </div>
 
 
@@ -146,12 +146,7 @@
 </div>
 
 
-
 <script>
-  
-
-  
-  
 
   // Add event listener for filtering
   

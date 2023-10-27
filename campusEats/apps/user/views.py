@@ -45,7 +45,7 @@ def user_login(request):
                 # return redirect(reverse('/register/admin'))  
                 # return render(request, 'user/adminhome.html', {'error_message': error_message})
             # User authentication successful, log the user in (you may want to set a session variable)
-            return redirect('success')  # Redirect to a success page after login
+            return redirect('/profile/user/account')  # Redirect to a success page after login
         else:
             # Authentication failed, handle it (e.g., display an error message)
             error_message = 'Invalid login credentials'

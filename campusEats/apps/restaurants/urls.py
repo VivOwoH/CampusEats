@@ -1,6 +1,7 @@
 # user/urls.py
 from django.urls import path, include, re_path as url
 from . import views
+from .views import MainView, RestaurantJsonListview
 
 urlpatterns = [
     # Other URL patterns for user-related views
@@ -12,4 +13,6 @@ urlpatterns = [
     path('save_reaction/<int:review_id>/<int:reaction_id>/', views.save_reaction, name='save_reaction'),
     path('get_reaction_emoji', views.get_reaction_emoji, name='get_reaction_emoji'),
 
+    path('', MainView.as_view(), name='main-view'),
+    path('restaurants-json/<int:restaurant_id>/', RestaurantJsonListview.as_view(), name='restaurants-json-view'),
 ]

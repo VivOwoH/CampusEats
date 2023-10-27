@@ -1,59 +1,46 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Blogs detail{% endblock %}
+
+{% block content %}
+
 <head>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f7f7f7;
-            line-height: 1.5;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-        }
-
-        .return-button {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            margin-bottom: 20px;
-        }
-
-        .return-button:hover {
-            background-color: #0056b3;
-        }
-
-        .blog-title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .blog-content {
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-
-        .blog-image {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ blog.title }}</title>
 </head>
 <body>
-    <div class="container">
-        <button class="return-button">Return</button>
-        <h1 class="blog-title">Blog Title</h1>
-        <p class="blog-content">
-            This is the content of the blog. It can be a long text describing the blog's details.
-        </p>
-        <img class="blog-image" src="blog-image.jpg" alt="Blog Image">
-    </div>
+    <h1>{{ blog.title }}</h1>
+    <p><strong>Author:</strong> {{ blog.author.username }}</p>
+    <p><strong>Posted on:</strong> {{ blog.created_at|date:"F j, Y, g:i a" }}</p>
+    <p><strong>Last updated:</strong> {{ blog.updated_at|date:"F j, Y, g:i a" }}</p>
+    <hr>
+    <p>{{ blog.content }}</p>
+    <hr>
+    <h2>Comments</h2>
+    <ul>
+        {% for comment in comments %}
+            <li>
+                <p><strong>{{ comment.user.username }}</strong> ({{ comment.created_at|date:"F j, Y, g:i a" }}):</p>
+                <p>{{ comment.text }}</p>
+            </li>
+        {% empty %}
+            <li>No comments yet.</li>
+        {% endfor %}
+    </ul>
+    <hr>
+
+    <!-- Comment form -->
+    <h3>Leave a Comment:</h3>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit Comment</button>
+    </form>
+    <hr>
+    <a href="{% url 'list_blogs' %}">Back to Blog List</a>
 </body>
 </html>
+
+{% endblock %}

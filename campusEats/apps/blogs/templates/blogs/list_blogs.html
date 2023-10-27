@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}All blogs{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'restaurants/restaurant_listing.css' %}?{% now 'U' %}">
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Blogs</title>
+</head>
+<body>
+    <div class="label_container">
+        <label for="search_label"> List of Blogs </label><br><br>
+        <a href="{% url 'add_blog' %}">
+            <h6>Create a New Blog ></h6></a>
+    </div>
+
+    <div class="list-container" id="restaurant-box">
+        {% for blog in blogs %}
+        <div class="restaurant-container" data-name="{{ restaurant.Name }}" data-price="{{ restaurant.PriceLevel }}"
+            data-takeout="{{ restaurant.Takeout }}" data-toprated="{{ restaurant.Rating }}">
+            <div class="restaurant-card">
+                <div class="restaurant-content">
+                    <h2 class="restaurant-title">{{ blog.title }}</h2>
+                    <p class="restaurant-description">Author: {{ blog.author.username }}</p>
+    
+                    <div class="restaurant-cta">
+                        <a href="{% url 'blog_detail' blog.id %}" class="button">Read Blog</a>
+                    </div>
+                </div>
+                <!-- YOU CAN ADD IMAGE HERE -->
+                <!-- <div class="restaurant-image">
+                    <img src="{{ restaurant.ImageURL }}" alt="{{ restaurant.Name }}">
+                </div> -->
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
+
+{% endblock %}
