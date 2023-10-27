@@ -1,8 +1,33 @@
+<!-- upload.html -->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Upload{% endblock %}
+
+{% block content %}
+
+<style>
+    #upload-btn {
+        width: 150px;
+        background-color: black;
+        border: 1px solid;
+        color: white;
+        border-radius: 30px;
+        padding: 10px 30px;
+        margin-left: 10px;
+        margin-top: 20px;
+        font-size: 15px;
+        cursor: pointer;
+        float: left;
+    }
+</style>
 
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.image.label }}: {{ form.image }}<br>
-    {{ form.model_name.label }}: {{ form.model_name }}<br>
-    {{ form.model_id.label }}: {{ form.model_id }}<br>
-    <button type="submit">Upload</button>
+    <!-- {{ form.model_name.label }}: {{ form.model_name }}<br>
+    {{ form.model_id.label }}: {{ form.model_id }}<br> -->
+    <button type="submit" id="upload-btn">Upload</button>
 </form>
+
+{% endblock %}
