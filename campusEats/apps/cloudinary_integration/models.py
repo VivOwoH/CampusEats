@@ -7,6 +7,6 @@ class UploadedImage(models.Model):
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
     # For generic relation
-    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
-    object_id = models.PositiveIntegerField()
-    content_object = GenericForeignKey('content_type', 'object_id')
+    # content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
+    # object_id = models.PositiveIntegerField()
+    # content_object = GenericForeignKey('content_type', 'object_id')

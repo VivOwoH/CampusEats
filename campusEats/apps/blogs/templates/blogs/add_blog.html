@@ -1,5 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Add blogs{% endblock %}
+
+{% block content %}
+
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,3 +24,5 @@
     <a href="{% url 'list_blogs' %}">Back to List of Blogs</a>
 </body>
 </html>
+
+{% endblock %}
