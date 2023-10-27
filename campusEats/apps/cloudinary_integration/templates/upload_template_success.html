@@ -1,0 +1,49 @@
+<!-- upload.html -->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Upload{% endblock %}
+
+{% block content %}
+
+<style>
+    #upload-btn {
+        width: 150px;
+        background-color: black;
+        border: 1px solid;
+        color: white;
+        border-radius: 30px;
+        padding: 10px 30px;
+        margin-left: 10px;
+        margin-top: 20px;
+        font-size: 15px;
+        cursor: pointer;
+        float: left;
+    }
+
+    .right-column {
+        height: 600px;
+    }
+</style>
+
+<!--section between the nav and form-->
+<div class="up_container"></div>
+
+<div class="container">
+    <div class="left-column">
+        <a href="/blogs/add/">CREATE A BLOG</a>
+        <a href="#">UPLOAD IMAGE</a>
+    </div>
+
+    <div class="right-column">
+        <h2>UPLOAD YOUR IMAGE</h2>
+        <br>
+        <h4>Image uploaded, here is where your image is hosted: {{ url }}</h4>
+    </div>
+
+    <script src="admin_script.js"></script>
+</div>
+
+<div class="up_container"></div>
+
+{% endblock %}

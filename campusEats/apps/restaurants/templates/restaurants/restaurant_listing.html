@@ -55,7 +55,7 @@
 
 
 <div class="list-container" id="restaurant-box">
-    <!-- {% for restaurant in restaurant_list %}
+    {% for restaurant in restaurant_list %}
     <div class="restaurant-container" data-name="{{ restaurant.Name }}" data-price="{{ restaurant.PriceLevel }}"
         data-takeout="{{ restaurant.Takeout }}" data-toprated="{{ restaurant.Rating }}">
         <div class="restaurant-card">
@@ -84,7 +84,7 @@
             </div>
         </div>
     </div>
-    {% endfor %} -->
+    {% endfor %}
 </div>
 
 <div id="spinner-box" class="not-visible">
@@ -124,12 +124,12 @@
                                 <div class="restaurant-content">
                                     <div class="restaurant-details">
                                         <div class="icon-text">
-                                            <span class="icon"><i class="ri-message-line"></i></span>
-                                            <span class="text">22</span>
+                                            <span class="icon"><i class="ri-contacts-book-line"></i></span>
+                                            <span class="text">${ restaurant.Phone } </span>
                                         </div>
                                         <div class="icon-text">
                                             <span class="icon"><i class="ri-hearts-line"></i></span>
-                                            <span class="text">100</span>
+                                            <span class="text">${ restaurant.Rating } /5</span>
                                         </div>
                                     </div>
 
@@ -158,7 +158,7 @@
         })
     }
 
-    handleGetData()
+    // handleGetData()
 
     loadBtn.addEventListener('click', () => {
         visible += 5
