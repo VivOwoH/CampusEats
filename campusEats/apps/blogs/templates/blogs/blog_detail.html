@@ -103,7 +103,12 @@
                 <h5>{{ blog.created_at|date:"F j, Y, g:i a" }}</h5>
                 <h5>Posted on: {{ blog.created_at|date:"F j, Y, g:i a" }}</h5>
                 <h5>Last updated: {{ blog.updated_at|date:"F j, Y, g:i a" }}</h5>
-                <div class="fakeimg" style="height:200px;">Image</div>
+                {% if blog.imageURL %}
+                    <img src="{{ blog.imageURL }}" alt="{{ blog.title }}" style="max-width: 100%; height: auto;">
+                {% else %}
+                    <div class="fakeimg" style="height:200px;">Image placeholder</div>
+                {% endif %}
+
                 <p>{{ blog.content }}</p>
             </div>
         </div>

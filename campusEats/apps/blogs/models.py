@@ -9,6 +9,7 @@ class Blog(models.Model):
     restaurant = models.ForeignKey('restaurants.Restaurant', on_delete=models.CASCADE, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    imageURL = models.URLField(max_length=255, blank=True, null=True)
 
     def __str__(self):
         return self.title
@@ -22,4 +23,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment by {self.user.username} on {self.article.title}"
-
