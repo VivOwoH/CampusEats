@@ -34,36 +34,26 @@
 
     <div class="container">
 
-        <!--admin navigation-->
         <div class="left-column">
             <a href="#">CREATE A BLOG</a>
             <a href="/upload">UPLOAD IMAGE</a>
         </div>
 
         <div class="right-column">
-            <form id="admin-profile-form" action="/update-admin/" method="post">
+            <h2>CREATE A BLOG POST</h2>
+            <br>
+            <form method="post">
                 {% csrf_token %}
-
-                <h2>CREATE A BLOG POST</h2>
-                <br>
-                <form method="post">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button type="submit" id="submit-btn">Submit</button>
-                </form>
-            
-                <br>
-                <div style="margin: 2rem auto;">
-                    <a href="{% url 'list_blogs' %}">Back to List of Blogs</a>
-                </div>
-                
+                {{ form.as_p }}
+                <button type="submit" id="submit-btn">Submit</button>
             </form>
+
+            <br>
+            <div style="margin: 2rem auto;">
+                <a href="{% url 'list_blogs' %}">Back to List of Blogs</a>
+            </div>
         </div>
 
-
-
-
-        <script src="admin_script.js"></script>
     </div>
 
     <div class="up_container"></div>

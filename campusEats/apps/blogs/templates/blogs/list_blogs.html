@@ -7,6 +7,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="{% static 'restaurants/restaurant_listing.css' %}?{% now 'U' %}">
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +16,34 @@
 </head>
 <body>
     <h1>List of Blogs</h1>
-    <ul>
+    <!-- <ul>
         {% for blog in blogs %}
             <li>
                 <a href="{% url 'blog_detail' blog.id %}">{{ blog.title }}</a> by {{ blog.author.username }}
             </li>
         {% endfor %}
-    </ul>
+    </ul> -->
+
+    <div class="list-container" id="restaurant-box">
+        {% for blog in blogs %}
+        <div class="restaurant-container" data-name="{{ restaurant.Name }}" data-price="{{ restaurant.PriceLevel }}"
+            data-takeout="{{ restaurant.Takeout }}" data-toprated="{{ restaurant.Rating }}">
+            <div class="restaurant-card">
+                <div class="restaurant-content">
+                    <h2 class="restaurant-title">{{ blog.title }}</h2>
+                    <p class="restaurant-description">Author: {{ blog.author.username }}</p>
+    
+                    <div class="restaurant-cta">
+                        <a href="{% url 'blog_detail' blog.id %}" class="button">Read Blog</a>
+                    </div>
+                </div>
+                <!-- <div class="restaurant-image">
+                    <img src="{{ restaurant.ImageURL }}" alt="{{ restaurant.Name }}">
+                </div> -->
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 
     <a href="{% url 'add_blog' %}">Create a New Blog</a>
 </body>
