@@ -105,3 +105,48 @@ h1{
 
 
 
+ul{
+    list-style-type: none;
+}
+
+.user_id_txt{
+    font-size: 17px;
+    font-weight: bold;
+    color:rgb(120, 119, 119);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+
+}
+
+.user-info i {
+    margin-right: 10px; 
+}
+
+.timestamp{
+    font-size: 12px;
+    color:rgb(90, 88, 88);
+}
+
+
+
+.child-comment{
+    margin-left: 4rem;
+}
+
+.child-id{
+    font-size: 17px;
+    font-weight: bold;
+    color:rgb(120, 119, 119);
+}
+
+.child-profile {
+    display: flex;
+    align-items: center;
+
+}
+.child-profile i {
+    margin-right: 10px; 
+}

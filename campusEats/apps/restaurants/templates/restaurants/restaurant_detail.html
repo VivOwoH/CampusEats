@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{% static 'restaurants/restaurant_details.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
 
@@ -29,53 +30,7 @@
         <div class="button-container">
             <a href="{% url 'create_review' %}?restaurant_id={{ restaurant.RestaurantID }}"> <button class="review-btn">Add Review </button></a>
         </div>
-         <!-- Display available reactions -->
          
-         <ul>
-            {% for review in reviews %}
-                <li>
-                    <!-- Display review details -->
-                    {{ review.ReviewID }}
-                    By User: {{ review.UserID }}
-                    Rating: {{ review.Rating }}
-                    Description: {{ review.Description }}
-                    At Timestamp: {{ review.Timestamp }}
-        
-                    <!-- Check if it's a parent review or a child review -->
-                    {% if review.ParentReviewID == None %}
-                        <!-- Add a button to redirect to the restaurant_detail.html page for parent reviews -->
-                        <a href="{% url 'create_review' %}?restaurant_id={{ restaurant.RestaurantID }}&review_id={{ review.ReviewID }}">
-                            <button class="review-detail-btn">Add comment</button>
-                        </a>
-                    {% else %}
-                        <!-- Display a child comment, you can use additional styling or indentation -->
-                        <div class="child-comment">
-                            By User: {{ review.UserID }}
-                            Rating: {{ review.Rating }}
-                            Description: {{ review.Description }}
-                            At Timestamp: {{ review.Timestamp }}
-                        </div>
-                    {% endif %}
-        
-                    <!-- Display available reactions -->
-                    Available Reactions:
-                    {% for reaction in reactions %}
-                        <span class="add-reaction-btn" data-review-id="{{ review.ReviewID }}" data-reaction-id="{{ reaction.id }}">{{ reaction.emoji }}</span>
-                    {% endfor %}
-
-                    
-
-                    <!-- Display user reactions here, you can use JavaScript to update this section -->
-                    <div class="user-reactions" id="user-reactions-{{ review.ReviewID }}">
-                        {% if review.extra %}
-                        User Reactions: {{ review.extra }}
-                        {% else %}
-                        No reactions yet.
-                        {% endif %}
-                    </div>
-                </li>
-            {% endfor %}
-        </ul>
         
           
         </div>
@@ -95,7 +50,112 @@
             <br><br>
             <div class="descr-container">{{ restaurant.Description }}</div>
         </div>
+        <!-- Display available reactions -->
 
+        <div style="height:50px"></div>
+        <div style="height:50px"><h3 style="color:orangered; margin-left: 1rem;">Reviews</h3></div>
+        <ul>
+            {% for review in reviews %}
+                <li>
+                    <!-- Display review details -->
+                    <!--{{ review.ReviewID }}-->
+        
+                    <!-- Check if it's a parent review or a child review -->
+                    {% if review.ParentReviewID == None %}
+                        <div class="user-info">
+                            <i class='far fa-user-circle' style="font-size: 25px; color:#b9bbbc;"></i>
+                            <p class="user_id_txt">{{ review.UserID }}</p>   
+                        </div>
+                        <p class="timestamp">{{ review.Timestamp }}</p>
+                        <br>
+                        <h5 style="color:grey">Rating {{ review.Rating }}</h5> 
+                        {{ review.Description }}<br><br>
+                    
+                        <!-- Add a button to redirect to the restaurant_detail.html page for parent reviews -->
+                        <a href="{% url 'create_review' %}?restaurant_id={{ restaurant.RestaurantID }}&review_id={{ review.ReviewID }}">
+                            <button class="review-detail-btn" style="background-color:rgb(250, 234, 234); border-radius:5px ; height:25px; border-color: darkgrey;">Reply <i class="fa-solid fa-reply"></i></button><br>
+                            
+                        </a>
+                        <!-- Display available reactions -->
+                        <!--Available Reactions:-->
+                        {% for reaction in reactions %}
+                        <span class="add-reaction-btn" data-review-id="{{ review.ReviewID }}" data-reaction-id="{{ reaction.id }}">{{ reaction.emoji }}</span>
+                        {% endfor %}
+                        <!-- Display user reactions here, you can use JavaScript to update this section -->
+                        <!-- <div class="user-reactions" id="user-reactions-{{ review.ReviewID }}">
+                            {% if review.user_reactions %}
+                            {{ review.user_reactions }}
+                            {% else %}
+                            Be the first one to react!
+                            {% endif %}
+                        </div> -->
+                        <hr class="horizontal-line">
+                        <div class="user-reactions" id="user-reactions-{{ review.ReviewID }}">
+                            {% if review.extra %}
+                            User Reactions: {{ review.extra }}
+                            {% else %}
+                            No reactions yet.
+                            {% endif %}
+                        </div>
+                        
+                        
+                    {% else %}
+                        <!-- Display a child comment, you can use additional styling or indentation -->
+                        <div class="child-comment"> 
+                            <div class="child-profile">
+                                <i class='far fa-user-circle' style="font-size: 25px; color:#b9bbbc;"></i>
+                                <p class="child-id">{{ review.UserID }}</p>
+                            </div> 
+                            <p class="timestamp">{{ review.Timestamp }}</p>
+                            <br>
+                            
+                            <h5 style="color:grey">Rating {{ review.Rating }}</h5> 
+                            {{ review.Description }}
+                            <br>
+                            <!-- Display available reactions -->
+                            <!--Available Reactions:-->
+                            {% for reaction in reactions %}
+                             <span class="add-reaction-btn" data-review-id="{{ review.ReviewID }}" data-reaction-id="{{ reaction.id }}">{{ reaction.emoji }}</span>
+                            {% endfor %}
+
+                            <!-- Display user reactions here, you can use JavaScript to update this section -->
+                            <div class="user-reactions" id="user-reactions-{{ review.ReviewID }}">
+                            <!-- {% if review.user_reactions %}
+                            {{ review.user_reactions }}
+                            {% else %}
+                            Be the first one to react!
+                            {% endif %} -->
+                            {% if review.extra %}
+                            User Reactions: {{ review.extra }}
+                            {% else %}
+                            No reactions yet.
+                            {% endif %}
+                    </div>
+                            
+                            
+                        </div>
+                    {% endif %}
+        
+                    
+                    
+
+                    
+
+                    
+                    
+                </li>
+                <div style="height:50px"></div>
+
+                    <!-- Display user reactions here, you can use JavaScript to update this section -->
+                    <!-- <div class="user-reactions" id="user-reactions-{{ review.ReviewID }}">
+                        {% if review.extra %}
+                        User Reactions: {{ review.extra }}
+                        {% else %}
+                        No reactions yet.
+                        {% endif %}
+                    </div> -->
+            {% endfor %}
+        </ul>
                 
     
         </div>
@@ -182,12 +242,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     const userReactionsDiv = document.getElementById(`user-reactions-${reviewID}`);
                     // userReactionsDiv.innerHTML = `User Reactions: ${data.emoji}`;
                     // Initialize an empty string to store the HTML content
-                    let emojiContent = "User Reactions: ";
+                    let emojiContent = "";
                     console.log("here", data.emoji )
                     // Loop over the dictionary and add each emoji icon and its count to the content
                     for (const emojiIcon in data.emoji) {
                         const count = data.emoji[emojiIcon];
-                        emojiContent += `${emojiIcon} (Count: ${count})&nbsp;&nbsp;`; // Add a space between emojis
+                        emojiContent += `${emojiIcon} ${count}&nbsp;&nbsp;`; // Add a space between emojis
                     }
 
                     // Set the innerHTML of the div to display the emoji icons and counts
