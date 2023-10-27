@@ -10,37 +10,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ blog.title }}</title>
 </head>
-<body>
-    <h1>{{ blog.title }}</h1>
-    <p><strong>Author:</strong> {{ blog.author.username }}</p>
-    <p><strong>Posted on:</strong> {{ blog.created_at|date:"F j, Y, g:i a" }}</p>
-    <p><strong>Last updated:</strong> {{ blog.updated_at|date:"F j, Y, g:i a" }}</p>
-    <hr>
-    <p>{{ blog.content }}</p>
-    <hr>
-    <h2>Comments</h2>
-    <ul>
-        {% for comment in comments %}
-            <li>
-                <p><strong>{{ comment.user.username }}</strong> ({{ comment.created_at|date:"F j, Y, g:i a" }}):</p>
-                <p>{{ comment.text }}</p>
-            </li>
-        {% empty %}
-            <li>No comments yet.</li>
-        {% endfor %}
-    </ul>
-    <hr>
 
-    <!-- Comment form -->
-    <h3>Leave a Comment:</h3>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Submit Comment</button>
-    </form>
-    <hr>
-    <a href="{% url 'list_blogs' %}">Back to Blog List</a>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'restaurants/restaurant_listing.css' %}?{% now 'U' %}">
+    <style>
+        /* Header/Blog Title */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Add a gray background color with some padding */
+        body {
+            background: #f1f1f1;
+        }
+
+        .header {
+            padding: 30px;
+            font-size: 40px;
+            text-align: center;
+            background: white;
+        }
+
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+        .leftcolumn {
+            float: left;
+            width: 75%;
+            display: flex;
+            padding: 20px;
+            justify-content: space-around;
+        }
+
+        /* Right column */
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Fake image */
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Add a card effect for articles */
+        .card {
+            background-color: white;
+            padding: 2rem;
+            margin: 2rem auto;
+            width: 100%;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 800px) {
+
+            .leftcolumn,
+            .rightcolumn {
+                width: 100%;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h4>{{ blog.title }}</h4>
+        <div class="label_container">
+        <a href="{% url 'list_blogs' %}">
+            <h6>> Back to Blog List</h6></a>
+    </div>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+                <h2>{{ blog.title }}</h2>
+                <h5>{{ blog.created_at|date:"F j, Y, g:i a" }}</h5>
+                <h5>Posted on: {{ blog.created_at|date:"F j, Y, g:i a" }}</h5>
+                <h5>Last updated: {{ blog.updated_at|date:"F j, Y, g:i a" }}</h5>
+                <div class="fakeimg" style="height:200px;">Image</div>
+                <p>{{ blog.content }}</p>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>Comments</h2>
+                <ul>
+                    {% for comment in comments %}
+                    <li>
+                        <p><strong>{{ comment.user.username }}</strong> ({{ comment.created_at|date:"F j, Y, g:i a" }}):
+                        </p>
+                        <p>{{ comment.text }}</p>
+                    </li>
+                    {% empty %}
+                    <li>No comments yet.</li>
+                    {% endfor %}
+                </ul>
+                <hr>
+
+                <!-- Comment form -->
+                <h3>Leave a Comment:</h3>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Submit Comment</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
+
 
 {% endblock %}
