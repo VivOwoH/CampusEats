@@ -15,14 +15,11 @@
     <title>List of Blogs</title>
 </head>
 <body>
-    <h1>List of Blogs</h1>
-    <!-- <ul>
-        {% for blog in blogs %}
-            <li>
-                <a href="{% url 'blog_detail' blog.id %}">{{ blog.title }}</a> by {{ blog.author.username }}
-            </li>
-        {% endfor %}
-    </ul> -->
+    <div class="label_container">
+        <label for="search_label"> List of Blogs </label><br><br>
+        <a href="{% url 'add_blog' %}">
+            <h6>Create a New Blog ></h6></a>
+    </div>
 
     <div class="list-container" id="restaurant-box">
         {% for blog in blogs %}
@@ -37,6 +34,7 @@
                         <a href="{% url 'blog_detail' blog.id %}" class="button">Read Blog</a>
                     </div>
                 </div>
+                <!-- YOU CAN ADD IMAGE HERE -->
                 <!-- <div class="restaurant-image">
                     <img src="{{ restaurant.ImageURL }}" alt="{{ restaurant.Name }}">
                 </div> -->
@@ -44,8 +42,6 @@
         </div>
         {% endfor %}
     </div>
-
-    <a href="{% url 'add_blog' %}">Create a New Blog</a>
 </body>
 </html>
 
