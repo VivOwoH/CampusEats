@@ -1,14 +1,8 @@
 import requests
 import json
 import re
-
+# Function to fetch details for a place using the Google Places API
 def fetch_place_details(api_key, place_id):
-    # endpoint = "https://maps.googleapis.com/maps/api/place/details/json"
-    # params = {
-    #     "fields": "name,rating,formatted_phone_number",
-    #     "place_id": place_id,
-    #     "key": api_key,
-    # }
 
     endpoint = "https://maps.googleapis.com/maps/api/place/details/json"
     params = {
@@ -81,16 +75,13 @@ def create_fixture(input_file, output_file, api_key):
         phone = place.get("formatted_phone_number", "")
         price_level = place.get("price_level", None)
         # New fields
-        takeout = place.get("takeout", None)  # Use None for unknown values
-        dine_in = place.get("dine_in", None)  # Use None for unknown values
-        delivery = place.get("delivery", None)  # Use None for unknown values
-        reservable = place.get("reservable", None)  # Use None for unknown values
-        serves_vegetarian_food = place.get("serves_vegetarian_food", None)  # Use None for unknown values
-        serves_wine = place.get("serves_wine", None)  # Use None for unknown values
+        takeout = place.get("takeout", None)  
+        dine_in = place.get("dine_in", None)  
+        delivery = place.get("delivery", None)  
+        reservable = place.get("reservable", None)  
+        serves_vegetarian_food = place.get("serves_vegetarian_food", None)  
+        serves_wine = place.get("serves_wine", None)  
         serves_beer = place.get("serves_beer", None)  
-
-        # Convert None values to False if they remain None
-        # price_level = False if price_level is None else price_level
         takeout = False if takeout is None else takeout
         dine_in = False if dine_in is None else dine_in
         delivery = False if delivery is None else delivery
@@ -129,25 +120,6 @@ def create_fixture(input_file, output_file, api_key):
     with open(output_file, "w") as fixture_file:
         json.dump(fixture_data, fixture_file, indent=2)
 
-
-
-# # Step 2: Populate Django model from JSON
-# def populate_model_from_json():
-#     with open("restaurant_data.json", "r") as json_file:
-#         data = json.load(json_file)
-
-#     for place in data.get("results", []):
-#         name = place["name"]
-#         location = place.get("vicinity", "")
-#         description = ", ".join(place.get("types", []))
-#         image_url = place.get("photos", [{}])[0].get("photo_reference", "")
-#         rating = place.get("rating", None)
-
-#         # Create a new Restaurant object and save it
-#         restaurant = Restaurant(Name=name, Location=location, Description=description, ImageURL=image_url, Rating=rating)
-#         restaurant.save()
-
-
 if __name__ == "__main__":
     api_key = "AIzaSyAxBAGRJmEsJw6gQDwFeoWSRKzjIecNyVA"
 
@@ -160,17 +132,6 @@ if __name__ == "__main__":
         data = json.load(json_file)
 
     restaurant_details = []
-
-    # for place in data.get("results", []):
-    #     place_id = place.get("place_id")
-    #     if place_id:
-    #         details = fetch_place_details(api_key, place_id)
-    #         restaurant_details.append(details)
-
-    # # Write the restaurant details to a new JSON file
-    # with open("restaurant_details.json", "w") as details_file:
-    #     json.dump(restaurant_details, details_file, indent=2)
-
     for place in data.get("results", []):
         place_id = place.get("place_id")
         if place_id:
@@ -222,7 +183,6 @@ if __name__ == "__main__":
     output_file = "fixtures/restaurants.json"
 
     create_fixture(input_file, output_file, api_key)
-    # print(len(restaurant_details))
 
 
 

@@ -7,5 +7,4 @@ urlpatterns = [
     path('delete-review/<int:review_id>/', views.delete_review, name='delete_review'),
     path('display-review/<int:review_id>/', views.display_reviews, name='display_reviews'),
     path('cancel_review/<int:restaurant_id>/', views.cancel_review, name='cancel_review'),
-    # path('restaurant/create-review/<int:restaurant_id>/', views.restaurant_detail, name='restaurant_detail'),
 ]

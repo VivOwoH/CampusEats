@@ -4,8 +4,6 @@ from . import views
 
 urlpatterns = [
     # Other URL patterns for user-related views
-    # path('login/', views.user_login, name='login'),
-    # path('', views.render_base_template, name='render_base'),
     path('register/', views.user_register, name='user_register'),
     path('login/', views.user_login, name='login'),
     path('logout/', views.user_logout, name='logout'),

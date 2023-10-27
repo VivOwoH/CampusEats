@@ -22,7 +22,6 @@ def blog_list(request):
     blogs = Blog.objects.all()
     global gloabl_user
     gloabl_user = CustomUser.get_global_user()
-    print(gloabl_user)
     context = {'blogs': blogs, 'user': gloabl_user}
     return render(request, 'blogs/list_blogs.html', context)
 
