@@ -7,7 +7,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import *
 
 from .models import Blog, Comment
-from .forms import BlogForm
+from .forms import BlogForm, CommentForm
 
 
 
@@ -24,8 +24,21 @@ def blog_list(request):
 def blog_detail(request, blog_id):
     blog = get_object_or_404(Blog, id=blog_id)
     comments = Comment.objects.filter(article=blog)
-    context = {'blog': blog, 'comments': comments}
-    return render(request, 'blog_detail.html', context)
+
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.article = blog
+            comment.user = request.user  # Assuming user is logged in
+            comment.save()
+            return redirect('blog_detail', blog_id=blog.id)  # Redirect to the same blog detail page
+
+    else:
+        form = CommentForm()
+
+    context = {'blog': blog, 'comments': comments, 'form': form}
+    return render(request, 'blogs/blog_detail.html', context)
 
 # Create a new blog post
 def add_blog(request):
