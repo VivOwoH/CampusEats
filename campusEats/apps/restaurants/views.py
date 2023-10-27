@@ -85,7 +85,7 @@ def get_reaction_emoji(request):
 def update_extra(reviews):
     for review in reviews:
         review.extra = get_restaurant_raction_for_review(review.ReviewID)
-    print(review.extra)
+
 class MainView(TemplateView):
     template_name = 'restaurants/restaurant_listing.html'
 class RestaurantJsonListview(View):
