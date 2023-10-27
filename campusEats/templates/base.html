@@ -8,8 +8,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Campus Eats{% endblock %}</title>
-  
-    <!-- <link rel="stylesheet" href="static/style.css"> -->
     <link rel="stylesheet" href="{% static 'restaurants/home.css' %}">
     <link rel="stylesheet" href="{% static 'admin/admin.css' %}">
     <link rel="stylesheet" href="{% static 'basestyle.css' %}">
@@ -25,28 +23,21 @@
         {% if user.user_type == 'admin' %}
             <a href="/register/admin"><i class="fas fa-user"></i></a>
         {% elif user.user_type == 'user' or user.user_type == 'blogger' %}
-            <a href="/success"><i class="fas fa-user"></i></a>
+            <a href="/profile/user/account"><i class="fas fa-user"></i></a>
         {% else %}
             <a href="/"><i class="fas fa-user"></i></a>
         {% endif %}
 
-        <!-- {% if user == None %}
-        <a href="/login">Login</a>
-        {% else %}
-        <a href="/logout">Logout</a>
-        {% endif %} -->
         {% if user.user_type == 'admin' or user.user_type == 'user' or user.user_type == 'blogger' %}
         <a href="/logout">Logout</a>
         {% else %}
         <a href="/login">Login</a>
         {% endif %}
-        <!-- <a href="/login">Login</a> -->
         <a href="/register">Sign Up</a>
         <a href="/blogs">Blog</a>
         <a href="/">Home</a>
         
     
-    <!-- <a class="logo" href="#"><img src="media/CE_logo.png" alt="Logo"></a> -->
     <a class="logo" href="/"><img src="{% static 'CE_logo.png' %}" alt="Logo"></a>
     
     </div>

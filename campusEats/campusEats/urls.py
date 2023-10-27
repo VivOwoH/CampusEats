@@ -16,12 +16,6 @@ Including another URLconf
 """
 # from django.contrib import admin
 # from django.urls import path
-
-# urlpatterns = [
-#     path('admin/', admin.site.urls),
-# ]
-
-# project/urls.py
 from django.contrib import admin
 from django.urls import path, include, re_path as url # Add the 'include' import
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
