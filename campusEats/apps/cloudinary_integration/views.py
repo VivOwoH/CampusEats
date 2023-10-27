@@ -36,7 +36,8 @@ def upload_view(request):
                 # object_id=model_id
             )
 
-            return redirect(image_url)  # Redirect to a success page or another view
+            print(image_url)
+            return redirect("/blogs/add/")  # Redirect to a success page or another view
         
     else:
         form = ImageUploadForm()

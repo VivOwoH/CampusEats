@@ -1,3 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}All blogs{% endblock %}
+
+{% block content %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,3 +25,5 @@
     <a href="{% url 'add_blog' %}">Create a New Blog</a>
 </body>
 </html>
+
+{% endblock %}
