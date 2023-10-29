@@ -54,7 +54,14 @@ CampusEats is a web application for [briefly describe what the app does and its 
     Installation
     ```
 ## Running the App
-[Provide instructions on how to run the app locally, e.g., starting the Django development server, running frontend build tools, etc.]
+Run the following commands in steps:
+
+```
+python manage.py makemigrations
+python manage.py migrate
+python manage.py loaddata apps/restaurants/fixtures/restaurants.json
+python manage.py loaddata apps/review/fixtures/reactions_fixture.json
+python manage.py runserver
 
 ## Features
 [Describe the app's features and functionality. List any user roles and their interactions with the app.]
