@@ -62,6 +62,7 @@ python manage.py migrate
 python manage.py loaddata apps/restaurants/fixtures/restaurants.json
 python manage.py loaddata apps/review/fixtures/reactions_fixture.json
 python manage.py runserver
+```
 
 ## Features
 [Describe the app's features and functionality. List any user roles and their interactions with the app.]
